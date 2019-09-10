@@ -6,9 +6,5 @@
 package by.epam.crackertracker.entity;
 
 public enum Role {
-    ADMIN, USER, SUPERUSER, CURATOR, GUEST
-
-
-
-
+    ADMIN, USER, SUPERUSER, CURATOR
 }

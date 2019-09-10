@@ -18,7 +18,7 @@ import java.util.List;
 
 public class SearchProductCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    ProductService service;
+    private ProductService service;
 
     public SearchProductCommand(ProductService service){
         this.service = service;

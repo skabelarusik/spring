@@ -13,6 +13,7 @@ import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.validator.*;
 import org.apache.log4j.Logger;
 import java.math.BigDecimal;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,7 +65,7 @@ public class SubscriptionService {
                     status = dao.insert(idProg, costProg, durationProg, login, balance);
                 }
             }
-        } catch (TrackerDBException e){
+        } catch (TrackerDBException | SQLException e){
             LOGGER.error("Wrong buy subscribe");
             throw new TrackerServiceException("Wrong buy subscribe", e);
         }

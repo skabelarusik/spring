@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class AddProgramNameCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    ProgramsNameService service;
+    private ProgramsNameService service;
 
     public AddProgramNameCommand(ProgramsNameService service){
         this.service = service;

@@ -17,7 +17,7 @@ import java.util.List;
 
 public class ShowReviewCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    ReviewService service;
+    private ReviewService service;
 
     public ShowReviewCommand(ReviewService service){
         this.service = service;

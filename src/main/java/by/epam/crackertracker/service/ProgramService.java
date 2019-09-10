@@ -61,7 +61,7 @@ public class ProgramService {
             dao = new ProgramDaoJdbcImpl();
             int idProgram = Integer.parseInt(id);
             try {
-                status = dao.deleteById(idProgram, login);
+                status = dao.deleteById(idProgram);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service delete by id product from program",e);
                 throw new TrackerServiceException("Wrong service delete by id product from program",e);

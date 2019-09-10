@@ -20,26 +20,26 @@ import java.util.List;
 public class AdviceService {
     private static final Logger LOGGER = Logger.getRootLogger();
 
-    public String selectRandomAdvice()  {
+    public String selectRandomAdvice() throws TrackerServiceException {
         AdviceDaoJdbcImpl dao = new AdviceDaoJdbcImpl();
         String advice = null;
         try {
             advice = dao.selectRandomAdvice();
         } catch (TrackerDBException e) {
             LOGGER.error("wrong service select random advice", e);
-            new TrackerServiceException("Wrong service select random advice ", e);
+            throw new TrackerServiceException("Wrong service select random advice ", e);
         }
         return advice;
     }
 
-    public List<Advice> selectAllAdvices() {
+    public List<Advice> selectAllAdvices() throws TrackerServiceException {
         List<Advice> list = new ArrayList<>();
         AdviceDaoJdbcImpl dao = new AdviceDaoJdbcImpl();
         try {
             list = dao.selectAll();
         } catch (TrackerDBException e) {
             LOGGER.error("wrong service select all advices", e);
-            new TrackerServiceException("Wrong service select all advices ", e);
+            throw new TrackerServiceException("Wrong service select all advices ", e);
         }
         return list;
     }

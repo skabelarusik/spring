@@ -8,7 +8,6 @@ package by.epam.crackertracker.pool;
 
 import by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
@@ -41,7 +40,7 @@ public class ConnectionPool {
             try {
                 initDriver(DRIVER);
             } catch (TrackerConnectionPoolException e) {
-                e.printStackTrace();
+                LOGGER.error("Wrong init driver" , e);
             }
 
         }
@@ -84,7 +83,7 @@ public class ConnectionPool {
         }
     }
 
-        public static ConnectionPool getInstance() throws TrackerConnectionPoolException {
+        public static ConnectionPool getInstance() {
             if(!create.get()){
                 try{
                     lock.lock();

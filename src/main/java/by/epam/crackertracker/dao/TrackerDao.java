@@ -20,7 +20,6 @@ public interface TrackerDao {
                 resultSet.close();
             } catch (SQLException e) {
                 throw new TrackerDBException("Wrong close resultset");
-//logger
             }
         }
     }
@@ -31,8 +30,6 @@ public interface TrackerDao {
                 statement.close();
             } catch (SQLException e) {
                 throw new TrackerDBException("Wrong close statement");
-
-//logger
             }
         }
     }
@@ -43,8 +40,6 @@ public interface TrackerDao {
                 connection.close();
             } catch (SQLException e) {
                 throw new TrackerDBException("Wrong close connection");
-
-//logger
             }
         }
     }

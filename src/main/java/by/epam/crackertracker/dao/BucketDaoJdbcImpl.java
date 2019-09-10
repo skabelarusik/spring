@@ -1,11 +1,9 @@
 package by.epam.crackertracker.dao;
 
 import by.epam.crackertracker.entity.Bucket;
-import by.epam.crackertracker.entity.Product;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.pool.ConnectionPool;
-import by.epam.crackertracker.validator.LoginValidator;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -13,9 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class BucketDaoJdbcImpl implements BucketDao {
     private static final Logger LOGGER = Logger.getRootLogger();
@@ -81,7 +77,7 @@ public class BucketDaoJdbcImpl implements BucketDao {
                 list.add(bucket);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.warn("Wrong filling list:"  + login);
         }
         return list;
     }
@@ -109,7 +105,6 @@ public class BucketDaoJdbcImpl implements BucketDao {
         Connection connection = null;
         PreparedStatement statement = null;
         boolean status = false;
-        System.out.println(id);
         try{
             connection = ConnectionPool.getInstance().takeConnection();
             statement = connection.prepareStatement(DELETE_ELEMENT);

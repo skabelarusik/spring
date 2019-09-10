@@ -8,7 +8,6 @@ package by.epam.crackertracker.controller;
 import by.epam.crackertracker.command.ActionFactory;
 import by.epam.crackertracker.command.EmptyCommand;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
-import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.pool.ConnectionPool;
 import by.epam.crackertracker.util.AttributeSessionCleaner;
 import by.epam.crackertracker.util.ParameterConstant;

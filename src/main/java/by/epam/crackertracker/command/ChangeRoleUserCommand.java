@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 public class ChangeRoleUserCommand implements Command {
 
     private static final Logger LOGGER = Logger.getRootLogger();
-    UserService service;
+    private UserService service;
 
     public ChangeRoleUserCommand(UserService service){
         this.service = service;

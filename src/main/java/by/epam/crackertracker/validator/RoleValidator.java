@@ -11,13 +11,11 @@ public class RoleValidator implements ValidatorI{
     @Override
     public boolean isValidate(String str) {
         boolean status = false;
-
-        if(str != null && !str.isEmpty()){
-            if(str.equalsIgnoreCase(Role.USER.toString()) || str.equalsIgnoreCase(Role.SUPERUSER.toString()) ||
-                str.equalsIgnoreCase(Role.ADMIN.toString()) || str.equalsIgnoreCase(Role.CURATOR.toString()))
+        if((str != null && !str.isEmpty()) && (str.equalsIgnoreCase(Role.USER.toString()) ||
+                str.equalsIgnoreCase(Role.SUPERUSER.toString()) || str.equalsIgnoreCase(Role.ADMIN.toString()) ||
+                str.equalsIgnoreCase(Role.CURATOR.toString()))){
                 status = true;
         }
-
         return status;
     }
 }

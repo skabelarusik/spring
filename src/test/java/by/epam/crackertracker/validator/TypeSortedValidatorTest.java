@@ -1,7 +1,6 @@
 package by.epam.crackertracker.validator;
 
 import by.epam.crackertracker.resources.ParametresTest;
-import by.epam.crackertracker.util.ParameterConstant;
 import org.junit.Assert;
 import org.junit.Test;
 

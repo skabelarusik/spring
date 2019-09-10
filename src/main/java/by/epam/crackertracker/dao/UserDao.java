@@ -7,7 +7,6 @@ package by.epam.crackertracker.dao;
 
 import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.User;
-import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
 
 import java.util.List;

@@ -11,6 +11,14 @@ import java.util.Optional;
 
 public class ActionFactory {
     private static final Logger LOGGER = Logger.getRootLogger();
+    private static ActionFactory actionFactory = new ActionFactory();
+
+    public ActionFactory getInstance(){
+        return actionFactory;
+    }
+
+    private ActionFactory(){}
+
     public static Optional<Command> defineCommand(String commandName){
         Optional<Command> current = Optional.empty();
         if(commandName == null){

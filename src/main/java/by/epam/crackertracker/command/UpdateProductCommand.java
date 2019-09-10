@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class UpdateProductCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    ProductService service;
+    private ProductService service;
 
     public UpdateProductCommand(ProductService service){
         this.service = service;

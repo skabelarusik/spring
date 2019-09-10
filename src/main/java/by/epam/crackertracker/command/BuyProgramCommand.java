@@ -1,10 +1,8 @@
 package by.epam.crackertracker.command;
 
 import by.epam.crackertracker.entity.Role;
-import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.SubscriptionService;
-import by.epam.crackertracker.service.UserService;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.apache.log4j.Logger;
@@ -14,14 +12,11 @@ import java.math.BigDecimal;
 
 public class BuyProgramCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    SubscriptionService subscriptionService;
-    UserService userService;
+    private SubscriptionService subscriptionService;
 
-    public BuyProgramCommand(SubscriptionService subscriptionService, UserService userService) {
+    public BuyProgramCommand(SubscriptionService subscriptionService) {
         this.subscriptionService = subscriptionService;
-        this.userService = userService;
     }
-
 
     @Override
     public String execute(HttpServletRequest request) {

@@ -9,34 +9,31 @@ import by.epam.crackertracker.resources.ParametresTest;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.time.LocalDate;
-import java.time.Month;
-
 public class BirthdayValidatorTest {
-    BirthdayValidator birthdayValidatorTest = new BirthdayValidator();
+    BirthdayValidator birthdayValidator = new BirthdayValidator();
 
     @Test
     public void isValidateNull() {
-        Assert.assertFalse(birthdayValidatorTest.isValidate(ParametresTest.NULL));
+        Assert.assertFalse(birthdayValidator.isValidate(ParametresTest.NULL));
     }
 
     @Test
     public void isValidateEmpty() {
-        Assert.assertFalse(birthdayValidatorTest.isValidate(ParametresTest.EMPTY));
+        Assert.assertFalse(birthdayValidator.isValidate(ParametresTest.EMPTY));
     }
 
     @Test
     public void isValidateCorrect() {
-        Assert.assertTrue(birthdayValidatorTest.isValidate(ParametresTest.CORRECT_DATE));
+        Assert.assertTrue(birthdayValidator.isValidate(ParametresTest.CORRECT_DATE));
     }
 
     @Test
     public void isValidateUncorrect() {
-        Assert.assertFalse(birthdayValidatorTest.isValidate(ParametresTest.UNCORRECT_DATE));
+        Assert.assertFalse(birthdayValidator.isValidate(ParametresTest.UNCORRECT_DATE));
     }
 
     @Test
     public void isValidateWrongDate() {
-        Assert.assertFalse(birthdayValidatorTest.isValidate(ParametresTest.WRONG_DATE));
+        Assert.assertFalse(birthdayValidator.isValidate(ParametresTest.WRONG_DATE));
     }
 }

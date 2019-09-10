@@ -9,7 +9,6 @@ import by.epam.crackertracker.entity.ProgramsName;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.pool.ConnectionPool;
-import by.epam.crackertracker.util.ParameterConstant;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -202,6 +201,8 @@ public class ProgramsNameDaoJdbc implements ProgramsNameDao {
         } catch (SQLException e){
             LOGGER.error(e);
             throw new TrackerDBException("Wrong checking id programs", e);
+        } finally {
+            closeQuietly(resultSet);
         }
         return status;
     }
@@ -218,6 +219,8 @@ public class ProgramsNameDaoJdbc implements ProgramsNameDao {
         } catch (SQLException e){
             LOGGER.error(e);
             throw new TrackerDBException("Wrong checking curator programs", e);
+        } finally {
+            closeQuietly(resultSet);
         }
         return status;
     }

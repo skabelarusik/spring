@@ -10,7 +10,6 @@ public class UserMessageCommand implements Command{
     public String execute(HttpServletRequest request) {
         String recipient = request.getParameter(ParameterConstant.PARAM_RECIPIENT);
         request.setAttribute(ParameterConstant.PARAM_RECIPIENT, recipient);
-        String page = PageConstant.PATH_PAGE_MESSAGE;
-        return page;
+        return PageConstant.PATH_PAGE_MESSAGE;
     }
 }

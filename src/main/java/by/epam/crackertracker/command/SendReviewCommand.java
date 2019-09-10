@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class SendReviewCommand implements Command{
     private static final Logger LOGGER = Logger.getRootLogger();
-    ReviewService service;
+    private ReviewService service;
 
     public SendReviewCommand(ReviewService service){
         this.service = service;

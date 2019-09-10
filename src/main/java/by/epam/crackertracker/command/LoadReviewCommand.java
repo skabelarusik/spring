@@ -9,8 +9,6 @@ import by.epam.crackertracker.entity.Review;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
-import by.epam.crackertracker.exception.TrackerConnectionPoolException;
-import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.service.ReviewService;
 import org.apache.log4j.Logger;
 

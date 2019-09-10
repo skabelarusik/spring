@@ -41,13 +41,4 @@ public class XssFilter implements Filter {
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
-    @Override
-    public void init(FilterConfig filterConfig) {
-
-    }
-
-    @Override
-    public void destroy() {
-
-    }
 }

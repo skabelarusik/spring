@@ -16,12 +16,11 @@ import javax.servlet.http.HttpServletRequest;
 
 public class AddAdviceCommand implements Command{
     private static final Logger LOGGER = Logger.getRootLogger();
-    AdviceService service;
+    private AdviceService service;
 
     public AddAdviceCommand(AdviceService service){
         this.service = service;
     }
-
 
     @Override
     public String execute(HttpServletRequest request)  {

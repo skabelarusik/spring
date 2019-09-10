@@ -10,7 +10,7 @@ import java.util.Objects;
 
 public class Product implements Serializable {
 
-    private int idproducts;
+    private int idProducts;
     private String name;
     private int calories;
     private double proteins;
@@ -22,12 +22,12 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public void setIdproducts(int idproducts){
-        this.idproducts = idproducts;
+    public void setIdProducts(int idProducts){
+        this.idProducts = idProducts;
     }
 
     public int getId() {
-        return idproducts;
+        return idProducts;
     }
 
     public String getName() {
@@ -89,7 +89,7 @@ public class Product implements Serializable {
 
     @Override
     public String toString() {
-        return "Product{" + "id=" + idproducts +
+        return "Product{" + "id=" + idProducts +
                 ", name='" + name + '\'' +
                 ", callories=" + calories +
                 ", proteins=" + proteins +

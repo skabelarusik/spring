@@ -53,7 +53,7 @@ public enum TypeCommand {
     EDIT_COMPONENT_PROGRAM(new EditComponentProgramCommand(new ProgramService())),
     DELETE_PRODUCT_PROGRAM(new DeleteProgramProductCommand(new ProgramService())),
     USER_MESSAGE(new UserMessageCommand()),
-    BUY_PROGRAM(new BuyProgramCommand(new SubscriptionService(), new UserService())),
+    BUY_PROGRAM(new BuyProgramCommand(new SubscriptionService())),
     SHOW_HISTORY_SUBSCRIPTION(new ShowHistorySubscriptionCommand(new SubscriptionService())),
     ADD_PRODUCT_BUCKET(new AddProductBucketCommand(new BucketService())),
     DELETE_PRODUCT_BUCKET(new DeleteProductBucketCommand(new BucketService())),

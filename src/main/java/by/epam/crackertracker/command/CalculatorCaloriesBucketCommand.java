@@ -18,7 +18,7 @@ public class CalculatorCaloriesBucketCommand implements Command {
 
     private int calculateCallories(List<Bucket> list){
         int sum = 0;
-        if(list != null && list.size() != 0){
+        if(list != null && !list.isEmpty()){
             for(Bucket x : list){
                 sum += (int)(x.getCalories() * x.getPortions());
             }

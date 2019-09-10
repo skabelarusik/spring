@@ -18,10 +18,10 @@ import java.util.List;
 
 public class SelectAllProgramsNameCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    ProgramsNameService servise;
+    private ProgramsNameService service;
 
-    public SelectAllProgramsNameCommand(ProgramsNameService servise){
-        this.servise = servise;
+    public SelectAllProgramsNameCommand(ProgramsNameService service){
+        this.service = service;
     }
     static final int MAX_TABLE_PROGRAMS_NAME = 11;
 
@@ -54,7 +54,7 @@ public class SelectAllProgramsNameCommand implements Command {
                 throw new TrackerServiceException("Wrong service type select all programs name");
             }
 
-            List<ProgramsName> listPrograms = servise.selectAllProgramsName(intPage, typeAction);
+            List<ProgramsName> listPrograms = service.selectAllProgramsName(intPage, typeAction);
             List<ProgramsName> newList = new ArrayList<>();
             if(listPrograms.size() == MAX_TABLE_PROGRAMS_NAME){
                 newList = new ArrayList<>(listPrograms.size() - 1);
@@ -62,7 +62,7 @@ public class SelectAllProgramsNameCommand implements Command {
                 for(int i = 0; i < listPrograms.size() - 1; i++){
                     newList.add(listPrograms.get(i));
                 }
-            } else if(listPrograms.size() != 0){
+            } else if(!listPrograms.isEmpty()){
                 newList = new ArrayList<>(listPrograms.size());
                 newList.addAll(listPrograms);
             }

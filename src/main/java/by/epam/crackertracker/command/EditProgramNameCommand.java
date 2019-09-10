@@ -1,11 +1,5 @@
 package by.epam.crackertracker.command;
 
-import by.epam.crackertracker.entity.ProgramsName;
-import by.epam.crackertracker.exception.TrackerConnectionPoolException;
-import by.epam.crackertracker.exception.TrackerDBException;
-import by.epam.crackertracker.exception.TrackerServiceException;
-import by.epam.crackertracker.exception.TrackerServletException;
-import by.epam.crackertracker.service.ProgramsNameService;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
 
@@ -23,7 +17,6 @@ public class EditProgramNameCommand implements Command {
         request.setAttribute(ParameterConstant.PARAM_ID, id);
         request.setAttribute(ParameterConstant.PARAM_DURATION, duration);
         request.setAttribute(ParameterConstant.PARAM_COST, cost);
-        String page = PageConstant.PATH_PAGE_UPDATE_PROG;
-        return page;
+        return PageConstant.PATH_PAGE_UPDATE_PROG;
     }
 }

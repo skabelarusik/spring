@@ -12,11 +12,10 @@ public class GenderValidator implements ValidatorI{
     public boolean isValidate(String str) {
         boolean status = false;
 
-        if(str != null && !str.isEmpty()){
-            if(str.equalsIgnoreCase(Gender.MALE.toString()) || str.equalsIgnoreCase(Gender.FEMALE.toString())){
+        if((str != null && !str.isEmpty()) && (str.equalsIgnoreCase(Gender.MALE.toString())
+                || str.equalsIgnoreCase(Gender.FEMALE.toString()))){
                 status = true;
             }
-        }
         return status;
     }
 }

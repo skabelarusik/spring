@@ -27,8 +27,8 @@ public class ProductService {
             type = ParameterConstant.SORTED_NOTHING;
         }
         if(!validator.isValidate(type)){
-            LOGGER.warn("Wrong sort type products exception");
-            throw new TrackerServiceException("Wrong sort type products exception");
+            LOGGER.warn("Wrong sort type products  exception ");
+            throw new TrackerServiceException(" Wrong sort type products exception");
         }
         ProductDaoJdbc dao = new ProductDaoJdbc();
         try {
@@ -71,7 +71,9 @@ public class ProductService {
             nameValidator.isValidate(name) && intValidator.isValidate(id)){
             int caloriesPr = Integer.parseInt(calories);
             Product product = new Product(name, caloriesPr);
-            double carbsPr, fatsPr, proteinsPr;
+            double carbsPr;
+            double fatsPr;
+            double proteinsPr;
             if(carbs != null && !carbs.isEmpty()){
                 carbsPr = Double.parseDouble(carbs);
             } else {
@@ -89,7 +91,7 @@ public class ProductService {
             }
             product.setCarbs(carbsPr);
             product.setFats(fatsPr);
-            product.setIdproducts(Integer.parseInt(id));
+            product.setIdProducts(Integer.parseInt(id));
             product.setProteins(proteinsPr);
             ProductDaoJdbc dao = new ProductDaoJdbc();
             try {
@@ -130,7 +132,9 @@ public class ProductService {
                 nameValidator.isValidate(name)) {
             int caloriesPr = Integer.parseInt(calories);
             Product product = new Product(name, caloriesPr);
-            double carbsPr, fatsPr, proteinsPr;
+            double carbsPr;
+            double fatsPr;
+            double proteinsPr;
             if (carbs != null && !carbs.isEmpty()) {
                 carbsPr = Double.parseDouble(carbs);
             } else {

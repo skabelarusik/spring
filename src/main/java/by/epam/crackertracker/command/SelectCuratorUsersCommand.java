@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 public class SelectCuratorUsersCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    SubscriptionService service;
+    private SubscriptionService service;
 
     public SelectCuratorUsersCommand(SubscriptionService service){
         this.service = service;
