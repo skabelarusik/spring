@@ -13,6 +13,11 @@
 
 </head>
 <body>
+<script type="text/javascript">
+    <c:if test="${mess == 7}">
+    alert("<fmt:message key="alert.wronglogin" bundle="${rb}"/>");
+    </c:if>
+</script>
 <header class="headLogin">
 </header>
 <!-- top menu -->
@@ -26,7 +31,7 @@
     <div class="blockLogin">
         <!-- Login form -->
         <h3 class="h3login"><fmt:message key="label.enterlogin" bundle="${rb}"/> </h3><br/><br/>
-        <form class="loginForm" method="post" action="/controller">
+        <form class="loginForm" method="post" action="/login">
             <input type="hidden" name="command" value="login">
             <p>
             <label for="loginField" class="formText"><fmt:message key="label.login" bundle="${rb}"/> </label>

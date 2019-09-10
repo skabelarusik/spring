@@ -23,6 +23,11 @@
 
 </head>
 <body>
+<script type="text/javascript">
+    <c:if test="${mess == 4}">
+    alert("<fmt:message key="alert.wrongreg" bundle="${rb}"/>");
+    </c:if>
+</script>
 <header class="headLogin"></header>
 <!-- top menu -->
 <div class="headName">

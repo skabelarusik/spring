@@ -20,7 +20,7 @@
 </div>
 <div class="wrapperReview">
     <h4 class="h3login"><a class="smallField"
-                           href='<c:out value="${currentPage}"/>'><fmt:message key="label.back" bundle="${rb}"/></a>
+                           href='<c:out value="${currentPage}"/>'><fmt:message key="label.backmain" bundle="${rb}"/></a>
     </h4>
     <br/>
     <div class="review">
@@ -60,8 +60,12 @@
                 <input type="hidden" name="command" value="delete_message">
                 <input type="hidden" name="type" value="input">
                 <input type="hidden" name="id" value="${message.id}">
-                <input type="submit"  value="delete" class="login-button"/>
-            ${addmessagedelete}
+                <input type="submit"  value="delete" class="login-button-message"/>
+            </form>
+            <form class="loginForm" method="post" action="/send_message">
+                <input type="hidden" name="command" value="user_message">
+                <input type="hidden" name="recipient" value="${message.sender}">
+                <input type="submit"  value="answer" class="login-button-message"/>
             </form>
         </div>
     </form>
@@ -85,8 +89,7 @@
                 <input type="hidden" name="command" value="delete_message">
                 <input type="hidden" name="type" value="output">
                 <input type="hidden" name="id" value="${messageOut.id}">
-                <input type="submit"  value="delete" class="login-button"/>
-                ${addmessagedelete}
+                <input type="submit"  value="delete" class="login-button-message"/>
             </form>
         </div>
     </c:forEach>

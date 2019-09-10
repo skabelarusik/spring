@@ -1,4 +1,4 @@
-<h3>Cracker Tracker</h3>
+<h3>CrackerTracker</h3>
 
 Online portal for calculating calories, working with a curator. It has a large selection of different programs, for example 
 for weight loss or weight gain.
@@ -21,4 +21,3 @@ create programs, product content,  can edit and delete it
 ADMIN: can update user role, delete-update-create product, advice etc.
 
 EVERYONE: change language, search products, update account, change avatar, change password, calculate necessary calories, send review etc.
-

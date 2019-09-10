@@ -24,7 +24,6 @@
     <div class="blockLogin">
         <!-- Login form -->
         <h3 class="h3login"><fmt:message key="text.aboutservice" bundle="${rb}"/> </h3><br/><br/>
-
     </div>
 </div>
 <!-- registration block -->

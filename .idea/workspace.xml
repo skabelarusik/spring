@@ -5,37 +5,24 @@
       <artifact name="cracker:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/pool/ConnectionPool.java" line="108" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8dd54e56-7913-4e54-9d46-8e48b33bb191" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/UserMessageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/message.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/message.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/message_by_BY.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/message_by_BY.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/message_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/message_en_US.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/message_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/message_ru_RU.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/curator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/curator.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/deposit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/deposit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CalculatorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CalculatorCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProgramProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProgramProductCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/RegistrationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/RegistrationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllProgramsNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllProgramsNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectCuratorUsersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectCuratorUsersCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/ServletSecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/ServletSecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/XssFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/XssFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/pool/ProxyTrackerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/pool/ProxyTrackerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/AttributeSessionCleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/AttributeSessionCleaner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/ParameterConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/ParameterConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/resulttest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/program_component.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/review.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/review.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/send_review.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/send_review.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/message.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/message.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/message_by_BY.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/message_by_BY.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/message_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/message_en_US.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/message_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/message_ru_RU.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/message.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/message.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/message_by_BY.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/message_by_BY.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/message_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/message_en_US.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/message_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/message_ru_RU.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/curator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/curator.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/deposit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/deposit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/message.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/message.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/resulttest.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,16 +54,98 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="DockManager">
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/LoginCommand.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="544">
+                    <caret line="70" column="49" lean-forward="true" selection-start-line="70" selection-end-line="71" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="cracker" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/result.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/AttributeSessionCleaner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" selection-start-line="21" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="493">
+              <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CalculatorCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="39" column="107" selection-start-line="39" selection-start-column="107" selection-end-line="39" selection-end-column="107" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/message.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/RegistrationCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="536">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/ShowHistorySubscriptionCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/DurationValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/PortionsValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="21" selection-start-line="5" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/CostValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -84,80 +153,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="163" column="20" lean-forward="true" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="20" />
+            <state relative-caret-position="219">
+              <caret line="349" column="1" selection-start-line="349" selection-start-column="1" selection-end-line="349" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SendReviewCommand.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/ParameterConstant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllProgramsNameCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProgramNameCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/curator.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2397">
-              <caret line="199" column="66" selection-start-line="199" selection-start-column="66" selection-end-line="199" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/review.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteReviewCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="29" selection-start-line="29" selection-end-line="33" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ReviewDaoJdbc.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-498">
-              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="28" column="59" selection-start-line="28" selection-end-line="29" />
+            <state relative-caret-position="340">
+              <caret line="71" column="78" selection-start-line="71" selection-start-column="78" selection-end-line="71" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -187,57 +193,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddProgramNameCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteSubscribeCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllCuratorSubscriptionCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectCuratorProgramCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/EditProgramNameCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/LoginCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/TrackerServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/javascript/style.js" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/UpdateProgramCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramsNameService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/entity/Program.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/programcomponent.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProgramProductCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/editprogram.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/EditComponentProgramCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/program_component.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddProductToProgramCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/AttributeSessionCleaner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteAdviceCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddAdviceCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/deposit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageSelector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SendMessageCommand.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator2/PartValidator (2).java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator2/UserValidator (2).java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator2/BillValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator2/OrderValidator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator2/OrderValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator2/UserValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator2/CartValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/resources/ParametresTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator2/FeedbackValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/StaticFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/UserDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/calculator_rate.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/calculator.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/BucketDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/entity/Bucket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddProductBucketCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/ActionFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/BucketService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProductBucketCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/BucketDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProductIdBucketCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/calculator_calories.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CalculatorCaloriesBucketCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/TypeCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/UserMessageCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/ChangeRoleUserCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/ParameterConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/ShowReviewCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/LoadReviewCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/result.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteUserCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteReviewCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ReviewService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ReviewDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ReviewDaoJdbc.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/LoginCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/footer.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/review.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/send_review.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SendReviewCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllProgramsNameCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProgramNameCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CheckInputMessageCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CheckOutputMessageCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/superuser.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/curator.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/user.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/admin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/ServletSecurityFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllProgramsNameCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectCuratorUsersCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/XssFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/pool/ProxyTrackerConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProgramProductCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/PortionsValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CalculatorCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/ParameterConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/AttributeSessionCleaner.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/RegistrationCommand.java" />
       </list>
     </option>
   </component>
@@ -271,11 +277,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="787" />
-    <option name="y" value="8" />
-    <option name="width" value="1761" />
-    <option name="height" value="1030" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="346" />
+    <option name="y" value="57" />
+    <option name="width" value="1547" />
+    <option name="height" value="903" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -284,6 +290,22 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cracker" type="58d84e3e:PackageViewProjectNode" />
+              <item name="cracker" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="cracker" type="58d84e3e:PackageViewProjectNode" />
+              <item name="cracker" type="616d4139:PackageViewModuleNode" />
+              <item name="by.epam.crackertracker" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -333,23 +355,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="crackertracker" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cracker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="crackertracker" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cracker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cracker" type="b2602c69:ProjectViewProjectNode" />
@@ -366,21 +372,9 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
             <path>
-              <item name="cracker" type="58d84e3e:PackageViewProjectNode" />
-              <item name="cracker" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="cracker" type="58d84e3e:PackageViewProjectNode" />
-              <item name="cracker" type="616d4139:PackageViewModuleNode" />
-              <item name="by.epam.crackertracker" type="1f31426a:PackageElementNode" />
+              <item name="cracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -395,29 +389,32 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="by.epam.crackertracker.command" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\cracker\src\main\resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\WEB-INF\tld" />
       <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\tld" />
       <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp" />
       <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\picture" />
       <recent name="C:\Users\User\IdeaProjects\cracker\src\main\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\cracker\src\test\java\by\epam\crackertracker\validator2" />
+      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\picture" />
+      <recent name="C:\Users\User\Desktop\cracker\src\main\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="by.epam.crackertracker.command" />
+      <recent name="by.epam.crackertracker.controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -433,12 +430,12 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.42">
-    <configuration name="C" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.epam.krupin.crackertracker.C" />
+    <configuration name="ProgramDaoJdbcImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.dao.ProgramDaoJdbcImpl" />
       <module name="cracker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.krupin.crackertracker.*" />
+          <option name="PATTERN" value="by.epam.crackertracker.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -446,8 +443,69 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CostValidator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator.CostValidator" />
+    <configuration name="CartValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.crackertracker.validator2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator2" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator2.CartValidatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FeedbackValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.crackertracker.validator2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator2" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator2.FeedbackValidatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FeedbackValidatorTest.testIsStarValidateEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.crackertracker.validator2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator2" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator2.FeedbackValidatorTest" />
+      <option name="METHOD_NAME" value="testIsStarValidateEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FeedbackValidatorTest.testIsStarValidateNegativeSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.crackertracker.validator2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator2" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator2.FeedbackValidatorTest" />
+      <option name="METHOD_NAME" value="testIsStarValidateNegativeSize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="by.epam.crackertracker.validator in cracker" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="cracker" />
       <extension name="coverage">
         <pattern>
@@ -455,45 +513,11 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.epam.krupin.crackertracker.D" />
-      <module name="cracker" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.krupin.crackertracker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.epam.krupin.crackertracker.Main" />
-      <module name="cracker" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.krupin.crackertracker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortionsValidator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator.PortionsValidator" />
-      <module name="cracker" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.crackertracker.validator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -644,20 +668,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.D" />
-      <item itemvalue="Application.C" />
-      <item itemvalue="Application.CostValidator" />
-      <item itemvalue="Application.PortionsValidator" />
+      <item itemvalue="Application.ProgramDaoJdbcImpl" />
+      <item itemvalue="JUnit.by.epam.crackertracker.validator in cracker" />
+      <item itemvalue="JUnit.CartValidatorTest" />
+      <item itemvalue="JUnit.FeedbackValidatorTest" />
+      <item itemvalue="JUnit.FeedbackValidatorTest.testIsStarValidateEmpty" />
+      <item itemvalue="JUnit.FeedbackValidatorTest.testIsStarValidateNegativeSize" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.42" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PortionsValidator" />
-        <item itemvalue="Application.CostValidator" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.C" />
-        <item itemvalue="Application.D" />
+        <item itemvalue="Application.ProgramDaoJdbcImpl" />
+        <item itemvalue="JUnit.FeedbackValidatorTest" />
+        <item itemvalue="JUnit.FeedbackValidatorTest.testIsStarValidateNegativeSize" />
+        <item itemvalue="JUnit.FeedbackValidatorTest.testIsStarValidateEmpty" />
+        <item itemvalue="JUnit.CartValidatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -788,7 +813,18 @@
       <workItem from="1565596522155" duration="32414000" />
       <workItem from="1565648768558" duration="125000" />
       <workItem from="1565648920203" duration="47000" />
-      <workItem from="1565649014180" duration="6084000" />
+      <workItem from="1565649014180" duration="7136000" />
+      <workItem from="1565689270972" duration="6450000" />
+      <workItem from="1565697631821" duration="6000" />
+      <workItem from="1565709971962" duration="12517000" />
+      <workItem from="1565726373467" duration="8906000" />
+      <workItem from="1565768470056" duration="42673000" />
+      <workItem from="1565820762552" duration="3675000" />
+      <workItem from="1565824508110" duration="6272000" />
+      <workItem from="1565853598653" duration="20313000" />
+      <workItem from="1565884387405" duration="808000" />
+      <workItem from="1565897602904" duration="44000" />
+      <workItem from="1565897815613" duration="10892000" />
     </task>
     <task id="LOCAL-00001" summary="update 30.07">
       <created>1564601843267</created>
@@ -825,11 +861,71 @@
       <option name="project" value="LOCAL" />
       <updated>1565568040069</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update 11.08.2019">
+      <created>1565655164398</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1565655164398</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update 12.08.2019">
+      <created>1565655211435</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1565655211435</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update 12.08.2019">
+      <created>1565655533378</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1565655533378</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update 13.08.2019">
+      <created>1565730855137</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1565730855137</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="CartValidatorTest - 2019.08.15 at 03h 48m 23s.xml">
+      <configuration name="CartValidatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FeedbackValidatorTest - 2019.08.15 at 03h 51m 01s.xml">
+      <configuration name="FeedbackValidatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FeedbackValidatorTest - 2019.08.15 at 03h 51m 25s.xml">
+      <configuration name="FeedbackValidatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FeedbackValidatorTest - 2019.08.15 at 03h 51m 38s.xml">
+      <configuration name="FeedbackValidatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FeedbackValidatorTest_testIsStarValidateEmpty - 2019.08.15 at 03h 52m 20s.xml">
+      <configuration name="FeedbackValidatorTest.testIsStarValidateEmpty" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FeedbackValidatorTest_testIsStarValidateEmpty - 2019.08.15 at 03h 52m 29s.xml">
+      <configuration name="FeedbackValidatorTest.testIsStarValidateEmpty" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FeedbackValidatorTest_testIsStarValidateEmpty - 2019.08.15 at 03h 52m 36s.xml">
+      <configuration name="FeedbackValidatorTest.testIsStarValidateEmpty" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FeedbackValidatorTest - 2019.08.15 at 03h 55m 19s.xml">
+      <configuration name="FeedbackValidatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FeedbackValidatorTest_testIsStarValidateNegativeSize - 2019.08.15 at 03h 55m 30s.xml">
+      <configuration name="FeedbackValidatorTest.testIsStarValidateNegativeSize" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FeedbackValidatorTest - 2019.08.15 at 03h 55m 36s.xml">
+      <configuration name="FeedbackValidatorTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="821946000" />
+    <option name="totallyTimeSpent" value="935554000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -841,10 +937,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="787" y="8" width="1761" height="1030" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.59796804" visible="true" weight="0.19635509" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.59796804" visible="true" weight="0.13950716" />
       <window_info id="Structure" order="1" sideWeight="0.40203193" side_tool="true" weight="0.19400352" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -855,23 +950,23 @@
       <window_info id="JavaEE:App" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.62610227" visible="true" weight="0.23273942" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39532295" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.73015875" weight="0.2608225" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39458185" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32843137" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4967666" weight="0.32683983" />
       <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49970606" weight="0.32850778" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49970606" weight="0.32962137" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3738977" side_tool="true" visible="true" weight="0.23273942" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.26984128" side_tool="true" weight="0.37973273" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49911818" weight="0.21492206" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4967666" weight="0.19588745" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.12522046" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.08465819" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.15733737" />
@@ -928,22 +1023,24 @@
     <MESSAGE value="update 07.08.2019" />
     <MESSAGE value="update 10.08.2019" />
     <MESSAGE value="update 11.08.2019" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 11.08.2019" />
+    <MESSAGE value="update 12.08.2019" />
+    <MESSAGE value="update 13.08.2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 13.08.2019" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/jsp/register.jsp</url>
-          <line>71</line>
+          <line>76</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageConstant.java</url>
-          <line>18</line>
-          <properties field="PATH_PAGE_RESULT" class="by.epam.crackertracker.util.PageConstant" />
-          <option name="timeStamp" value="2" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator2/FeedbackValidatorTest.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -953,370 +1050,358 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectCuratorProgramCommand.java">
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+        <state relative-caret-position="2363">
+          <caret line="189" column="40" selection-start-line="189" selection-start-column="40" selection-end-line="189" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/entity/Message.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="170">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/entity/MealTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/header.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log/logging.txt">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tld/custom.tld">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/program_component.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="80" column="28" selection-start-line="67" selection-start-column="2" selection-end-line="87" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/structural.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/calculator_calories.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-145">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/footer.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SendMessageCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CheckInputMessageCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="42" selection-start-line="42" selection-end-line="43" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/curator.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3785">
+          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="155" column="87" selection-start-line="155" selection-start-column="87" selection-end-line="155" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/TypeCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/MessageDaoJdbcImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="177">
+          <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/editprogram.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="48" selection-start-line="48" selection-end-line="50" selection-end-column="9" />
+        <state relative-caret-position="381">
+          <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddProgramNameCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CheckOutputMessageCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="397">
+          <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/superuser.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        <state relative-caret-position="510">
+          <caret line="72" column="69" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddProductCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/LoginValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/StaticFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="100" column="67" lean-forward="true" selection-start-line="100" selection-start-column="67" selection-end-line="100" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="33" column="60" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5440">
+          <caret line="320" column="23" lean-forward="true" selection-start-line="320" selection-start-column="23" selection-end-line="320" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/ServletSecurityFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="54" column="61" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllProgramsNameCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectCuratorUsersCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/XssFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/pool/ProxyTrackerConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteMessageCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddProductToProgramCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProductBucketCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="134" column="78" lean-forward="true" selection-start-line="134" selection-start-column="78" selection-end-line="134" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/EditComponentProgramCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="17" selection-start-line="22" selection-end-line="23" />
+        <state relative-caret-position="427">
+          <caret line="31" column="84" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/program_component.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProductCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="101" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="101" />
+        <state relative-caret-position="393">
+          <caret line="42" column="50" lean-forward="true" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/AdviceService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProductIdBucketCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddAdviceCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        <state relative-caret-position="274">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding>
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProgramNameCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="36" column="59" lean-forward="true" selection-start-line="36" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteReviewCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProgramProductCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="69" selection-start-line="23" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteAdviceCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" selection-start-line="28" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/AttributeSessionCleaner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/UpdateProgramCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="58" column="30" lean-forward="true" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+        <state relative-caret-position="476">
+          <caret line="37" column="84" selection-start-line="37" selection-start-column="84" selection-end-line="37" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageConstant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="43" />
+          <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageSelector.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/PositiveIntValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/deposit.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/MinMaxCaloriesValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="66" column="75" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="75" />
+        <state relative-caret-position="51">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DepositCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/IdValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="33" column="54" lean-forward="true" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/message.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/PortionsValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="85">
+          <caret line="5" column="21" selection-start-line="5" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/UserMessageCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/CostValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SendMessageCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/DurationValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/ChangeRoleUserCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CalculatorCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" selection-start-line="27" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="336" column="34" selection-start-line="336" selection-start-column="34" selection-end-line="336" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/UserDaoJdbcImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="176" column="19" selection-start-line="176" selection-start-column="19" selection-end-line="176" selection-end-column="19" />
+        <state relative-caret-position="391">
+          <caret line="39" column="107" selection-start-line="39" selection-start-column="107" selection-end-line="39" selection-end-column="107" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/ParameterConstant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="97" column="69" selection-start-line="97" selection-start-column="69" selection-end-line="97" selection-end-column="69" />
+        <state relative-caret-position="340">
+          <caret line="71" column="78" selection-start-line="71" selection-start-column="78" selection-end-line="71" selection-end-column="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/TypeCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/AttributeSessionCleaner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+        <state relative-caret-position="493">
+          <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/message_by_BY.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="178" column="78" selection-start-line="178" selection-start-column="67" selection-end-line="178" selection-end-column="78" />
+        <state relative-caret-position="211">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/ShowReviewCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="43" column="9" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="43" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/LoadReviewCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="35" column="89" lean-forward="true" selection-start-line="35" selection-start-column="89" selection-end-line="35" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteUserCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramsNameService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="60" column="13" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ReviewDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ReviewService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="59" selection-start-line="28" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ReviewDaoJdbc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-498">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-        </state>
-      </provider>
+      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="163" column="20" lean-forward="true" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="20" />
+        <state relative-caret-position="219">
+          <caret line="349" column="1" selection-start-line="349" selection-start-column="1" selection-end-line="349" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/result.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/message.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="34" selection-end-column="13" />
+        <state relative-caret-position="408">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/send_review.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/LoginCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        <state relative-caret-position="544">
+          <caret line="70" column="49" lean-forward="true" selection-start-line="70" selection-end-line="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/review.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/ShowHistorySubscriptionCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="68">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SendReviewCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/RegistrationCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllProgramsNameCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteReviewCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="29" selection-start-line="29" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProgramNameCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/curator.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2397">
-          <caret line="199" column="66" selection-start-line="199" selection-start-column="66" selection-end-line="199" selection-end-column="66" />
+        <state relative-caret-position="536">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
@@ -1342,6 +1427,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1384,11 +1470,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>javaEEApplication|cracker</last-edited>
+          <last-edited>cracker</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

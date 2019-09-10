@@ -241,19 +241,75 @@
         </table>
     </c:forEach>
 
+    <c:if test="${not empty listSubscr}">
+        <table border="1" width="600px" class="userTable" cellspacing="0" cellpadding="4">
+            <td width="20px" class="prod3">ID</td>
+            <td width="80px" class="prod3">SUBSCRIBER</td>
+            <td width="80px" class="prod3">Name Program</td>
+            <td width="60px" class="prod3">START</td>
+            <td width="60px" class="prod3">FINISH</td>
+            <td width="50px" class="prod3">MESSAGE</td></table>
+    </c:if>
+
 
     <c:forEach items="${listSubscr}" var="subs">
-        <table border="1" width="60%" class="tableTab">
+        <table border="1" width="600px" class="userTable" cellspacing="0" cellpadding="4">
             <tr>
-                <td width="3%">${subs.id}</td>
-                <td width="17%">${subs.subscriber}</td>
-                <td width="17%">${subs.curator}</td>
-                <td width="10%">${subs.start}</td>
-                <td width="10%">${subs.finish}</td>
+                <td width="20px" class="prod3">${subs.id}</td>
+                <td width="80px" class="prod3">${subs.subscriber}</td>
+                <td width="80px" class="prod3">${subs.nameProgram}</td>
+                <td width="60px" class="prod3">${subs.start}</td>
+                <td width="60px" class="prod3">${subs.finish}</td>
+                <c:if test="${role != 'USER'}">
+                <td width="50px" class="prod3">
+                    <form class="changePageForm" method="post" action="/send_message">
+                        <input type="hidden" name="command" value="user_message">
+                        <input type="hidden" name="recipient" value="${subs.subscriber}">
+                        <input type="submit"  value="subscriber" class="uploadButtonTable"/>
+                    </form>
+                </td>
+                </c:if>
             </tr>
         </table>
     </c:forEach>
     ${messageSubsc}
+
+    <c:if test="${not empty listCuratorSubscr}">
+        <table border="1" width="600px" class="userTable" cellspacing="0" cellpadding="4">
+           <td width="20px" class="prod3">ID</td>
+           <td width="80px" class="prod3">SUBSCRIBER</td>
+           <td width="80px" class="prod3">Name Program</td>
+           <td width="60px" class="prod3">START</td>
+           <td width="60px" class="prod3">FINISH</td>
+           <td width="50px" class="prod3">MESSAGE</td>
+            <td width="50px" class="prod3">EDIT PROG</td></table>
+        </c:if>
+
+    <c:forEach items="${listCuratorSubscr}" var="subs">
+       <table border="1" width="600px" class="userTable" cellspacing="0" cellpadding="4">
+       <tr>
+            <td width="20px" class="prod3">${subs.id}</td>
+            <td width="80px" class="prod3">${subs.subscriber}</td>
+            <td width="80px" class="prod3">${subs.nameProgram}</td>
+            <td width="60px" class="prod3">${subs.start}</td>
+            <td width="60px" class="prod3">${subs.finish}</td>
+            <td width="50px" class="prod3">
+                 <form class="changePageForm" method="post" action="/send_message">
+                     <input type="hidden" name="command" value="user_message">
+                     <input type="hidden" name="recipient" value="${subs.subscriber}">
+                     <input type="submit"  value="subscriber" class="uploadButtonTable"/>
+                 </form>
+            </td>
+            <td width="50px" class="prod3">
+                 <form class="changePageForm" method="post" action="/edit_program">
+                     <input type="hidden" name="command" value="edit_component_program">
+                     <input type="hidden" name="name" value="${subs.nameProgram}">
+                     <input type="submit"  value="edit" class="uploadButtonTable"/>
+                 </form>
+            </td>
+       </tr>
+       </table>
+    </c:forEach>
 
     <!-- table programs name -->
     <c:if test="${not empty listPrograms}">
@@ -277,6 +333,7 @@
                 <td width="70px">${programs.curator}</td>
                 <td width="40px">${programs.duration}</td>
                 <td width="40px">${programs.cost}</td>
+                <c:if test="${(role == 'ADMIN')}">
                 <td width="60px">
                     <form class="changePageForm" method="post" action="/delete_program_name">
                         <input type="hidden" name="command" value="delete_program_name">
@@ -285,6 +342,18 @@
                         <input type="submit"  value="${buttonName}" class="uploadButtonTable"/>
                     </form>
                 </td>
+                </c:if>
+                <c:if test="${role == 'USER'}">
+                    <td width="60px">
+                        <form class="changePageForm" method="post" action="/buy_program">
+                            <input type="hidden" name="command" value="buy_program">
+                            <input type="hidden" name="cost" value="${programs.cost}">
+                            <input type="hidden" name="duration" value="${programs.duration}">
+                            <input type="hidden" name="id" value="${programs.id}">
+                            <input type="submit"  value="BUY" class="uploadButtonTable"/>
+                        </form>
+                    </td>
+                </c:if>
             </tr>
         </table>
     </c:forEach>

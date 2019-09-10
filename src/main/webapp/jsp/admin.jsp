@@ -18,16 +18,22 @@
 <div class="wrapper">
     <script type="text/javascript">
         <c:if test="${mess == 1}">
-        alert("Congratulations, the data has been updated!");
+        alert("<fmt:message key="alert.update" bundle="${rb}"/>");
         </c:if>
         <c:if test="${mess == 2}">
-        alert("Congratulations, data added!");
+        alert("<fmt:message key="alert.update" bundle="${rb}"/>");
         </c:if>
         <c:if test="${mess == 3}">
-        alert("Congratulations, data deleted!");
+        alert("<fmt:message key="alert.delete" bundle="${rb}"/>");
         </c:if>
         <c:if test="${mess == 4}">
-        alert("Wrong, please check it");
+        alert("<fmt:message key="alert.check" bundle="${rb}"/>");
+        </c:if>
+        <c:if test="${mess == 6}">
+        alert("<fmt:message key="alert.welcome" bundle="${rb}"/>");
+        </c:if>
+        <c:if test="${mess == 7}">
+        alert("<fmt:message key="alert.wronglogin" bundle="${rb}"/>");
         </c:if>
     </script>
     <header>
@@ -62,26 +68,26 @@
 
             <!-- avatar -->
             <div class="icon">
-                <img src=${avatar} class="icon1"/>
+                <img src="${avatar}" class="icon1"/>
             </div>
             <h5><fmt:message key="label.avatar" bundle="${rb}"/></h5>
             <div class="uploadFile">
-                <form method="post" action="/UploadServlet" enctype="multipart/form-data">
+                <form method="post" class="invisibleForm" action="/UploadServlet" enctype="multipart/form-data">
                     <label for="changeAva" class="uploadButton"><fmt:message key="button.selectfile" bundle="${rb}"/></label>
-                    <input style="opacity: 0; z-index: -1;" type="file" id="changeAva" name="file" /><br />
+                    <input style="opacity: 0; z-index: -1;" type="file" id="changeAva" name="file" />
                     <input type="submit" value="<fmt:message key="button.upload" bundle="${rb}"/>"
-                        size="10" class="login-button" /><br/>
-                        ${errorDownload}
+                           size="10" class="login-button" /><br/>
+                    ${errorDownload}
                 </form>
             </div>
             <div class="message">
-                 <a href="/jsp/editing.jsp"><fmt:message key="button.edit" bundle="${rb}"/></a>
+                 <a href="/controller_admin?command=update_profile"><fmt:message key="button.edit" bundle="${rb}"/></a>
             </div>
             <div class="message">
                 <h4><fmt:message key="label.message" bundle="${rb}"/></h4>
                 <h5><a href="/controller_admin?command=input_message"><fmt:message key="label.input" bundle="${rb}"/></a></h5>
                 <h5><a href="/controller_admin?command=output_message"><fmt:message key="label.output" bundle="${rb}"/></a></h5>
-                <h5><a href="/jsp/message.jsp"><fmt:message key="label.sendmessage" bundle="${rb}"/> </a></h5>
+                <h5><a href="/controller_admin?command=send_message"><fmt:message key="label.sendmessage" bundle="${rb}"/> </a></h5>
             </div>
 
         </div>
@@ -89,15 +95,15 @@
         <!-- center block -->
         <div class="block2">
             <div class="searchheader">
-                <form class="adviceForm" method="post" action="/controller">
+                <form class="adviceForm" method="post" action="/controller_admin">
                     <input type="hidden" name="command" value="search_product">
                     <p><input  class="adminBlock" type="search" name="text" value="" placeholder="Поиск продуктов по сайту">
                         <input  class="adminBlock" type="submit" value="Найти"></p>
                 </form>
             </div>
-            <h4><fmt:message key="label.logoutmess" bundle="${rb}"/> </h4>
+            <h4><br/><fmt:message key="label.logoutmess" bundle="${rb}"/> </h4>
             <a href="/controller_admin?command=logout" class="aBlock2"><h5><fmt:message key="label.logout" bundle="${rb}"/></h5></a>
-            <br/>
+                <br/>
 
             <!-- panel users -->
             <div class="wrapperBlock2">
@@ -344,20 +350,20 @@
         <div class="icon">
             <img src="/jsp/picture/oracle.png" class="icon1">
         </div>
+        <br/>
         <div class="icon">
             <img src="/jsp/picture/mysql.jpg" class="icon1">
         </div>
+        <br/>
         <div class="icon">
             <img src="/jsp/picture/tomcat.png" class="icon1">
         </div>
     </div>
     </div>
-
+</div>
     <footer>
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>
-
-
 </body>
 </html>

@@ -15,6 +15,20 @@
 
 </head>
 <body>
+<script type="text/javascript">
+    <c:if test="${mess == 5}">
+    alert("<fmt:message key="alert.regist" bundle="${rb}"/>");
+    </c:if>
+    <c:if test="${mess == 4}">
+    alert("<fmt:message key="alert.check" bundle="${rb}"/>");
+    </c:if>
+    <c:if test="${mess == 6}">
+    alert("<fmt:message key="alert.welcome" bundle="${rb}"/>");
+    </c:if>
+    <c:if test="${mess == 7}">
+    alert("<fmt:message key="alert.wronglogin" bundle="${rb}"/>");
+    </c:if>
+</script>
 <div class="wrapper">
     <header>
         <jsp:include page="header.jsp"/>
@@ -39,11 +53,11 @@
     <div class="wrapperBlocks">
         <!-- left column -->
         <div class="block1">
-            <h3><fmt:message key="label.welcome" bundle="${rb}"/>, ${login}</h3>
+            <h3><fmt:message key="label.welcome" bundle="${rb}"/> ${login}</h3>
 
             <!-- avatar -->
             <div class="icon">
-                <img src=${avatar} class="icon1"/>
+                <img src="${avatar}" class="icon1"/>
             </div>
             <h5><fmt:message key="label.avatar" bundle="${rb}"/></h5>
             <div class="uploadFile">
@@ -56,13 +70,13 @@
                 </form>
             </div>
             <div class="message">
-                <a href="/jsp/editing.jsp" class="invisibleForm"><fmt:message key="button.edit" bundle="${rb}"/></a>
+                <a href="/controller_user?command=update_profile" class="invisibleForm"><fmt:message key="button.edit" bundle="${rb}"/></a>
             </div>
             <div class="message">
                 <h4><fmt:message key="label.message" bundle="${rb}"/></h4>
-                <h5><a href="/controller_curator?command=input_message" class="invisibleForm"><fmt:message key="label.input" bundle="${rb}"/></a></h5>
-                <h5><a href="/controller_curator?command=output_message" class="invisibleForm"><fmt:message key="label.output" bundle="${rb}"/></a></h5>
-                <h5><a href="/jsp/message.jsp" class="invisibleForm"><fmt:message key="label.sendmessage" bundle="${rb}"/> </a></h5>
+                <h5><a href="/controller_user?command=input_message" class="invisibleForm"><fmt:message key="label.input" bundle="${rb}"/></a></h5>
+                <h5><a href="/controller_user?command=output_message" class="invisibleForm"><fmt:message key="label.output" bundle="${rb}"/></a></h5>
+                <h5><a href="/controller_user?command=send_message" class="invisibleForm"><fmt:message key="label.sendmessage" bundle="${rb}"/> </a></h5>
             </div>
 
         </div>
@@ -75,21 +89,23 @@
                         <input  class="adminBlock" type="submit" value="Найти"></p>
                 </form>
             </div>
-            <h4><fmt:message key="label.logoutmess" bundle="${rb}"/> </h4>
-            <a href="/controller_admin?command=logout" class="aBlock2"><h5><fmt:message key="label.logout" bundle="${rb}"/></h5></a>
+            <h4><br/><fmt:message key="label.logoutmess" bundle="${rb}"/> </h4>
+            <a href="/controller_user?command=logout" class="aBlock2"><h5><fmt:message key="label.logout" bundle="${rb}"/></h5></a>
             <br/>
-            <jsp:include page="calculator.jsp"/><br/>
-            <jsp:include page="calculator_rate.jsp"/><br/>
-
             <!-- panel users -->
             <div class="wrapperBlock2">
                 <div class="blockUsers">
+                    <!-- panel calculate -->
                     <div class="productBlock">
+                        <jsp:include page="calculator.jsp"/><br/>
+                        <jsp:include page="calculator_rate.jsp"/><br/>
+                    </div>
+                    <div class="blockLearner">
                         <h4 class="adminBlock"><fmt:message key="label.showuser" bundle="${rb}"/> </h4>
-                        <a href="/controller_curator?command=select_user"><h5 class="adminBlock"><fmt:message key="button.show"
+                        <a href="/controller_user?command=select_user"><h5 class="adminBlock"><fmt:message key="button.show"
                                                                                                               bundle="${rb}"/></h5></a><br/>
                         <h4 class="adminBlock"><fmt:message key="label.showuserstatus" bundle="${rb}"/></h4>
-                        <form class="adminBlock" method="post" action="/controller_curator">
+                        <form class="adminBlock" method="post" action="/controller_user">
                             <input type="hidden" name="command" value="select_user_status">
                             <p>
                                 <label for="user" class="adviceForm"> <fmt:message key="label.user" bundle="${rb}"/></label>
@@ -109,7 +125,7 @@
 
                         <!-- select user by gender -->
                         <h4 class="adminBlock"><fmt:message key="label.showusergender" bundle="${rb}"/></h4>
-                        <form class="adminBlock" method="post" action="/controller_curator">
+                        <form class="adminBlock" method="post" action="/controller_user">
                             <input type="hidden" name="command" value="select_user_gender">
                             <p>
                                 <label for="sex1" class="adviceForm"> <fmt:message key="label.sexmale" bundle="${rb}"/></label>
@@ -118,39 +134,26 @@
                                 <input autofocus id="sex2" type="radio" name="gender" value="female"></p>
                             <input type="submit" value="<fmt:message key="button.show" bundle="${rb}"/>" class="login-button"/>
                         </form><br/>
-                    </div>
 
-                    <!-- panel learner -->
-                    <div class="blockLearner">
-                        <h4 class="adminBlock"><fmt:message key="label.mysubscriber" bundle="${rb}"/></h4>
-                        <a href="/controller_curator?command=select_all_curator_subs"><h5 class="adminBlock">
-                            <fmt:message key="label.show" bundle="${rb}"/></h5></a>
-                        <h4 class="adminBlock"><fmt:message bundle="${rb}" key="label.showprogname" /></h4>
-                        <a href="/controller_curator?command=select_curator_programs"><h5 class="adminBlock">
-                            <fmt:message key="label.show" bundle="${rb}"/></h5></a><br/>
-                        ${msgSelectPrName}
+                        <h4 class="adminBlock"><fmt:message key="label.reqcurator" bundle="${rb}"/> </h4>
+                        <a href="/controller_user?command=select_user_status&role=admin"><h5 class="adminBlock"><fmt:message key="button.click"
+                                                                                                              bundle="${rb}"/></h5></a><br/>
 
                     </div>
 
-
-                    <div class="blockLearner">
-
-                        <h4 class="adminBlock"><fmt:message key="label.review" bundle="${rb}"/></h4>
-                        <a href="/controller_curator?command=show_review"><h5 class="adminBlock">SelectAllReview</h5></a><br/>
-
-                    </div>
                 <br/>
                 </div>
+
 
                 <!-- panel product -->
                 <div class="anotherBlock">
                     <div class="productBlock">
                         <h4 class="adminBlock"><fmt:message key="label.productbox" bundle="${rb}"/></h4>
-                        <a href="/controller_curator?command=select_all_products">
+                        <a href="/controller_user?command=select_all_products">
                             <h5 class="adminBlock"><fmt:message key="label.selectproduct" bundle="${rb}"/> </h5>
                         </a><br/>
                         <!-- select products by callories -->
-                        <form class="adminBlock" method="post" action="/controller_curator">
+                        <form class="adminBlock" method="post" action="/controller_user">
                             <input type="hidden" name="command" value="select_product">
                             <p>
                                 <label for="minCalories" class="formText2"><fmt:message key="label.mincalor" bundle="${rb}"/></label>
@@ -164,76 +167,24 @@
                             </p>
                             <input type="submit" class="login-button" value="<fmt:message key="button.show" bundle="${rb}"/>"/>
                         </form><br/>
-
-                        <!-- delete product -->
-                        <form class="adminBlock" method="post" action="/controller_curator">
-                            <input type="hidden" name="command" value="delete_product">
-                            <h4 class="adminBlock"><fmt:message key="label.deleteproduct" bundle="${rb}"/></h4>
-                            <p>
-                                <label for="idProd" class="formText2">Id</label>
-                                <input type="number" name="id" maxlength="9" autofocus id="idProd"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input id">
-                            </p>
-                            <p>
-                                <label for="nameProd" class="formText2"><fmt:message key="label.name" bundle="${rb}"/></label>
-                                <input type="text" name="nameProduct" maxlength="35" autofocus id="nameProd"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input name">
-                            </p>
-                            <input type="submit" value="<fmt:message key="button.delete" bundle="${rb}"/>" class="login-button"/>
-                            ${messageDeleteProduct}
-                        </form>
-
-                        <!-- add product -->
-                        <form class="adminBlock" method="post" action="/controller_curator">
-                            <input type="hidden" name="command" value="add_product">
-                            <h4 class="adminBlock"><fmt:message key="label.addproduct" bundle="${rb}"/></h4>
-                            <p>
-                                <label for="nameNewProduct" class="formText2"><fmt:message key="label.name" bundle="${rb}"/></label>
-                                <input type="text" name="nameProduct" maxlength="35" autofocus id="nameNewProduct"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input name">
-                            </p>
-                            <p>
-                                <label for="caloriesNewProduct" class="formText2"><fmt:message key="label.calor" bundle="${rb}"/></label>
-                                <input type="number" name="caloriesProduct" maxlength="9" autofocus id="caloriesNewProduct"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input calories">
-                            </p>
-                            <p>
-                                <label for="proteinsNewProduct" class="formText2"><fmt:message key="label.proteins" bundle="${rb}"/></label>
-                                <input type="number" name="proteinsProduct" maxlength="9" autofocus id="proteinsNewProduct"
-                                       value=""  class="formInput2" placeholder="Input proteins">
-                            </p>
-                            <p>
-                                <label for="fatsNewProduct" class="formText2"><fmt:message key="label.fats" bundle="${rb}"/></label>
-                                <input type="number" name="fatsProduct" maxlength="9" autofocus id="fatsNewProduct"
-                                       value=""  class="formInput2" placeholder="Input proteins">
-                            </p>
-                            <p>
-                                <label for="carbsNewProduct" class="formText2"><fmt:message key="label.carbs" bundle="${rb}"/></label>
-                                <input type="number" name="carbsProduct" maxlength="9" autofocus id="carbsNewProduct"
-                                       value=""  class="formInput2" placeholder="Input proteins">
-                            </p>
-                            <input type="submit" class="login-button" value="<fmt:message key="button.insert" bundle="${rb}"/>"/><br/>
-                            ${messageInsertProduct}
-                        </form>
                     </div>
 
+                    <!-- user calculator -->
+                    <div class="blockAdvice">
+                        <jsp:include page="calculator_calories.jsp"/><br/>
+                    </div>
 
                     <div class="blockAdvice">
-                        <h4 class="adminBlock"><fmt:message key="label.advicebox" bundle="${rb}"/></h4>
-                        <a href="/controller_curator?command=select_advice"><h5 class="adminBlock">
-                            <fmt:message key="label.selectadvice" bundle="${rb}"/> </h5></a><br/>
-                        <form class="adviceForm" method="post" action="/controller_curator">
-                            <input type="hidden" name="command" value="<fmt:message key="button.insert" bundle="${rb}"/>">
-                            <h4 class="adminBlock">
-                                <fmt:message key="label.addadvice" bundle="${rb}"/></h4>
-                            <input type="text" name = "advice" placeholder="message" id="advice" value="" class="formInputAdmin"/>
-                            <input type="submit" class="login-button" value="<fmt:message key="button.insert" bundle="${rb}"/>"/>
-                            <br/>${addmessage}
-                        </form>
-                    </div>
+
+                        <h4 class="adminBlock"><fmt:message bundle="${rb}" key="label.showprogname" /></h4>
+                        <a href="/controller_user?command=select_all_programs_name&type=1"><h5 class="adminBlock">
+                            <fmt:message key="label.show" bundle="${rb}"/></h5></a><br/>
+
+                        <h4 class="adminBlock"><fmt:message bundle="${rb}" key="label.showsub" /></h4>
+                        <a href="/controller_user?command=show_history_subscription"><h5 class="adminBlock">
+                            <fmt:message key="label.show_history_subs" bundle="${rb}"/></h5></a>                    </div>
                     <br/>
                 </div>
-
             </div>
         </div>
         <div class="block3">
@@ -246,9 +197,11 @@
             <div class="icon">
                 <img src="/jsp/picture/oracle.png" class="icon1">
             </div>
+            <br/>
             <div class="icon">
                 <img src="/jsp/picture/mysql.jpg" class="icon1">
             </div>
+            <br/>
             <div class="icon">
                 <img src="/jsp/picture/tomcat.png" class="icon1">
             </div>

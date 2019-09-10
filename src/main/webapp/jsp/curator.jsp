@@ -4,8 +4,6 @@
 <%@taglib prefix="ctg" uri="customtag" %>
 <fmt:setLocale value="${lang}" scope="session" />
 <fmt:setBundle basename="message" var="rb" />
-<%@page import="by.epam.crackertracker.entity.MealDay"%>
-
 
 <html>
 <head>
@@ -19,16 +17,22 @@
 <div class="wrapper">
     <script type="text/javascript">
         <c:if test="${mess == 1}">
-        alert("Congratulations, the data has been updated!");
+        alert("<fmt:message key="alert.update" bundle="${rb}"/>");
         </c:if>
         <c:if test="${mess == 2}">
-        alert("Congratulations, data added!");
+        alert("<fmt:message key="alert.update" bundle="${rb}"/>");
         </c:if>
         <c:if test="${mess == 3}">
-        alert("Congratulations, data deleted!");
+        alert("<fmt:message key="alert.delete" bundle="${rb}"/>");
         </c:if>
         <c:if test="${mess == 4}">
-        alert("Wrong, please check it");
+        alert("<fmt:message key="alert.check" bundle="${rb}"/>");
+        </c:if>
+        <c:if test="${mess == 6}">
+        alert("<fmt:message key="alert.welcome" bundle="${rb}"/>");
+        </c:if>
+        <c:if test="${mess == 7}">
+        alert("<fmt:message key="alert.wronglogin" bundle="${rb}"/>");
         </c:if>
     </script>
     <header>
@@ -58,7 +62,7 @@
 
             <!-- avatar -->
             <div class="icon">
-                <img src=${avatar} class="icon1"/>
+                <img src="${avatar}" class="icon1"/>
             </div>
             <h5><fmt:message key="label.avatar" bundle="${rb}"/></h5>
             <div class="uploadFile">
@@ -71,13 +75,13 @@
                 </form>
             </div>
             <div class="message">
-                <a href="/jsp/editing.jsp" class="invisibleForm"><fmt:message key="button.edit" bundle="${rb}"/></a>
+                <a href="/controller_curator?command=update_profile" class="invisibleForm"><fmt:message key="button.edit" bundle="${rb}"/></a>
             </div>
             <div class="message">
                 <h4><fmt:message key="label.message" bundle="${rb}"/></h4>
                 <h5><a href="/controller_curator?command=input_message" class="invisibleForm"><fmt:message key="label.input" bundle="${rb}"/></a></h5>
                 <h5><a href="/controller_curator?command=output_message" class="invisibleForm"><fmt:message key="label.output" bundle="${rb}"/></a></h5>
-                <h5><a href="/jsp/message.jsp" class="invisibleForm"><fmt:message key="label.sendmessage" bundle="${rb}"/> </a></h5>
+                <h5><a href="/controller_curator?command=send_message" class="invisibleForm"><fmt:message key="label.sendmessage" bundle="${rb}"/> </a></h5>
             </div>
 
         </div>
@@ -90,7 +94,7 @@
                         <input  class="adminBlock" type="submit" value="Найти"></p>
                 </form>
             </div>
-            <h4><fmt:message key="label.logoutmess" bundle="${rb}"/> </h4>
+            <h4><br/><fmt:message key="label.logoutmess" bundle="${rb}"/> </h4>
             <a href="/controller_curator?command=logout" class="aBlock2"><h5><fmt:message key="label.logout" bundle="${rb}"/></h5></a>
             <br/>
 
@@ -166,57 +170,12 @@
                             ${messageProgramName}
                         </form><br/>
 
-                        <!-- add components to program -->
-                        <form class="adminBlock" method="post" action="/controller_curator">
-                            <input type="hidden" name="command" value="add_product_to_program">
-                            <h4 class="adminBlock"><fmt:message key="label.addcomponentprog" bundle="${rb}"/></h4>
-                            <p>
-                                <label for="idProgram" class="formText2"><fmt:message key="label.progname" bundle="${rb}"/></label>
-                                <input type="text" name="idProgram" maxlength="40" autofocus id="idProgram"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input name">
-                            </p>
-                            <p>
-                                <label for="numProduct" class="formText2"><fmt:message key="label.product" bundle="${rb}"/></label>
-                                <input type="text" name="numProduct" maxlength="35" autofocus id="numProduct"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input cost">
-                            </p>
-                            <p>
-                                <label for="portions" class="formText2"><fmt:message key="label.durprog" bundle="${rb}"/></label>
-                                <input type="text" name="portions" maxlength="4" autofocus id="portions"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input portions">
-                            </p>
-                            <select name="day" class="whiteBlock">
-                                <option>MONDAY</option>
-                                <option>TUESDAY</option>
-                                <option>WEDNESDAY</option>
-                                <option>THURSDAY</option>
-                                <option>FRIDAY</option>
-                                <option>SATURDAY</option>
-                                <option>SUNDAY</option>
-                                <option>WEEKDAYS</option>
-                                <option>WEEKEND</option>
-                                <option>ALL</option>
-                            </select>
-                            <select name="time" class="whiteBlock">
-                                <option>BREAKFAST</option>
-                                <option>SECOND_BREAKFAST</option>
-                                <option>LUNCH</option>
-                                <option>SECOND_LUNCH</option>
-                                <option>DINNER</option>
-                                <option>SECOND_DINNER</option>
-                            </select>
-                            <input type="submit" class="login-button" value="<fmt:message key="button.insert" bundle="${rb}"/>"/><br/>
-                            ${messageInsertProduct}
+                            <h4 class="adminBlock"><fmt:message key="label.mysubscriber" bundle="${rb}"/></h4>
+                            <a href="/controller_curator?command=select_all_curator_subs"><h5 class="adminBlock">
+                                <fmt:message key="label.show" bundle="${rb}"/></h5></a><br/>
                         </form>
                     </div>
-
-
-                    <!-- subscribers block -->
-                    <div class="blockLearner">
-                        <h4 class="adminBlock"><fmt:message key="label.mysubscriber" bundle="${rb}"/></h4>
-                        <a href="/controller_curator?command=select_all_curator_subs"><h5 class="adminBlock">
-                            <fmt:message key="label.show" bundle="${rb}"/></h5></a>
-                    </div><br/>
+                    <br/>
                 </div>
 
                 <!-- panel product -->
@@ -329,6 +288,9 @@
                         </form>
                     </div>
 
+                    <div class="blockAdvice">
+                        <jsp:include page="calculator_calories.jsp"/><br/>
+                    </div>
 
                     <div class="blockAdvice">
                         <h4 class="adminBlock"><fmt:message key="label.advicebox" bundle="${rb}"/></h4>
@@ -358,9 +320,11 @@
             <div class="icon">
                 <img src="/jsp/picture/oracle.png" class="icon1">
             </div>
+            <br/>
             <div class="icon">
                 <img src="/jsp/picture/mysql.jpg" class="icon1">
             </div>
+            <br/>
             <div class="icon">
                 <img src="/jsp/picture/tomcat.png" class="icon1">
             </div>
@@ -370,7 +334,5 @@
         <jsp:include page="footer.jsp"/>
     </footer>
 </div>
-
-
 </body>
 </html>

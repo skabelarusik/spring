@@ -1,24 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 18.06.2019
-  Time: 12:54
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page isErrorPage="true" contentType="text/html; charset-UTF-8" pageEncoding="UTF-8" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<fmt:setLocale value="${lang}" scope="session" />
+<fmt:setBundle basename="message" var="rb" />
 <html>
-<title>Error Page</title>
-<body>
+<title><fmt:message key="label.error" bundle="${rb}"/></title><body>
 <br/>
 Request from ${pageContext.errorData.requestURI} is failed
 <br/>
-Status code: ${pageContext.errorData.statusCode}
+
 <br/>
-Exception: ${pageContext.errorData.throwable}
-<br/>
-Message from exception: ${pageContext.exception.message}
-<br/>
-${error}
+<h4 class="alert-heading"><fmt:message key="label.sorry" bundle="${rb}"/></h4>
+<hr/>
+<p><fmt:message key="message.error" bundle="${rb}"/></p>
+<div><span class="code">  ${pageContext.errorData.statusCode}</span></div>
+<div class="error_message">${pageContext.request.getAttribute("message")}</div><hr/>
 <a href="${currentPage}">
     Back
 </a>
