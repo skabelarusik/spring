@@ -60,14 +60,15 @@ public class ProductDaoJdbc implements ProductDao {
         String sqlReq = null;
         switch (type){
             case "INCREASE_CALORIES": sqlReq = SELECT_ALL_PRODUCT;
-            break;
+                break;
             case "DECREASE_CALORIES": sqlReq = SELECT_ALL_PRODUCT_DECREASE_CALORIES;
-            break;
-            case "NOTHING": sqlReq = SELECT_ALL_PRODUCT_INCREASE_CALORIES;
-            break;
+                break;
             case "INCREASE_NAME": sqlReq = SELECT_ALL_PRODUCT_INREASE_NAME;
-            break;
+                break;
             case "DECREASE_NAME": sqlReq = SELECT_ALL_PRODUCT_DECREASE_NAME;
+                break;
+            default: sqlReq = SELECT_ALL_PRODUCT_INCREASE_CALORIES;
+                break;
         }
         try {
             connection = ConnectionPool.getInstance().takeConnection();
@@ -158,11 +159,12 @@ public class ProductDaoJdbc implements ProductDao {
                     break;
                 case "DECREASE_CALORIES": sqlReq = SELECT_PRODUCTS_RANGE_CALORIES_DECREASE;
                     break;
-                case "NOTHING": sqlReq = SELECT_PRODUCTS_RANGE_CALORIES_INCREASE;
-                    break;
                 case "INCREASE_NAME": sqlReq = SELECT_PRODUCTS_RANGE_NAME_INCREASE;
                     break;
                 case "DECREASE_NAME": sqlReq = SELECT_PRODUCTS_RANGE_NAME_DECREASE;
+                    break;
+                default: sqlReq = SELECT_PRODUCTS_RANGE_CALORIES_INCREASE;
+                    break;
             }
             statement = connection.prepareStatement(sqlReq);
             statement.setInt(1, min);
@@ -174,7 +176,7 @@ public class ProductDaoJdbc implements ProductDao {
             }
         } catch (TrackerConnectionPoolException | SQLException e) {
             LOGGER.error(e);
-            new TrackerDBException("Wrong range calories" ,e);
+            throw new TrackerDBException("Wrong range calories" ,e);
         } finally {
             this.closeQuietly(resultSet);
             this.closeQuietly(statement);
@@ -204,7 +206,7 @@ public class ProductDaoJdbc implements ProductDao {
             }
         } catch (TrackerConnectionPoolException | SQLException e) {
             LOGGER.error(e);
-            new TrackerDBException("Wrong update product", e);
+            throw new TrackerDBException("Wrong update product", e);
         } finally {
             this.closeQuietly(statement);
             this.closeQuietly(connection);
@@ -241,13 +243,17 @@ public class ProductDaoJdbc implements ProductDao {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         boolean status;
-        try { statement = connection.prepareStatement(SELECT_NAME_PRODUCT);
-        statement.setString(1, name);
-        resultSet = statement.executeQuery();
-        status = resultSet.next();
+        try {
+            statement = connection.prepareStatement(SELECT_NAME_PRODUCT);
+            statement.setString(1, name);
+            resultSet = statement.executeQuery();
+            status = resultSet.next();
         } catch (SQLException e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong insert product",e);
+        } finally {
+            this.closeQuietly(resultSet);
+            this.closeQuietly(statement);
         }
         return status;
     }
@@ -264,6 +270,9 @@ public class ProductDaoJdbc implements ProductDao {
         } catch (SQLException e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong select id product" ,e);
+        } finally {
+            this.closeQuietly(resultSet);
+            this.closeQuietly(statement);
         }
         return status;
     }
@@ -281,6 +290,9 @@ public class ProductDaoJdbc implements ProductDao {
         } catch (SQLException e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong select id product" ,e);
+        } finally {
+            this.closeQuietly(resultSet);
+            this.closeQuietly(statement);
         }
         return status;
     }

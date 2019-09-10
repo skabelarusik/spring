@@ -15,7 +15,6 @@ public class BirthdayValidator implements ValidatorI {
     private static final String SPLIT_DATE = "-";
     private static final int FEBR_DAYS = 28;
     private static final int VYS_FEBR_DAYS = 29;
-    private static final int DAYS_30 = 30;
     private static final int DAYS_31 = 31;
 
     @Override
@@ -30,10 +29,8 @@ public class BirthdayValidator implements ValidatorI {
                 status = checkRange(str);
             } else {
                 if(month == Month.FEBRUARY.getValue()){
-                    if(day == VYS_FEBR_DAYS){
-                        if(years % 4 == 0){
-                            status = checkRange(str);
-                        }
+                    if(day == VYS_FEBR_DAYS && years % 4 == 0){
+                        status = checkRange(str);
                     }
                 }else{
                     if(day < DAYS_31){
@@ -51,15 +48,15 @@ public class BirthdayValidator implements ValidatorI {
         return status;
             }
 
-            private boolean checkRange(String str){
-                boolean status = false;
-                LocalDate birthday = LocalDate.parse(str);
-                LocalDate current = LocalDate.now();
-                LocalDate minDate = current.minusYears(MIN_AGE);
-                LocalDate maxDate = current.minusYears(MAX_AGE);
-                if(birthday.isAfter(maxDate) && birthday.isBefore(minDate)){
-                    status = true;
-                }
-                return status;
-            }
+        private boolean checkRange(String str){
+           boolean status = false;
+           LocalDate birthday = LocalDate.parse(str);
+           LocalDate current = LocalDate.now();
+           LocalDate minDate = current.minusYears(MIN_AGE);
+           LocalDate maxDate = current.minusYears(MAX_AGE);
+           if(birthday.isAfter(maxDate) && birthday.isBefore(minDate)){
+               status = true;
+           }
+           return status;
+        }
 }

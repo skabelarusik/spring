@@ -17,7 +17,7 @@ import java.util.List;
 
 public class SelectAllCuratorSubscriptionCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    SubscriptionService service;
+    private SubscriptionService service;
 
     public SelectAllCuratorSubscriptionCommand(SubscriptionService service){
         this.service = service;

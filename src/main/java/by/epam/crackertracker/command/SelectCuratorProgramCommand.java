@@ -20,10 +20,10 @@ import static by.epam.crackertracker.command.SelectAllProgramsNameCommand.MAX_TA
 
 public class SelectCuratorProgramCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    ProgramsNameService servise;
+    private ProgramsNameService service;
 
-    public SelectCuratorProgramCommand(ProgramsNameService servise){
-        this.servise = servise;
+    public SelectCuratorProgramCommand(ProgramsNameService service){
+        this.service = service;
     }
     @Override
     public String execute(HttpServletRequest request) {
@@ -54,7 +54,7 @@ public class SelectCuratorProgramCommand implements Command {
             } else {
                 throw new TrackerServiceException("Wrong service type select all curators programs name");
             }
-            List<ProgramsName> list = servise.selectCuratorProgramsName(login, intPage, typeAction);
+            List<ProgramsName> list = service.selectCuratorProgramsName(login, intPage, typeAction);
             List<ProgramsName> newList = new ArrayList<>();
             if(list.size() == MAX_TABLE_PROGRAMS_NAME){
                 newList = new ArrayList<>(list.size() - 1);
@@ -62,7 +62,7 @@ public class SelectCuratorProgramCommand implements Command {
                 for(int i = 0; i < list.size() - 1; i++){
                     newList.add(list.get(i));
                 }
-            } else if(list.size() != 0){
+            } else if(!list.isEmpty()){
                 newList = new ArrayList<>(list.size());
                 newList.addAll(list);
             }

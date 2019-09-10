@@ -31,9 +31,9 @@ public class ReviewDaoJdbc implements ReviewDao {
 
     @Override
     public List<Review> selectAllReview(int show) throws TrackerDBException {
-        Connection connection;
-        PreparedStatement statement;
-        ResultSet resultSet;
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
         List<Review> list= new ArrayList<>();
         try{
             connection = ConnectionPool.getInstance().takeConnection();
@@ -52,6 +52,10 @@ public class ReviewDaoJdbc implements ReviewDao {
         } catch (TrackerConnectionPoolException | SQLException e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong select reviews");
+        } finally {
+            this.closeQuietly(resultSet);
+            this.closeQuietly(statement);
+            this.closeQuietly(connection);
         }
         return list;
     }
@@ -102,6 +106,9 @@ public class ReviewDaoJdbc implements ReviewDao {
         } catch (TrackerConnectionPoolException | SQLException e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong insert review");
+        } finally {
+            this.closeQuietly(statement);
+            this.closeQuietly(connection);
         }
         return status;
     }

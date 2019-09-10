@@ -6,7 +6,6 @@
 package by.epam.crackertracker.service;
 
 import by.epam.crackertracker.dao.MessageDaoJdbcImpl;
-import by.epam.crackertracker.dao.UserDaoJdbcImpl;
 import by.epam.crackertracker.entity.Message;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.validator.IdValidator;
@@ -35,7 +34,7 @@ public class MessageService {
         try {
             result = dao.selectInputMessage(login, page);
         } catch (TrackerDBException e) {
-            LOGGER.error("Wrong service check input message", e);
+            LOGGER.error("Wrong service check input message ", e);
             throw new TrackerServiceException("Wrong service check input message",e);
         }
         return result;
@@ -62,7 +61,6 @@ public class MessageService {
     public boolean sendMessage(String sender, String recipient, String topic, String text) throws TrackerServiceException {
         LoginValidator loginValidator = new LoginValidator();
         MessageDaoJdbcImpl dao;
-        UserDaoJdbcImpl userDao = new UserDaoJdbcImpl();
         boolean status = false;
         if(loginValidator.isValidate(recipient) && topic!= null && !topic.isEmpty() &&
             text!=null && !text.isEmpty() && text.length()<=MAX_SIZE_TEXT &&

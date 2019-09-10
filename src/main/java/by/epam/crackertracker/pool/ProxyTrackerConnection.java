@@ -6,10 +6,6 @@
 
 package by.epam.crackertracker.pool;
 
-import by.epam.crackertracker.exception.TrackerConnectionPoolException;
-import com.mysql.cj.log.Log;
-import org.apache.log4j.Logger;
-
 import java.sql.*;
 import java.util.Map;
 import java.util.Properties;
@@ -17,7 +13,6 @@ import java.util.concurrent.Executor;
 
 
 class ProxyTrackerConnection implements Connection {
-    private static final Logger LOGGER = Logger.getRootLogger();
     private Connection connection;
 
      ProxyTrackerConnection(Connection connection) {
@@ -66,11 +61,7 @@ class ProxyTrackerConnection implements Connection {
 
     @Override
     public void close(){
-        try {
-            ConnectionPool.getInstance().releaseConnection(this);
-        } catch (TrackerConnectionPoolException e) {
-            LOGGER.error("Wrong close connection", e);
-        }
+         ConnectionPool.getInstance().releaseConnection(this);
     }
 
     void finishClose() throws SQLException {

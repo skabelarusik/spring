@@ -10,7 +10,6 @@ import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
 import by.epam.crackertracker.service.ProductService;
-import by.epam.crackertracker.validator.IdValidator;
 import by.epam.crackertracker.validator.MinMaxCaloriesValidator;
 import org.apache.log4j.Logger;
 
@@ -62,7 +61,7 @@ public class SelectProductByCaloriesCommand implements Command {
                 return page;
             }
             List<Product> newProductList = new ArrayList<>();
-            if (productList.size() > 0 && productList.size() < MAX_TABLE_PRODUCTS) {
+            if (!productList.isEmpty() && productList.size() < MAX_TABLE_PRODUCTS) {
                 newProductList = new ArrayList<>(productList.size());
                 for (int i = 0; i < productList.size(); i++) {
                     newProductList.add(productList.get(i));
@@ -74,7 +73,7 @@ public class SelectProductByCaloriesCommand implements Command {
                 }
                 request.setAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
             }
-            if (newProductList != null) {
+            if (!newProductList.isEmpty()) {
                 request.setAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS_BY_CALORIES, productList);
                 page = PageConstant.PATH_PAGE_RESULT;
             } else {

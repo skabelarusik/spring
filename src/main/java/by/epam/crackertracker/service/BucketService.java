@@ -2,16 +2,11 @@ package by.epam.crackertracker.service;
 
 import by.epam.crackertracker.dao.BucketDaoJdbcImpl;
 import by.epam.crackertracker.entity.Bucket;
-import by.epam.crackertracker.entity.Product;
 import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.validator.*;
-
-import javax.persistence.Id;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class BucketService {
     public List<Bucket> addProduct(String login, String product, String portions) throws TrackerServiceException {
@@ -23,17 +18,15 @@ public class BucketService {
         boolean status = false;
         try{
             if(validator.isValidate(login) && productNameValidator.isValidate(product) &&
-                    portionsValidator.isValidate(portions)){
+                    portionsValidator.isValidate(portions)) {
                 Double port = Double.parseDouble(portions);
                 dao = new BucketDaoJdbcImpl();
                 status = dao.insert(login, product, port);
-                if(status){
+                if (status) {
                     list = dao.selectAll(login);
                 } else {
                     throw new TrackerServiceException("Wrong add Product");
                 }
-            } else {
-                throw new TrackerServiceException("Wrong add Product");
             }
         } catch (TrackerDBException e){
             throw new TrackerServiceException("Wrong add Product");

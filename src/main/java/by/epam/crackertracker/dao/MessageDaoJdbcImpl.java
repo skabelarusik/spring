@@ -36,7 +36,7 @@ public class MessageDaoJdbcImpl implements MessageDao {
     @Override
     public List<Message> selectInputMessage(String login, int i) throws TrackerDBException {
         List<Message> messageList = new ArrayList<>();
-        if(login.isEmpty() || login == null){
+        if(login.isEmpty()){
             throw new TrackerDBException("Wrong login");
         }
 
@@ -80,7 +80,7 @@ public class MessageDaoJdbcImpl implements MessageDao {
     @Override
     public List<Message> selectOutputMessage(String login, int i) throws TrackerDBException {
         List<Message> outputList = null;
-        if(login.isEmpty() || login == null){
+        if(login.isEmpty()){
             throw new TrackerDBException("Wrong login");
         }
         Connection connection = null;
@@ -167,6 +167,9 @@ public class MessageDaoJdbcImpl implements MessageDao {
         } catch (TrackerConnectionPoolException | SQLException e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong delete message");
+        } finally {
+            this.closeQuietly(statement);
+            this.closeQuietly(connection);
         }
         return status;
     }

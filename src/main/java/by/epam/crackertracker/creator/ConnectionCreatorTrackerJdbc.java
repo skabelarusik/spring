@@ -7,8 +7,6 @@ package by.epam.crackertracker.creator;
 
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import org.apache.log4j.Logger;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -36,8 +34,4 @@ public class ConnectionCreatorTrackerJdbc implements ConnectionCreatorFactory {
         return connection;
     }
 
-    @Override
-    public void close() {
-
-    }
 }

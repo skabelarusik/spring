@@ -6,10 +6,8 @@ public class ReviewLengthValidator implements ValidatorI{
     @Override
     public boolean isValidate(String str) {
         boolean status = false;
-        if(str != null && !str.isEmpty()){
-            if(str.length() > MIN_LENGTH && str.length()<=MAX_LENGTH){
+        if((str != null && !str.isEmpty()) && (str.length() > MIN_LENGTH && str.length()<=MAX_LENGTH)){
                 status = true;
-            }
         }
         return status;
     }

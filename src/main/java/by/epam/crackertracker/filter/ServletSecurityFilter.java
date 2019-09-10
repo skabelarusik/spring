@@ -16,18 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-//@WebFilter(urlPatterns = {"/*"})
+@WebFilter(urlPatterns = {"/*"})
 public class ServletSecurityFilter implements Filter {
-
-    @Override
-    public void init(FilterConfig filterConfig) {
-
-    }
-
-    @Override
-    public void destroy() {
-
-    }
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
@@ -40,7 +30,6 @@ public class ServletSecurityFilter implements Filter {
         } else{
             //log
             response.sendRedirect(PageConstant.PATH_PAGE_ERROR);
-            return;
         }
     }
 
@@ -80,7 +69,6 @@ public class ServletSecurityFilter implements Filter {
                 status = true;
             }
         }
-        System.out.println(role + "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         return status;
     }
 

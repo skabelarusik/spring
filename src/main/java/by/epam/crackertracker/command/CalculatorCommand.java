@@ -7,7 +7,6 @@
 package by.epam.crackertracker.command;
 
 import by.epam.crackertracker.util.ParameterConstant;
-import by.epam.crackertracker.validator.DurationValidator;
 import by.epam.crackertracker.validator.IdValidator;
 
 import javax.servlet.http.HttpServletRequest;
@@ -39,9 +38,7 @@ public class CalculatorCommand implements Command {
         } else{
             request.setAttribute(ParameterConstant.ATTRIBUTE_RESULT, ParameterConstant.MESSAGE_ERROR_REGIST);
         }
-
-        String page = (String) request.getSession(true).getAttribute(ParameterConstant.ATTRIBUTE_CURRENT_PAGE);
-        return page;
+        return (String) request.getSession(true).getAttribute(ParameterConstant.ATTRIBUTE_CURRENT_PAGE);
     }
 
     private String checkMessage(double result){

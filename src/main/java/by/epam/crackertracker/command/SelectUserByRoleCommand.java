@@ -17,7 +17,7 @@ import java.util.List;
 
 public class SelectUserByRoleCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    UserService service;
+    private UserService service;
 
     public SelectUserByRoleCommand(UserService service){
         this.service = service;

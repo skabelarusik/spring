@@ -7,11 +7,10 @@ import by.epam.crackertracker.util.ParameterConstant;
 import by.epam.crackertracker.util.RouteType;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.List;
 
 public class DeleteProductIdBucketCommand implements Command {
-    BucketService service;
+    private BucketService service;
     public DeleteProductIdBucketCommand(BucketService service) {
         this.service = service;
     }

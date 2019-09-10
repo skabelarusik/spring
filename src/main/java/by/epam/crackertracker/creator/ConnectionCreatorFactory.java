@@ -15,5 +15,4 @@ public interface ConnectionCreatorFactory {
 
     public Connection newConnection() throws SQLException, TrackerDBException, TrackerConnectionPoolException;
 
-    public void close();
 }

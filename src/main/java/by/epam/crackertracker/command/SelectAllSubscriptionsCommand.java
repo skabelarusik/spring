@@ -18,7 +18,7 @@ import java.util.List;
 
 public class SelectAllSubscriptionsCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    SubscriptionService service;
+    private SubscriptionService service;
 
     public SelectAllSubscriptionsCommand(SubscriptionService service){
         this.service = service;

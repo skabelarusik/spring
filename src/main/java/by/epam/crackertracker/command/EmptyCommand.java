@@ -8,7 +8,6 @@ public class EmptyCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
-        String page = PageConstant.PATH_PAGE_INDEX;
-        return page;
+        return PageConstant.PATH_PAGE_INDEX;
     }
 }

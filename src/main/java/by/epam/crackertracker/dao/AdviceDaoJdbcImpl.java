@@ -103,7 +103,7 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
     }
 
     public String selectRandomAdvice() throws TrackerDBException {
-        Connection connection;
+        Connection connection = null;
         String advice = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
@@ -120,6 +120,7 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
         } finally {
             this.closeQuietly(resultSet);
             this.closeQuietly(statement);
+            this.closeQuietly(connection);
         }
         return advice;
     }
@@ -157,7 +158,7 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
             status = resultSet.next();
         } catch (SQLException e) {
             LOGGER.error(e);
-            new TrackerDBException("Wrong checking id advice", e);
+            throw new TrackerDBException("Wrong checking id advice", e);
         } finally {
             this.closeQuietly(resultSet);
             this.closeQuietly(statement);

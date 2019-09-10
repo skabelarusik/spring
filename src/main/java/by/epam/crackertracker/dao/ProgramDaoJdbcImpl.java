@@ -12,7 +12,6 @@ import org.apache.log4j.Logger;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class ProgramDaoJdbcImpl implements ProgramDao {
@@ -95,7 +94,6 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         try{
-            System.out.println(program);
             statement = connection.prepareStatement(CHECK_ID_PROGRAM);
             statement.setString(1, program);
             resultSet = statement.executeQuery();
@@ -136,16 +134,21 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
 
     private boolean hasCuratorProgram(Connection connection, String name, String login) throws TrackerDBException {
         boolean status = false;
+        ResultSet resultSet = null;
+        PreparedStatement statement = null;
         try {
-            PreparedStatement statement = connection.prepareStatement(SELECT_ID_BY_PROGRAM_NAME_CURATOR);
+            statement = connection.prepareStatement(SELECT_ID_BY_PROGRAM_NAME_CURATOR);
             statement.setString(1, login);
             statement.setString(2, name);
-            ResultSet resultSet = statement.executeQuery();
+            resultSet = statement.executeQuery();
             if(resultSet.next()) {
                 status = true;
             }
         } catch (SQLException e) {
             throw new TrackerDBException("Wrong checking curators program",e);
+        }   finally {
+            this.closeQuietly(resultSet);
+            this.closeQuietly(statement);
         }
         return status;
     }
@@ -162,7 +165,6 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
                 MealDay day = MealDay.valueOf(resultSet.getString(6).toUpperCase());
                 Program program = new Program(progName, product, portions, day, time);
                 program.setId(id);
-                System.out.println(program);
                 list.add(program);
             }
         } catch (SQLException e){
@@ -173,23 +175,23 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
         return list;
     }
 
-    public final static String DELETE_BY_ID = "DELETE FROM programs where id = ?";
+    public static final String DELETE_BY_ID = "DELETE FROM programs where id = ?";
 
-    public boolean deleteById(int idProgram, String login) throws TrackerDBException {
-        System.out.println(idProgram);
-        Connection connection;
-        PreparedStatement statement;
-        boolean status;
+    public boolean deleteById(int idProgram) throws TrackerDBException {
+        Connection connection = null;
+        PreparedStatement statement = null;
         try{
             connection = ConnectionPool.getInstance().takeConnection();
             statement = connection.prepareStatement(DELETE_BY_ID);
             statement.setInt(1, idProgram);
             statement.execute();
-            status = true;
         } catch (SQLException | TrackerConnectionPoolException e){
             throw new TrackerDBException("Wrong delete by id",e);
+        } finally {
+            this.closeQuietly(statement);
+            this.closeQuietly(connection);
         }
-        return status;
+        return true;
     }
 
 

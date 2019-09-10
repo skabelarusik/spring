@@ -14,7 +14,6 @@ import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.Gender;
 import by.epam.crackertracker.entity.User;
 import by.epam.crackertracker.exception.TrackerDBException;
-import com.mysql.cj.log.Log;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
@@ -38,7 +37,7 @@ public class UserService {
                 user = dao.selectByLogin(loginValue, passValue);
             }
         } catch (TrackerDBException e){
-            LOGGER.error("Wrong service check user",e);
+            LOGGER.error(" Wrong service check user",e);
             throw new TrackerServiceException("Wrong service check user",e);
         }
         return user;
@@ -102,7 +101,7 @@ public class UserService {
             try {
                 userList = dao.selectAll(intPage, type);
             } catch (TrackerDBException e) {
-                LOGGER.error("Wrong service select all users",e);
+                LOGGER.error(" Wrong service select all users",e);
                 throw new TrackerServiceException("Wrong service select all users",e);
             }
             request.setAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
@@ -126,7 +125,7 @@ public class UserService {
             }
         }
         List<User> newUserList = null;
-        if(userList.size() > 0 && userList.size() < MAX_TABLE_USERS){
+        if(!userList.isEmpty() && userList.size() < MAX_TABLE_USERS){
             newUserList = new ArrayList<>(userList.size());
             for(int i = 0 ; i < userList.size(); i++){
                 newUserList.add(userList.get(i));
@@ -233,7 +232,7 @@ public class UserService {
             throw new TrackerServiceException("Wrong service select user by role",e);
         }
         List<User> newUserList = null;
-        if(userList.size() > 0 && userList.size() < MAX_TABLE_USERS){
+        if(!userList.isEmpty() && userList.size() < MAX_TABLE_USERS){
             newUserList = new ArrayList<>(userList.size());
             for(int i = 0 ; i < userList.size(); i++){
                 newUserList.add(userList.get(i));
@@ -285,7 +284,7 @@ public class UserService {
             throw new TrackerServiceException("Wrong service select user by gender",e);
         }
         List<User> newUserList = null;
-        if(userList.size() > 0 && userList.size() < MAX_TABLE_USERS){
+        if(!userList.isEmpty() && userList.size() < MAX_TABLE_USERS){
             newUserList = new ArrayList<>(userList.size());
             for(int i = 0 ; i < userList.size(); i++){
                 newUserList.add(userList.get(i));

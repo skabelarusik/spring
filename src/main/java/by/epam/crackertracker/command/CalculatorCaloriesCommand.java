@@ -16,6 +16,12 @@ public class CalculatorCaloriesCommand implements Command {
     private static final double KEF_ACTIVE3 = 1.55;
     private static final double KEF_ACTIVE4 = 1.9;
 
+    private static final int CORRECT_KEF_1 = 10;
+    private static final double CORRECT_KEF_2 = 6.25;
+    private static final int CORRECT_KEF_3 = 5;
+    private static final int CORRECT_KEF_4_MALE = 161;
+    private static final int CORRECT_KEF_4_FEMALE = 5;
+
     @Override
     public String execute(HttpServletRequest request) {
         String age = request.getParameter(ParameterConstant.PARAM_AGE);
@@ -36,18 +42,18 @@ public class CalculatorCaloriesCommand implements Command {
             int age = Integer.parseInt(ageParam);
             int weight = Integer.parseInt(weightParam);
             int height = Integer.parseInt(heightParam);
-            double kef_active;
+            double kefActivity;
             if (active.equals(ParameterConstant.PARAM_ACT1)) {
-                kef_active = KEF_ACTIVE1;
+                kefActivity = KEF_ACTIVE1;
             } else {
                 if (active.equals(ParameterConstant.PARAM_ACT2)) {
-                    kef_active = KEF_ACTIVE2;
+                    kefActivity = KEF_ACTIVE2;
                 } else {
                     if (active.equals(ParameterConstant.PARAM_ACT3)) {
-                        kef_active = KEF_ACTIVE3;
+                        kefActivity = KEF_ACTIVE3;
                     } else {
                         if (active.equals(ParameterConstant.PARAM_ACT4)) {
-                            kef_active = KEF_ACTIVE4;
+                            kefActivity = KEF_ACTIVE4;
                         } else {
                             result = ParameterConstant.WRONG_DATA;
                             return result;
@@ -55,11 +61,14 @@ public class CalculatorCaloriesCommand implements Command {
                     }
                 }
             }
+
             if (gender.equals(ParameterConstant.PARAM_FEMALE)) {
-                int res = (int)((10 * weight + 6.25 * height - 5 * age - 161)*kef_active);
+                int res = (int)((CORRECT_KEF_1 * weight + CORRECT_KEF_2 * height - CORRECT_KEF_3 * age -
+                        CORRECT_KEF_4_MALE)*kefActivity);
                 result = String.valueOf(res);
             } else if (gender.equals(ParameterConstant.PARAM_MALE)){
-                    int res = (int)((10 * weight + 6.25 * height - 5 * age + 5)*kef_active);
+                    int res = (int)((CORRECT_KEF_1 * weight + CORRECT_KEF_2 * height - CORRECT_KEF_3 * age +
+                            CORRECT_KEF_4_FEMALE)*kefActivity);
                     result = String.valueOf(res);
                 }
             } else {

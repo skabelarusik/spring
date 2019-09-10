@@ -108,8 +108,6 @@ public class UserDaoJdbcImpl implements UserDao {
         ResultSet resultSet = null;
         String sqlReq;
         switch (type){
-            default: sqlReq = SELECT_ALL_USERS;
-                break;
             case "DECREASE_AGE": sqlReq = SELECT_ALL_USERS_DEC_AGE;
                 break;
             case "INCREASE_AGE": sqlReq = SELECT_ALL_USERS_INC_AGE;
@@ -117,7 +115,9 @@ public class UserDaoJdbcImpl implements UserDao {
             case "INCREASE_LOGIN": sqlReq = SELECT_ALL_USERS_INC_LOGIN;
                 break;
             case "DECREASE_LOGIN": sqlReq = SELECT_ALL_USERS_DEC_LOGIN;
-            break;
+                break;
+            default: sqlReq = SELECT_ALL_USERS;
+                break;
         }
         try{
             connection = ConnectionPool.getInstance().takeConnection();
@@ -144,11 +144,11 @@ public class UserDaoJdbcImpl implements UserDao {
         ResultSet resultSet = null;
         String sqlReq;
         switch (type){
-            default: sqlReq = SELECT_USER_BY_GENDER;
-                break;
             case "DECREASE_LOGIN": sqlReq = SELECT_USER_BY_GENDER_DEC_LOGIN;
                 break;
             case "INCREASE_LOGIN": sqlReq = SELECT_USER_BY_GENDER_INC_LOGIN;
+                break;
+            default: sqlReq = SELECT_USER_BY_GENDER;
                 break;
         }
         try{
@@ -162,6 +162,10 @@ public class UserDaoJdbcImpl implements UserDao {
         } catch (TrackerConnectionPoolException | SQLException e){
             LOGGER.error(e);
             throw new TrackerDBException("Wrong select users by gender");
+        } finally {
+            this.closeQuietly(resultSet);
+            this.closeQuietly(statement);
+            this.closeQuietly(connection);
         }
         return list;
     }
@@ -215,7 +219,7 @@ public class UserDaoJdbcImpl implements UserDao {
                     String email = resultSet.getString(5);
                     LocalDate birthday= LocalDate.parse(resultSet.getString(6).trim());
                     LocalDate registr = LocalDate.parse(resultSet.getString(7));
-                    BigDecimal balance = new BigDecimal(Double.parseDouble(resultSet.getString(8)));
+                    BigDecimal balance = BigDecimal.valueOf(Double.parseDouble(resultSet.getString(8)));
                     String path = resultSet.getString(9).trim();
                     Role role = Role.valueOf(resultSet.getString(10).toUpperCase().trim());
                     int id = resultSet.getInt(11);
@@ -235,9 +239,9 @@ public class UserDaoJdbcImpl implements UserDao {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong select user by login connection");
         } finally {
-        this.closeQuietly(resultSet);
-        this.closeQuietly(statement);
-        this.closeQuietly(connection);
+            this.closeQuietly(resultSet);
+            this.closeQuietly(statement);
+            this.closeQuietly(connection);
         }
         return user;
     }
@@ -327,7 +331,6 @@ public class UserDaoJdbcImpl implements UserDao {
     public boolean updatePasswordUser(String login, String newPassword) throws TrackerDBException {
         Connection connection = null;
         PreparedStatement statement = null;
-        ResultSet resultSet = null;
         boolean status = false;
         try{
             connection = ConnectionPool.getInstance().takeConnection();
@@ -341,11 +344,9 @@ public class UserDaoJdbcImpl implements UserDao {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong update password user");
         } finally {
-            this.closeQuietly(resultSet);
             this.closeQuietly(statement);
             this.closeQuietly(connection);
         }
-
         return status;
     }
 
@@ -367,6 +368,9 @@ public class UserDaoJdbcImpl implements UserDao {
         } catch (TrackerConnectionPoolException | SQLException e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrond update path");
+        } finally {
+            this.closeQuietly(statement);
+            this.closeQuietly(connection);
         }
         return status;
     }
@@ -378,11 +382,11 @@ public class UserDaoJdbcImpl implements UserDao {
         ResultSet resultSet = null;
         String sqlReq;
         switch (type){
-            default: sqlReq = SELECT_USER_BY_ROLE;
-                break;
             case "DECREASE_LOGIN": sqlReq = SELECT_USER_BY_ROLE_DEC_LOGIN;
                 break;
             case "INCREASE_LOGIN": sqlReq = SELECT_USER_BY_ROLE_INC_LOGIN;
+                break;
+            default: sqlReq = SELECT_USER_BY_ROLE;
                 break;
         }
         try{
@@ -396,6 +400,10 @@ public class UserDaoJdbcImpl implements UserDao {
         } catch (TrackerConnectionPoolException | SQLException e){
             LOGGER.error(e);
             throw new TrackerDBException("Wrong select users by gender");
+        } finally {
+            this.closeQuietly(resultSet);
+            this.closeQuietly(statement);
+            this.closeQuietly(connection);
         }
         return list;
     }
@@ -489,6 +497,7 @@ public class UserDaoJdbcImpl implements UserDao {
             LOGGER.error(ex);
             throw new TrackerDBException("wrong check user has id");
         } finally {
+            this.closeQuietly(resultSet);
             this.closeQuietly(statement);
             this.closeQuietly(resultSet);
         }

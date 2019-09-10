@@ -8,12 +8,11 @@ public class MinMaxCaloriesValidator implements ValidatorI {
     @Override
     public boolean isValidate(String str) {
         boolean status = false;
-        if(str != null && !str.isEmpty()){
-            if(str.matches(NUMBER_REGEX)){
-                int num = Integer.parseInt(str);
-                if(num >= MIN_CALORIES && num <= MAX_CALORIES){
-                    status = true;
-                }
+        if((str != null && !str.isEmpty()) && (str.matches(NUMBER_REGEX)))
+        {
+            int num = Integer.parseInt(str);
+            if(num >= MIN_CALORIES && num <= MAX_CALORIES){
+                status = true;
             }
         }
         return status;

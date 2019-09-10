@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 
 public class UpdatePasswordCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    UserService service;
+    private UserService service;
 
     public UpdatePasswordCommand(UserService service){
         this.service = service;

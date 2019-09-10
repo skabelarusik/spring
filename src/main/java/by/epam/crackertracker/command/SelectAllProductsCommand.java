@@ -21,7 +21,7 @@ public class SelectAllProductsCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
     public static final int MAX_TABLE_PRODUCTS = 11;
     public static final int START_PAGE = 1;
-    ProductService receiver;
+    private ProductService receiver;
 
     public SelectAllProductsCommand(ProductService receiver){
         this.receiver = receiver;
@@ -38,19 +38,17 @@ public class SelectAllProductsCommand implements Command {
         if(currentTablePage == null){
             request.setAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, pageNum);
         } else if(validator.isValidate(currentTablePage)){
-            {
                 pageNum = Integer.parseInt(currentTablePage);
                 request.setAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, pageNum);
                 if (pageNum > 1) {
                     request.setAttribute(ParameterConstant.ATTRIBUTE_PREV_PAGE, pageNum - 1);
                 }
-            }
         }
         List<Product> newProductList;
         String page;
         try{
             productList = receiver.selectAllProduct(type, pageNum);
-            if(productList.size() > 0 && productList.size() < MAX_TABLE_PRODUCTS){
+            if(!productList.isEmpty() && productList.size() < MAX_TABLE_PRODUCTS){
                 newProductList = new ArrayList<>(productList.size());
                 for(int i = 0 ; i < productList.size(); i++){
                     newProductList.add(productList.get(i));

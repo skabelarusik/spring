@@ -182,7 +182,7 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
 
     public static final String CHECK_BALANCE_CUR = "SELECT money from users where id = (SELECT curator from programs_name where id = ?)";
 
-    public boolean insert(int idProgram, BigDecimal cost, int duration, String login, BigDecimal balance) throws TrackerDBException {
+    public boolean insert(int idProgram, BigDecimal cost, int duration, String login, BigDecimal balance) throws TrackerDBException, SQLException {
         Connection connection = null;
         PreparedStatement statementUser = null;
         PreparedStatement statementSubs = null;
@@ -211,15 +211,14 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
             statementUpdRole.setString(1, login);
             statementUpdRole.executeUpdate();
 
-
             statementCheckBalCur = connection.prepareStatement(CHECK_BALANCE_CUR);
             statementCheckBalCur.setInt(1, idProgram);
             resultSet = statementCheckBalCur.executeQuery();
-            BigDecimal balanceCur = null;
+            BigDecimal balanceCur = new BigDecimal(0);
             while (resultSet.next()){
                 balanceCur = resultSet.getBigDecimal(1);
             }
-            BigDecimal newCurBalance = balanceCur.add(new BigDecimal(cost.doubleValue()/2));
+            BigDecimal newCurBalance = balanceCur.add(BigDecimal.valueOf(cost.doubleValue()/2));
             statementUpdBalCur = connection.prepareStatement(UPDATE_BALANCE_CUR);
             statementUpdBalCur.setBigDecimal(1, newCurBalance);
             statementUpdBalCur.setInt(2, idProgram);
@@ -228,15 +227,15 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
             status = true;
         } catch (SQLException | TrackerConnectionPoolException e){
             try {
-                connection.rollback();
+                if(connection != null){
+                    connection.rollback();
+                }
             } catch (SQLException ex) {
                 throw new TrackerDBException("Wrong rollback at insert subscription");
             }
         } finally {
-            try {
+            if(connection != null){
                 connection.setAutoCommit(true);
-            } catch (SQLException e) {
-                throw new TrackerDBException("Wrong setAutocommit to connection at insert subscription");
             }
             this.closeQuietly(resultSet);
             this.closeQuietly(statementCheckBalCur);

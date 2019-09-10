@@ -17,7 +17,7 @@ import java.util.List;
 
 public class SelectUserByGenderCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    UserService service;
+    private UserService service;
 
     public SelectUserByGenderCommand(UserService service){
         this.service = service;

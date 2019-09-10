@@ -24,8 +24,7 @@ public class CuratorMap {
     public String getCurator() {
         if(it.hasNext()){
             Map.Entry<String, Double> m = it.next();
-            String str = m.getValue() + "  " + m.getKey();
-            return str;
+            return m.getValue() + "  " + m.getKey();
         } else {
             it = map.entrySet().iterator();
             return getCurator();

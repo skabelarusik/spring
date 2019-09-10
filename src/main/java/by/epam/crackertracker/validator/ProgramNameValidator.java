@@ -8,10 +8,8 @@ public class ProgramNameValidator implements ValidatorI {
     public boolean isValidate(String text){
         boolean status = false;
 
-        if(text!= null && !text.isEmpty()){
-            if(text.length() <= MAX_LENGTH && text.length() >= MIN_LENGTH){
+        if((text!= null && !text.isEmpty()) && (text.length() <= MAX_LENGTH && text.length() >= MIN_LENGTH)){
                 status = true;
-            }
         }
         return status;
     }

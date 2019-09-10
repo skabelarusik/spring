@@ -8,8 +8,6 @@ package by.epam.crackertracker.controller;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
-import by.epam.crackertracker.exception.TrackerConnectionPoolException;
-import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.service.UserService;
 import org.apache.log4j.Logger;
 
@@ -50,8 +48,6 @@ public class UploadServlet extends HttpServlet {
             String fileName = request.getSession().getAttribute(ParameterConstant.PARAM_LOGIN) + "." + param[param.length - 1];
             String path = UPLOAD_DIR + fileName;
             String pathFile = SHOW_DIR + fileName;
-            System.out.println(path);
-            System.out.println(pathFile);
             part.write(path);
             UserService service = new UserService();
             boolean status = false;
@@ -60,7 +56,6 @@ public class UploadServlet extends HttpServlet {
             } catch (TrackerServiceException e) {
                 LOGGER.error("Wrong upload picture");
             }
-            System.out.println(status);
             if(status) {
                 if(!oldPath.equals(PageConstant.DEFAULT_AVATAR_PATH)){
                     Files.deleteIfExists(Paths.get(oldPath));

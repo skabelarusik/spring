@@ -9,6 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 public class AttributeSessionCleaner {
+    private AttributeSessionCleaner attributeCleaner;
+
+    public AttributeSessionCleaner getAttributeSessionCleaner() {
+        if(attributeCleaner == null){
+            attributeCleaner = new AttributeSessionCleaner();
+        }
+        return attributeCleaner;
+    }
+
+    private AttributeSessionCleaner(){}
 
     public static void clean(HttpServletRequest request){
         HttpSession session = request.getSession();

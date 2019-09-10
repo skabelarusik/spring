@@ -9,8 +9,6 @@ import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.UserService;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
-import by.epam.crackertracker.exception.TrackerConnectionPoolException;
-import by.epam.crackertracker.exception.TrackerDBException;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +16,7 @@ import javax.servlet.http.HttpSession;
 
 public class UpdateProfileCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
-    UserService receiver;
+    private UserService receiver;
 
     public UpdateProfileCommand(UserService receiver){
         this.receiver = receiver;

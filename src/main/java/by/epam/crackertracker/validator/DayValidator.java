@@ -1,6 +1,5 @@
 package by.epam.crackertracker.validator;
 
-import by.epam.crackertracker.entity.Gender;
 import by.epam.crackertracker.entity.MealDay;
 
 public class DayValidator implements ValidatorI {

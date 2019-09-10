@@ -5,11 +5,7 @@
 
 package by.epam.crackertracker.command;
 
-import by.epam.crackertracker.exception.TrackerConnectionPoolException;
-import by.epam.crackertracker.exception.TrackerDBException;
-import by.epam.crackertracker.exception.TrackerServletException;
 import by.epam.crackertracker.service.SubscriptionService;
-
 import javax.servlet.http.HttpServletRequest;
 
 public class DeleteSubscribeCommand implements Command {

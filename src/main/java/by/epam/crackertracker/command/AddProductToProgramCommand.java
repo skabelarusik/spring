@@ -13,8 +13,8 @@ import java.util.List;
 
 public class AddProductToProgramCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
+    private ProgramService service;
 
-    ProgramService service;
     public AddProductToProgramCommand(ProgramService service){
         this.service = service;
     }

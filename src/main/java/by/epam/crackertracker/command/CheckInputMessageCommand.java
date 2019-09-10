@@ -19,7 +19,7 @@ import java.util.List;
 public class CheckInputMessageCommand implements Command {
     private static final Logger LOGGER = Logger.getRootLogger();
     public static final int MAX_TABLE_MESSAGE = 6;
-    MessageService messageService;
+    private MessageService messageService;
 
     public CheckInputMessageCommand(MessageService receiver){
         this.messageService = receiver;
@@ -51,7 +51,7 @@ public class CheckInputMessageCommand implements Command {
                 for(int i = 0 ; i < messageList.size() - 1; i++){
                     newMessageList.add(messageList.get(i));
                 }
-            } else if(messageList.size() > 0 && messageList.size() < MAX_TABLE_MESSAGE){
+            } else if(!messageList.isEmpty() && messageList.size() < MAX_TABLE_MESSAGE){
                 newMessageList = new ArrayList<>(messageList.size());
                 for(int i = 0 ; i < messageList.size(); i++){
                     newMessageList.add(messageList.get(i));
