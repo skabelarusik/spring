@@ -20,7 +20,7 @@ public class CalculatorCommand implements Command {
     public static final int MAS_KEF_5 = 40;
     public static final String MESS_KEF_1 = ": Недостаточная масса тела";
     public static final String MESS_KEF_2 = ": Нормальная масса тела";
-    public static final String MESS_KEF_3 = ": Избыточная масса тела (предожирение)";
+    public static final String MESS_KEF_3 = ": Иыточная масса тела (предожирение)";
     public static final String MESS_KEF_4 = ": Ожирение 1-ой степени";
     public static final String MESS_KEF_5 = ": Ожирение 2-ой степени";
     public static final String MESS_ANOTHER = ": Ожирение 3-й степени";

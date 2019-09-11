@@ -309,7 +309,7 @@ public class ProductDaoJdbc implements ProductDao {
                 double fats = resultSet.getDouble(5);
                 double carbs = resultSet.getDouble(6);
                 Product product = new Product(name, calories);
-                product.setIdproducts(id);
+                product.setIdProducts(id);
                 product.setProteins(proteins);
                 product.setFats(fats);
                 product.setCarbs(carbs);

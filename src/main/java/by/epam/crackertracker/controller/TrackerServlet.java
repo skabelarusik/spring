@@ -8,6 +8,7 @@ package by.epam.crackertracker.controller;
 import by.epam.crackertracker.command.ActionFactory;
 import by.epam.crackertracker.command.EmptyCommand;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
+import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.pool.ConnectionPool;
 import by.epam.crackertracker.util.AttributeSessionCleaner;
 import by.epam.crackertracker.util.ParameterConstant;
@@ -28,12 +29,20 @@ public class TrackerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
             processRequest(request, response);
+        } catch (TrackerServiceException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        try {
             processRequest(req, resp);
+        } catch (TrackerServiceException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -45,7 +54,7 @@ public class TrackerServlet extends HttpServlet {
         }
     }
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, TrackerServiceException {
         Optional<Command> commandOptional = ActionFactory.defineCommand(request.getParameter(ParameterConstant.PARAM_COMMAND));
         Command command = commandOptional.orElse(new EmptyCommand());
         AttributeSessionCleaner.clean(request);
