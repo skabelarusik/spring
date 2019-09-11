@@ -1,0 +1,387 @@
+-- add content to advices 
+insert into advices (idadvices, message) values ('13', 'Не падайте в депрессию');
+insert into advices (idadvices, message) values ('9', 'Больше двигайтесь');
+insert into advices (idadvices, message) values ('7', 'Заниматься любимым делом — возможность стать счастливым');
+insert into advices (idadvices, message) values ('6', 'Избавьтесь от вредных привычек');
+insert into advices (idadvices, message) values ('5', 'Наладьте свой сон');
+insert into advices (idadvices, message) values ('12', 'Откажитесь от соленой и обработанной пищи');
+insert into advices (idadvices, message) values ('23', 'Пойте в душе');
+
+--add content to bucket
+insert into bucket (idbucket, user_b, prod_b, portions) values ('36', '68', '20', '1');
+insert into bucket (idbucket, user_b, prod_b, portions) values ('37', '68', '26', '2');
+insert into bucket (idbucket, user_b, prod_b, portions) values ('39', '76', '20', '1');
+insert into bucket (idbucket, user_b, prod_b, portions) values ('40', '76', '5', '2');
+
+--add content to curator_rate
+insert into curator_rate (idcurator_rate, login, sender_id, rate, comment) values 
+('1', '36', '27', '4', 'test');
+insert into curator_rate (idcurator_rate, login, sender_id, rate, comment) values 
+('2', '36', '28', '5', 'good');
+insert into curator_rate (idcurator_rate, login, sender_id, rate) values 
+('3', '28', '27', '5');
+insert into curator_rate (idcurator_rate, login, sender_id, rate, comment) values 
+('4', '28', '64', '1', 'bad');
+insert into curator_rate (idcurator_rate, login, sender_id, rate) values 
+('5', '65', '27', '5');
+insert into curator_rate (idcurator_rate, login, sender_id, rate) values 
+('6', '66', '27', '3');
+insert into curator_rate (idcurator_rate, login, sender_id, rate) values 
+('7', '41', '27', '5');
+insert into curator_rate (idcurator_rate, login, sender_id, rate) values 
+('8', '37', '27', '4');
+
+-- add content to messages
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('1', '27', '28', 'Hi', 'How are you?', '2024-07-20', '0', '0');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('2', '28', '27', 'Hello', 'Im ok? What about you?', '2024-07-20', '0', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('3', '28', '27', 'Test', 'testtest', '2016-02-08', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('4', '27', '28', '123', 'sad', '2019-07-24', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('5', '27', '36', '123as', 'asd', '2019-07-24', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('6', '27', '36', 'asdasdasdassssssssssssssssssssssssssssss', 'qweqweqw', '2019-07-24', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('9', '27', '28', 'qwee', 'fdsa', '2019-07-26', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('10', '27', '28', 'test', 'test', '2019-07-26', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('12', '27', '28', 'test', 'test', '2019-07-26', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('14', '27', '28', 'Rrrrr', 'asd', '2019-07-26', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('15', '27', '28', 'test', '<scRipt>alert(\"asd\")</SCript>', '2019-07-26', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('16', '28', '27', '7 aug', '7 aug7 aug', '2019-08-07', '0', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('17', '69', '28', 'qwe', 'asd', '2019-08-09', '0', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('18', '69', '69', 'sadasd', 'asdas', '2019-08-09', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('19', '28', '27', '12', 'ssad', '2019-08-12', '0', '0');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('20', '28', '27', 'Rrrrr', 'asdddd', '2019-08-13', '0', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('21', '28', '27', 'test', 'qweqweq', '2019-08-13', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('22', '27', '67', 'test', 'hi', '2019-08-13', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('23', '27', '36', 'asdsad', '123sds', '2019-08-14', '1', '1');
+insert into messages (idmessages, sender, recipient, topik, text, date, show_recipient,
+ show_sender) values ('24', '49', '28', 'test', 'qwe', '2019-08-14', '0', '0');
+insert into messages (idmessages, sender, recipient, topik, text, date, 
+show_recipient, show_sender) values ('26', '68', '71', 'test', 'asdas', '2019-08-15', '0', '1')
+
+--add content to products
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('1', 'Арахис', '622', '26.3', '45.2', '9.9');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('2', 'Горбуша свежая', '142', '20.5', '6.5', '0');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('3', 'Борщ с говядиной', '30', '2.6', '1.5', '1.4');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('4', 'Сыр Old Amsterdam', '407', '6.2', '39', '0');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('5', 'Банан', '95', '1.5', '0.2', '21.8');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('6', 'Багет', '262', '7.5', '2.9', '51.4');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('7', 'Хлеб Бородинский', '208', '6.9', '1.3', '40.9');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('8', 'Кола', '42', '0', '0', '10.4');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('9', 'Квас очаковский', '30', '0', '0', '5.5');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('10', 'Кофе натуральный молотый', '201', '13.9', '14.4', '4.1');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('11', 'Апельсиновый сок', '36', '0.9', '0.2', '8.1');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('12', 'Овощи', '31', '2.5', '0.1', '5');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('13', 'Чай зеленый', '0', '0', '0', '0');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('14', 'Простокваша', '40', '3', '1', '4.1');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('15', 'Овощной салат', '60', '2', '3', '5');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('16', 'Яблоко', '47', '0.4', '0.4', '9.8');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('17', 'Напиток из цикория', '63', '0.9', '0.9', '12.6');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('18', 'Омлет', '184', '9.6', '15.4', '1.9');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('19', 'Зелень', '36', '2.6', '0.4', '5.2');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('20', 'Апельсин', '36', '0.9', '0.2', '8.1');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('21', 'Чай черный без сахара', '0', '0.1', '0', '0');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('22', 'Тост с творожным сыром', '140', '3.6', '7.6', '14.8');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('23', 'Овсянка', '167', '4.7', '5.1', '27.1');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('24', 'Печеный картофель', '119', '6', '5.6', '11.6');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('25', 'Тост с яйцом', '151', '7', '5.6', '17.5');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('26', 'Морс', '41', '0.1', '0', '10.7');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('27', 'Творог', '138', '15', '8', '1.5');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('28', 'Йогурт', '57', '10.3', '0', '4');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('29', 'Куриная грудка вареная', '137', '29.8', '1.8', '0.5');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('30', 'Масло растительное', '899', '0', '99', '0');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('31', 'Гречка вареная', '63', '2.5', '0.7', '12.4');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('32', 'Картофель вареный', '82', '2', '0.4', '16.7');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('33', 'Джем вишневый', '226', '0', '0', '56.5');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('34', 'Яйцо куриное вареное', '160', '12.9', '11.6', '0.8');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('35', 'Миндаль', '645', '18.6', '57.7', '16.2');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('100', 'Banana', '350', '0', '2.5', '0');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('101', 'Pineapple', '250', '0', '2.5', '0');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('104', 'йцу', '123', '1', '1', '1');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('105', 'Resrt', '333', '-1', '-1', '-1');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('107', 'Тест', '123', '-1', '-1', '-1');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('108', 'Зефир', '300', '20', '60', '120');
+insert into products (idproducts, name, calories, proteins, fats, carbs) 
+values ('109', 'Чизик', '999', '100', '100', '100');
+
+--add content to programs
+insert into programs (id, name, product, portions, time, day) values(
+'92', '1', '15', '1', 'dinner', 'friday');
+insert into programs (id, name, product, portions, time, day) values(
+'107', '1', '28', '1', 'dinner', 'sunday');
+insert into programs (id, name, product, portions, time, day) values(
+'139', '1', '2', '3', 'breakfast', 'tuesday');
+insert into programs (id, name, product, portions, time, day) values(
+'172', '1', '13', '1', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'217', '13', '1', '1', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'218', '13', '1', '1', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'219', '13', '1', '1', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'220', '13', '1', '1', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'221', '13', '1', '1', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'234', '1', '12', '11', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'235', '1', '1', '1', 'dinner', 'friday');
+insert into programs (id, name, product, portions, time, day) values(
+'236', '12', '13', '1', 'dinner', 'thursday');
+insert into programs (id, name, product, portions, time, day) values(
+'237', '1', '5', '5', 'lunch', 'sunday');
+insert into programs (id, name, product, portions, time, day) values(
+'240', '2', '5', '0.5', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'241', '2', '16', '1', 'lunch', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'242', '2', '16', '0.5', 'breakfast', 'tuesday');
+insert into programs (id, name, product, portions, time, day) values(
+'243', '3', '16', '0.5', 'second_dinner', 'weekend');
+insert into programs (id, name, product, portions, time, day) values(
+'245', '2', '5', '1', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'246', '2', '5', '1', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'247', '2', '5', '1', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'248', '7', '26', '0.5', 'second_lunch', 'wednesday');
+insert into programs (id, name, product, portions, time, day) values(
+'249', '32', '16', '1', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'250', '7', '16', '1', 'dinner', 'sunday');
+insert into programs (id, name, product, portions, time, day) values(
+'251', '1', '16', '0.5', 'breakfast', 'friday');
+insert into programs (id, name, product, portions, time, day) values(
+'252', '1', '16', '0.5', 'breakfast', 'weekend');
+insert into programs (id, name, product, portions, time, day) values(
+'253', '1', '16', '3', 'breakfast', 'thursday');
+insert into programs (id, name, product, portions, time, day) values(
+'254', '1', '26', '2', 'second_dinner', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'255', '1', '5', '2', 'breakfast', 'sunday');
+insert into programs (id, name, product, portions, time, day) values(
+'256', '1', '26', '1', 'second_breakfast', 'all');
+insert into programs (id, name, product, portions, time, day) values(
+'257', '1', '16', '3', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'258', '1', '16', '1', 'second_breakfast', 'tuesday');
+insert into programs (id, name, product, portions, time, day) values(
+'259', '1', '26', '1', 'second_lunch', 'tuesday');
+insert into programs (id, name, product, portions, time, day) values(
+'260', '1', '16', '0.5', 'dinner', 'thursday');
+insert into programs (id, name, product, portions, time, day) values(
+'261', '1', '26', '0.5', 'dinner', 'friday');
+insert into programs (id, name, product, portions, time, day) values(
+'262', '1', '16', '1', 'second_dinner', 'friday');
+insert into programs (id, name, product, portions, time, day) values(
+'263', '1', '16', '0.5', 'breakfast', 'thursday');
+insert into programs (id, name, product, portions, time, day) values(
+'264', '1', '108', '1', 'second_lunch', 'saturday');
+insert into programs (id, name, product, portions, time, day) values(
+'265', '1', '5', '2', 'second_dinner', 'weekend');
+insert into programs (id, name, product, portions, time, day) values(
+'267', '14', '16', '1', 'breakfast', 'monday');
+insert into programs (id, name, product, portions, time, day) values(
+'268', '14', '5', '1', 'breakfast', 'tuesday');
+insert into programs (id, name, product, portions, time, day) values(
+'269', '14', '26', '2', 'second_breakfast', 'all');
+insert into programs (id, name, product, portions, time, day) values(
+'270', '14', '28', '1', 'second_lunch', 'friday');
+insert into programs (id, name, product, portions, time, day) values(
+'271', '15', '16', '2', 'breakfast', 'weekend');
+insert into programs (id, name, product, portions, time, day) values(
+'272', '15', '5', '1', 'second_breakfast', 'all');
+insert into programs (id, name, product, portions, time, day) values(
+'273', '15', '16', '1', 'dinner', 'tuesday');
+insert into programs (id, name, product, portions, time, day) values(
+'274', '15', '26', '1', 'second_dinner', 'sunday');
+insert into programs (id, name, product, portions, time, day) values(
+'275', '15', '16', '1', 'lunch', 'monday');
+
+-- add content to programs_name
+
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'1', 'Худеем с ниайрой!', '28', '30', '10', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'2', 'Эффективное похудение с бендером', '28', '30', '15.5', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'3', 'Пробный урок с dexterom', '28', '7', '0', '0');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'4', 'Сушка с growmaster-ом', '28', '30', '8', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'5', 'Самая приятная диета с fitLyudmila', '65', '30', '10', '0');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'6', 'Убираем лишние жиры с Анастасией', '65', '30', '6', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'7', 'Набор массы с проф.спортсменом', '28', '30', '24', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'8', 'Спортивный интенсив', '65', '30', '10', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'9', 'Разгрузочные недели ', '65', '30', '8', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'10', 'Недельная зарядка', '65', '7', '2', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'11', 'Годовой абонемент с ниайрой', '28', '365', '70', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'12', 'Набор массы ', '65', '30', '15', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'13', 'Худеем за месяц', '28', '30', '14', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'14', 'test', '28', '1', '3', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'15', 'testtest', '28', '30', '13.5', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'18', '', '28', '13', '444', '0');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'19', 'ТЕСТ', '28', '44', '1', '0');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'21', 'ТЕСТТЕМТ', '28', '31', '12', '0');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'27', 'Фитоняша за 2 часа', '28', '1', '1200', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'29', 'Новая тестовая программа', '28', '1', '12', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'30', 'testtest1', '28', '2', '12', '0');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'31', '333', '28', '1', '12', '0');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'32', 'testtest123', '27', '1', '12', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'33', 'testtest123123', '27', '1', '12', '0');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'34', 'Фитоняша', '28', '30', '200', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'35', 'Котики жирненькие', '28', '2', '100000', '1');
+insert into programs_name (id, name, curator, duration, cost, show_name) values(
+'36', 'Дорагабагата', '28', '50', '15000', '1');
+
+-- add content to review 
+
+insert into review (idreview, name, date, text, show_review) values(
+'3', '27', '2017-03-24', 'qweqwe', '0');
+insert into review (idreview, name, date, text, show_review) values(
+'5', '27', '2019-08-03', 'Очень хороший сайт!!!', '1');
+insert into review (idreview, name, date, text, show_review) values(
+'7', '27', '2019-08-13', 'Проверочный отзыв', '1');
+
+-- add content to role
+
+insert into role (id, name) values('1', 'admin');
+insert into role (id, name) values('4', 'curator');
+insert into role (id, name) values('5', 'guest');
+insert into role (id, name) values('3', 'superuser');
+insert into role (id, name) values('2', 'user');
+
+-- add content to subscriptions
+
+insert into subscriptions (idsubscriptions, program, subscriber, start_date, finish_date, active) values(
+'8', '13', '72', '2019-08-14', '2019-09-13', '1');
+insert into subscriptions (idsubscriptions, program, subscriber, start_date, finish_date, active) values(
+'9', '14', '73', '2019-08-14', '2019-08-22', '1');
+insert into subscriptions (idsubscriptions, program, subscriber, start_date, finish_date, active) values(
+'34', '1', '71', '2019-08-15', '2019-09-14', '1');
+insert into subscriptions (idsubscriptions, program, subscriber, start_date, finish_date, active) values(
+'35', '14', '27', '2019-08-15', '2019-08-16', '1');
+insert into subscriptions (idsubscriptions, program, subscriber, start_date, finish_date, active) values(
+'36', '6', '68', '2019-08-16', '2019-09-15', '1');
+
+-- add content to users
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'27', 'Andrey', 'Krupin', 'clockworktimes', '$2a$12$PEpfpTsA6Dokushn2Mq02eurA/Ntu7Cj61KPkuJV6/NfRpyN.9Gg.', 'male', '1987-10-22', 'ber-linn@tut.by', '2', '81', '2019-07-19', '/jsp/picture/user.png', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'28', 'Татьяная', 'Крупина', 'niaura', '$2a$12$neBeucHLnLq9bG2oz2L0vuNch3XBIVEMpEoWGGJszzp1OedEQ/Zcm', 'female', '1987-10-13', 'ber-linn@tut.by', '4', '30', '2019-07-19', '/jsp/picture/niaura.jpg', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'36', 'КОТ', 'БЕНДЕР', 'kotbender', '$2a$12$sGA1dxeRXcdawQdOKZSDEe./azYRh4Pw8i.cB7DnxQHJlLIYBuUda', 'male', '1970-01-01', 'kot@tut.by', '4', '0', '2019-07-19', '/jsp/picture/user.png', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'37', '', '', 'sss', '$2a$12$yPG52q5KjmFjyzwSMD46IeMvsyHTnoKDz0ZuwGsQ0Xsz4tGGDJnRS', 'male', '1970-01-01', '', '4', '0', '2019-07-19', '/jsp/picture/user.png', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'41', 'asdasd', 'fafdsf', 'kotbender2', '$2a$12$61B3lttXgVd.PmdbMfJiZ.OJH2J.omRJ9eNUohJoYnyZRYCc9SWba', 'male', '1970-01-21', 'kot@tut.by', '4', '0', '2019-07-19', '/jsp/picture/user.png', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'49', 'Крупин', 'Андрей', 'admin', '$2a$12$NQdI5bal5cDeFOoJHGOwW.FVQ1IiIbRO1Vry3vu.PShRztXvgN0Ae', 'male', '1970-01-01', 'skacwt@gmail.com', '1', '11', '2019-07-19', '/jsp/picture/admin.jpg', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'64', 'Andrey', 'Krupinz', 'test', '$2a$12$sADlduHpehssTXkguCocvuzBuCaBj5g9KD45jf0i1B36uyqw51.Ye', 'female', '1970-01-01', 'kot@tut.by', '4', '0', '2019-07-25', '/jsp/picture/user.png', '0');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'65', 'Curator', '', 'curator', '$2a$12$Hj8CoEgZ1IJLAIAgar8Ok.571diECY62.DG0tAgghOqRZ3lQSxXsa', 'female', '1986-01-02', 'test@gmail.com', '4', '13', '2019-07-26', '/jsp/picture/user.png', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'66', 'Декстер', '', 'dexter', '$2a$12$v0ZQTgUXbuuq0j39RzjBhOR3L6llZLBEM8ZXgUGL6DBpsiSi9X9Iu', 'male', '1995-12-13', 'test@tut.nu', '4', '0', '2019-08-07', '/jsp/picture/user.png', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'67', 'Александр', 'Лукашенко', 'Lukashenko88', '$2a$12$47WW/02xj2Ftdk/yf/37P.kgsuiMMJI0KVuYUiORz/gp6dVZIo44G', 'male', '1955-04-08', 'alex@gmail.com', '2', '0', '2019-08-07', '/jsp/picture/user.png', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'68', 'Слоняраё', 'Hobot', 'SLON', '$2a$12$oTooBx.4/KCqeRVnjCX7Mei8rC/OeJ.lcZx5L2Ou80ODh85W.3XMC', 'male', '2005-02-15', 'ber-linn@tut.by', '3', '688', '2019-08-07', '/jsp/picture/SLON.jpg', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'69', 'Andre', 'Krupin', 'BUGAGA', '$2a$12$OaMv9ElIs5dvkljn7pwFT.EKGPnPTZmm4lJMRnJgPLmJ2vDFf9WWm', 'male', '1999-01-01', 'asfasf@tut.nu', '2', '0', '2019-08-09', '/jsp/picture/user.png', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'70', 'Andrey', 'Krupin', '123', '$2a$12$TXh3wRUJ3rXmvzjcdwm4YeP3Nh3hiM0Wa4kwalCeCZJX4uySznj0.', 'male', '1970-01-01', 'kot@tut.by', '2', '0', '2019-08-13', '/jsp/picture/user.png', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'71', 'Andre', '', 'superuser', '$2a$12$OVgf6XV1bZETbpOosOXjNuh1Em28JB9mHCuMzfUo6.XpbR2cq1HUy', 'female', '1970-01-01', 'nia@tut.by', '3', '4', '2019-08-14', '/jsp/picture/superuser.jpg', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'72', '', '', 'bendercot', '$2a$12$v3RtJd.JNFdMhQS2r.pQ1enUAZHKGoUowWpAg1kIDSj2mTumtmPg6', 'male', '1970-01-01', 'ber-linn@tut.by', '2', '9', '2019-08-14', '/jsp/picture/bendercot.jpg', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'73', '', '', 'KOLOBOK', '$2a$12$6VB5UybppUqZtbTlDT5aXOzev7iSiQgC/2LhsPYiUSXWguMu0Xupq', 'male', '1970-01-01', 'kot@tut.by', '2', '7', '2019-08-14', '/jsp/picture/KOLOBOK.jpg', '0');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'74', 'Татьяна', '', 'Tatsiana', '$2a$12$BM3CuQ25OHybNYv06lGbG.myDh2ZvDk/4RC2IcmvmO0bvSQJoMkKm', 'female', '1970-01-01', 'niaur@lz.vk', '2', '11', '2019-08-16', '/jsp/picture/Tatsiana.jpg', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'75', '', '', 'niaura123', '$2a$12$pAh4ZIM6d.ADONJo0T9tAueA3e6jjd8jRQHyoWwrwUIdEutzV.S.e', 'male', '1970-01-01', 'ber-linn@tut.by', '2', '0', '2019-08-16', '/jsp/picture/user.png', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'76', '', '', 'niaurasss', '$2a$12$mdLKsaYAUqh9FJpNPV4dXe.SN.DBu82NI/b7fpbdRNEfSmbZo0YLW', 'male', '1970-01-01', 'skacwt@gmail.com', '2', '6', '2019-08-16', '/jsp/picture/user.png', '1');
+insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
+'77', '', '', 'SLON123', '$2a$12$zldIhc1fSFfknOlv6IsNteMgNQwJOJn5f12ofo8X7MrQ84RIOeZ0G', 'male', '1970-01-01', 'ber-linn@tut.by', '2', '0', '2019-08-16', '/jsp/picture/user.png', '1');
