@@ -14,7 +14,7 @@ import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 import java.util.Enumeration;
 
-@WebFilter(urlPatterns = {"/*"})
+//@WebFilter(urlPatterns = {"/*"})
 public class XssFilter implements Filter {
     public static final String XSS_SCRIPT_TAG = "<script";
     public static final String XSS_SCRIPT_END_TAG = "</script>";

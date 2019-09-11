@@ -6,6 +6,7 @@
 package by.epam.crackertracker.command;
 
 import by.epam.crackertracker.entity.Advice;
+import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
 import by.epam.crackertracker.service.AdviceService;
@@ -21,7 +22,7 @@ public class SelectAllAdviceCommand implements Command {
     }
 
     @Override
-    public String execute(HttpServletRequest request)  {
+    public String execute(HttpServletRequest request) throws TrackerServiceException {
         List<Advice> list = service.selectAllAdvices();
         request.setAttribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, list);
         return PageConstant.PATH_PAGE_RESULT;
