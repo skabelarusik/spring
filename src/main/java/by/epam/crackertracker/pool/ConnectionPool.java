@@ -36,7 +36,6 @@ public class ConnectionPool {
             ResourceBundle resource = ResourceBundle.getBundle("database");
             COUNT_CONNECTION = Integer.parseInt(resource.getString("db.poolsize"));
             DRIVER = resource.getString("db.driver");
-
             try {
                 initDriver(DRIVER);
             } catch (TrackerConnectionPoolException e) {

@@ -8,6 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="8dd54e56-7913-4e54-9d46-8e48b33bb191" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlscripts/script table.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sqlscripts/script table.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/UserDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/UserDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/pool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.42" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -197,6 +204,32 @@
         </option>
       </method>
     </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.epam.Main" />
+      <module name="cracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.Main" />
+      <module name="cracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.crackertracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProgramDaoJdbcImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.dao.ProgramDaoJdbcImpl" />
       <module name="cracker" />
@@ -223,49 +256,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FeedbackValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdviceLengthValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cracker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.crackertracker.validator2.*" />
+          <option name="PATTERN" value="by.epam.crackertracker.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator2" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator2.FeedbackValidatorTest" />
+      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator.AdviceLengthValidatorTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FeedbackValidatorTest.testIsStarValidateEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cracker" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.crackertracker.validator2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator2" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator2.FeedbackValidatorTest" />
-      <option name="METHOD_NAME" value="testIsStarValidateEmpty" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FeedbackValidatorTest.testIsStarValidateNegativeSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cracker" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.crackertracker.validator2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator2" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator2.FeedbackValidatorTest" />
-      <option name="METHOD_NAME" value="testIsStarValidateNegativeSize" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -389,19 +390,19 @@
     <list>
       <item itemvalue="Application.ProgramDaoJdbcImpl" />
       <item itemvalue="Application.main" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
       <item itemvalue="JUnit.by.epam.crackertracker.validator in cracker" />
-      <item itemvalue="JUnit.FeedbackValidatorTest" />
-      <item itemvalue="JUnit.FeedbackValidatorTest.testIsStarValidateEmpty" />
-      <item itemvalue="JUnit.FeedbackValidatorTest.testIsStarValidateNegativeSize" />
+      <item itemvalue="JUnit.AdviceLengthValidatorTest" />
       <item itemvalue="Maven.cracker [tomcat7:run]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.main" />
+        <item itemvalue="JUnit.AdviceLengthValidatorTest" />
         <item itemvalue="Application.ProgramDaoJdbcImpl" />
-        <item itemvalue="JUnit.FeedbackValidatorTest" />
-        <item itemvalue="JUnit.FeedbackValidatorTest.testIsStarValidateNegativeSize" />
-        <item itemvalue="JUnit.FeedbackValidatorTest.testIsStarValidateEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -610,38 +611,6 @@
     </task>
     <option name="localTasksCounter" value="10" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="CartValidatorTest - 2019.08.15 at 03h 48m 23s.xml">
-      <configuration name="CartValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeedbackValidatorTest - 2019.08.15 at 03h 51m 01s.xml">
-      <configuration name="FeedbackValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeedbackValidatorTest - 2019.08.15 at 03h 51m 25s.xml">
-      <configuration name="FeedbackValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeedbackValidatorTest - 2019.08.15 at 03h 51m 38s.xml">
-      <configuration name="FeedbackValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeedbackValidatorTest_testIsStarValidateEmpty - 2019.08.15 at 03h 52m 20s.xml">
-      <configuration name="FeedbackValidatorTest.testIsStarValidateEmpty" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeedbackValidatorTest_testIsStarValidateEmpty - 2019.08.15 at 03h 52m 29s.xml">
-      <configuration name="FeedbackValidatorTest.testIsStarValidateEmpty" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeedbackValidatorTest_testIsStarValidateEmpty - 2019.08.15 at 03h 52m 36s.xml">
-      <configuration name="FeedbackValidatorTest.testIsStarValidateEmpty" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeedbackValidatorTest - 2019.08.15 at 03h 55m 19s.xml">
-      <configuration name="FeedbackValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeedbackValidatorTest_testIsStarValidateNegativeSize - 2019.08.15 at 03h 55m 30s.xml">
-      <configuration name="FeedbackValidatorTest.testIsStarValidateNegativeSize" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeedbackValidatorTest - 2019.08.15 at 03h 55m 36s.xml">
-      <configuration name="FeedbackValidatorTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="935554000" />

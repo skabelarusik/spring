@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.sql.Date;
 import java.util.List;
 
 public class ProgramDaoJdbcImpl implements ProgramDao {
@@ -26,10 +27,9 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
     public static final String SELECT_ID_BY_PROGRAM_NAME_CURATOR = "select p.id from programs_name p inner join users u on " +
             "u.id = p.curator where u.login = ? and p.name = ?";
 
-    public static final String SELECT_ALL_SUPERUSER = "SELECT p.id, pr1.name, pr2.name, p.portions, p.time, p.day from programs p " +
-            "inner join programs_name pr1 on pr1.id = p.name inner join products pr2 on pr2.idproducts = p.product " +
-            "inner join subscriptions s on s.program = pr1.id  where p.day = ? and s.user = (SELECT id from users where login = ?) " +
-            "and s.start_date <= ? and finish_date >= ? order by p.time ";
+
+
+
 
 
     private static final Logger LOGGER = LogManager.getRootLogger();
@@ -194,6 +194,17 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
         return true;
     }
 
+    String SQL = "SELECT p.id, pr1.name, pr2.name, p.portions, p.time, p.day from programs p \n"+
+            "         inner join programs_name pr1 on pr1.id = p.name inner join products pr2 on pr2.idproducts = p.product \n"+
+            "         inner join subscriptions s on s.program = pr1.id  where p.day = 'thursday' and s.subscriber = (SELECT id from users where login = 'SLON') \n"+
+            "         and s.start_date <= '2019-09-12' and finish_date >= '2019-09-12' order by p.time ";
+
+    public static final String SELECT_ALL_SUPERUSER = "SELECT p.id, pr1.name, pr2.name, p.portions, p.time, p.day from programs p \n" +
+            "inner join programs_name pr1 on pr1.id = p.name inner join products pr2 on pr2.idproducts = p.product \n" +
+            "inner join subscriptions s on s.program = pr1.id  " +
+            "where p.day = ? and " +
+            " s.subscriber = (SELECT id from users where login = ?) " +
+            "and s.start_date <= ? and s.finish_date >= ? order by p.time ";
 
     public List<Program> selectSuperuserPrograms(String loginValue) throws TrackerDBException {
         Connection connection = null;
@@ -207,8 +218,8 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
             statement = connection.prepareStatement(SELECT_ALL_SUPERUSER);
             statement.setString(1, day.toLowerCase());
             statement.setString(2, loginValue);
-            statement.setString(3, date.toString());
-            statement.setString(4, date.toString());
+            statement.setDate(3, Date.valueOf(date.toString()));
+            statement.setDate(4, Date.valueOf(date.toString()));
             resultSet = statement.executeQuery();
             programList = fillingList(resultSet);
         } catch (SQLException | TrackerConnectionPoolException e){

@@ -107,6 +107,7 @@ public class UserDaoJdbcImpl implements UserDao {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         String sqlReq;
+
         switch (type){
             case "DECREASE_AGE": sqlReq = SELECT_ALL_USERS_DEC_AGE;
                 break;
@@ -119,6 +120,8 @@ public class UserDaoJdbcImpl implements UserDao {
             default: sqlReq = SELECT_ALL_USERS;
                 break;
         }
+
+
         try{
             connection = ConnectionPool.getInstance().takeConnection();
             statement = connection.prepareStatement(sqlReq);
