@@ -18,7 +18,7 @@ import java.util.List;
 
 public class AdviceDaoJdbcImpl implements AdviceDao {
     private static final String SELECT_ALL = "SELECT idadvices, message from advices";
-    private static final String SELECT_ADVICE = "SELECT message from advices ORDER BY RAND() LIMIT 1";
+    private static final String SELECT_ADVICE = "SELECT message from advices ORDER BY RANDOM() LIMIT 1";
     private static final String DELETE_BY_ID = "DELETE from advices where idadvices = ?";
     private static final String INSERT_ADVICE = "INSERT into advices (message) values (?)";
     private static final String SELECT_ADVICE_BY_TEXT = "SELECT idadvices from advices where message = ?";
