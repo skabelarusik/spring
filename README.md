@@ -1,3 +1,8 @@
+<for jenkins>
+
+admin status :  name - admin, password - admin
+user status : name - user1, password - user
+
 <h3>CrackerTracker</h3>
 
 Online portal for calculating calories, working with a curator. It has a large selection of different programs, for example 
