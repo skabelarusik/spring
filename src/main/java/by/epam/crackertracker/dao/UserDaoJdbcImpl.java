@@ -55,14 +55,14 @@ public class UserDaoJdbcImpl implements UserDao {
     public static final String UPDATE_ROLE_USER = "UPDATE users SET status = ? WHERE id = ?";
     public static final String SELECT_LOGIN_USER = "SELECT id from users where login = ?";
     public static final String INSERT_USER = "INSERT INTO users (name, surname, login, password, sex, birthday, email, " +
-            "registrdate, avatar) VALUES (?,?,?,?,?,?,?,?,?)";
+            "registrdate, avatar) VALUES (?,?,?,?,?,?::date,?,?::date,?)";
     public static final String UPDATE_PASSWORD = "UPDATE users set password = ? WHERE login = ?";
     public static final String SELECT_USER_BY_LOGIN_PASS = "SELECT u.name, u.surname, u.password, u.sex, u.email, u.birthday, " +
             "u.registrdate, u.money, u.avatar, r.name, u.id from users u INNER JOIN role r on u.status = r.id where u.login = ? and u.active = 1";
     public static final String SELECT_ID_LOGIN_USER = "SELECT id from users where id = ? and login = ?";
     public static final String SELECT_USER_BY_ID = "SELECT id from users where id = ?";
     public static final String UPDATE_DATA_USER = "UPDATE users SET name = ?, surname = ?, " +
-            "email = ?, birthday = ? where login = ?";
+            "email = ?, birthday = ?::date where login = ?";
     public static final String UPDATE_BALANCE = "UPDATE users set money = ? where login = ?";
     public static final String UPDATE_PATH = "UPDATE users SET avatar = ? where login = ?";
     public static final String SELECT_ID_CURATOR = "SELECT id from users where status = ?";

@@ -21,17 +21,17 @@ import java.util.List;
 public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
     public static final String SELECT_ALL = "select s.idsubscriptions, u.name, u1.login, s.start_date, " +
             "s.finish_date from subscriptions s inner join programs_name u on s.program = u.id " +
-            "inner join users u1 on s.user = u1.id order by s.finish_date desc";
+            "inner join users u1 on s.subscriber = u1.id order by s.finish_date desc";
     public static final String DELETE_BY_ID = "delete from subscriptions where id = ?";
     public static final String CHECK_SUPERUSER_STATUS = "SELECT s.idsubscriptions from subscriptions s inner join " +
-            "users u on s.user = u.id where u.login = ? and (s.finish_date >= ? and s.start_date <= ?)";
+            "users u on s.subscriber = u.id where u.login = ? and (s.finish_date >= ?::date and s.start_date <= ?::date)";
     public static final String SELECT_ALL_BY_CURATOR = "select s.idsubscriptions, u.name, u1.login, s.start_date, \n" +
             "s.finish_date from subscriptions s inner join programs_name u on s.program = u.id \n" +
-            "inner join users u1 on s.user = u1.id where u.curator = (SELECT id from users where login = ?) ORDER BY s.finish_date desc";
+            "inner join users u1 on s.subscriber = u1.id where u.curator = (SELECT id from users where login = ?) ORDER BY s.finish_date desc";
     public static final String SELECT_HISTORY_BY_ID = "SELECT s.idsubscriptions, p.name, s.start_date, s.finish_date from " +
-            "subscriptions s inner join programs_name p on s.program = p.id where s.user = ? order by s.finish_date desc";
-    public static final String INSERT_SUBSCRIPTION = "INSERT INTO subscriptions (program, user, start_date, finish_date)" +
-            "  values (?,(SELECT id from USERS where login = ?),?,?)";
+            "subscriptions s inner join programs_name p on s.program = p.id where s.subscriber = ? order by s.finish_date desc";
+    public static final String INSERT_SUBSCRIPTION = "INSERT INTO subscriptions (program, subscriber, start_date, finish_date)" +
+            "  values (?,(SELECT id from USERS where login = ?),?::date,?::date)";
     public static final String UPDATE_BALANCE = "UPDATE users set money = ? where login = ?";
 
     public static final String UPDATE_BALANCE_CUR = "UPDATE users set money = ? where id = (SELECT curator from programs_name " +
@@ -101,6 +101,7 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
         try{
             connection = ConnectionPool.getInstance().takeConnection();
             LocalDate localDate = LocalDate.now();
+            Date date = Date.valueOf(localDate);
             statement = connection.prepareStatement(CHECK_SUPERUSER_STATUS);
             statement.setString(1, loginValue);
             statement.setString(2, localDate.toString());
