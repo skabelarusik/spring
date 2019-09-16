@@ -14,13 +14,23 @@ import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 import java.util.Enumeration;
 
-//@WebFilter(urlPatterns = {"/*"})
+@WebFilter(urlPatterns = {"/1/*"})
 public class XssFilter implements Filter {
     public static final String XSS_SCRIPT_TAG = "<script";
     public static final String XSS_SCRIPT_END_TAG = "</script>";
     public static final String JAVASCRIPT = "javascript:";
 
     private static final Logger LOGGER = org.apache.log4j.Logger.getRootLogger();
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+
+    }
+
+    @Override
+    public void destroy() {
+
+    }
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
