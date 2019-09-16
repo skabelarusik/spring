@@ -39,6 +39,8 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
                 statement.executeUpdate();
                 status = true;
                 LOGGER.debug(text + " - advice inserted");
+                String a = "asd";
+                LOGGER.error("asdsadsad" + a + "sadsadsda");
             }
         } catch (TrackerConnectionPoolException | SQLException e) {
             LOGGER.error(e);
