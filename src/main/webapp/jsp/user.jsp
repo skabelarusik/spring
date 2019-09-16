@@ -109,7 +109,7 @@
                             <input type="hidden" name="command" value="select_user_status">
                             <p>
                                 <label for="user" class="adviceForm"> <fmt:message key="label.user" bundle="${rb}"/></label>
-                                <input autofocus id="user" type="radio" name="role"  value="user">
+                                <input autofocus id="user" type="radio" name="role"  value="user" checked>
                                 <label for="superuser" class="adviceForm"> <fmt:message key="label.superuser" bundle="${rb}"/></label>
                                 <input autofocus id="superuser" type="radio" name="role" value="superuser"></p>
                             <p>
@@ -129,7 +129,7 @@
                             <input type="hidden" name="command" value="select_user_gender">
                             <p>
                                 <label for="sex1" class="adviceForm"> <fmt:message key="label.sexmale" bundle="${rb}"/></label>
-                                <input autofocus id="sex1" type="radio" name="gender"  value="male">
+                                <input autofocus id="sex1" type="radio" name="gender"  value="male" checked>
                                 <label for="sex2" class="adviceForm"> <fmt:message key="label.sexfemale" bundle="${rb}"/></label>
                                 <input autofocus id="sex2" type="radio" name="gender" value="female"></p>
                             <input type="submit" value="<fmt:message key="button.show" bundle="${rb}"/>" class="login-button"/>

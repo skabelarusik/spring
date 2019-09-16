@@ -6,7 +6,7 @@
 package by.epam.crackertracker.validator;
 
 public class ProductNameValidator implements ValidatorI{
-    private static final String PRODUCT_NAME_REGEX = "[a-zA-Z–∞-—è–ê-–Ø—ë–Å]{2,35}";
+    private static final String PRODUCT_NAME_REGEX = "[a-zA-Z‡-ˇ¿-ﬂ∏®]{2,35}";
 
     @Override
     public boolean isValidate(String name){
