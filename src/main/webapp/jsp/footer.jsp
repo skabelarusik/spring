@@ -17,6 +17,7 @@
         <div id="footerReviews">
             <h4><a href="/jsp/send_review.jsp" class="adminBlock"><fmt:message key="label.sendreview"
                    bundle="${rb}"/></a></h4>
+            <p class = "footersize"><fmt:message key="build.timestamp" bundle = "${rb}"/></p>
         </div>
     </div>
 </body>

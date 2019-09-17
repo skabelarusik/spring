@@ -7,12 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dd54e56-7913-4e54-9d46-8e48b33bb191" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/cracker_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/ServletSecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/ServletSecurityFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/StaticFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/StaticFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/XssFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/XssFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/message_by_BY.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/message_by_BY.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/message_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/message_en_US.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/message_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/message_ru_RU.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/footer.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,27 +94,27 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\WEB-INF\tld" />
-      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\tld" />
-      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp" />
-      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\picture" />
-      <recent name="C:\Users\User\IdeaProjects\cracker\src\main\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="by.epam.crackertracker.command" />
+      <recent name="by.epam.crackertracker.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\cracker\src\test\java\by\epam\crackertracker\validator2" />
       <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\picture" />
       <recent name="C:\Users\User\Desktop\cracker\src\main\resources" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="by.epam.crackertracker.command" />
-      <recent name="by.epam.crackertracker.controller" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\WEB-INF\tld" />
+      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\tld" />
+      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp" />
+      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\picture" />
+      <recent name="C:\Users\User\IdeaProjects\cracker\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
