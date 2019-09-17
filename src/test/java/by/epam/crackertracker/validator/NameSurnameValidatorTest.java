@@ -36,4 +36,6 @@ public class NameSurnameValidatorTest {
     public void testIsValidateCorrectSize(){
         Assert.assertTrue(validator.isValidate(ParametresTest.TEN_SIZE));
     }
+
+
 }

@@ -22,6 +22,7 @@ public class ProductNameValidatorTest {
         Assert.assertFalse(validator.isValidate(ParametresTest.EMPTY));
     }
 
+
     @Test
     public void testIsValidateOneSize(){
         Assert.assertFalse(validator.isValidate(ParametresTest.ONE_SIZE));
@@ -36,5 +37,7 @@ public class ProductNameValidatorTest {
     public void testIsValidateCorrectSize(){
         Assert.assertTrue(validator.isValidate(ParametresTest.TEN_SIZE));
     }
+
+
 
 }
