@@ -62,6 +62,7 @@ public class ConnectionPool {
                     Connection connection = factory.newConnection();
                     ProxyTrackerConnection proxyConnection = new ProxyTrackerConnection(connection);
                     freeConnections.offer(proxyConnection);
+                    System.out.println(freeConnections.size() + "^^^^^^");
                 } catch (TrackerConnectionPoolException e) {
                     LOGGER.error("Wrong initialize connection pool", e);
                     throw new TrackerConnectionPoolException("Wrong initialize connection pool", e);
@@ -124,11 +125,12 @@ public class ConnectionPool {
         }
 
         public void closePool() throws TrackerConnectionPoolException {
+            System.out.println(freeConnections.size());
             for(int i = 0; i < COUNT_CONNECTION; i++) {
                 try {
                     ProxyTrackerConnection connection = freeConnections.take();
                     connection.finishClose();
-                } catch (InterruptedException | SQLException e) {
+                } catch (SQLException | InterruptedException e) {
                     LOGGER.warn("Problems with connection closing! " + e);
                     throw new TrackerConnectionPoolException("Wrong close connection pool",e);
                 }

@@ -84,7 +84,7 @@ CREATE TABLE programs_name (
   curator integer NOT NULL,
   duration integer NOT NULL DEFAULT '30',
   cost float NOT NULL DEFAULT '0',
-  show_name boolean NOT NULL DEFAULT '1',
+  show_name integer NOT NULL DEFAULT '1',
   FOREIGN KEY (curator) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 

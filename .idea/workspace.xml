@@ -10,17 +10,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/dao/AdviceDaoJdbcImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/dao/BucketDaoJdbcImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/dao/MessageDaoJdbcImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/dao/ProductDaoJdbcTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/dao/ProgramDaoJdbcImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/dao/ProgramsNameDaoJdbcTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/dao/ReviewDaoJdbcTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/dao/UserDaoJdbcImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/NameSurnameValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/NameSurnameValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/ProductNameValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/ProductNameValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlscripts/script table.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sqlscripts/script table.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/pool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/resources/ParametresDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/resources/ParametresDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/db/migration/V1__initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/db/migration/V1__initDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/simplelogger.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/database.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +56,7 @@
         <option value="Enum" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -95,6 +90,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -107,21 +105,28 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\test\resources" />
-      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\WEB-INF\tld" />
-      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\tld" />
-      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp" />
-      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\picture" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="by.epam.crackertracker.dao" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="by.epam.crackertracker.command" />
+      <recent name="by.epam.crackertracker.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\cracker\src\test\java\by\epam\crackertracker\validator2" />
       <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\picture" />
       <recent name="C:\Users\User\Desktop\cracker\src\main\resources" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="by.epam.crackertracker.command" />
-      <recent name="by.epam.crackertracker.controller" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="groovy.util.GroovyTestCase" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\test\resources" />
+      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\WEB-INF\tld" />
+      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\tld" />
+      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp" />
+      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\picture" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,7 +141,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.NameSurnameValidatorTest">
+  <component name="RunManager" selected="JUnit.by.epam.crackertracker.dao in cracker">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.42" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -210,6 +215,37 @@
         </option>
       </method>
     </configuration>
+    <configuration name="AdviceDaoJdbcTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.crackertracker.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.crackertracker.dao" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.dao.AdviceDaoJdbcTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdviceDaoJdbcTest.testTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.crackertracker.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.crackertracker.dao" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.dao.AdviceDaoJdbcTest" />
+      <option name="METHOD_NAME" value="testTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in cracker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cracker" />
       <option name="PACKAGE_NAME" value="" />
@@ -218,64 +254,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NameSurnameValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProgramsNameDaoJdbcTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cracker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.crackertracker.validator.*" />
+          <option name="PATTERN" value="by.epam.crackertracker.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator.NameSurnameValidatorTest" />
+      <option name="PACKAGE_NAME" value="by.epam.crackertracker.dao" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.dao.ProgramsNameDaoJdbcTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductNameValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="by.epam.crackertracker.dao in cracker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cracker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.crackertracker.validator.*" />
+          <option name="PATTERN" value="by.epam.crackertracker.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator.ProductNameValidatorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductNameValidatorTest.testIsValidateCorrectSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cracker" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.crackertracker.validator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator.ProductNameValidatorTest" />
-      <option name="METHOD_NAME" value="testIsValidateCorrectSize" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductNameValidatorTest.testIsValidateOneSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cracker" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.epam.crackertracker.validator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.epam.crackertracker.validator" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.validator.ProductNameValidatorTest" />
-      <option name="METHOD_NAME" value="testIsValidateOneSize" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="by.epam.crackertracker.dao" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -399,19 +402,19 @@
     <list>
       <item itemvalue="JUnit.by.epam.crackertracker.validator in cracker" />
       <item itemvalue="Maven.cracker [tomcat7:run]" />
+      <item itemvalue="JUnit.ProgramsNameDaoJdbcTest" />
+      <item itemvalue="JUnit.AdviceDaoJdbcTest" />
       <item itemvalue="JUnit.All in cracker" />
-      <item itemvalue="JUnit.NameSurnameValidatorTest" />
-      <item itemvalue="JUnit.ProductNameValidatorTest.testIsValidateOneSize" />
-      <item itemvalue="JUnit.ProductNameValidatorTest.testIsValidateCorrectSize" />
-      <item itemvalue="JUnit.ProductNameValidatorTest" />
+      <item itemvalue="JUnit.by.epam.crackertracker.dao in cracker" />
+      <item itemvalue="JUnit.AdviceDaoJdbcTest.testTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.NameSurnameValidatorTest" />
-        <item itemvalue="JUnit.ProductNameValidatorTest" />
+        <item itemvalue="JUnit.by.epam.crackertracker.dao in cracker" />
+        <item itemvalue="JUnit.AdviceDaoJdbcTest.testTest" />
         <item itemvalue="JUnit.All in cracker" />
-        <item itemvalue="JUnit.ProductNameValidatorTest.testIsValidateCorrectSize" />
-        <item itemvalue="JUnit.ProductNameValidatorTest.testIsValidateOneSize" />
+        <item itemvalue="JUnit.ProgramsNameDaoJdbcTest" />
+        <item itemvalue="JUnit.AdviceDaoJdbcTest" />
       </list>
     </recent_temporary>
   </component>

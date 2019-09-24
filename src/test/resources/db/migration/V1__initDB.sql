@@ -5,6 +5,8 @@ create table role
     name varchar(45) NOT NULL UNIQUE,
     primary key (id)
 );
+ALTER SEQUENCE role_id_seq start with 6 minvalue 6 restart 6;
+
 
 create table users
 (
@@ -24,12 +26,15 @@ create table users
     primary key (id),
     FOREIGN KEY (status) REFERENCES role (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
+ALTER SEQUENCE users_id_seq start with 3 minvalue 3 restart 3;
+
 
 CREATE TABLE advices (
-  idadvices serial UNIQUE,
+  idadvices serial UNIQUE ,
   message varchar(100) NOT NULL UNIQUE,
   PRIMARY KEY (idadvices)
 );
+ALTER SEQUENCE advices_idadvices_seq start with 3 minvalue 3 restart 3;
 
 CREATE TABLE products
  (
@@ -41,6 +46,8 @@ CREATE TABLE products
   carbs float DEFAULT '-1',
   PRIMARY KEY (idproducts)
 );
+ALTER SEQUENCE products_idproducts_seq start with 3 minvalue 3 restart 3;
+
 
 CREATE TABLE bucket
  (
@@ -52,6 +59,8 @@ CREATE TABLE bucket
   FOREIGN KEY (user_b) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY (prod_b) REFERENCES products(idproducts) ON UPDATE CASCADE ON DELETE CASCADE
 );
+ALTER SEQUENCE bucket_idbucket_seq start with 3 minvalue 3 restart 3;
+
 
 CREATE TABLE messages (
   idmessages serial UNIQUE,
@@ -66,6 +75,8 @@ CREATE TABLE messages (
   FOREIGN KEY (recipient) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY (sender) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
+ALTER SEQUENCE messages_idmessages_seq start with 3 minvalue 3 restart 3;
+
 
 CREATE TABLE curator_rate (
   idcurator_rate serial UNIQUE,
@@ -77,6 +88,8 @@ CREATE TABLE curator_rate (
   FOREIGN KEY (login) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY (sender_id) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
+ALTER SEQUENCE curator_rate_idcurator_rate_seq start with 3 minvalue 3 restart 3;
+
 
 CREATE TABLE programs_name (
   id serial UNIQUE,
@@ -84,9 +97,11 @@ CREATE TABLE programs_name (
   curator integer NOT NULL,
   duration integer NOT NULL DEFAULT '30',
   cost float NOT NULL DEFAULT '0',
-  show_name boolean NOT NULL DEFAULT '1',
+  show_name integer NOT NULL DEFAULT '1',
   FOREIGN KEY (curator) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
+ALTER SEQUENCE programs_name_id_seq start with 3 minvalue 3 restart 3;
+
 
 
 CREATE TABLE programs (
@@ -100,6 +115,8 @@ CREATE TABLE programs (
   FOREIGN KEY (product) REFERENCES products(idproducts) ON UPDATE CASCADE ON DELETE CASCADE,
    FOREIGN KEY (name) REFERENCES programs_name(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
+ALTER SEQUENCE programs_id_seq start with 3 minvalue 3 restart 3;
+
 
 CREATE TABLE review (
   idreview serial UNIQUE,
@@ -109,6 +126,8 @@ CREATE TABLE review (
   show_review boolean NOT NULL DEFAULT '1',
     FOREIGN KEY (name) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
+ALTER SEQUENCE review_idreview_seq start with 3 minvalue 3 restart 3;
+
 
 CREATE TABLE subscriptions (
   idsubscriptions serial UNIQUE,
@@ -120,9 +139,11 @@ CREATE TABLE subscriptions (
   FOREIGN KEY (program) REFERENCES programs_name(id) ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY (subscriber) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
+ALTER SEQUENCE subscriptions_idsubscriptions_seq start with 3 minvalue 3 restart 3;
+
 
 -- add content to advices
-insert into advices (idadvices, message) values ('1', 'БУГАГА');
+insert into advices (idadvices, message) values ('1', 'bugaga');
 insert into advices (idadvices, message) values ('2', 'testtest');
 
 -- add content to role
