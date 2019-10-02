@@ -4,11 +4,8 @@
  */
 
 package by.epam.crackertracker.tag;
-import javax.servlet.jsp.JspTagException;
-import javax.servlet.jsp.JspWriter;
-import javax.servlet.jsp.tagext.TagSupport;
 import java.io.IOException;
-
+/*
 @SuppressWarnings("serial")
 public class ShowCuratorTag extends TagSupport {
 
@@ -59,5 +56,10 @@ public class ShowCuratorTag extends TagSupport {
         }
     return EVAL_PAGE;
 }
+
+
 }
+
+ */
+
 

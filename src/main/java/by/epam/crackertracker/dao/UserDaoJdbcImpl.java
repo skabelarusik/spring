@@ -10,17 +10,25 @@ import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.User;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
+import by.epam.crackertracker.mapper.UserMapper;
 import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.mindrot.jbcrypt.BCrypt;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
 import java.math.BigDecimal;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.*;
 
-
+@Repository
 public class UserDaoJdbcImpl implements UserDao {
+
+    @Autowired
+    public JdbcTemplate jdbcTemplate;
 
     public static final String SELECT_ALL_USERS = "SELECT u.id, u.name, u.surname, u.login, u.sex," +
             "u.birthday, u.registrdate, u.email, r1.name from users u INNER JOIN role r1 on u.status = r1.id where u.active = 1 limit ? offset ?";
@@ -99,9 +107,12 @@ public class UserDaoJdbcImpl implements UserDao {
     }
 
 
+    public String SELECT_ALL = "select * from users";
 
     @Override
-    public List<User> selectAll(int page, String type) throws TrackerDBException {
+    public List<User> selectAll()  {
+        return jdbcTemplate.query(SELECT_ALL, new UserMapper());
+        /*
         Connection connection = null;
         List<User> listProduct;
         PreparedStatement statement = null;
@@ -171,6 +182,8 @@ public class UserDaoJdbcImpl implements UserDao {
             this.closeQuietly(connection);
         }
         return list;
+
+         */
     }
 
 

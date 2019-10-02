@@ -22,10 +22,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-@WebServlet(name = "FileLoadServlet", urlPatterns = "/UploadServlet", loadOnStartup = 1)
-@MultipartConfig(fileSizeThreshold = 1024 * 1024,
-        maxFileSize = 1024 * 1024 * 5,
-        maxRequestSize = 1024 * 1024 * 5 * 5)
+//@WebServlet(name = "FileLoadServlet", urlPatterns = "/UploadServlet", loadOnStartup = 1)
+//@MultipartConfig(fileSizeThreshold = 1024 * 1024,
+//        maxFileSize = 1024 * 1024 * 5,
+//        maxRequestSize = 1024 * 1024 * 5 * 5)
 public class UploadServlet extends HttpServlet {
 
     private static final String UPLOAD_DIR = "C:\\Users\\User\\Desktop\\cracker\\src\\main\\webapp\\jsp\\picture\\";

@@ -13,7 +13,7 @@ import java.util.List;
 
 public interface UserDao extends TrackerDao {
 
-    List<User> selectAll(int page, String type) throws TrackerDBException;
+    List<User> selectAll() ;
 
     boolean deleteByIdLogin(int id, String login) throws TrackerDBException;
 

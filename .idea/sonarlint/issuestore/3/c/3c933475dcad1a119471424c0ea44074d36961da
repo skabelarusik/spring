@@ -1,0 +1,12 @@
+
+jsquid:S20954"GUse try-with-resources or close this "Statement" in a "finally" clause.(‡²€·ýÿÿÿÿ8±À¹õÓ-
+lsquid:S2095ß"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(µ’ù¡ÿÿÿÿÿ
+lsquid:S2095Ï"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(˜Ãúúúÿÿÿÿ
+nsquid:S2095ƒ"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(„¹àï8±À¹õÓ-
+gsquid:S2095Ó"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÒÔÂ–
+gsquid:S2095É"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(í„Åü
+dsquid:S2095Ù"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(šêæùÿÿÿÿÿ
+msquid:S2095i"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¤˜–õ8±À¹õÓ-
+lsquid:S2095K"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¹¢’A8±À¹õÓ-
+gsquid:S2095×"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‡ß‡£
+Esquid:S1481h")Remove this unused "date" local variable.(±ê½Õÿÿÿÿÿ

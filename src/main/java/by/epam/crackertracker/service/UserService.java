@@ -5,6 +5,7 @@
 
 package by.epam.crackertracker.service;
 
+import by.epam.crackertracker.dao.UserDao;
 import by.epam.crackertracker.dao.UserDaoJdbcImpl;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.util.PageConstant;
@@ -15,6 +16,9 @@ import by.epam.crackertracker.entity.Gender;
 import by.epam.crackertracker.entity.User;
 import by.epam.crackertracker.exception.TrackerDBException;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.math.BigDecimal;
@@ -23,7 +27,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class UserService {
+
+    @Autowired
+    public UserDao userDao;
+
     private static final Logger LOGGER = Logger.getRootLogger();
     public static final int MAX_TABLE_USERS = 11;
 
@@ -88,7 +97,9 @@ public class UserService {
         return mapCurators;
     }
 
-    public List<User> selectAllUsers(HttpServletRequest request) throws TrackerServiceException {
+    public List<User> selectAllUsers() {
+
+        /*
         UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
         String currentPage = request.getParameter(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
         String type = request.getParameter(ParameterConstant.PARAM_TYPE);
@@ -136,7 +147,11 @@ public class UserService {
                 newUserList.add(userList.get(i));
             }
         }
-        return newUserList;
+
+         */
+
+
+        return userDao.selectAll();
     }
 
     public boolean updateDataUser(String login, String name, String surname,
@@ -247,6 +262,7 @@ public class UserService {
         return newUserList;
     }
 
+    /*
     public List<User> selectUsersByGender(HttpServletRequest request, String gender) throws TrackerServiceException {
         UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
         GenderValidator genderValidator = new GenderValidator();
@@ -297,6 +313,8 @@ public class UserService {
         }
         return newUserList;
     }
+
+     */
 
     public boolean deleteUser(String login, String id) throws TrackerServiceException {
         LoginValidator loginValidator = new LoginValidator();

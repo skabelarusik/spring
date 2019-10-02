@@ -1,0 +1,7 @@
+
+ksquid:S2095a"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½²£¹üÿÿÿÿ
+gsquid:S2095Œ"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ù¶—Í
+gsquid:S00116Å"NRename this field "SQL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á«þ¢
+lsquid:S2095Ú"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(†ñè¶ùÿÿÿÿ
+ksquid:S2095I"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ì‡Ì¬úÿÿÿÿ
+ksquid:S2095v"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÙàÀýÿÿÿÿÿ

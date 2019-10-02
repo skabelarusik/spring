@@ -1,0 +1,585 @@
+2019-09-24 14:23:25 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (8, test test 1234, null, 10, -33, 1).
+2019-09-24 14:23:25 main WARN  root:106 - Programs name id: 2 was deleted
+2019-09-24 14:23:25 main WARN  root:133 - Programs name: test test 1234 was insert
+2019-09-24 14:24:28 main INFO  root:29 - connection created
+2019-09-24 14:24:28 main INFO  root:29 - connection created
+2019-09-24 14:24:28 main INFO  root:29 - connection created
+2019-09-24 14:24:28 main INFO  root:29 - connection created
+2019-09-24 14:24:28 main INFO  root:29 - connection created
+2019-09-24 14:24:28 main INFO  root:29 - connection created
+2019-09-24 14:24:28 main INFO  root:29 - connection created
+2019-09-24 14:24:28 main INFO  root:29 - connection created
+2019-09-24 14:24:28 main INFO  root:29 - connection created
+2019-09-24 14:24:28 main INFO  root:29 - connection created
+2019-09-24 14:24:28 main INFO  root:70 - Connection pool with 10 connections was created
+2019-09-24 14:24:28 main DEBUG root:92 - Connaction Pool was created
+2019-09-24 14:24:28 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
+  Detail: Failing row contains (3, null).
+2019-09-24 14:24:28 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
+2019-09-24 14:24:28 main DEBUG root:67 - 2 advice deleted
+2019-09-24 14:24:34 main ERROR root:240 - org.postgresql.util.PSQLException: An I/O error occured while sending to the backend.
+2019-09-24 14:24:34 main ERROR root:220 - org.postgresql.util.PSQLException: An I/O error occured while sending to the backend.
+2019-09-24 14:24:34 main ERROR root:240 - org.postgresql.util.PSQLException: An I/O error occured while sending to the backend.
+2019-09-24 14:24:34 main ERROR root:202 - org.postgresql.util.PSQLException: An I/O error occured while sending to the backend.
+2019-09-24 14:24:34 main ERROR root:55 - org.postgresql.util.PSQLException: An I/O error occured while sending to the backend.
+2019-09-24 14:24:34 main ERROR root:220 - org.postgresql.util.PSQLException: An I/O error occured while sending to the backend.
+2019-09-24 14:24:34 main ERROR root:240 - org.postgresql.util.PSQLException: An I/O error occured while sending to the backend.
+2019-09-24 14:24:34 main ERROR root:55 - org.postgresql.util.PSQLException: An I/O error occured while sending to the backend.
+2019-09-24 14:24:34 main ERROR root:240 - org.postgresql.util.PSQLException: An I/O error occured while sending to the backend.
+2019-09-24 14:24:34 main ERROR root:240 - org.postgresql.util.PSQLException: An I/O error occured while sending to the backend.
+2019-09-24 14:24:34 main ERROR root:240 - org.postgresql.util.PSQLException: This connection has been closed.
+2019-09-24 14:24:34 main ERROR root:202 - org.postgresql.util.PSQLException: This connection has been closed.
+2019-09-24 14:24:34 main ERROR root:240 - org.postgresql.util.PSQLException: This connection has been closed.
+2019-09-24 14:24:34 main ERROR root:55 - org.postgresql.util.PSQLException: This connection has been closed.
+2019-09-24 14:25:59 main INFO  root:29 - connection created
+2019-09-24 14:25:59 main INFO  root:29 - connection created
+2019-09-24 14:25:59 main INFO  root:29 - connection created
+2019-09-24 14:25:59 main INFO  root:29 - connection created
+2019-09-24 14:25:59 main INFO  root:29 - connection created
+2019-09-24 14:25:59 main INFO  root:29 - connection created
+2019-09-24 14:25:59 main INFO  root:29 - connection created
+2019-09-24 14:25:59 main INFO  root:29 - connection created
+2019-09-24 14:25:59 main INFO  root:29 - connection created
+2019-09-24 14:26:00 main INFO  root:29 - connection created
+2019-09-24 14:26:00 main INFO  root:70 - Connection pool with 10 connections was created
+2019-09-24 14:26:00 main DEBUG root:92 - Connaction Pool was created
+2019-09-24 14:26:00 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
+  Detail: Failing row contains (3, null).
+2019-09-24 14:26:00 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
+2019-09-24 14:26:00 main DEBUG root:67 - 2 advice deleted
+2019-09-24 14:26:00 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:26:00 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:26:00 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:26:00 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:26:00 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:26:00 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:26:00 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:26:00 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:26:00 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:26:00 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:27:28 main INFO  root:29 - connection created
+2019-09-24 14:27:28 main INFO  root:29 - connection created
+2019-09-24 14:27:28 main INFO  root:29 - connection created
+2019-09-24 14:27:28 main INFO  root:29 - connection created
+2019-09-24 14:27:28 main INFO  root:29 - connection created
+2019-09-24 14:27:28 main INFO  root:29 - connection created
+2019-09-24 14:27:28 main INFO  root:29 - connection created
+2019-09-24 14:27:28 main INFO  root:29 - connection created
+2019-09-24 14:27:28 main INFO  root:29 - connection created
+2019-09-24 14:27:28 main INFO  root:29 - connection created
+2019-09-24 14:27:28 main INFO  root:70 - Connection pool with 10 connections was created
+2019-09-24 14:27:28 main DEBUG root:92 - Connaction Pool was created
+2019-09-24 14:27:28 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:27:28 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:27:28 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:27:28 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:27:28 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:27:28 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:27:28 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:27:28 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:27:28 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:28:34 main INFO  root:29 - connection created
+2019-09-24 14:28:34 main INFO  root:29 - connection created
+2019-09-24 14:28:34 main INFO  root:29 - connection created
+2019-09-24 14:28:34 main INFO  root:29 - connection created
+2019-09-24 14:28:34 main INFO  root:29 - connection created
+2019-09-24 14:28:35 main INFO  root:29 - connection created
+2019-09-24 14:28:35 main INFO  root:29 - connection created
+2019-09-24 14:28:35 main INFO  root:29 - connection created
+2019-09-24 14:28:35 main INFO  root:29 - connection created
+2019-09-24 14:28:35 main INFO  root:29 - connection created
+2019-09-24 14:28:35 main INFO  root:70 - Connection pool with 10 connections was created
+2019-09-24 14:28:35 main DEBUG root:92 - Connaction Pool was created
+2019-09-24 14:28:35 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:28:35 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:28:35 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:28:35 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:28:35 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:28:35 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:28:35 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:28:35 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:28:35 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:17 main INFO  root:29 - connection created
+2019-09-24 14:29:17 main INFO  root:29 - connection created
+2019-09-24 14:29:17 main INFO  root:29 - connection created
+2019-09-24 14:29:17 main INFO  root:29 - connection created
+2019-09-24 14:29:17 main INFO  root:29 - connection created
+2019-09-24 14:29:17 main INFO  root:29 - connection created
+2019-09-24 14:29:17 main INFO  root:29 - connection created
+2019-09-24 14:29:17 main INFO  root:29 - connection created
+2019-09-24 14:29:17 main INFO  root:29 - connection created
+2019-09-24 14:29:17 main INFO  root:29 - connection created
+2019-09-24 14:29:17 main INFO  root:70 - Connection pool with 10 connections was created
+2019-09-24 14:29:17 main DEBUG root:92 - Connaction Pool was created
+2019-09-24 14:29:17 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:17 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:17 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:17 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:17 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:17 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:17 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:17 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:17 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:50 main INFO  root:29 - connection created
+2019-09-24 14:29:50 main INFO  root:29 - connection created
+2019-09-24 14:29:50 main INFO  root:29 - connection created
+2019-09-24 14:29:50 main INFO  root:29 - connection created
+2019-09-24 14:29:50 main INFO  root:29 - connection created
+2019-09-24 14:29:50 main INFO  root:29 - connection created
+2019-09-24 14:29:50 main INFO  root:29 - connection created
+2019-09-24 14:29:50 main INFO  root:29 - connection created
+2019-09-24 14:29:50 main INFO  root:29 - connection created
+2019-09-24 14:29:50 main INFO  root:29 - connection created
+2019-09-24 14:29:50 main INFO  root:70 - Connection pool with 10 connections was created
+2019-09-24 14:29:50 main DEBUG root:92 - Connaction Pool was created
+2019-09-24 14:29:50 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:50 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:50 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:50 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:50 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:50 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:50 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:50 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:29:50 main INFO  root:135 - Pool has been closed, drivers deregistered.
+2019-09-24 14:31:05 main INFO  root:29 - connection created
+2019-09-24 14:31:05 main INFO  root:29 - connection created
+2019-09-24 14:31:06 main INFO  root:29 - connection created
+2019-09-24 14:31:06 main INFO  root:29 - connection created
+2019-09-24 14:31:06 main INFO  root:29 - connection created
+2019-09-24 14:31:06 main INFO  root:29 - connection created
+2019-09-24 14:31:06 main INFO  root:29 - connection created
+2019-09-24 14:31:06 main INFO  root:29 - connection created
+2019-09-24 14:31:06 main INFO  root:29 - connection created
+2019-09-24 14:31:06 main INFO  root:29 - connection created
+2019-09-24 14:31:06 main INFO  root:70 - Connection pool with 10 connections was created
+2019-09-24 14:31:06 main DEBUG root:92 - Connaction Pool was created
+2019-09-24 14:31:06 main INFO  root:141 - Pool has been closed, drivers deregistered.
+2019-09-24 14:31:06 main INFO  root:141 - Pool has been closed, drivers deregistered.
+2019-09-24 14:31:06 main INFO  root:141 - Pool has been closed, drivers deregistered.
+2019-09-24 14:31:06 main INFO  root:141 - Pool has been closed, drivers deregistered.
+2019-09-24 14:31:06 main INFO  root:141 - Pool has been closed, drivers deregistered.
+2019-09-24 14:31:06 main INFO  root:141 - Pool has been closed, drivers deregistered.
+2019-09-24 14:31:06 main INFO  root:141 - Pool has been closed, drivers deregistered.
+2019-09-24 14:31:06 main INFO  root:141 - Pool has been closed, drivers deregistered.
+2019-09-24 14:31:06 main INFO  root:141 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:09 main INFO  root:29 - connection created
+2019-09-24 14:35:09 main INFO  root:29 - connection created
+2019-09-24 14:35:09 main INFO  root:29 - connection created
+2019-09-24 14:35:09 main INFO  root:29 - connection created
+2019-09-24 14:35:09 main INFO  root:29 - connection created
+2019-09-24 14:35:09 main INFO  root:29 - connection created
+2019-09-24 14:35:09 main INFO  root:29 - connection created
+2019-09-24 14:35:09 main INFO  root:29 - connection created
+2019-09-24 14:35:09 main INFO  root:29 - connection created
+2019-09-24 14:35:09 main INFO  root:29 - connection created
+2019-09-24 14:35:09 main INFO  root:70 - Connection pool with 10 connections was created
+2019-09-24 14:35:09 main DEBUG root:92 - Connaction Pool was created
+2019-09-24 14:35:09 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:09 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:09 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:09 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:09 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:09 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:09 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:09 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:09 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:41 main INFO  root:29 - connection created
+2019-09-24 14:35:41 main INFO  root:29 - connection created
+2019-09-24 14:35:41 main INFO  root:29 - connection created
+2019-09-24 14:35:41 main INFO  root:29 - connection created
+2019-09-24 14:35:41 main INFO  root:29 - connection created
+2019-09-24 14:35:41 main INFO  root:29 - connection created
+2019-09-24 14:35:41 main INFO  root:29 - connection created
+2019-09-24 14:35:41 main INFO  root:29 - connection created
+2019-09-24 14:35:42 main INFO  root:29 - connection created
+2019-09-24 14:35:42 main INFO  root:29 - connection created
+2019-09-24 14:35:42 main INFO  root:70 - Connection pool with 10 connections was created
+2019-09-24 14:35:42 main DEBUG root:92 - Connaction Pool was created
+2019-09-24 14:35:42 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:42 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:42 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:42 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:42 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:42 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:42 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:42 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:35:42 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:37:57 main INFO  root:29 - connection created
+2019-09-24 14:37:57 main INFO  root:29 - connection created
+2019-09-24 14:37:57 main INFO  root:29 - connection created
+2019-09-24 14:37:57 main INFO  root:29 - connection created
+2019-09-24 14:37:57 main INFO  root:29 - connection created
+2019-09-24 14:37:57 main INFO  root:29 - connection created
+2019-09-24 14:37:57 main INFO  root:29 - connection created
+2019-09-24 14:37:57 main INFO  root:29 - connection created
+2019-09-24 14:37:57 main INFO  root:29 - connection created
+2019-09-24 14:37:57 main INFO  root:29 - connection created
+2019-09-24 14:37:57 main INFO  root:70 - Connection pool with 10 connections was created
+2019-09-24 14:37:57 main DEBUG root:92 - Connaction Pool was created
+2019-09-24 14:37:57 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:37:57 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:37:57 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:37:57 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:37:57 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:37:57 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:37:57 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:37:57 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:37:57 main INFO  root:136 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:16 main INFO  root:29 - connection created
+2019-09-24 14:38:17 main INFO  root:29 - connection created
+2019-09-24 14:38:17 main INFO  root:29 - connection created
+2019-09-24 14:38:17 main INFO  root:29 - connection created
+2019-09-24 14:38:17 main INFO  root:29 - connection created
+2019-09-24 14:38:17 main INFO  root:29 - connection created
+2019-09-24 14:38:17 main INFO  root:29 - connection created
+2019-09-24 14:38:17 main INFO  root:29 - connection created
+2019-09-24 14:38:17 main INFO  root:29 - connection created
+2019-09-24 14:38:17 main INFO  root:29 - connection created
+2019-09-24 14:38:17 main INFO  root:70 - Connection pool with 10 connections was created
+2019-09-24 14:38:17 main DEBUG root:92 - Connaction Pool was created
+2019-09-24 14:38:17 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:17 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:17 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:17 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:17 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:17 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:17 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:17 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:17 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:56 main INFO  root:29 - connection created
+2019-09-24 14:38:56 main INFO  root:29 - connection created
+2019-09-24 14:38:56 main INFO  root:29 - connection created
+2019-09-24 14:38:56 main INFO  root:29 - connection created
+2019-09-24 14:38:56 main INFO  root:29 - connection created
+2019-09-24 14:38:56 main INFO  root:29 - connection created
+2019-09-24 14:38:56 main INFO  root:29 - connection created
+2019-09-24 14:38:56 main INFO  root:29 - connection created
+2019-09-24 14:38:56 main INFO  root:29 - connection created
+2019-09-24 14:38:56 main INFO  root:29 - connection created
+2019-09-24 14:38:56 main INFO  root:71 - Connection pool with 10 connections was created
+2019-09-24 14:38:56 main DEBUG root:93 - Connaction Pool was created
+2019-09-24 14:38:56 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:56 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:56 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:56 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:56 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:56 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:56 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:56 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:38:56 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:39:45 main INFO  root:29 - connection created
+2019-09-24 14:39:46 main INFO  root:29 - connection created
+2019-09-24 14:39:46 main INFO  root:29 - connection created
+2019-09-24 14:39:46 main INFO  root:29 - connection created
+2019-09-24 14:39:46 main INFO  root:29 - connection created
+2019-09-24 14:39:46 main INFO  root:29 - connection created
+2019-09-24 14:39:46 main INFO  root:29 - connection created
+2019-09-24 14:39:46 main INFO  root:29 - connection created
+2019-09-24 14:39:46 main INFO  root:29 - connection created
+2019-09-24 14:39:46 main INFO  root:29 - connection created
+2019-09-24 14:39:46 main INFO  root:71 - Connection pool with 10 connections was created
+2019-09-24 14:39:46 main DEBUG root:93 - Connaction Pool was created
+2019-09-24 14:39:46 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:39:46 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:39:46 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:39:46 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:39:46 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:39:46 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:39:46 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:39:46 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:39:46 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:39:46 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:10 main INFO  root:29 - connection created
+2019-09-24 14:40:10 main INFO  root:29 - connection created
+2019-09-24 14:40:11 main INFO  root:29 - connection created
+2019-09-24 14:40:11 main INFO  root:29 - connection created
+2019-09-24 14:40:11 main INFO  root:29 - connection created
+2019-09-24 14:40:11 main INFO  root:29 - connection created
+2019-09-24 14:40:11 main INFO  root:29 - connection created
+2019-09-24 14:40:11 main INFO  root:29 - connection created
+2019-09-24 14:40:11 main INFO  root:29 - connection created
+2019-09-24 14:40:11 main INFO  root:29 - connection created
+2019-09-24 14:40:11 main INFO  root:71 - Connection pool with 10 connections was created
+2019-09-24 14:40:11 main DEBUG root:93 - Connaction Pool was created
+2019-09-24 14:40:11 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
+  Detail: Failing row contains (3, null).
+2019-09-24 14:40:11 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
+2019-09-24 14:40:11 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:11 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:11 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:11 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:11 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:11 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:11 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:11 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:11 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:11 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:57 main INFO  root:29 - connection created
+2019-09-24 14:40:57 main INFO  root:29 - connection created
+2019-09-24 14:40:57 main INFO  root:29 - connection created
+2019-09-24 14:40:57 main INFO  root:29 - connection created
+2019-09-24 14:40:57 main INFO  root:29 - connection created
+2019-09-24 14:40:57 main INFO  root:29 - connection created
+2019-09-24 14:40:57 main INFO  root:29 - connection created
+2019-09-24 14:40:57 main INFO  root:29 - connection created
+2019-09-24 14:40:57 main INFO  root:29 - connection created
+2019-09-24 14:40:57 main INFO  root:29 - connection created
+2019-09-24 14:40:57 main INFO  root:71 - Connection pool with 10 connections was created
+2019-09-24 14:40:57 main DEBUG root:93 - Connaction Pool was created
+2019-09-24 14:40:57 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
+  Detail: Failing row contains (4, null).
+2019-09-24 14:40:57 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
+2019-09-24 14:40:57 main DEBUG root:67 - 2 advice deleted
+2019-09-24 14:40:57 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:57 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:57 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:57 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:57 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:57 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:57 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:57 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:57 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:40:57 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:43:03 main INFO  root:29 - connection created
+2019-09-24 14:43:03 main INFO  root:29 - connection created
+2019-09-24 14:43:03 main INFO  root:29 - connection created
+2019-09-24 14:43:03 main INFO  root:29 - connection created
+2019-09-24 14:43:03 main INFO  root:29 - connection created
+2019-09-24 14:43:03 main INFO  root:29 - connection created
+2019-09-24 14:43:03 main INFO  root:29 - connection created
+2019-09-24 14:43:04 main INFO  root:29 - connection created
+2019-09-24 14:43:04 main INFO  root:29 - connection created
+2019-09-24 14:43:04 main INFO  root:29 - connection created
+2019-09-24 14:43:04 main INFO  root:71 - Connection pool with 10 connections was created
+2019-09-24 14:43:04 main DEBUG root:93 - Connaction Pool was created
+2019-09-24 14:43:04 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
+  Detail: Failing row contains (3, null).
+2019-09-24 14:43:04 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
+2019-09-24 14:43:04 main DEBUG root:67 - 2 advice deleted
+2019-09-24 14:43:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:43:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:43:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:43:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:43:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:43:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:43:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:43:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:43:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:43:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:44:17 main INFO  root:29 - connection created
+2019-09-24 14:44:17 main INFO  root:29 - connection created
+2019-09-24 14:44:17 main INFO  root:29 - connection created
+2019-09-24 14:44:17 main INFO  root:29 - connection created
+2019-09-24 14:44:17 main INFO  root:29 - connection created
+2019-09-24 14:44:17 main INFO  root:29 - connection created
+2019-09-24 14:44:17 main INFO  root:29 - connection created
+2019-09-24 14:44:17 main INFO  root:29 - connection created
+2019-09-24 14:44:17 main INFO  root:29 - connection created
+2019-09-24 14:44:18 main INFO  root:29 - connection created
+2019-09-24 14:44:18 main INFO  root:71 - Connection pool with 10 connections was created
+2019-09-24 14:44:18 main DEBUG root:93 - Connaction Pool was created
+2019-09-24 14:44:18 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
+  Detail: Failing row contains (3, null).
+2019-09-24 14:44:18 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
+2019-09-24 14:44:18 main DEBUG root:67 - 2 advice deleted
+2019-09-24 14:44:22 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "name" violates not-null constraint
+  Detail: Failing row contains (3, null, 2, 10, 5, 1).
+2019-09-24 14:44:22 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (4, test test 1234, null, 10000, 5, 1).
+2019-09-24 14:44:22 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (5, test test 1234, null, 10, 555555, 1).
+2019-09-24 14:44:22 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (6, test test 1234, null, 10, 5, 1).
+2019-09-24 14:44:22 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (7, test test 1234, null, -10, 5, 1).
+2019-09-24 14:44:22 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (8, test test 1234, null, 10, -33, 1).
+2019-09-24 14:44:22 main WARN  root:106 - Programs name id: 2 was deleted
+2019-09-24 14:44:22 main WARN  root:133 - Programs name: test test 1234 was insert
+2019-09-24 14:45:39 main INFO  root:29 - connection created
+2019-09-24 14:45:40 main INFO  root:29 - connection created
+2019-09-24 14:45:40 main INFO  root:29 - connection created
+2019-09-24 14:45:40 main INFO  root:29 - connection created
+2019-09-24 14:45:40 main INFO  root:29 - connection created
+2019-09-24 14:45:40 main INFO  root:29 - connection created
+2019-09-24 14:45:40 main INFO  root:29 - connection created
+2019-09-24 14:45:40 main INFO  root:29 - connection created
+2019-09-24 14:45:40 main INFO  root:29 - connection created
+2019-09-24 14:45:40 main INFO  root:29 - connection created
+2019-09-24 14:45:40 main INFO  root:71 - Connection pool with 10 connections was created
+2019-09-24 14:45:40 main DEBUG root:93 - Connaction Pool was created
+2019-09-24 14:45:40 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
+  Detail: Failing row contains (3, null).
+2019-09-24 14:45:40 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
+2019-09-24 14:45:40 main DEBUG root:67 - 2 advice deleted
+2019-09-24 14:45:44 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "name" violates not-null constraint
+  Detail: Failing row contains (3, null, 2, 10, 5, 1).
+2019-09-24 14:45:44 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (4, test test 1234, null, 10000, 5, 1).
+2019-09-24 14:45:44 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (5, test test 1234, null, 10, 555555, 1).
+2019-09-24 14:45:44 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (6, test test 1234, null, 10, 5, 1).
+2019-09-24 14:45:44 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (7, test test 1234, null, -10, 5, 1).
+2019-09-24 14:45:44 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (8, test test 1234, null, 10, -33, 1).
+2019-09-24 14:45:44 main WARN  root:106 - Programs name id: 2 was deleted
+2019-09-24 14:45:44 main WARN  root:133 - Programs name: test test 1234 was insert
+2019-09-24 14:45:45 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:45:45 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:45:45 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:45:45 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:45:45 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:45:45 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:45:45 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:45:45 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:45:45 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:45:45 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:46:36 main INFO  root:29 - connection created
+2019-09-24 14:46:36 main INFO  root:29 - connection created
+2019-09-24 14:46:36 main INFO  root:29 - connection created
+2019-09-24 14:46:37 main INFO  root:29 - connection created
+2019-09-24 14:46:37 main INFO  root:29 - connection created
+2019-09-24 14:46:37 main INFO  root:29 - connection created
+2019-09-24 14:46:37 main INFO  root:29 - connection created
+2019-09-24 14:46:37 main INFO  root:29 - connection created
+2019-09-24 14:46:37 main INFO  root:29 - connection created
+2019-09-24 14:46:37 main INFO  root:29 - connection created
+2019-09-24 14:46:37 main INFO  root:71 - Connection pool with 10 connections was created
+2019-09-24 14:46:37 main DEBUG root:93 - Connaction Pool was created
+2019-09-24 14:46:37 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
+  Detail: Failing row contains (3, null).
+2019-09-24 14:46:37 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
+2019-09-24 14:46:37 main DEBUG root:67 - 2 advice deleted
+2019-09-24 14:46:41 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "name" violates not-null constraint
+  Detail: Failing row contains (3, null, 2, 10, 5, 1).
+2019-09-24 14:46:41 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (4, test test 1234, null, 10000, 5, 1).
+2019-09-24 14:46:41 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (5, test test 1234, null, 10, 555555, 1).
+2019-09-24 14:46:41 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (6, test test 1234, null, 10, 5, 1).
+2019-09-24 14:46:41 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (7, test test 1234, null, -10, 5, 1).
+2019-09-24 14:46:41 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (8, test test 1234, null, 10, -33, 1).
+2019-09-24 14:46:41 main WARN  root:106 - Programs name id: 2 was deleted
+2019-09-24 14:46:41 main WARN  root:133 - Programs name: test test 1234 was insert
+2019-09-24 14:46:42 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:46:42 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:46:42 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:46:42 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:46:42 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:46:42 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:46:42 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:46:42 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:46:42 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:46:42 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:46:59 main INFO  root:29 - connection created
+2019-09-24 14:46:59 main INFO  root:29 - connection created
+2019-09-24 14:46:59 main INFO  root:29 - connection created
+2019-09-24 14:46:59 main INFO  root:29 - connection created
+2019-09-24 14:46:59 main INFO  root:29 - connection created
+2019-09-24 14:46:59 main INFO  root:29 - connection created
+2019-09-24 14:46:59 main INFO  root:29 - connection created
+2019-09-24 14:46:59 main INFO  root:29 - connection created
+2019-09-24 14:46:59 main INFO  root:29 - connection created
+2019-09-24 14:46:59 main INFO  root:29 - connection created
+2019-09-24 14:46:59 main INFO  root:71 - Connection pool with 10 connections was created
+2019-09-24 14:46:59 main DEBUG root:93 - Connaction Pool was created
+2019-09-24 14:47:00 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
+  Detail: Failing row contains (3, null).
+2019-09-24 14:47:00 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
+2019-09-24 14:47:00 main DEBUG root:67 - 2 advice deleted
+2019-09-24 14:47:04 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "name" violates not-null constraint
+  Detail: Failing row contains (3, null, 2, 10, 5, 1).
+2019-09-24 14:47:04 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (4, test test 1234, null, 10000, 5, 1).
+2019-09-24 14:47:04 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (5, test test 1234, null, 10, 555555, 1).
+2019-09-24 14:47:04 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (6, test test 1234, null, 10, 5, 1).
+2019-09-24 14:47:04 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (7, test test 1234, null, -10, 5, 1).
+2019-09-24 14:47:04 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (8, test test 1234, null, 10, -33, 1).
+2019-09-24 14:47:04 main WARN  root:106 - Programs name id: 2 was deleted
+2019-09-24 14:47:04 main WARN  root:133 - Programs name: test test 1234 was insert
+2019-09-24 14:47:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:04 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:55 main INFO  root:29 - connection created
+2019-09-24 14:47:55 main INFO  root:29 - connection created
+2019-09-24 14:47:55 main INFO  root:29 - connection created
+2019-09-24 14:47:55 main INFO  root:29 - connection created
+2019-09-24 14:47:55 main INFO  root:29 - connection created
+2019-09-24 14:47:55 main INFO  root:29 - connection created
+2019-09-24 14:47:55 main INFO  root:29 - connection created
+2019-09-24 14:47:55 main INFO  root:29 - connection created
+2019-09-24 14:47:55 main INFO  root:29 - connection created
+2019-09-24 14:47:55 main INFO  root:29 - connection created
+2019-09-24 14:47:55 main INFO  root:71 - Connection pool with 10 connections was created
+2019-09-24 14:47:55 main DEBUG root:93 - Connaction Pool was created
+2019-09-24 14:47:55 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
+  Detail: Failing row contains (3, null).
+2019-09-24 14:47:55 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
+2019-09-24 14:47:55 main DEBUG root:67 - 2 advice deleted
+2019-09-24 14:47:55 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:55 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:55 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:55 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:55 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:55 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:55 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:55 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:55 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:47:55 main INFO  root:138 - Pool has been closed, drivers deregistered.
+2019-09-24 14:48:29 main INFO  root:29 - connection created
+2019-09-24 14:48:29 main INFO  root:29 - connection created
+2019-09-24 14:48:29 main INFO  root:29 - connection created
+2019-09-24 14:48:29 main INFO  root:29 - connection created
+2019-09-24 14:48:30 main INFO  root:29 - connection created
+2019-09-24 14:48:30 main INFO  root:29 - connection created
+2019-09-24 14:48:30 main INFO  root:29 - connection created
+2019-09-24 14:48:30 main INFO  root:29 - connection created
+2019-09-24 14:48:30 main INFO  root:29 - connection created
+2019-09-24 14:48:30 main INFO  root:29 - connection created
+2019-09-24 14:48:30 main INFO  root:71 - Connection pool with 10 connections was created
+2019-09-24 14:48:30 main DEBUG root:93 - Connaction Pool was created
+2019-09-24 14:48:30 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
+  Detail: Failing row contains (3, null).
+2019-09-24 14:48:30 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
+2019-09-24 14:48:30 main DEBUG root:67 - 2 advice deleted
+2019-09-24 14:48:35 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "name" violates not-null constraint
+  Detail: Failing row contains (3, null, 2, 10, 5, 1).
+2019-09-24 14:48:35 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (4, test test 1234, null, 10000, 5, 1).
+2019-09-24 14:48:35 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (5, test test 1234, null, 10, 555555, 1).
+2019-09-24 14:48:35 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (6, test test 1234, null, 10, 5, 1).
+2019-09-24 14:48:35 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (7, test test 1234, null, -10, 5, 1).
+2019-09-24 14:48:35 main ERROR root:136 - org.postgresql.util.PSQLException: ERROR: null value in column "curator" violates not-null constraint
+  Detail: Failing row contains (8, test test 1234, null, 10, -33, 1).
+2019-09-24 14:48:35 main WARN  root:106 - Programs name id: 2 was deleted
+2019-09-24 14:48:35 main WARN  root:133 - Programs name: test test 1234 was insert
+2019-09-24 14:48:35 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:48:35 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:48:35 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:48:35 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:48:35 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:48:35 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:48:35 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:48:35 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:48:35 main INFO  root:137 - Pool has been closed, drivers deregistered.
+2019-09-24 14:48:35 main INFO  root:137 - Pool has been closed, drivers deregistered.

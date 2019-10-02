@@ -1,0 +1,12 @@
+
+]squid:S2142k"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
+W
+squid:S106€"9Replace this use of System.out or System.err by a logger.(§í÷8ÆûÁ˜Ö-
+V
+squid:S106A"9Replace this use of System.out or System.err by a logger.(¾íí8Ù²Ä˜Ö-
+P
+squid:S899u":Do something with the "boolean" value returned by "offer".(ä‚îÍ
+esquid:S2142…"FEither re-interrupt this method or rethrow the "InterruptedException".(ÿ“¿Å8ß¼»˜Ö-
+P
+squid:S899@":Do something with the "boolean" value returned by "offer".(àâªÆ
+_squid:S2095>"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú
