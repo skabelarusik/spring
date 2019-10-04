@@ -7,105 +7,1164 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dd54e56-7913-4e54-9d46-8e48b33bb191" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/18f70267b53dfffc9c6929a487953a9cca70fb8f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22d29c44bda9e1e322fe36bce4df205fbe6e86ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/338b8bb4017fa89dfb8d4843728fd6ce2261a062" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/3499103ad79bf34967ed68a871a8414e7d8d6dfd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/3499103ad79bf34967ed68a871a8414e7d8d6dfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c933475dcad1a119471424c0ea44074d36961da" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c933475dcad1a119471424c0ea44074d36961da" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/e/3ed66506ee5733c78548f1bb49d1c8cc66e24c45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/518bc842026fcee989be2a297d532738fac63e68" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/54555ccb50ab3fa26d88653f58415e32ddd35896" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/3/73bb5137bd0ed7ba516256949958f2246473b345" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/3/73bb5137bd0ed7ba516256949958f2246473b345" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8e6d3b70c9f5b02570779b0441540d45eceb0ded" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9ccda38bb8360ccd9fe5f449167a5cbaa074285e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a02f465b18c16e0fd6aff9ee73b2d4d8f37851a7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa3e0fc54badeb6910d7ff36320df5841170ee96" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7e8bfd9460d1afa7ef1e06f4eddd880c985021f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7e8bfd9460d1afa7ef1e06f4eddd880c985021f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b903e36b0d47895f78d9616d93d552e7ca9edbdd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bbeff794419a490fd553aa3150d4e23edd83c880" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bbeff794419a490fd553aa3150d4e23edd83c880" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3b30c64c717b8ff69c8835d416919cf0e80ea05" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/5/d50efcc9414809524e21d33639bacca8216fef6e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d84a7d39f35aeee0c685bbfa811436d3c0bf55c5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/0/e01c6bc02ea040f81c898bf2b2a84a71e6ea628f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/0/e01c6bc02ea040f81c898bf2b2a84a71e6ea628f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1f21dd9af64d1572c99ff020a773c2483c36d94" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/ActionFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddAdviceCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddProductBucketCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddProductCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddProductToProgramCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/AddProgramNameCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/BuyProgramCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CalculatorCaloriesBucketCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CalculatorCaloriesCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CalculatorCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/ChangeRoleUserCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CheckInputMessageCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/CheckOutputMessageCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteAdviceCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteMessageCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProductBucketCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProductCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProductIdBucketCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProgramNameCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteProgramProductCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteReviewCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteSubscribeCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DeleteUserCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/DepositCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/EditComponentProgramCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/EditProgramNameCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/EmptyCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/LanguageCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/LoadReviewCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/LoginCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/LogoutCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/RegistrationCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SearchProductCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllAdviceCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllCuratorSubscriptionCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllProductsCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllProgramsNameCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectAllSubscriptionsCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectCuratorProgramCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectCuratorUsersCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectProductByCaloriesCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectUserByGenderCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectUserByRoleCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SelectUserCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SendMessageCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/SendReviewCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/ShowHistorySubscriptionCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/ShowReviewCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/TypeCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/UpdatePasswordCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/UpdateProductCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/UpdateProfileCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/UpdateProgramCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/command/UserMessageCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/TrackerServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/UploadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/UploadServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/BucketDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/BucketDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/MessageDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/MessageDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProductDaoJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProductDaoJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ReviewDaoJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ReviewDaoJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/UserDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/UserDaoJdbcImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/StaticFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/StaticFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/XssFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/XssFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/tag/ShowCuratorTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/tag/ShowCuratorTag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/NameSurnameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/NameSurnameValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/ProductNameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/ProductNameValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/dao/AdviceDaoJdbcTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/dao/ProgramsNameDaoJdbcTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/resources/ParametresDaoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/resources/ParametresTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/AdviceLengthValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/BirthdayValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/CostValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/DayValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/DepositValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/DoubleValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/DurationValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/EmailValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/GenderValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/IdValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/LoginValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/MessageValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/MinMaxCaloriesValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/NameSurnameValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/PasswordValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/PortionsValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/PositiveIntValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/ProductNameValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/ProgramNameValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/ReviewLengthValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/RoleValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/TimeValidatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/TypeSortedValidatorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/AdviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/AdviceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/bootstrap/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/lib/components/bootstrap-select.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/lib/components/datepicker3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/lib/components/jasny-bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/lib/components/jquery-ui-timepicker-addon.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/lib/components/jquery.mCustomScrollbar.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/lib/components/jquery.tagit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/lib/components/mCSB_buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/lib/components/tagit.ui-zendesk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/lib/components/timepicker.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-accordion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-accordion.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-alerts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-alerts.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-animated-image-panel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-animated-image-panel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-autocomplete.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-autocomplete.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-breadcrumbs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-breadcrumbs.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-buttons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-buttons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-core.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-core.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-datepicker-2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-datepicker-2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-datepicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-file-uploader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-file-uploader.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-form-elements.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-form-elements.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-image-text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-image-text.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-items-list.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-items-list.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-labels.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-labels.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-loaders.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-loaders.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-login-panel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-login-panel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-modal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-modal.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-multiswitch.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-multiswitch.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-pagination.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-pagination.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-panels.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-panels.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-popovers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-popovers.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-profile-menu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-profile-menu.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-profile.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-progress-bars.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-progress-bars.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-rating.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-rating.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-search.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-show-text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-show-text.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-sliders.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-sliders.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-switch.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-switch.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-tables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-tables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-tabs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-tabs.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-tagit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-tagit.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-timeline.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-timeline.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-timepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-timepicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-tooltips.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/uui-tooltips.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/animated.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/spinning.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_animated.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_spinning.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-awesome/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-oswald/oswald-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-it.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-it.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-it.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-it.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-it.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-semibold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-semibold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-semibold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-semibold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-semibold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/Logo_Epam_Color.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/Logo_Epam_Gray.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/Logo_Epam_White.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/ic_logo_UUi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/ic_logo_UUi_blue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/icons/datepicker-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/icons/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/icons/no-results-responsive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/icons/no-results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/images/icons/no_photo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/jquery-ui.theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jquery-ui/jquery-ui.theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/css/jquery.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/css/jquery.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/css/jquery.dataTables_themeroller.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/Sorting icons.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/back_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/back_enabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/back_enabled_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/forward_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/forward_enabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/forward_enabled_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/sort_asc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/sort_asc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/sort_both.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/sort_desc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/images/sort_desc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/js/jquery.dataTables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/js/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/DataTables-1.10.2/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/bootstrap-datepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/bootstrap-select.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/bootstrap-timepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/bootstrap3-typeahead.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/c3-0.4.2/c3.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/c3-0.4.2/c3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/d3-3.4.13/d3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/jasny-bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/jquery.mCustomScrollbar.concat.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/jquery.sparkline.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/components/tag-it.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/jquery-1.12.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib/less.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-autocomplete.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-core.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-datepicker-2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-datepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-dropdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-global-search.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-multiswitch.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-panel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-popover.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-rating.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-show-text.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-tabs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-tagit.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-timepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-tooltip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/uui-tree-grid.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-accordion.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-alerts.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-all.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-animated-image-panel.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-autocomplete.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-breadcrumbs.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-buttons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-carousel.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-colors.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-datepicker-2.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-datepicker.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-file-uploader.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-fonts.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-form-elements.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-image-text.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-items-list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-labels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-loaders.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-login-panel.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-modal.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-multiswitch.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-pagination.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-panels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-popovers.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-profile-menu.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-profile.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-progress-bars.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-rating.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-search.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-show-text.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-sliders.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-switch.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-tables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-tabs.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-tagit.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-timeline.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-timepicker.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/less/uui-tooltips.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/config.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/fonts/slick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/slick-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/slick-theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/slick-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/slick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/slick.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/slick/slick.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/jquery.tinymce.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/langs/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/advlist/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/advlist/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/anchor/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/anchor/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/autolink/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/autolink/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/autoresize/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/autoresize/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/autosave/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/autosave/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/bbcode/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/bbcode/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/charmap/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/charmap/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/code/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/code/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/colorpicker/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/colorpicker/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/css/dialog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/img/buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/img/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/img/items.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/img/menu_arrow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/img/menu_check.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/img/progress.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/img/tabs.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/tiny_mce_popup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/utils/editable_selects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/utils/form_utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/utils/mctabs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/compat3x/utils/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/contextmenu/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/contextmenu/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/directionality/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/directionality/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-cool.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-cry.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-embarassed.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-frown.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-innocent.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-kiss.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-laughing.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-sealed.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-smile.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-surprised.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-undecided.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-wink.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/img/smiley-yell.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/emoticons/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/example/dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/example/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/example/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/example_dependency/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/example_dependency/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/fullpage/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/fullpage/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/fullscreen/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/fullscreen/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/hr/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/hr/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/image/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/image/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/Canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/ColorMatrix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/Conversions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/CropRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/Dialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/Filters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/ImagePanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/ImageSize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/ImageTools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/Mime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/Plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/classes/UndoStack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/plugin.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/imagetools/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/importcss/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/importcss/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/insertdatetime/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/insertdatetime/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/layer/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/layer/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/legacyoutput/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/legacyoutput/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/link/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/link/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/lists/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/lists/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/media/moxieplayer.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/media/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/media/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/nonbreaking/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/nonbreaking/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/noneditable/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/noneditable/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/pagebreak/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/pagebreak/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/paste/classes/Clipboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/paste/classes/Plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/paste/classes/Quirks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/paste/classes/Utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/paste/classes/WordFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/paste/plugin.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/paste/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/paste/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/preview/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/preview/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/print/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/print/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/save/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/save/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/searchreplace/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/searchreplace/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/spellchecker/classes/DomTextMatcher.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/spellchecker/classes/Plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/spellchecker/plugin.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/spellchecker/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/spellchecker/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/tabfocus/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/tabfocus/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/table/classes/CellSelection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/table/classes/Dialogs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/table/classes/Plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/table/classes/Quirks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/table/classes/TableGrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/table/classes/Utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/table/plugin.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/table/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/table/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/template/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/template/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/textcolor/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/textcolor/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/textpattern/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/textpattern/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/css/visualblocks.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/address.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/article.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/aside.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/blockquote.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/div.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/dl.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/figure.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/h1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/h2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/h3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/h4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/h5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/h6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/hgroup.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/ol.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/p.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/pre.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/section.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/img/ul.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualblocks/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualchars/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/visualchars/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/wordcount/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/plugins/wordcount/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/content.inline.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/tinymce-small.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/tinymce-small.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/tinymce-small.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/tinymce-small.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/tinymce-small.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/tinymce.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/tinymce.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/tinymce.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/tinymce.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/fonts/tinymce.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/img/anchor.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/img/loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/img/object.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/img/trans.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/skin.ie7.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/skins/epamuui/skin.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/themes/modern/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/themes/modern/theme.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tinymce/tinymce.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tld/custom.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index111.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index111.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/SpringConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/BucketDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/BucketDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/MessageDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/MessageDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProductDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProductDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ReviewDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ReviewDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/UserDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/UserDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/AdviceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/AdviceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/bootstrap/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/config/SpringConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/BucketDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/BucketDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/MessageDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/MessageDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProductDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProductDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ReviewDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ReviewDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/UserDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/UserDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/service/AdviceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/service/AdviceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/lib/components/bootstrap-select.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/lib/components/datepicker3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/lib/components/jasny-bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/lib/components/jquery-ui-timepicker-addon.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/lib/components/jquery.mCustomScrollbar.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/lib/components/jquery.tagit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/lib/components/mCSB_buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/lib/components/tagit.ui-zendesk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/lib/components/timepicker.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-accordion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-accordion.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-alerts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-alerts.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-animated-image-panel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-animated-image-panel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-autocomplete.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-autocomplete.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-breadcrumbs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-breadcrumbs.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-buttons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-buttons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-core.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-core.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-datepicker-2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-datepicker-2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-datepicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-file-uploader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-file-uploader.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-form-elements.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-form-elements.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-image-text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-image-text.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-items-list.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-items-list.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-labels.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-labels.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-loaders.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-loaders.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-login-panel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-login-panel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-modal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-modal.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-multiswitch.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-multiswitch.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-pagination.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-pagination.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-panels.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-panels.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-popovers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-popovers.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-profile-menu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-profile-menu.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-profile.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-progress-bars.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-progress-bars.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-rating.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-rating.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-search.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-show-text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-show-text.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-sliders.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-sliders.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-switch.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-switch.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-tables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-tables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-tabs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-tabs.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-tagit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-tagit.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-timeline.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-timeline.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-timepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-timepicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-tooltips.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/css/uui-tooltips.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/animated.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/spinning.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_animated.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_spinning.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-awesome/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-oswald/oswald-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-it.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-it.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-it.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-it.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-it.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-semibold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-semibold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-semibold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-semibold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/fonts/font-sourcesanspro/sourcesanspro-semibold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/images/Logo_Epam_Color.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/images/Logo_Epam_Gray.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/images/Logo_Epam_White.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/images/ic_logo_UUi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/images/ic_logo_UUi_blue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/images/icons/datepicker-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/images/icons/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/images/icons/no-results-responsive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/images/icons/no-results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/images/icons/no_photo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/jquery-ui.theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/jquery-ui/jquery-ui.theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/css/jquery.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/css/jquery.dataTables.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/css/jquery.dataTables_themeroller.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/Sorting icons.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/back_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/back_enabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/back_enabled_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/forward_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/forward_enabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/forward_enabled_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/sort_asc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/sort_asc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/sort_both.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/sort_desc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/images/sort_desc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/js/jquery.dataTables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/js/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/DataTables-1.10.2/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/bootstrap-datepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/bootstrap-select.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/bootstrap-timepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/bootstrap3-typeahead.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/c3-0.4.2/c3.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/c3-0.4.2/c3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/d3-3.4.13/d3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/jasny-bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/jquery.mCustomScrollbar.concat.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/jquery.sparkline.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/components/tag-it.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/jquery-1.12.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/lib/less.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-autocomplete.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-core.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-datepicker-2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-datepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-dropdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-global-search.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-multiswitch.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-panel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-popover.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-rating.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-show-text.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-tabs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-tagit.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-timepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-tooltip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/js/uui-tree-grid.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-accordion.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-alerts.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-all.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-animated-image-panel.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-autocomplete.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-breadcrumbs.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-buttons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-carousel.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-colors.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-datepicker-2.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-datepicker.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-file-uploader.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-fonts.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-form-elements.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-image-text.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-items-list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-labels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-loaders.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-login-panel.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-modal.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-multiswitch.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-pagination.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-panels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-popovers.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-profile-menu.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-profile.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-progress-bars.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-rating.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-search.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-show-text.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-sliders.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-switch.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-tables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-tabs.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-tagit.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-timeline.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-timepicker.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/less/uui-tooltips.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/config.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/fonts/slick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/slick-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/slick-theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/slick-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/slick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/slick.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/slick/slick.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/jquery.tinymce.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/langs/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/advlist/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/advlist/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/anchor/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/anchor/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/autolink/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/autolink/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/autoresize/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/autoresize/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/autosave/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/autosave/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/bbcode/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/bbcode/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/charmap/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/charmap/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/code/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/code/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/colorpicker/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/colorpicker/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/css/dialog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/img/buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/img/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/img/items.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/img/menu_arrow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/img/menu_check.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/img/progress.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/img/tabs.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/tiny_mce_popup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/utils/editable_selects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/utils/form_utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/utils/mctabs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/compat3x/utils/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/contextmenu/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/contextmenu/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/directionality/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/directionality/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-cool.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-cry.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-embarassed.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-frown.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-innocent.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-kiss.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-laughing.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-sealed.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-smile.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-surprised.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-undecided.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-wink.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/img/smiley-yell.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/emoticons/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/example/dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/example/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/example/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/example_dependency/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/example_dependency/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/fullpage/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/fullpage/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/fullscreen/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/fullscreen/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/hr/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/hr/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/image/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/image/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/Canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/ColorMatrix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/Conversions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/CropRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/Dialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/Filters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/ImagePanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/ImageSize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/ImageTools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/Mime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/Plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/classes/UndoStack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/plugin.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/imagetools/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/importcss/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/importcss/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/insertdatetime/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/insertdatetime/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/layer/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/layer/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/legacyoutput/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/legacyoutput/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/link/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/link/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/lists/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/lists/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/media/moxieplayer.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/media/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/media/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/nonbreaking/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/nonbreaking/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/noneditable/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/noneditable/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/pagebreak/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/pagebreak/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/paste/classes/Clipboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/paste/classes/Plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/paste/classes/Quirks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/paste/classes/Utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/paste/classes/WordFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/paste/plugin.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/paste/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/paste/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/preview/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/preview/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/print/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/print/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/save/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/save/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/searchreplace/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/searchreplace/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/spellchecker/classes/DomTextMatcher.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/spellchecker/classes/Plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/spellchecker/plugin.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/spellchecker/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/spellchecker/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/tabfocus/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/tabfocus/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/table/classes/CellSelection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/table/classes/Dialogs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/table/classes/Plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/table/classes/Quirks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/table/classes/TableGrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/table/classes/Utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/table/plugin.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/table/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/table/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/template/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/template/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/textcolor/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/textcolor/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/textpattern/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/textpattern/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/css/visualblocks.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/address.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/article.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/aside.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/blockquote.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/div.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/dl.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/figure.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/h1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/h2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/h3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/h4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/h5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/h6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/hgroup.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/ol.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/p.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/pre.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/section.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/img/ul.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualblocks/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualchars/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/visualchars/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/wordcount/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/plugins/wordcount/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/content.inline.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-oswald/oswald-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-it.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/font-sourcesanspro/sourcesanspro-semibold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/tinymce-small.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/tinymce-small.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/tinymce-small.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/tinymce-small.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/tinymce-small.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/tinymce.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/tinymce.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/tinymce.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/tinymce.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/fonts/tinymce.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/img/anchor.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/img/loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/img/object.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/img/trans.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/skin.ie7.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/skins/epamuui/skin.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/themes/modern/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/themes/modern/theme.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tinymce/tinymce.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/tld/custom.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/index111.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/index111.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,8 +1205,8 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -190,7 +1249,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
@@ -213,11 +1272,11 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\webapp\WEB-INF\views" />
       <recent name="C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\test\resources" />
       <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\WEB-INF\tld" />
       <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\tld" />
       <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp" />
-      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\picture" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -232,7 +1291,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.by.epam.crackertracker.dao in cracker">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.42" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -306,17 +1365,15 @@
         </option>
       </method>
     </configuration>
-    <configuration name="AdviceDaoJdbcTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.Main" />
       <module name="cracker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.epam.crackertracker.dao.*" />
+          <option name="PATTERN" value="by.epam.crackertracker.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.epam.crackertracker.dao" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.dao.AdviceDaoJdbcTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -493,19 +1550,19 @@
     <list>
       <item itemvalue="JUnit.by.epam.crackertracker.validator in cracker" />
       <item itemvalue="JUnit.ProgramsNameDaoJdbcTest" />
-      <item itemvalue="JUnit.AdviceDaoJdbcTest" />
       <item itemvalue="JUnit.All in cracker" />
       <item itemvalue="JUnit.by.epam.crackertracker.dao in cracker" />
       <item itemvalue="JUnit.AdviceDaoJdbcTest.testTest" />
       <item itemvalue="Maven.cracker [tomcat7:run]" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.by.epam.crackertracker.dao in cracker" />
         <item itemvalue="JUnit.AdviceDaoJdbcTest.testTest" />
         <item itemvalue="JUnit.All in cracker" />
         <item itemvalue="JUnit.ProgramsNameDaoJdbcTest" />
-        <item itemvalue="JUnit.AdviceDaoJdbcTest" />
       </list>
     </recent_temporary>
   </component>
@@ -751,7 +1808,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/jsp/register.jsp</url>
-          <line>76</line>
+          <line>70</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

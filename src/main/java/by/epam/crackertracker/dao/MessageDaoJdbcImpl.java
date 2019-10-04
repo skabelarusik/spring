@@ -12,12 +12,16 @@ import by.epam.crackertracker.pool.ConnectionPool;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class MessageDaoJdbcImpl implements MessageDao {
 
    private static final String SELECT_INPUT_MESSAGE = "SELECT m.idmessages, u.login, m.topik, m.text, m.date from messages m inner join users u\n" +
@@ -32,6 +36,8 @@ public class MessageDaoJdbcImpl implements MessageDao {
 
     private static final Logger LOGGER = LogManager.getRootLogger();
 
+    @Autowired
+    private JdbcTemplate template;
 
     @Override
     public List<Message> selectInputMessage(String login, int i) throws TrackerDBException {

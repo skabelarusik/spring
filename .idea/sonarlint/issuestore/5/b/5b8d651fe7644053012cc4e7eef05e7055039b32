@@ -1,7 +1,7 @@
 
-csquid:S1871I"LThis branch's code block is the same as the block for the branch on line 60.(¶Ş·
-squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ü›ºÆıÿÿÿÿ
 nsquid:S3776."RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Å•ŒÈúÿÿÿÿ
 csquid:S1871N"LThis branch's code block is the same as the block for the branch on line 60.(¶Ş·
 ˜squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ü›ºÆıÿÿÿÿ
+csquid:S1871I"LThis branch's code block is the same as the block for the branch on line 60.(¶Ş·
 csquid:S1871B"LThis branch's code block is the same as the block for the branch on line 60.(¶Ş·

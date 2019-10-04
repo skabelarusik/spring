@@ -13,12 +13,18 @@ import by.epam.crackertracker.validator.IdValidator;
 import by.epam.crackertracker.dao.AdviceDaoJdbcImpl;
 import by.epam.crackertracker.exception.TrackerDBException;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class AdviceService {
     private static final Logger LOGGER = Logger.getRootLogger();
+
+    @Autowired
+    private AdviceDaoJdbcImpl dao;
 
     public String selectRandomAdvice() throws TrackerServiceException {
         AdviceDaoJdbcImpl dao = new AdviceDaoJdbcImpl();
@@ -32,16 +38,8 @@ public class AdviceService {
         return advice;
     }
 
-    public List<Advice> selectAllAdvices() throws TrackerServiceException {
-        List<Advice> list = new ArrayList<>();
-        AdviceDaoJdbcImpl dao = new AdviceDaoJdbcImpl();
-        try {
-            list = dao.selectAll();
-        } catch (TrackerDBException e) {
-            LOGGER.error("wrong service select all advices", e);
-            throw new TrackerServiceException("Wrong service select all advices ", e);
-        }
-        return list;
+    public List<Advice> selectAllAdvices() {
+        return dao.selectAll();
     }
 
     public boolean addAdvice(String message) throws TrackerServiceException {

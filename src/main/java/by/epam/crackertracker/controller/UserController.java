@@ -2,10 +2,15 @@ package by.epam.crackertracker.controller;
 
 import by.epam.crackertracker.entity.User;
 import by.epam.crackertracker.service.UserService;
+import freemarker.ext.beans.MapModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import java.net.http.HttpRequest;
 
 @Controller
 @RequestMapping("/")
@@ -73,4 +78,23 @@ public class UserController {
     //    userService.delete(id);
         return "redirect:/users";
     }
+
+    @PostMapping("/login")
+    public String loginUser(@RequestParam("login") String login, @RequestParam("password") String password,
+                           ModelMap model){
+        model.addAttribute("login",login);
+        model.addAttribute("password", password);
+        return "admin";
+    }
+
+    @GetMapping("/admin")
+    public String admin(){
+        return "admin";
+    }
+
+    @GetMapping("/registration")
+    public String registration(){
+        return "register";
+    }
+
 }

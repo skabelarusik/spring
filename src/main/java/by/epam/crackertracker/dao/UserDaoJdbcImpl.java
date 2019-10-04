@@ -28,7 +28,7 @@ import java.util.*;
 public class UserDaoJdbcImpl implements UserDao {
 
     @Autowired
-    public JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
     public static final String SELECT_ALL_USERS = "SELECT u.id, u.name, u.surname, u.login, u.sex," +
             "u.birthday, u.registrdate, u.email, r1.name from users u INNER JOIN role r1 on u.status = r1.id where u.active = 1 limit ? offset ?";

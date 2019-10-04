@@ -8,14 +8,19 @@ package by.epam.crackertracker.dao;
 import by.epam.crackertracker.entity.Advice;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
+import by.epam.crackertracker.mapper.AdviceMapper;
 import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class AdviceDaoJdbcImpl implements AdviceDao {
     private static final String SELECT_ALL = "SELECT idadvices, message from advices";
     private static final String SELECT_ADVICE = "SELECT message from advices ORDER BY RANDOM() LIMIT 1";
@@ -25,6 +30,9 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
     private static final String SELECT_ADVICE_BY_ID = "SELECT idadvices from advices where idadvices = ?";
 
     private static final Logger LOGGER = LogManager.getRootLogger();
+
+    @Autowired
+    private JdbcTemplate template;
 
     @Override
     public boolean insert(String text) throws TrackerDBException {
@@ -77,31 +85,8 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
     }
 
     @Override
-    public List<Advice> selectAll() throws TrackerDBException {
-        Connection connection = null;
-        Statement statement = null;
-        ResultSet resultSet = null;
-        List<Advice> adviceList = new ArrayList<>();
-        try {
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery(SELECT_ALL);
-            while (resultSet.next()){
-                String message = resultSet.getString(2);
-                int id = resultSet.getInt(1);
-                Advice advice = new Advice(message);
-                advice.setId(id);
-                adviceList.add(advice);
-            }
-        } catch (TrackerConnectionPoolException | SQLException e) {
-            LOGGER.error(e);
-            throw new TrackerDBException("Wrong select advices", e);
-        }  finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
-        }
-        return adviceList;
+    public List<Advice> selectAll() {
+        return template.query(SELECT_ALL, new AdviceMapper());
     }
 
     public String selectRandomAdvice() throws TrackerDBException {

@@ -5,6 +5,9 @@ import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,15 +16,18 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class BucketDaoJdbcImpl implements BucketDao {
     private static final Logger LOGGER = Logger.getRootLogger();
-
     public static final String ADD_ELEMENT = "INSERT INTO bucket (user_b, prod_b, portions) VALUES ((SELECT id from users " +
             "where login = ?), (SELECT idproducts from products where name = ?), ?)";
     public static final String SELECT_ELEMENTS = "select b.portions,  b.idbucket, p.name, p.calories from bucket b inner join products p on b.prod_b = p.idproducts" +
             " where user_b = (SELECT id from users where login = ?) ";
     public static final String DELETE_ELEMENT = "DELETE from bucket where idbucket = ?";
     public static final String DELETE_ALL = "DELETE from bucket where user_b = (SELECT id from users where login = ?)";
+
+    @Autowired
+    private JdbcTemplate template;
 
     public boolean insert(String login, String product, Double portions) throws TrackerDBException {
         Connection connection = null;

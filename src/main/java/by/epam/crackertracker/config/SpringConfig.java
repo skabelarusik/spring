@@ -16,6 +16,7 @@ import java.util.ResourceBundle;
 @Configuration
 @ComponentScan(basePackages = {"by.epam.crackertracker"})
 @PropertySource("classpath:database.properties")
+
 public class SpringConfig {
     @Value("${db.url}")
     public String URL;

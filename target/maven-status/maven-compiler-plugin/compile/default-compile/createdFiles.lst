@@ -12,6 +12,7 @@ by\epam\crackertracker\entity\Role.class
 by\epam\crackertracker\validator\MinMaxCaloriesValidator.class
 by\epam\crackertracker\validator\ProgramNameValidator.class
 by\epam\crackertracker\pool\ProxyTrackerConnection.class
+by\epam\crackertracker\mapper\AdviceMapper.class
 by\epam\crackertracker\dao\ProductDaoJdbc.class
 by\epam\crackertracker\mapper\UserMapper.class
 by\epam\crackertracker\validator\CostValidator.class
@@ -34,6 +35,7 @@ by\epam\crackertracker\entity\Program.class
 by\epam\crackertracker\exception\TrackerDBException.class
 by\epam\crackertracker\filter\EncodingFilter.class
 by\epam\crackertracker\validator\LoginValidator.class
+by\epam\crackertracker\controller\AdviceController.class
 by\epam\crackertracker\dao\ProgramDaoJdbcImpl.class
 by\epam\crackertracker\creator\ConnectionCreatorFactory.class
 by\epam\crackertracker\filter\StaticFilter.class

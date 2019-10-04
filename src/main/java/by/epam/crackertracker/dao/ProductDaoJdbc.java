@@ -11,11 +11,15 @@ import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class ProductDaoJdbc implements ProductDao {
 
     public static final String SELECT_ALL_PRODUCT = "SELECT idproducts, name, calories, proteins,  fats, carbs from products limit ? offset ?";
@@ -49,6 +53,9 @@ public class ProductDaoJdbc implements ProductDao {
     public static final int COUNT_PRODUCTS = 11;
 
     private static final Logger LOGGER = LogManager.getRootLogger();
+
+    @Autowired
+    private JdbcTemplate template;
 
     @Override
     public List<Product> selectAll(int page, String type) throws TrackerDBException {

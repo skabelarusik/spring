@@ -8,6 +8,9 @@ import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -15,6 +18,7 @@ import java.util.ArrayList;
 import java.sql.Date;
 import java.util.List;
 
+@Repository
 public class ProgramDaoJdbcImpl implements ProgramDao {
 
     public static final String INSERT_PRODUCT_TO_PROGRAM = "INSERT INTO programs (name, product, portions, time, day)\n" +
@@ -27,12 +31,10 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
     public static final String SELECT_ID_BY_PROGRAM_NAME_CURATOR = "select p.id from programs_name p inner join users u on " +
             "u.id = p.curator where u.login = ? and p.name = ?";
 
-
-
-
-
-
     private static final Logger LOGGER = LogManager.getRootLogger();
+
+    @Autowired
+    private JdbcTemplate template;
 
     public boolean insert(Program program) throws TrackerDBException {
         boolean status = false;

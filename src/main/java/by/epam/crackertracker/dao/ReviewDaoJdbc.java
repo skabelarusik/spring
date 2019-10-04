@@ -11,6 +11,9 @@ import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,6 +23,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class ReviewDaoJdbc implements ReviewDao {
     public static final String SELECT_ALL_REVIEW = "SELECT r.idreview, u.login, r.date, r.text from\n" +
             " review r INNER JOIN users u on r.name = u.id where r.show_review = ? order by r.date desc";
@@ -28,6 +32,9 @@ public class ReviewDaoJdbc implements ReviewDao {
     public static final String INSERT_REVIEW = "INSERT INTO review (name, date, text) values (?,?,?)";
 
     private static final Logger LOGGER = LogManager.getRootLogger();
+
+    @Autowired
+    private JdbcTemplate template;
 
     @Override
     public List<Review> selectAllReview(int show) throws TrackerDBException {

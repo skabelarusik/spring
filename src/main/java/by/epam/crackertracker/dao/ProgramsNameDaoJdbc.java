@@ -11,12 +11,16 @@ import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class ProgramsNameDaoJdbc implements ProgramsNameDao {
     public static final String SELECT_ALL_PROGRAMS_NAME = "SELECT p.id, p.name, u.login, p.duration, p.cost " +
             "from programs_name p inner join users u on p.curator = u.id where p.show_name = ? limit ? offset ? ";
@@ -36,6 +40,9 @@ public class ProgramsNameDaoJdbc implements ProgramsNameDao {
     public static final int COUNT_NAMES = 11;
 
     private static final Logger LOGGER = LogManager.getRootLogger();
+
+    @Autowired
+    private JdbcTemplate template;
 
     @Override
     public List<ProgramsName> selectAll(int page, int type) throws TrackerDBException {

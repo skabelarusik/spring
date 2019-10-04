@@ -11,13 +11,16 @@ import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
+@Repository
 public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
     public static final String SELECT_ALL = "select s.idsubscriptions, u.name, u1.login, s.start_date, " +
             "s.finish_date from subscriptions s inner join programs_name u on s.program = u.id " +
@@ -40,6 +43,9 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
             "where name = 'superuser') WHERE login = ?";
 
     private static final Logger LOGGER = LogManager.getRootLogger();
+
+    @Autowired
+    private JdbcTemplate template;
 
     @Override
     public List<TrackerSubscription> selectAll() throws TrackerDBException {
