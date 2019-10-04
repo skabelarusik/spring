@@ -213,51 +213,18 @@ public class UserDaoJdbcImpl implements UserDao {
         return status;
     }
 
+    public static final String SELECT_USER_BY_LOGIN_PASS_2 = "SELECT * from users where login = ?";
 
 
     public User selectByLogin(String login, String pass) throws TrackerDBException {
-        User user = null;
-        Connection connection = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-        try {
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(SELECT_USER_BY_LOGIN_PASS);
-            statement.setString(1, login);
-            resultSet = statement.executeQuery();
-            if(resultSet.next()){
-                String password = resultSet.getString(3);
-                if(BCrypt.checkpw(pass, password)){
-                    user = new User(login);
-                    String name = resultSet.getString(1);
-                    String surname = resultSet.getString(2);
-                    Gender gender = Gender.valueOf(resultSet.getString(4).toUpperCase().trim());
-                    String email = resultSet.getString(5);
-                    LocalDate birthday= LocalDate.parse(resultSet.getString(6).trim());
-                    LocalDate registr = LocalDate.parse(resultSet.getString(7));
-                    BigDecimal balance = BigDecimal.valueOf(Double.parseDouble(resultSet.getString(8)));
-                    String path = resultSet.getString(9).trim();
-                    Role role = Role.valueOf(resultSet.getString(10).toUpperCase().trim());
-                    int id = resultSet.getInt(11);
-                    user.setName(name);
-                    user.setSurname(surname);
-                    user.setEmail(email);
-                    user.setRole(role);
-                    user.setGender(gender);
-                    user.setBirthDate(birthday);
-                    user.setRegistrDate(registr);
-                    user.setBalance(balance);
-                    user.setPath(path);
-                    user.setId(id);
-                }
+        User user;
+        try{
+            user = jdbcTemplate.queryForObject(SELECT_USER_BY_LOGIN_PASS_2, new UserMapper(), login);
+            if(!BCrypt.checkpw(pass, user.getPassword())){
+                throw new TrackerDBException("Wrong data");
             }
-        } catch (TrackerConnectionPoolException | SQLException e) {
-            LOGGER.error(e);
-            throw new TrackerDBException("Wrong select user by login connection");
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
+        } catch (Exception e){
+            throw new TrackerDBException("Wrong data");
         }
         return user;
     }

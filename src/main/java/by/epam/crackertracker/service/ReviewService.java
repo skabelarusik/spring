@@ -1,5 +1,5 @@
 /**
- * service for working with review dao
+ * service for working with review.ftl dao
  * @author Andrey Krupin,  june-august 2019
  */
 
@@ -25,8 +25,8 @@ public class ReviewService {
         try {
             list = dao.selectAllReview(show);
         } catch (TrackerDBException e) {
-            LOGGER.error("Wrong service select all review",e);
-            throw new TrackerServiceException("Wrong service select all review",e);
+            LOGGER.error("Wrong service select all review.ftl",e);
+            throw new TrackerServiceException("Wrong service select all review.ftl",e);
         }
         return list;
     }
@@ -49,8 +49,8 @@ public class ReviewService {
             try {
                 status = dao.deleteById(idRev, typeShow);
             } catch (TrackerDBException e) {
-                LOGGER.error("Wrong service delete by id review",e);
-                throw new TrackerServiceException("Wrong service delete by id review",e);
+                LOGGER.error("Wrong service delete by id review.ftl",e);
+                throw new TrackerServiceException("Wrong service delete by id review.ftl",e);
             }
         }
 
@@ -66,8 +66,8 @@ public class ReviewService {
             try {
                 status = dao.insertReview(sender, text);
             } catch (TrackerDBException e) {
-                LOGGER.error("Wrong service send review",e);
-                throw new TrackerServiceException("Wrong service send review",e);
+                LOGGER.error("Wrong service send review.ftl",e);
+                throw new TrackerServiceException("Wrong service send review.ftl",e);
             }
         }
         return status;

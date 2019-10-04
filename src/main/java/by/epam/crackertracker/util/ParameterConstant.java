@@ -9,8 +9,27 @@ public class ParameterConstant {
 
     private ParameterConstant(){}
 
+    //COMMON PARAMETERS
+    public static final String PARAM_ID = "id";
+
+
+    //USER PARAMETRES
+    public static final String NAME = "name";
+    public static final String PASSWORD = "password";
+    public static final String SURNAME = "surname";
+    public static final String LOGIN = "login";
+    public static final String GENDER = "sex";
+    public static final String BIRTHDAY = "birthday";
+    public static final String EMAIL = "email";
+    public static final String REGISTR_DATE = "registrdate";
     public static final String PARAM_LOGIN = "login";
     public static final String PARAM_PASSWORD = "password";
+    public static final String MONEY = "money";
+    public static final String STATUS = "status";
+    public static final String AVATAR = "avatar";
+    public static final String ACTIVE = "active";
+
+
     public static final String PARAM_NAME = "username";
     public static final String PARAM_SURNAME = "usersurname";
     public static final String PARAM_EMAIL = "email";
@@ -19,7 +38,6 @@ public class ParameterConstant {
     public static final String PARAM_NEW_PASSWORD = "newpassword";
     public static final String PARAM_NEW_PASSWORD_CHECK = "newpasswordCheck";
     public static final String PARAM_ADVICE = "advice";
-    public static final String PARAM_ID = "id";
     public static final String PARAM_GENDER = "gender";
     public static final String PARAM_ID_PRODUCT = "idproduct";
     public static final String PARAM_NAME_PRODUCT = "nameProduct";

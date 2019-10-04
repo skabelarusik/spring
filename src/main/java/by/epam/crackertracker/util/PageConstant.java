@@ -19,7 +19,7 @@ public class PageConstant {
     public static final String PATH_PAGE_RESULT = "/jsp/result.jsp";
     public static final String PATH_PAGE_EDITING = "/jsp/editing.jsp";
     public static final String DEFAULT_AVATAR_PATH = "/jsp/picture/user.png";
-    public static final String PATH_PAGE_REVIEW = "/jsp/review.jsp";
+    public static final String PATH_PAGE_REVIEW = "/jsp/review.ftl.jsp";
     public static final String PATH_PAGE_SEND_REVIEW = "/jsp/send_review.jsp";
     public static final String PATH_PAGE_CALCULATOR = "/jsp/calculator.jsp";
     public static final String PATH_PAGE_MESSAGE = "/jsp/message.jsp";

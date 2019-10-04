@@ -38,12 +38,11 @@ public class UserService {
 
     public User checkUser(String loginValue, String passValue) throws TrackerServiceException {
         User user = null;
-        UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
         LoginValidator validator = new LoginValidator();
         PasswordValidator validator1 = new PasswordValidator();
         try{
             if(validator.isValidate(loginValue) && validator1.isValidate(passValue)) {
-                user = dao.selectByLogin(loginValue, passValue);
+                user = userDao.selectByLogin(loginValue, passValue);
             }
         } catch (TrackerDBException e){
             LOGGER.error(" Wrong service check user",e);

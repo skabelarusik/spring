@@ -1,5 +1,5 @@
 /**
- * class review-entity
+ * class review.ftl-entity
  * @author Andrey Krupin,  june-august 2019
  */
 

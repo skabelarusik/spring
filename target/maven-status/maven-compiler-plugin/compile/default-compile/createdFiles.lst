@@ -22,8 +22,10 @@ by\epam\crackertracker\dao\ReviewDaoJdbc.class
 by\epam\crackertracker\exception\TrackerServiceException.class
 by\epam\crackertracker\filter\XssFilter.class
 by\epam\crackertracker\dao\BucketDao.class
+by\epam\crackertracker\controller\CommonController.class
 by\epam\crackertracker\dao\ReviewDao.class
 by\epam\crackertracker\entity\Payment.class
+by\epam\crackertracker\controller\ReviewController.class
 by\epam\crackertracker\dao\AdviceDao.class
 by\epam\crackertracker\validator\GenderValidator.class
 by\epam\crackertracker\util\RouteType.class
@@ -44,6 +46,7 @@ by\epam\crackertracker\util\PageConstant.class
 by\epam\crackertracker\validator\ReviewLengthValidator.class
 by\epam\crackertracker\service\ProgramsNameService.class
 by\epam\crackertracker\dao\ProductDao.class
+by\epam\crackertracker\Main.class
 by\epam\crackertracker\validator\EmailValidator.class
 by\epam\crackertracker\config\SpringConfig.class
 by\epam\crackertracker\entity\ProgramsName.class

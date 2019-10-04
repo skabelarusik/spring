@@ -24,6 +24,7 @@ public class User implements Serializable {
     private Role role;
     private String path;
     private BigDecimal balance;
+    private int active;
 
     public User(){}
 
@@ -35,11 +36,13 @@ public class User implements Serializable {
         email = null;
         surname = null;
         role = Role.USER;
+        active = 1;
     }
 
     public User(String login){
         this.login = login;
     }
+
 
 
     public void setId(int id) {
@@ -142,12 +145,21 @@ public class User implements Serializable {
         this.balance = balance;
     }
 
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return id == user.id &&
+                active == user.active &&
                 Objects.equals(login, user.login) &&
                 Objects.equals(password, user.password) &&
                 Objects.equals(name, user.name) &&
@@ -163,7 +175,7 @@ public class User implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, login, password, name, surname, gender, birthDate, registrDate, email, role, path, balance);
+        return Objects.hash(id, login, password, name, surname, gender, birthDate, registrDate, email, role, path, balance, active);
     }
 
     @Override
@@ -181,6 +193,7 @@ public class User implements Serializable {
                 ", role=" + role +
                 ", path='" + path + '\'' +
                 ", balance=" + balance +
+                ", active=" + active +
                 '}';
     }
 }

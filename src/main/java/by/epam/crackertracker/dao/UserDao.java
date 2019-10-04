@@ -23,4 +23,6 @@ public interface UserDao extends TrackerDao {
 
     public boolean updateUser(User user) throws TrackerDBException;
 
+    public User selectByLogin(String login, String password) throws TrackerDBException;
+
     }

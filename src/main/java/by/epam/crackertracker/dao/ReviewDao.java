@@ -1,5 +1,5 @@
 /**
- * interface for different review dao
+ * interface for different review.ftl dao
  * @author Andrey Krupin,  june-august 2019
  */
 

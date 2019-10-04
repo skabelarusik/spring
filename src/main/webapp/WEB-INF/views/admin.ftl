@@ -5,17 +5,20 @@
         <style type="text/css">
             <#include "/css/style.css">
         </style>
-        <title>LOGIN</title>
+        <title>ADMIN PAGE</title>
     </head>
 
 <body>
 <div class="wrapper">
     <script type="text/javascript">
-        alert("HELLO!!!")
+        alert("HELLO ADMIN!!!")
     </script>
 
     <div class="wrapperBlocks">
     <h1>HI, ${login}</h1>
+    <h1>${name}</h1>
+    <h1>${balance}</h1>
+
            <h1><a href="/users">go to Users</a></h1>
     </div>
 </div>

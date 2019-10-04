@@ -26,10 +26,10 @@ import java.util.List;
 @Repository
 public class ReviewDaoJdbc implements ReviewDao {
     public static final String SELECT_ALL_REVIEW = "SELECT r.idreview, u.login, r.date, r.text from\n" +
-            " review r INNER JOIN users u on r.name = u.id where r.show_review = ? order by r.date desc";
-    public static final String DELETE_BY_ID = "UPDATE review set show_review = ? where idreview = ?";
-    public static final String SELECT_BY_ID = "SELECT idreview from review where idreview = ?";
-    public static final String INSERT_REVIEW = "INSERT INTO review (name, date, text) values (?,?,?)";
+            " review.ftl r INNER JOIN users u on r.name = u.id where r.show_review = ? order by r.date desc";
+    public static final String DELETE_BY_ID = "UPDATE review.ftl set show_review = ? where idreview = ?";
+    public static final String SELECT_BY_ID = "SELECT idreview from review.ftl where idreview = ?";
+    public static final String INSERT_REVIEW = "INSERT INTO review.ftl (name, date, text) values (?,?,?)";
 
     private static final Logger LOGGER = LogManager.getRootLogger();
 
@@ -84,7 +84,7 @@ public class ReviewDaoJdbc implements ReviewDao {
             }
         } catch (TrackerConnectionPoolException | SQLException e) {
             LOGGER.error(e);
-            throw new TrackerDBException("Wrong delete review");
+            throw new TrackerDBException("Wrong delete review.ftl");
         } finally {
             this.closeQuietly(statement);
             this.closeQuietly(connection);
@@ -112,7 +112,7 @@ public class ReviewDaoJdbc implements ReviewDao {
         }
         } catch (TrackerConnectionPoolException | SQLException e) {
             LOGGER.error(e);
-            throw new TrackerDBException("Wrong insert review");
+            throw new TrackerDBException("Wrong insert review.ftl");
         } finally {
             this.closeQuietly(statement);
             this.closeQuietly(connection);
@@ -131,7 +131,7 @@ public class ReviewDaoJdbc implements ReviewDao {
             status  = resultSet.next();
         } catch (SQLException e) {
             LOGGER.error(e);
-            throw new TrackerDBException("Wrong checking id review");
+            throw new TrackerDBException("Wrong checking id review.ftl");
         } finally {
             this.closeQuietly(resultSet);
             this.closeQuietly(statement);
