@@ -23,7 +23,7 @@
     <br/>
         <!-- Login form -->
         <h3 class="h3login"><@spring.message "label.enterlogin"/></h3><br/><br/>
-        <form class="loginForm" method="post" action="/login">
+        <form class="loginForm" method="post" action="/user/login">
             <p>
             <label for="loginField" class="formText"><@spring.message "label.login"/></label>
             <input type="text" name="login" maxlength="45" autofocus id="loginField" pattern="^[(\w)-]{3,16}"
@@ -52,7 +52,7 @@
 </div>
 <!-- registration block -->
 <div class="blockReg">
-    <a href="registration">
+    <a href="/user/registration">
     <h4 class="h3login"><@spring.message "label.withoutacc"/></h4></a>
 </div>
 <!-- block buttom -->
@@ -74,6 +74,7 @@
     <input type="submit" class="lan3" name="langv" value="<@spring.message "label.vk"/>" />
     <input type="hidden" name="command" value="language">
     <input type="button" class="lan3" name="langv" value="<@spring.message "label.facebook"/>">
+
 </body>
 </html>
 

@@ -11,10 +11,11 @@ public class ParameterConstant {
 
     //COMMON PARAMETERS
     public static final String PARAM_ID = "id";
-
-
-    //USER PARAMETRES
     public static final String NAME = "name";
+    public static final String TEXT = "text";
+    public static final String DATE = "date";
+
+    //USER PARAMETERS
     public static final String PASSWORD = "password";
     public static final String SURNAME = "surname";
     public static final String LOGIN = "login";
@@ -26,8 +27,20 @@ public class ParameterConstant {
     public static final String PARAM_PASSWORD = "password";
     public static final String MONEY = "money";
     public static final String STATUS = "status";
-    public static final String AVATAR = "avatar";
     public static final String ACTIVE = "active";
+    public static final String ATTRIBUTE_AVATAR = "avatar";
+
+    //ADVICE PARAMETERS
+    public static final String TEXT_ADVICE = "message";
+    public static final String ID_ADVICE = "idreview";
+
+    //REVIEW PARAMETERS
+    public static final String ID_REVIEW = "idadvices";
+    public static final String SHOW_REVIEW = "show_review";
+    public static final int SHOW = 1;
+    public static final int SHOW_DELETED = 0;
+
+    public static final String START_PAGE = "startPage";
 
 
     public static final String PARAM_NAME = "username";
@@ -84,7 +97,6 @@ public class ParameterConstant {
     public static final String ATTRIBUTE_LANGUAGE = "lang";
     public static final String ATTRIBUTE_ERROR_AUTH = "errorLoginPassMessage";
     public static final String ATTRIBUTE_CURRENT_PAGE = "currentPage";
-    public static final String ATTRIBUTE_AVATAR = "avatar";
     public static final String ATTRIBUTE_UPDATE = "editmessage";
     public static final String ATTRIBUTE_RES_ADD = "addmessage";
     public static final String ATTRIBUTE_ADD_DELETE_MESS = "addmessagedelete";

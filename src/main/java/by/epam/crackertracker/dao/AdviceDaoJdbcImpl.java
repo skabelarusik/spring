@@ -26,8 +26,6 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
     private static final String SELECT_ADVICE = "SELECT message from advices ORDER BY RANDOM() LIMIT 1";
     private static final String DELETE_BY_ID = "DELETE from advices where idadvices = ?";
     private static final String INSERT_ADVICE = "INSERT into advices (message) values (?)";
-    private static final String SELECT_ADVICE_BY_TEXT = "SELECT idadvices from advices where message = ?";
-    private static final String SELECT_ADVICE_BY_ID = "SELECT idadvices from advices where idadvices = ?";
 
     private static final Logger LOGGER = LogManager.getRootLogger();
 
@@ -35,53 +33,25 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
     private JdbcTemplate template;
 
     @Override
-    public boolean insert(String text) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        boolean status = false;
-        try {
-            connection = ConnectionPool.getInstance().takeConnection();
-            if(isUniqeAdvice(connection, text)) {
-                statement = connection.prepareStatement(INSERT_ADVICE);
-                statement.setString(1, text);
-                statement.executeUpdate();
-                status = true;
-                LOGGER.debug(text + " - advice inserted");
-                String a = "asd";
-                LOGGER.error("asdsadsad" + a + "sadsadsda");
-            }
-        } catch (TrackerConnectionPoolException | SQLException e) {
-            LOGGER.error(e);
+    public void insert(String text) throws TrackerDBException {
+       try{
+        template.update(INSERT_ADVICE, text);
+        LOGGER.debug(text + " - advice inserted");
+       } catch (Exception e) {
+            LOGGER.error("Wrong insert advice:" + text);
             throw new TrackerDBException("Wrong insert advice", e);
-        } finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
-        }
-        return status;
+       }
     }
 
     @Override
-    public boolean deleteById(int id) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        boolean status = false;
+    public void deleteById(int id) throws TrackerDBException {
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            if(hasId(connection, id)){
-                statement = connection.prepareStatement(DELETE_BY_ID);
-                statement.setInt(1, id);
-                statement.executeUpdate();
-                status = true;
-                LOGGER.debug(id + " advice deleted");
-            }
-        } catch (TrackerConnectionPoolException | SQLException e) {
-            LOGGER.error(e);
-            throw new TrackerDBException("Wrong delete advice by id", e);
-        }   finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
+            template.update(DELETE_BY_ID, id);
+            LOGGER.warn("Advice: " + id + " was deleted");
+        } catch (Exception e){
+            LOGGER.error("Wrong delete advice");
+            throw new TrackerDBException("Wrong delete advice");
         }
-        return status;
     }
 
     @Override
@@ -89,67 +59,16 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
         return template.query(SELECT_ALL, new AdviceMapper());
     }
 
-    public String selectRandomAdvice() throws TrackerDBException {
-        Connection connection = null;
-        String advice = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-        try {
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(SELECT_ADVICE);
-            resultSet = statement.executeQuery();
-            if(resultSet.next()){
-                advice = resultSet.getString(1);
-            }
-        } catch ( TrackerConnectionPoolException | SQLException e) {
-            LOGGER.error(e);
-            throw new TrackerDBException("Wrong select random advice", e);
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
+    @Override
+    public Advice selectRandomAdvice() throws TrackerDBException {
+        Advice advice = null;
+        try{
+            advice= template.queryForObject(SELECT_ADVICE, new AdviceMapper());
+        } catch (Exception e){
+            LOGGER.warn("Wrong select random advice");
+            throw new TrackerDBException("Wrong select random advice");
         }
         return advice;
     }
 
-    private boolean isUniqeAdvice(Connection connection, String message) throws TrackerDBException {
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-        boolean status = true;
-        try {
-            statement = connection.prepareStatement(SELECT_ADVICE_BY_TEXT);
-            statement.setString(1, message);
-            resultSet = statement.executeQuery();
-            if(resultSet.next()){
-                status = false;
-            }
-        } catch (SQLException e) {
-            LOGGER.error(e);
-            throw new TrackerDBException("Wrong checking uniqe advice", e);
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-        }
-
-        return status;
-    }
-
-    private boolean hasId(Connection connection, int id) throws TrackerDBException {
-        boolean status = false;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-        try {
-            statement = connection.prepareStatement(SELECT_ADVICE_BY_ID);
-            statement.setInt(1, id);
-            resultSet = statement.executeQuery();
-            status = resultSet.next();
-        } catch (SQLException e) {
-            LOGGER.error(e);
-            throw new TrackerDBException("Wrong checking id advice", e);
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-        }
-        return status;
-    }
 }

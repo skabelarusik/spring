@@ -12,9 +12,12 @@ import java.util.List;
 
 public interface AdviceDao extends TrackerDao {
 
-    boolean insert(String text) throws TrackerDBException;
+    void insert(String text) throws TrackerDBException;
 
-    boolean deleteById(int id) throws TrackerDBException;
+    void deleteById(int id) throws TrackerDBException;
 
     List<Advice> selectAll() throws TrackerDBException;
-}
+
+    public Advice selectRandomAdvice() throws TrackerDBException;
+
+    }

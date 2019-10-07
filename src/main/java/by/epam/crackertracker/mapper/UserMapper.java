@@ -26,7 +26,7 @@ public class UserMapper implements RowMapper<User> {
         user.setEmail(resultSet.getString(ParameterConstant.EMAIL));
         user.setRole(Role.ADMIN);
         user.setBalance(new BigDecimal(resultSet.getDouble(ParameterConstant.MONEY)));
-        user.setPath(resultSet.getString(ParameterConstant.AVATAR));
+        user.setPath(resultSet.getString(ParameterConstant.ATTRIBUTE_AVATAR));
         user.setRegistrDate(LocalDate.parse(resultSet.getString(ParameterConstant.REGISTR_DATE)));
         user.setActive(resultSet.getInt(ParameterConstant.ACTIVE));
         return user;

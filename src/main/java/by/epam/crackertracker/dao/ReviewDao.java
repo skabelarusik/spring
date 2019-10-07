@@ -12,7 +12,10 @@ import java.util.List;
 
 public interface ReviewDao extends TrackerDao {
 
-    List<Review> selectAllReview(int show) throws TrackerDBException;
+    List<Review> selectAllReview(int show);
 
-    boolean deleteById(int id, int typeShow) throws TrackerDBException;
+    void deleteById(int id, int typeShow) throws TrackerDBException;
+
+    void insertReview(String sender, String text) throws TrackerDBException;
+
 }

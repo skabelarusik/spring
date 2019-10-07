@@ -3,6 +3,7 @@ package by.epam.crackertracker.dao;
 import by.epam.crackertracker.entity.Bucket;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
+import by.epam.crackertracker.mapper.BucketMapper;
 import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,101 +30,41 @@ public class BucketDaoJdbcImpl implements BucketDao {
     @Autowired
     private JdbcTemplate template;
 
-    public boolean insert(String login, String product, Double portions) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        boolean status = false;
+    public void insert(String login, String product, Double portions) throws TrackerDBException {
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(ADD_ELEMENT);
-            statement.setString(1,login);
-            statement.setString(2,product);
-            statement.setDouble(3,portions);
-            statement.executeUpdate();
-            status = true;
-        } catch (SQLException | TrackerConnectionPoolException e){
-            LOGGER.warn("User:" + login + " input wrong product: " + product);
-        } finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
+            template.update(ADD_ELEMENT, login, product, portions);
+        } catch (Exception e){
+            throw new TrackerDBException("Wrong insert product: " + product + " to bucket user:" + login);
         }
-        return status;
     }
 
     public List<Bucket> selectAll(String login) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-        List<Bucket> list = new ArrayList<>();
+        List<Bucket> bucketList = null;
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(SELECT_ELEMENTS);
-            statement.setString(1, login);
-            resultSet = statement.executeQuery();
-            list = fillingList(resultSet, login);
-        } catch (SQLException | TrackerConnectionPoolException e){
-        LOGGER.warn("Wrong select products in bucket users:"  + login);
-    } finally {
-        this.closeQuietly(resultSet);
-        this.closeQuietly(statement);
-        this.closeQuietly(connection);
-    } return list;
-    }
-
-    private List<Bucket> fillingList(ResultSet resultSet, String login) {
-        List<Bucket> list = new ArrayList<>();
-        try {
-            while (resultSet.next()) {
-                Double portions = resultSet.getDouble(1);
-                int id = resultSet.getInt(2);
-                String product = resultSet.getString(3);
-                int calories = resultSet.getInt(4);
-                Bucket bucket = new Bucket(login, product, calories, portions);
-                bucket.setId(id);
-                list.add(bucket);
-            }
-        } catch (SQLException e) {
-            LOGGER.warn("Wrong filling list:"  + login);
+            bucketList = template.query(SELECT_ELEMENTS, new BucketMapper(), login);
+        } catch (Exception e){
+            LOGGER.error("Wrong select all elements bucket for user: " + login);
+            throw new TrackerDBException("Wrong select all elements bucket");
         }
-        return list;
+        return bucketList;
     }
 
-    public boolean removeAll(String login) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        boolean status = false;
+
+    public void removeAll(String login) throws TrackerDBException {
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(DELETE_ALL);
-            statement.setString(1, login);
-            statement.executeUpdate();
-            status = true;
-        }  catch (TrackerConnectionPoolException | SQLException e) {
-            LOGGER.warn("Wrong clear bucket users:" + login);
-        }   finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
+            template.update(DELETE_ALL, login);
+        } catch (Exception e){
+            LOGGER.error("Wrong clear bucket for user: " + login);
+            throw new TrackerDBException("Wrong clear bucket");
         }
-        return status;
     }
 
-    public boolean deleteById(int id) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        boolean status = false;
+    public void deleteById(int id) throws TrackerDBException {
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(DELETE_ELEMENT);
-            statement.setInt(1, id);
-            statement.executeUpdate();
-            status = true;
-        } catch (TrackerConnectionPoolException | SQLException e) {
+            template.update(DELETE_ELEMENT, id);
+        } catch (Exception e) {
             LOGGER.warn("Wrong delete by id");
             throw new TrackerDBException("Wrong delete by id",e);
-        } finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
         }
-        return status;
     }
 }

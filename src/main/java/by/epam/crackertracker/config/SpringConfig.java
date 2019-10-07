@@ -39,6 +39,7 @@ public class SpringConfig {
         dataSource.setUsername(USER);
         dataSource.setPassword(PASSWORD);
         dataSource.setDriverClassName(DRIVER);
+        System.out.println(URL);
         return dataSource;
     }
 }

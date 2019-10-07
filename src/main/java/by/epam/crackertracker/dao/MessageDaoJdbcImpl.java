@@ -8,6 +8,7 @@ package by.epam.crackertracker.dao;
 import by.epam.crackertracker.entity.Message;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
+import by.epam.crackertracker.mapper.MessageMapper;
 import by.epam.crackertracker.pool.ConnectionPool;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.apache.log4j.LogManager;
@@ -17,8 +18,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.sql.*;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -41,117 +40,36 @@ public class MessageDaoJdbcImpl implements MessageDao {
 
     @Override
     public List<Message> selectInputMessage(String login, int i) throws TrackerDBException {
-        List<Message> messageList = new ArrayList<>();
-        if(login.isEmpty()){
-            throw new TrackerDBException("Wrong login");
+        List<Message> list;
+        try{
+            list = template.query(SELECT_INPUT_MESSAGE, new MessageMapper(), login, COUNT_MESSAGE, ((i - 1) * COUNT_MESSAGE - (i - 1)));
+        } catch (Exception e) {
+            LOGGER.error(e);
+            throw new TrackerDBException("Wrong select input message");
         }
-
-        Connection connection = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-            try{
-                connection = ConnectionPool.getInstance().takeConnection();
-                statement = connection.prepareStatement(SELECT_INPUT_MESSAGE);
-                statement.setString(1, login);
-                statement.setInt(2, COUNT_MESSAGE);
-                statement.setInt(3, (i - 1) * COUNT_MESSAGE - (i - 1));
-                resultSet = statement.executeQuery();
-
-                while (resultSet.next()){
-                    Message message = new Message();
-                    int id = resultSet.getInt(1);
-                    String sender = resultSet.getString(2);
-                    String topik = resultSet.getString(3);
-                    String text = resultSet.getString(4);
-                    LocalDate date = LocalDate.parse(resultSet.getString(5));
-                    message.setLocalDate(date);
-                    message.setSender(sender);
-                    message.setText(text);
-                    message.setTopik(topik);
-                    message.setId(id);
-                    messageList.add(message);
-                    }
-
-            } catch (TrackerConnectionPoolException | SQLException e) {
-                LOGGER.error(e);
-                throw new TrackerDBException("Wrong statement");
-            } finally {
-               this.closeQuietly(resultSet);
-                this.closeQuietly(statement);
-                this.closeQuietly(connection);
-            }
-        return messageList;
+        return list;
     }
 
     @Override
     public List<Message> selectOutputMessage(String login, int i) throws TrackerDBException {
-        List<Message> outputList = null;
-        if(login.isEmpty()){
-            throw new TrackerDBException("Wrong login");
-        }
-        Connection connection = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
+        List<Message> list;
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(SELECT_OUTPUT_MESSAGE);
-            statement.setString(1, login);
-            statement.setInt(2, COUNT_MESSAGE);
-            statement.setInt(3, (i - 1) * COUNT_MESSAGE - (i - 1));
-            resultSet = statement.executeQuery();
-            outputList = new ArrayList<>();
-            while (resultSet.next()){
-                int id = resultSet.getInt(1);
-                String recipient = resultSet.getString(2);
-                String topik = resultSet.getString(3);
-                String text = resultSet.getString(4);
-                LocalDate date = LocalDate.parse(resultSet.getString(5));
-                Message message = new Message();
-                message.setRecipient(recipient);
-                message.setTopik(topik);
-                message.setText(text);
-                message.setLocalDate(date);
-                message.setId(id);
-                outputList.add(message);
-            }
-        } catch (TrackerConnectionPoolException | SQLException e) {
+            list = template.query(SELECT_OUTPUT_MESSAGE, new MessageMapper(), login, COUNT_MESSAGE, ((i - 1) * COUNT_MESSAGE - (i - 1)));
+        } catch (Exception e) {
             LOGGER.error(e);
-            throw new TrackerDBException("Wrong statement");
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
+            throw new TrackerDBException("Wrong select output message");
         }
-        return outputList;
+        return list;
     }
 
-    public boolean addMessage(Message message) throws TrackerDBException {
-        UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
-        Connection connection = null;
-        PreparedStatement statement = null;
-        boolean status = false;
+    public void addMessage(Message message) throws TrackerDBException {
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            if(!dao.isUniqueUser(connection, message.getRecipient())){
-                statement = connection.prepareStatement(INSERT_MESSAGE);
-                int idSender = dao.selectIdByLogin(connection, message.getSender());
-                int idRecipient = dao.selectIdByLogin(connection, message.getRecipient());
-                statement.setInt(1, idSender);
-                statement.setInt(2, idRecipient);
-                statement.setString(3, message.getTopik());
-                statement.setString(4, message.getText());
-                statement.setString(5, message.getLocalDate().toString());
-                statement.executeUpdate();
-                status = true;
-            }
-        } catch (TrackerConnectionPoolException | SQLException e) {
-            LOGGER.error(e);
-            throw new TrackerDBException("Wrong insert message");
-        } finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
+            template.update(INSERT_MESSAGE, message.getSender(), message.getRecipient(), message.getTopik(),
+                    message.getText(), message.getLocalDate());
+        } catch (Exception e) {
+            LOGGER.error("Wrong insert message");
+            throw new TrackerDBException("Wrong insert message from user : " + message.getSender());
         }
-        return status;
     }
 
     public boolean deleteMessage(int id, String type) throws TrackerDBException {

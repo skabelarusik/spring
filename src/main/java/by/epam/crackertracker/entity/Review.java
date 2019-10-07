@@ -13,11 +13,14 @@ public class Review {
     private String name;
     private LocalDate date;
     private String text;
+    private int active;
+
 
     public Review(String name, String text, LocalDate date){
         this.name = name;
         this.date = date;
         this.text = text;
+        active = 1;
     }
 
     public int getId() {
@@ -50,6 +53,14 @@ public class Review {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
     }
 
     @Override

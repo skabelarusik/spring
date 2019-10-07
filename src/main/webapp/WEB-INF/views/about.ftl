@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
+﻿<#import "/spring.ftl" as spring/>
+<!DOCTYPE html>
     <head>
         <style type="text/css">
             <#include "/css/style.css">
         </style>
-        <title>LOGIN PAGE</title>
+        <title><@spring.message "title.service"/></title>
         <#setting classic_compatible=true>
     </head>
 <body>
@@ -19,29 +20,26 @@
 
     <div class="blockLogin">
         <!-- Login form -->
-        <h3 class="h3login"><fmt:message key="text.aboutservice" bundle="${rb}"/> </h3><br/><br/>
+        <h3 class="h3login"><@spring.message "text.aboutservice"/></h3><br/><br/>
     </div>
 </div>
 <!-- registration block -->
 <div class="blockReg">
     <c:url value="/jsp/register.jsp" var="reg" />
-    <h4 class="h3login"><fmt:message key="label.backlogin" bundle="${rb}"/>
-        <a class="registration" href='<c:out value="${reg}"/>'>
-            <fmt:message key="label.back" bundle="${rb}"/></a>
+    <h4 class="h3login"><@spring.message "label.backlogin"/>
+        <a class="registration" href='/login'>
+            <@spring.message "label.back"/></a>
     </h4>
 </div>
 
 <div class="languageLogin">
-    <form class="language" name="lanEn" method="post" action="/lang_service">
-        <input type="hidden" name="command" value="language">
+    <form class="language" method="get" action="/lang/en">
         <input type="submit" class="lan1" name="langv" value="EN">
     </form>
-    <form class="language" name="lanEn" method="post" action="/lang_service">
-        <input type="hidden" name="command" value="language">
+    <form class="language" method="get" action="/lang/ru">
         <input type="submit" class="lan2" name="langv" value="RU">
     </form>
-    <form class="language" name="lanEn" method="post" action="/lang_service">
-        <input type="hidden" name="command" value="language">
+    <form class="language" method="get" action="/lang/by">
         <input type="submit" class="lan3" name="langv" value="BY">
     </form>
 </div>

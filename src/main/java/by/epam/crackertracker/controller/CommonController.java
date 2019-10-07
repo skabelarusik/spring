@@ -15,8 +15,6 @@ import java.util.Locale;
 @RequestMapping("/")
 public class CommonController {
 
-    @Autowired
-    private MessageSource messageSource;
 
     @Autowired
     private LocaleResolver localeResolver;

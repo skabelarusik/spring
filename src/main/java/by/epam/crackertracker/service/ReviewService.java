@@ -5,6 +5,7 @@
 
 package by.epam.crackertracker.service;
 
+import by.epam.crackertracker.dao.ReviewDao;
 import by.epam.crackertracker.dao.ReviewDaoJdbc;
 import by.epam.crackertracker.entity.Review;
 import by.epam.crackertracker.exception.TrackerServiceException;
@@ -14,27 +15,24 @@ import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.validator.LoginValidator;
 import by.epam.crackertracker.validator.ReviewLengthValidator;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
 import java.util.List;
 
 public class ReviewService {
     private static final Logger LOGGER = Logger.getRootLogger();
 
-    public List<Review> selectAllReview(int show) throws TrackerServiceException {
-        ReviewDaoJdbc dao = new ReviewDaoJdbc();
-        List<Review> list;
-        try {
-            list = dao.selectAllReview(show);
-        } catch (TrackerDBException e) {
-            LOGGER.error("Wrong service select all review.ftl",e);
-            throw new TrackerServiceException("Wrong service select all review.ftl",e);
-        }
-        return list;
+    @Autowired
+    private ReviewDao dao;
+
+    public List<Review> selectAllReview(int show) {
+        return  dao.selectAllReview(show);
     }
 
-    public boolean deleteById(String id, String buttonName) throws TrackerServiceException {
+    public void deleteById(String id, String buttonName) throws TrackerServiceException {
         IdValidator validator = new IdValidator();
         ReviewDaoJdbc dao = new ReviewDaoJdbc();
-        boolean status = false;
         if(id != null && !id.isEmpty() && validator.isValidate(id)){
             int idRev = Integer.parseInt(id);
             int typeShow;
@@ -47,29 +45,26 @@ public class ReviewService {
                 throw new TrackerServiceException("Wrong type delete program name by id");
             }
             try {
-                status = dao.deleteById(idRev, typeShow);
+                dao.deleteById(idRev, typeShow);
             } catch (TrackerDBException e) {
-                LOGGER.error("Wrong service delete by id review.ftl",e);
-                throw new TrackerServiceException("Wrong service delete by id review.ftl",e);
+                LOGGER.error("Wrong service delete by id review",e);
+                throw new TrackerServiceException("Wrong service delete by id review",e);
             }
         }
-
-        return status;
     }
 
-    public boolean sendReview(String sender, String text) throws TrackerServiceException {
+    public void sendReview(String sender, String text) throws TrackerServiceException {
         LoginValidator validator = new LoginValidator();
         ReviewLengthValidator reviewLengthValidator = new ReviewLengthValidator();
         ReviewDaoJdbc dao = new ReviewDaoJdbc();
         boolean status = false;
         if(validator.isValidate(sender) && reviewLengthValidator.isValidate(text)){
             try {
-                status = dao.insertReview(sender, text);
+                dao.insertReview(sender, text);
             } catch (TrackerDBException e) {
-                LOGGER.error("Wrong service send review.ftl",e);
-                throw new TrackerServiceException("Wrong service send review.ftl",e);
+                LOGGER.error("Wrong service send review",e);
+                throw new TrackerServiceException("Wrong service send review",e);
             }
         }
-        return status;
     }
 }

@@ -23,7 +23,7 @@ import java.util.Locale;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "by.epam.controller")
+@ComponentScan(basePackages = "by.epam.crackertracker")
 public class WebConfig extends WebMvcConfigurerAdapter{
 
     public static final int ORDER = 1;
