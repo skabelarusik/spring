@@ -19,8 +19,6 @@
 
     <div class="blockLogin">
     <br/>
-    <@spring.message "label.withoutacc"/>
-    <br/>
         <!-- Login form -->
         <h3 class="h3login"><@spring.message "label.enterlogin"/></h3><br/><br/>
         <form class="loginForm" method="post" action="/user/login">
@@ -39,7 +37,7 @@
             </p><br/><br/>
             <input type="submit" value="<@spring.message "button.login"/>" class="login-button"/>
             <br/>
-            ${messageException}
+            ${messageAuth}
             <div class="formInput">
             </div>
             <br/>

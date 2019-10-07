@@ -16,19 +16,19 @@ public class UserMapper implements RowMapper<User> {
 
     public User mapRow(ResultSet resultSet, int i) throws SQLException {
         User user = new User();
-        user.setId(resultSet.getInt(ParameterConstant.PARAM_ID));
-        user.setName(resultSet.getString(ParameterConstant.NAME));
-        user.setSurname(resultSet.getString(ParameterConstant.SURNAME));
-        user.setLogin(resultSet.getString(ParameterConstant.LOGIN));
-        user.setPassword(resultSet.getString(ParameterConstant.PASSWORD));
-        user.setGender(Gender.valueOf((resultSet.getString(ParameterConstant.GENDER)).toUpperCase().trim()));
-        user.setBirthDate(LocalDate.parse(resultSet.getString(ParameterConstant.BIRTHDAY)));
-        user.setEmail(resultSet.getString(ParameterConstant.EMAIL));
-        user.setRole(Role.ADMIN);
-        user.setBalance(new BigDecimal(resultSet.getDouble(ParameterConstant.MONEY)));
-        user.setPath(resultSet.getString(ParameterConstant.ATTRIBUTE_AVATAR));
-        user.setRegistrDate(LocalDate.parse(resultSet.getString(ParameterConstant.REGISTR_DATE)));
-        user.setActive(resultSet.getInt(ParameterConstant.ACTIVE));
+        user.setId(resultSet.getInt(12));
+        user.setName(resultSet.getString(1));
+        user.setSurname(resultSet.getString(2));
+        user.setLogin(resultSet.getString(3));
+        user.setPassword(resultSet.getString(4));
+        user.setGender(Gender.valueOf((resultSet.getString(5)).toUpperCase().trim()));
+        user.setBirthDate(LocalDate.parse(resultSet.getString(7)));
+        user.setEmail(resultSet.getString(6));
+        user.setRole(Role.valueOf(resultSet.getString(11).toUpperCase().trim()));
+        user.setBalance(new BigDecimal(resultSet.getDouble(9)));
+        user.setPath(resultSet.getString(10));
+        user.setRegistrDate(LocalDate.parse(resultSet.getString(8)));
+        user.setActive(resultSet.getInt(13));
         return user;
     }
 

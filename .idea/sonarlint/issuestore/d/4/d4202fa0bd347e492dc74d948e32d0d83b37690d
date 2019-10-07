@@ -1,4 +1,6 @@
 
-hsquid:CommentedOutCodeLine‰"<This block of commented-out lines of code should be removed.(øûš¤üÿÿÿÿ
+usquid:S3776W"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(äŸ÷ÿÿÿÿÿ8ÛÇ‘­Ú-
+vsquid:S3776ó"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ß†´¡ûÿÿÿÿ8‹Á»­Ú-
 psquid:UselessImportCheck"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ
-bsquid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(ûÔÿÃ
+Zsquid:UselessImportCheck"*Remove this unused import 'java.util.Map'.(¼è½Òþÿÿÿÿ8ƒÌ¦®Ú-
+Jsquid:S1481¥"+Remove this unused "status" local variable.(³Éë“8Üîÿ²Ú-

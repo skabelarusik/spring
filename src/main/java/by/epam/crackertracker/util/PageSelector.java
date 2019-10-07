@@ -5,9 +5,27 @@
 
 package by.epam.crackertracker.util;
 
+import by.epam.crackertracker.entity.Role;
+
 public class PageSelector {
 
     private PageSelector(){}
+
+    public static String selectHomePage(Role role){
+        String page;
+        switch (role){
+            case ADMIN: page = PageConstant.PATH_PAGE_MAIN_ADMIN;
+                break;
+            case USER: page = PageConstant.PATH_PAGE_MAIN_USER;
+                break;
+            case CURATOR: page=PageConstant.PATH_PAGE_MAIN_CURATOR;
+                break;
+            case SUPERUSER: page = PageConstant.PATH_PAGE_MAIN_SUPERUSER;
+                break;
+            default: page = PageConstant.PATH_PAGE_MAIN_INDEX;
+        }
+        return page;
+    }
 
     public static String selectPage(String uri){
         String page;

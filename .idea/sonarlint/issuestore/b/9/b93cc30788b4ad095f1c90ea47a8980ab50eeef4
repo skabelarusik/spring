@@ -1,2 +1,4 @@
 
-isquid:S1192"FDefine a constant instead of duplicating this literal "index" 4 times.(¦œû×ÿÿÿÿÿ8©Šþ·Ù-
+isquid:S1192"FDefine a constant instead of duplicating this literal "index" 4 times.(¦œû×ÿÿÿÿÿ8Ã„Ž³Ú-
+rsquid:UselessImportCheck"BRemove this unused import 'by.epam.crackertracker.entity.Message'.(à¢¥¶ùÿÿÿÿ8Ëœ…´Ú-
+jsquid:UselessImportCheck"?Remove this unused import 'by.epam.crackertracker.entity.User'.(þüà»8¬è†´Ú-

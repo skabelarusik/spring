@@ -1,5 +1,5 @@
 /**
- * service for working with review.ftl dao
+ * service for working with resultReview.ftl dao
  * @author Andrey Krupin,  june-august 2019
  */
 
@@ -17,9 +17,11 @@ import by.epam.crackertracker.validator.ReviewLengthValidator;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ReviewService {
     private static final Logger LOGGER = Logger.getRootLogger();
 

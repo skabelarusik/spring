@@ -23,9 +23,9 @@ import java.util.List;
 @Repository
 public class MessageDaoJdbcImpl implements MessageDao {
 
-   private static final String SELECT_INPUT_MESSAGE = "SELECT m.idmessages, u.login, m.topik, m.text, m.date from messages m inner join users u\n" +
+   private static final String SELECT_INPUT_MESSAGE = "SELECT m.idmessages, u.login, m.recipient, m.topik, m.text, m.date from messages m inner join users u\n" +
            "on m.sender = u.id inner join users u1 on m.recipient = u1.id where u1.login = ? and m.show_recipient=1 order by m.date desc limit ? offset ? ";
-   private static final String SELECT_OUTPUT_MESSAGE = "SELECT m.idmessages, u1.login, m.topik, m.text, m.date from messages m " +
+   private static final String SELECT_OUTPUT_MESSAGE = "SELECT m.idmessages, u1.login, m.recepient, m.topik, m.text, m.date from messages m " +
            "inner join users u on m.sender = u.id inner join users u1 on m.recipient = u1.id where u.login = ? and m.show_sender=1 order by m.date desc limit ? offset ?";
    private static final String INSERT_MESSAGE = "insert into messages (sender, recipient, topik, text, date) values (?,?,?,?,?)";
    public static final String DELETE_MESSAGE_INPUT = "UPDATE messages set show_recipient = 0 where idmessages = ?";
@@ -62,6 +62,7 @@ public class MessageDaoJdbcImpl implements MessageDao {
         return list;
     }
 
+    @Override
     public void addMessage(Message message) throws TrackerDBException {
         try{
             template.update(INSERT_MESSAGE, message.getSender(), message.getRecipient(), message.getTopik(),
@@ -72,10 +73,7 @@ public class MessageDaoJdbcImpl implements MessageDao {
         }
     }
 
-    public boolean deleteMessage(int id, String type) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        boolean status = false;
+    public void deleteMessage(int id, String type) throws TrackerDBException {
         String sqlStr = null;
         if(type.equals(ParameterConstant.INPUT_MESSAGE)){
             sqlStr = DELETE_MESSAGE_INPUT;
@@ -83,18 +81,10 @@ public class MessageDaoJdbcImpl implements MessageDao {
             sqlStr = DELETE_MESSAGE_OUTPUT;
         }
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(sqlStr);
-            statement.setInt(1, id);
-            statement.executeUpdate();
-            status = true;
-        } catch (TrackerConnectionPoolException | SQLException e) {
+            template.update(sqlStr, id);
+        } catch (Exception e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong delete message");
-        } finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
         }
-        return status;
     }
 }

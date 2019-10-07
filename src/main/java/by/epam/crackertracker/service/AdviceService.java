@@ -30,7 +30,7 @@ public class AdviceService {
         AdviceDaoJdbcImpl dao = new AdviceDaoJdbcImpl();
         String advice = null;
         try {
-            advice = dao.selectRandomAdvice();
+           dao.selectRandomAdvice();
         } catch (TrackerDBException e) {
             LOGGER.error("wrong service select random advice", e);
             throw new TrackerServiceException("Wrong service select random advice ", e);
@@ -49,7 +49,7 @@ public class AdviceService {
         if(validator.isValidate(message)){
             dao = new AdviceDaoJdbcImpl();
             try {
-                status = dao.insert(message);
+                dao.insert(message);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service select random advice", e);
                 throw new TrackerServiceException("Wrong service select random advice ", e);
@@ -66,7 +66,7 @@ public class AdviceService {
             dao = new AdviceDaoJdbcImpl();
             int numb = Integer.parseInt(id);
             try {
-                status = dao.deleteById(numb);
+                dao.deleteById(numb);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service delete by id", e);
                 throw new TrackerServiceException("Wrong service delete by id" , e);

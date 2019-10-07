@@ -84,22 +84,7 @@ public class UserService {
         return status;
     }
 
-    public Map<String,Double> selectRandomUser() throws TrackerServiceException {
-        UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
-        Map<String, Double> mapCurators;
-        try {
-            mapCurators = dao.selectTopFiveCurators();
-        } catch (TrackerDBException e) {
-            LOGGER.error("Wrong service select random users", e);
-            throw new TrackerServiceException("Wrong service select random users", e);
-        }
-        return mapCurators;
-    }
-
-    public List<User> selectAllUsers() {
-
-        /*
-        UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
+    public List<User> selectAllUsers(HttpServletRequest request) throws TrackerServiceException {
         String currentPage = request.getParameter(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
         String type = request.getParameter(ParameterConstant.PARAM_TYPE);
         List<User> userList;
@@ -109,8 +94,8 @@ public class UserService {
         if(currentPage == null){
             int intPage = 1;
             try {
-                userList = dao.selectAll(intPage, type);
-            } catch (TrackerDBException e) {
+                userList = userDao.selectAll(intPage, type);
+            } catch (Exception e) {
                 LOGGER.error(" Wrong service select all users",e);
                 throw new TrackerServiceException("Wrong service select all users",e);
             }
@@ -121,8 +106,8 @@ public class UserService {
         } else {
             int intPage = Integer.parseInt(currentPage);
             try {
-                userList = dao.selectAll(intPage, type);
-            } catch (TrackerDBException e) {
+                userList = userDao.selectAll(intPage, type);
+            } catch (Exception e) {
                 LOGGER.error("Wrong service  select all users",e);
                 throw new TrackerServiceException("Wrong service select all users",e);
             }
@@ -146,16 +131,11 @@ public class UserService {
                 newUserList.add(userList.get(i));
             }
         }
-
-         */
-
-
-        return userDao.selectAll();
+        return userList;
     }
 
-    public boolean updateDataUser(String login, String name, String surname,
+    public void updateDataUser(String login, String name, String surname,
                                   String email, String birthday) throws TrackerServiceException {
-        boolean status = false;
         EmailValidator emailValidator = new EmailValidator();
         BirthdayValidator birthdayValidator = new BirthdayValidator();
         NameSurnameValidator nameSurnameValidator = new NameSurnameValidator();
@@ -163,25 +143,23 @@ public class UserService {
         try{
             if(emailValidator.isValidate(email) && birthdayValidator.isValidate(birthday) && nameSurnameValidator.isValidate(name) &&
                     nameSurnameValidator.isValidate(surname) && loginValidator.isValidate(login)) {
-                UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
                 User user = new User(login);
                 user.setName(name);
                 user.setSurname(surname);
                 user.setEmail(email);
                 user.setBirthDate(LocalDate.parse(birthday));
-                status = dao.updateUser(user);
+                userDao.updateUser(user);
+            } else {
+                throw new TrackerServiceException("Wrong data");
             }
         } catch (TrackerDBException e){
             LOGGER.error("Wrong service update user",e);
             throw new TrackerServiceException("Wrong service update user",e);
         }
-
-        return status;
     }
 
-    public boolean updatePasswordUser(String login, String oldPass, String currentPass,
+    public void updatePasswordUser(String login, String oldPass, String currentPass,
                                       String newPass, String newPassCheck) throws TrackerServiceException {
-        UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
         LoginValidator loginValidator = new LoginValidator();
         PasswordValidator passwordValidator = new PasswordValidator();
         boolean status = false;
@@ -189,13 +167,14 @@ public class UserService {
             if(loginValidator.isValidate(login) && passwordValidator.isValidate(oldPass) && passwordValidator.isValidate(currentPass) &&
                     passwordValidator.isValidate(newPass) && passwordValidator.isValidate(newPassCheck) &&
                     oldPass.equals(currentPass) && newPass.equals(newPassCheck)) {
-                status = dao.updatePasswordUser(login, newPass);
+                userDao.updatePasswordUser(login, newPass);
+            } else{
+                throw new TrackerServiceException("Not valide data");
             }
         } catch (TrackerDBException e){
             LOGGER.error("Wrong service update password user",e);
             throw new TrackerServiceException("Wrong service update password user",e);
         }
-        return status;
     }
 
     public boolean sendAvatar(String login, String path) throws TrackerServiceException {
@@ -215,8 +194,8 @@ public class UserService {
         return status;
     }
 
-    public List<User> selectUsersByRole(HttpServletRequest request, String role) throws TrackerServiceException {
-        UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
+    public List<User> selectUsersByRole(HttpServletRequest request) throws TrackerServiceException {
+        String role = request.getParameter(ParameterConstant.ATTRIBUTE_ROLE);
         RoleValidator roleValidator = new RoleValidator();
         TypeSortedValidator typeSortedValidator = new TypeSortedValidator();
         String currentPage = request.getParameter(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
@@ -240,7 +219,7 @@ public class UserService {
             }
         }
         try {
-            userList = dao.selectByRole(intPage, type, role);
+            userList = userDao.selectByRole(intPage, type, role);
         } catch (TrackerDBException e) {
             LOGGER.error("Wrong service select user by role",e);
             throw new TrackerServiceException("Wrong service select user by role",e);
@@ -261,11 +240,10 @@ public class UserService {
         return newUserList;
     }
 
-    /*
-    public List<User> selectUsersByGender(HttpServletRequest request, String gender) throws TrackerServiceException {
-        UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
+    public List<User> selectUsersByGender(HttpServletRequest request) throws TrackerServiceException {
         GenderValidator genderValidator = new GenderValidator();
         TypeSortedValidator typeSortedValidator = new TypeSortedValidator();
+        String gender = request.getParameter(ParameterConstant.PARAM_GENDER);
         String currentPage = request.getParameter(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
         String type = request.getParameter(ParameterConstant.PARAM_TYPE);
         List<User> userList;
@@ -278,14 +256,14 @@ public class UserService {
         try{
             if(currentPage == null){
             int intPage = 1;
-            userList = dao.selectByGender(intPage, type, gender);
+            userList = userDao.selectByGender(intPage, type, gender);
             request.setAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
             if(userList.size() == MAX_TABLE_USERS){
                 request.setAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
             }
         } else {
             int intPage = Integer.parseInt(currentPage);
-            userList = dao.selectByGender(intPage, type, gender);
+            userList = userDao.selectByGender(intPage, type, gender);
             request.setAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
             if(userList.size() == MAX_TABLE_USERS){
                 request.setAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
@@ -313,40 +291,19 @@ public class UserService {
         return newUserList;
     }
 
-     */
-
-    public boolean deleteUser(String login, String id) throws TrackerServiceException {
-        LoginValidator loginValidator = new LoginValidator();
-        IdValidator idValidator = new IdValidator();
-        boolean status = false;
-        if(loginValidator.isValidate(login) && idValidator.isValidate(id)){
-           int idUser = Integer.parseInt(id);
-           UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
-            try {
-                status = dao.deleteByIdLogin(idUser, login);
-            } catch (TrackerDBException e) {
-                LOGGER.error("Wrong service delete user",e);
-                throw new TrackerServiceException("Wrong service delete user",e);
-            }
-        }
-        return status;
-    }
-
-    public boolean updateRole(String id, Role role) throws TrackerServiceException {
+    public void updateRole(String id, Role role) throws TrackerServiceException {
        IdValidator validator = new IdValidator();
        RoleValidator roleValidator = new RoleValidator();
-        boolean status = false;
-        UserDaoJdbcImpl dao = null;
         if (validator.isValidate(id) && roleValidator.isValidate(role.name())) {
-            dao = new UserDaoJdbcImpl();
             try {
-                status = dao.updateRoleUser(Integer.parseInt(id), role);
+                userDao.updateRoleUser(Integer.parseInt(id), role);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service check user",e);
                 throw new TrackerServiceException("Wrong service update role",e);
             }
+        } else {
+            throw new TrackerServiceException("Wrong data");
         }
-        return status;
     }
 
     public boolean deposit(String sum, String type, String login, BigDecimal oldSum) throws TrackerServiceException {

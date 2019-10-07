@@ -32,7 +32,7 @@
     <div class="wrapperBlocks">
         <!-- left column -->
         <div class="block1">
-            <h3><@spring.message "label.welcome"/>, ${user.login}</h3>
+            <h3><@spring.message "label.welcome"/>, ${user.login}, ${test}</h3>
 
             <!-- avatar -->
             <div class="icon">
@@ -104,20 +104,6 @@
                             <input type="submit" value="<@spring.message "button.show" />" class="login-button"/>
                         </form> ${wrongData}<br/>
 
-
-                        <!-- delete user -->
-                        <form class="adminBlock" method="post" action="/user/delete">
-                            <h4 class="adminBlock"><@spring.message "label.deleteuser" /></h4>
-                            <p><label for="login" class="formText2"><@spring.message "label.login"/></label>
-                                <input type="text" name = "login" id="login"  value="" placeholder="login" class="formInput2"/>
-                            </p>
-                            <p><label for="id" class="formText2">Id</label>
-                                <input type="text" name = "id" id="id"  value="" placeholder="id" class="formInput2"/></p>
-                            <input type="submit" class="login-button" value="<@spring.message "button.delete" />"/>
-                            <br/>${addmessagedelete}<br/>
-                        </form>
-
-
                         <!-- update role user -->
                         <form class="adminBlock" method="post" action="/user/update_role">
                             <h4 class="adminBlock"><@spring.message "label.updateroleuser" /></h4>
@@ -137,6 +123,7 @@
                             </p>
                             <input type="submit" value="<@spring.message "button.update" />" class="login-button"/>
                         </form>
+                        <br/>${updateMessage}<br/>
                     </div><br/>
 
                     <!-- panel review -->

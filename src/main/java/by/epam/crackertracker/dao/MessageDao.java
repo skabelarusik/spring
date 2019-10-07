@@ -12,7 +12,12 @@ import java.util.List;
 
 public interface MessageDao extends TrackerDao {
 
-    public List<Message> selectInputMessage(String login, int i) throws TrackerDBException;
+    List<Message> selectInputMessage(String login, int i) throws TrackerDBException;
 
-    public List<Message> selectOutputMessage(String login, int i) throws TrackerDBException;
+    List<Message> selectOutputMessage(String login, int i) throws TrackerDBException;
+
+    void addMessage(Message message) throws TrackerDBException;
+
+    void deleteMessage(int id, String type) throws TrackerDBException;
+
 }

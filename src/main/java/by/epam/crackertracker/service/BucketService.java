@@ -21,7 +21,7 @@ public class BucketService {
                     portionsValidator.isValidate(portions)) {
                 Double port = Double.parseDouble(portions);
                 dao = new BucketDaoJdbcImpl();
-                status = dao.insert(login, product, port);
+                dao.insert(login, product, port);
                 if (status) {
                     list = dao.selectAll(login);
                 } else {
@@ -41,7 +41,7 @@ public class BucketService {
         if(validator.isValidate(login)){
             dao = new BucketDaoJdbcImpl();
             try {
-                status = dao.removeAll(login);
+                dao.removeAll(login);
             } catch (TrackerDBException e) {
                 throw new TrackerServiceException("Wrong login in bucket service");
             }
@@ -61,7 +61,7 @@ public class BucketService {
             dao = new BucketDaoJdbcImpl();
             int idProd = Integer.parseInt(id);
             try {
-                status = dao.deleteById(idProd);
+                dao.deleteById(idProd);
             } catch (TrackerDBException e) {
                 throw new TrackerServiceException("Wrong service delete product from bucket id:" + id);
             }

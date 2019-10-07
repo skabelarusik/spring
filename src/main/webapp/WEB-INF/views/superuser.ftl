@@ -77,7 +77,6 @@
                 <div class="blockUsers">
                     <!-- panel calculate -->
                     <div class="productBlock">
-                        <#include "header.ftl">
                         <#include "calculator.ftl"/><br/>
                         <#include "calculator_rate.ftl"/><br/>
                     </div>
@@ -118,7 +117,7 @@
                         <a href="/user/request"><h5 class="adminBlock"><@spring.message "button.click"/></h5></a><br/>
 
                     </div><br/>
-
+  </div>
                     <!-- panel product -->
                     <div class="anotherBlock">
                         <div class="productBlock">
@@ -146,7 +145,7 @@
 
                         <!-- user calculator -->
                         <div class="blockAdvice">
-                            <#include "calculator_calories.jsp"/><br/>
+                            <#include "calculator_calories.ftl"/><br/>
                         </div>
 
 
@@ -186,7 +185,6 @@
                 <img src="picture/tomcat.png" class="icon1">
             </div>
         </div>
-    </div>
     <footer>
         <#include "footer.ftl">
     </footer>

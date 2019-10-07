@@ -7,6 +7,8 @@ package by.epam.crackertracker.util;
 
 public class ParameterConstant {
 
+    public static final String USER = "user";
+
     private ParameterConstant(){}
 
     //COMMON PARAMETERS
@@ -81,6 +83,7 @@ public class ParameterConstant {
     public static final String PARAM_DURATION = "duration";
     public static final String PARAM_COST = "cost";
     public static final String PARAM_RECIPIENT = "recipient";
+    public static final String PARAM_SENDER = "sender";
 
     public static final String RU = "ru_RU";
     public static final String EN = "en_US";
@@ -128,12 +131,13 @@ public class ParameterConstant {
     public static final String ATTRIBUTE_SHOW_REVIEW = "show_review";
 
 
-
+    public static final String MESAGE_WRONG_AUTH = "messageAuth";
     public static final String MESSAGE_ERROR_REGIST = "Please, check it";
     public static final String MESSAGE_CONGRAT = "congratulations!";
     public static final String MESSAGE_ERROR_DOWNLOAD = "errorDownload";
     public static final String WRONG = "Wrong download";
     public static final String WRONG_DATA = "wrongData";
+    public static final String WRONG_DATA_PASS = "wrongData";
     public static final String WRONG_DELETE_USER = "addmessagedelete";
     public static final String MESSAGE_UPDATE_PRODUCT = "messageUpdateProduct";
     public static final String MESSAGE_DELETE_PRODUCT =  "messageDeleteProduct";
@@ -176,6 +180,7 @@ public class ParameterConstant {
     public static final String PARAM_NUM_PRODUCT = "numProduct";
     public static final String PARAM_NUM_PROGRAM = "idProgram";
     public static final String PARAM_PORTIONS = "portions";
+
 
 
 

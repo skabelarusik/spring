@@ -1,25 +1,19 @@
 package by.epam.crackertracker.controller;
 
-import by.epam.crackertracker.entity.Gender;
 import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.User;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.UserService;
 import by.epam.crackertracker.util.PageConstant;
+import by.epam.crackertracker.util.PageSelector;
 import by.epam.crackertracker.util.ParameterConstant;
-import freemarker.ext.beans.MapModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.math.BigDecimal;
-import java.net.http.HttpRequest;
-import java.time.LocalDate;
-import java.util.Locale;
+import java.awt.*;
 
 @Controller
 @RequestMapping(PageConstant.REQUEST_USER)
@@ -28,117 +22,116 @@ public class UserController {
     @Autowired
     public UserService userService;
 
-    @GetMapping("/select")
-    public String selectAllUsers(Model model) {
-      //  model.addAttribute("users", userService.selectAllUsers());
-        return "resultUser";
+    @GetMapping(PageConstant.URI_SELECT)
+    public String selectAllUsers(HttpServletRequest request, Model model) {
+        String page;
+        try {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectAllUsers(request));
+            page = PageConstant.PATH_RESULT_USER;
+        } catch (TrackerServiceException e) {
+            page = PageConstant.PATH_PAGE_ERROR;
+        }
+        return page;
     }
 
-    @PostMapping("/select_by_status")
-    public String selectAllUsersByStatus(Model model) {
-        model.addAttribute("users", userService.selectAllUsers());
-        return "resultUser";
+    @PostMapping(PageConstant.URI_SELECT_USER_BY_STATUS)
+    public String selectAllUsersByStatus(HttpServletRequest request, Model model) {
+        String page;
+        try {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByRole(request));
+            page = PageConstant.PATH_RESULT_USER;
+        } catch (TrackerServiceException e) {
+            page = PageConstant.PATH_PAGE_ERROR;
+        }
+            return page;
     }
 
-    @PostMapping("/select_by_gender")
-    public String selectAllUsersByGender(Model model) {
-        model.addAttribute("users", userService.selectAllUsers());
-        return "resultUser";
+    @PostMapping(PageConstant.URI_SELECT_USER_BY_GENDER)
+    public String selectAllUsersByGender(HttpServletRequest request, Model model) {
+        String page;
+        try {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByGender(request));
+            page = PageConstant.PATH_RESULT_USER;
+        } catch (TrackerServiceException e) {
+            page = PageConstant.PATH_PAGE_ERROR;
+        }
+        return page;
     }
 
-    @GetMapping("/user/{id}")
-    public String getById(@PathVariable("id") int id, Model model) {
-  //      model.addAttribute("user", userService.getById(id));
-        return "showUser";
-    }
-/*
-    @GetMapping("/user2/{id}")
-    public @ResponseBody User getById2(@PathVariable("id") int id, Model model) {
-        model.addAttribute("user", userService.getById(id));
-        return userService.getById(id);
-    }
-
-
- */
-    @GetMapping("/addUser")
-    public String createUserPage() {
-        return "createUser";
+    @PostMapping(PageConstant.URI_UPDATE_USER)
+    public String updateUser(HttpServletRequest request) {
+        String name = request.getParameter(ParameterConstant.PARAM_NAME);
+        String surname = request.getParameter(ParameterConstant.PARAM_SURNAME);
+        String email = request.getParameter(ParameterConstant.EMAIL);
+        String birthday = request.getParameter(ParameterConstant.PARAM_BIRTHDAY);
+        String login = (String) request.getSession(true).getAttribute(ParameterConstant.LOGIN);
+        try {
+            userService.updateDataUser(login, name, surname, email, birthday);
+            request.setAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_CONGRAT);
+        } catch (TrackerServiceException e) {
+            request.setAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_ERROR_REGIST);
+        }
+        return PageConstant.PATH_PAGE_EDIT_USER;
     }
 
-
-    @PostMapping("/addUser")
-    public String addUser(@ModelAttribute("user") User user) throws Exception {
-   //     userService.save(user);
-        return "redirect:/users";
-    }
-
-    @PostMapping("/update")
-    public String updateUser(@ModelAttribute("user") User user) {
-    //    userService.update(user);
-        return "redirect:/user/" + user.getId();
-    }
-
-    @PostMapping("/update_role")
-    public String updateUserRole(@ModelAttribute("user") User user) {
-        //    userService.update(user);
-        return "redirect:/user/" + user.getId();
-    }
-
-    @GetMapping("/update/{id}")
-    public String update(@PathVariable("id") int id, Model model) {
-   //     model.addAttribute("user", userService.getById(id));
+    @GetMapping(PageConstant.URI_UPDATE_USER)
+    public String moveUpdateUser() {
         return "editUser";
     }
 
-    @PostMapping("/delete")
-    public String deleteUser(@PathVariable("id") int id) {
-    //    userService.delete(id);
-        return "redirect:/users";
+    @PostMapping(PageConstant.UPDATE_PASS)
+    public String updatePass(HttpServletRequest request){
+        String oldPassword = request.getParameter(ParameterConstant.PARAM_NEW_PASSWORD);
+        User user = (User)request.getSession(true).getAttribute(ParameterConstant.USER);
+        String password = user.getPassword();
+        String newPassword = request.getParameter(ParameterConstant.PARAM_NEW_PASSWORD);
+        String newCheckPassword = request.getParameter(ParameterConstant.PARAM_NEW_PASSWORD_CHECK);
+        String login = user.getLogin();
+        try {
+            userService.updatePasswordUser(login, oldPassword, password, newPassword, newCheckPassword);
+            request.setAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_CONGRAT);
+        } catch (TrackerServiceException e) {
+            request.setAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
+        }
+        return PageConstant.PATH_PAGE_EDIT_USER;
+    }
+
+    @PostMapping(PageConstant.URI_UPDATE_USER_ROLE)
+    public String updateUserRole(HttpServletRequest request) {
+        String id = request.getParameter(ParameterConstant.PARAM_ID);
+        Role role = Role.valueOf(request.getParameter(ParameterConstant.ATTRIBUTE_ROLE).toUpperCase().trim());
+        try {
+            userService.updateRole(id, role);
+            request.setAttribute("updateMessage", ParameterConstant.MESSAGE_CONGRAT);
+        } catch (TrackerServiceException e) {
+            request.setAttribute("updateMessage", ParameterConstant.WRONG_DATA);
+        }
+        return PageSelector.selectHomePage((Role) request.getSession(true).getAttribute(ParameterConstant.ATTRIBUTE_ROLE));
     }
 
     @PostMapping(PageConstant.URI_LOGIN)
-    public String loginUser(HttpServletRequest request) {
-/*
+    public String loginUser(HttpServletRequest request) throws TrackerServiceException {
         User user = null;
         String page = null;
-        try {
+        try{
             user = userService.checkUser(request.getParameter(ParameterConstant.PARAM_LOGIN),
                     request.getParameter(ParameterConstant.PARAM_PASSWORD));
             if(user.getActive() == 0){
-                request.setAttribute("messageException", "YOU WAS BANNED");
-                return  "index";
+                request.setAttribute(ParameterConstant.MESAGE_WRONG_AUTH, "YOU WAS BANNED");
+                return  PageConstant.PATH_PAGE_MAIN_INDEX;
             }
-            request.getSession(true).setAttribute("login", user.getLogin());
-            request.getSession().setAttribute("name", user.getName());
-            request.getSession().setAttribute("balance", user.getBalance());
-            if(user.getRole() == Role.ADMIN){
-                page = "admin";
-            } else{
-                return null;
-            }
+            request.getSession(true).setAttribute(ParameterConstant.USER, user);
+            request.getSession().setAttribute(ParameterConstant.ATTRIBUTE_ROLE, user.getRole());
+            request.getSession().setAttribute(ParameterConstant.LOGIN, user.getLogin());
+            page = PageSelector.selectHomePage(user.getRole());
         } catch (TrackerServiceException e) {
-            request.setAttribute("messageException", "WRONG PASSWORD OR LOGIN");
-            page = "index";
+            request.setAttribute(ParameterConstant.MESAGE_WRONG_AUTH, "WRONG PASSWORD OR LOGIN");
+            page = PageConstant.PATH_PAGE_MAIN_INDEX;
         }
-
- */
-User user = new User();
-        user.setId(1);
-        user.setName("Andrey");
-        user.setSurname("Krupin");
-        user.setLogin("clockworktimes");
-        user.setRole(Role.ADMIN);
-        user.setBalance(new BigDecimal(11));
-        user.setPath("asd");
-        request.getSession(true).setAttribute("user", user);
-        request.getSession().setAttribute(ParameterConstant.START_PAGE, "admin");
-        return "user";
+        request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
+        return page;
     }
 
-    @GetMapping("admin")
-    public String adminPage(){
-        return "admin";
-    }
 
     @PostMapping(PageConstant.URI_REGISTER)
     public String registration(){

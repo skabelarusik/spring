@@ -30,6 +30,8 @@
         <a class="registration" href='/login'>
             <@spring.message "label.back"/></a>
     </h4>
+            <h1>${name}</h1>
+
 </div>
 
 <div class="languageLogin">

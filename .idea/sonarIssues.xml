@@ -88,6 +88,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/MessageController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ProductController.java">
           <value>
             <set />
@@ -129,6 +134,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/BucketDaoJdbcImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/MessageDao.java">
           <value>
             <set />
           </value>
@@ -203,6 +213,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/mapper/MessageMapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/mapper/ReviewMapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/mapper/UserMapper.java">
           <value>
             <set />
@@ -218,12 +238,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/BucketService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/MessageService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ReviewService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/UserService.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/tag/ShowCuratorTag.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageConstant.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageSelector.java">
           <value>
             <set />
           </value>
@@ -283,12 +328,42 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editUser.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/message.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.ftl">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultMessage.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultReview.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultUser.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/review.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/send_message.ftl">
           <value>
             <set />
           </value>
@@ -339,6 +414,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/jsp/superuser.jsp">
           <value>
             <set />
           </value>

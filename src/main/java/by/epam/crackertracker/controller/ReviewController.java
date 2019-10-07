@@ -7,6 +7,7 @@ import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,20 +19,20 @@ import java.util.List;
 @RequestMapping("/review")
 public class ReviewController {
 
-   // @Autowired
+    @Autowired
     private ReviewService service;
 
 
     @GetMapping("/show")
-    public String show(){
-        List<Review> serviceList = service.selectAllReview(ParameterConstant.SHOW);
-        return "review";
+    public String show(Model model){
+        model.addAttribute("reviewList", service.selectAllReview(ParameterConstant.SHOW));
+        return "resultReview";
     }
 
     @GetMapping("/show_del")
-    public String showDeleted(){
-        List<Review> serviceList = service.selectAllReview(ParameterConstant.SHOW_DELETED);
-        return "review";
+    public String showDeleted(Model model){
+       model.addAttribute("reviewList",service.selectAllReview(ParameterConstant.SHOW_DELETED));
+       return "resultReview";
     }
 
     @PostMapping("/delete")

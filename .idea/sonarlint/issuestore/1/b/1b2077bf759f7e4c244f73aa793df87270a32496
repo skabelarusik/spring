@@ -1,9 +1,9 @@
 
-squid:UselessImportCheck"bRemove this unused import 'org.springframework.web.servlet.config.annotation.InterceptorRegistry'.(¯¶ø±8ˆ×Ç·Ù-
+lsquid:UselessImportCheck	"ARemove this unused import 'org.springframework.core.io.Resource'.(¹ÒÁ8ˆ×Ç·Ù-
 ]squid:S1075!"ARefactor your code to get this URI from a customizable parameter.(Úä¨Şıÿÿÿÿ
 ‰squid:UselessImportCheck"YRemove this unused import 'org.springframework.web.servlet.i18n.LocaleChangeInterceptor'.(€ó´ãüÿÿÿÿ8ˆ×Ç·Ù-
+squid:UselessImportCheck"bRemove this unused import 'org.springframework.web.servlet.config.annotation.InterceptorRegistry'.(¯¶ø±8ˆ×Ç·Ù-
 squid:UselessImportCheck"^Remove this unused import 'org.springframework.web.servlet.view.InternalResourceViewResolver'.(Îøÿ‚şÿÿÿÿ8–––²Ù-
 [squid:UselessImportCheck"0Remove this unused import 'jdk.jfr.ContentType'.(„é²ò8“£úŒÙ-
-lsquid:UselessImportCheck	"ARemove this unused import 'org.springframework.core.io.Resource'.(¹ÒÁ8ˆ×Ç·Ù-
 †squid:UselessImportCheck"VRemove this unused import 'org.springframework.web.servlet.i18n.CookieLocaleResolver'.(’¿âˆÿÿÿÿÿ8ˆ×Ç·Ù-
 –squid:UselessImportCheck"fRemove this unused import 'org.springframework.context.support.ReloadableResourceBundleMessageSource'.(Â¿ã‹ıÿÿÿÿ8ˆ×Ç·Ù-

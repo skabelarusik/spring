@@ -1,0 +1,5 @@
+
+rsquid:UselessImportCheck"BRemove this unused import 'by.epam.crackertracker.entity.Message'.(à¢¥¶ùÿÿÿÿ8ø—ñ´Ú-
+Fsquid:S1148""#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ð‹Ò³Ú-
+Fsquid:S1148-"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ÿ‹ ´Ú-
+lsquid:UselessImportCheck"<Remove this unused import 'org.springframework.ui.ModelMap'.(ÊÁâºùÿÿÿÿ8¼‹´Ú-

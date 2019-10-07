@@ -11,13 +11,14 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class ReviewMapper implements RowMapper<Review> {
+    public static final String SELECT_ALL_REVIEW = "SELECT r.idreview, u.login, r.date, r.text from\n" +
+            " review r INNER JOIN users u on r.name = u.id where r.show_review = ? order by r.date desc";
 
     @Override
     public Review mapRow(ResultSet resultSet, int i) throws SQLException {
-        Review review = new Review(resultSet.getString(ParameterConstant.NAME), resultSet.getString(ParameterConstant.TEXT),
-               LocalDate.parse(resultSet.getString(ParameterConstant.DATE)));
-        review.setId(resultSet.getInt(ParameterConstant.ID_ADVICE));
-        review.setId(resultSet.getInt(ParameterConstant.SHOW_REVIEW));
+        Review review = new Review(resultSet.getString(2), resultSet.getString(4),
+               LocalDate.parse(resultSet.getString(3)));
+        review.setId(resultSet.getInt(1));
         return review;
     }
 }
