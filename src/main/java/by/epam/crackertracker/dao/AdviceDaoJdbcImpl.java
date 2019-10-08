@@ -61,7 +61,7 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
 
     @Override
     public Advice selectRandomAdvice() throws TrackerDBException {
-        Advice advice = null;
+        Advice advice;
         try{
             advice= template.queryForObject(SELECT_ADVICE, new AdviceMapper());
         } catch (Exception e){

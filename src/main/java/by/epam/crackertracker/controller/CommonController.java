@@ -3,6 +3,7 @@ package by.epam.crackertracker.controller;
 import by.epam.crackertracker.entity.Message;
 import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.User;
+import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.PageSelector;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class CommonController {
 
     @GetMapping("/")
     public String index(){
-        return "index";
+        return PageConstant.PATH_PAGE_MAIN_INDEX;
     }
 
     @GetMapping("/about")
@@ -54,5 +55,10 @@ public class CommonController {
     public String langEn(HttpServletRequest request, HttpServletResponse response){
         localeResolver.setLocale(request, response, new Locale("en", "US"));
         return "index";
+    }
+
+    @GetMapping("/logout")
+    public String logout(){
+        return PageConstant.PATH_PAGE_MAIN_INDEX;
     }
 }

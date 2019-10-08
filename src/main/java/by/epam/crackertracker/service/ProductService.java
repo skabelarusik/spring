@@ -13,12 +13,18 @@ import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.util.ParameterConstant;
 import by.epam.crackertracker.validator.*;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ProductService {
     private static final Logger LOGGER = Logger.getRootLogger();
+
+    @Autowired
+    private ProductDao dao;
 
     public List<Product> selectProduct(int min, int max, int intPage, String type) throws TrackerServiceException {
         List<Product> productList;
@@ -30,7 +36,6 @@ public class ProductService {
             LOGGER.warn("Wrong sort type products  exception ");
             throw new TrackerServiceException(" Wrong sort type products exception");
         }
-        ProductDaoJdbc dao = new ProductDaoJdbc();
         try {
             productList = dao.selectAllByRangeCallories(min, max, intPage, type);
         } catch (TrackerDBException e) {
@@ -50,7 +55,6 @@ public class ProductService {
             LOGGER.warn("Wrong sort type products exception");
             throw new TrackerServiceException("Wrong sort type products exception");
         }
-        ProductDao dao  = new ProductDaoJdbc();
         try {
             productList = dao.selectAll(page, type);
         } catch (TrackerDBException e) {
@@ -59,13 +63,12 @@ public class ProductService {
         return productList;
     }
 
-    public boolean updateProduct(String id, String name, String calories, String fats, String carbs,
+    public void updateProduct(String id, String name, String calories, String fats, String carbs,
                                  String proteins) throws TrackerServiceException {
         MinMaxCaloriesValidator caloriesValidator = new MinMaxCaloriesValidator();
         DoubleValidator doubleValidator = new DoubleValidator();
         IdValidator intValidator = new IdValidator();
         ProductNameValidator nameValidator = new ProductNameValidator();
-        boolean status = false;
         if(doubleValidator.isValidate(fats) && doubleValidator.isValidate(carbs) &&
                 doubleValidator.isValidate(proteins) && caloriesValidator.isValidate(calories) &&
             nameValidator.isValidate(name) && intValidator.isValidate(id)){
@@ -95,38 +98,37 @@ public class ProductService {
             product.setProteins(proteinsPr);
             ProductDaoJdbc dao = new ProductDaoJdbc();
             try {
-                status = dao.updateProduct(product);
+                dao.updateProduct(product);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service update product",e);
                 throw new TrackerServiceException("Wrong service update product",e);
             }
+        } else {
+            throw new TrackerServiceException("Wrong service update product");
         }
-        return status;
     }
 
-    public boolean deleteProduct(String name, String id) throws TrackerServiceException {
+    public void deleteProduct(String name, String id) throws TrackerServiceException {
         IdValidator validator = new IdValidator();
         ProductNameValidator nameValidator = new ProductNameValidator();
-        ProductDaoJdbc dao = new ProductDaoJdbc();
-        boolean status = false;
         if(validator.isValidate(id) && nameValidator.isValidate(name)){
             int idProd = Integer.parseInt(id);
             try {
-                status = dao.deleteById(idProd, name);
+                dao.deleteById(idProd, name);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service delete product",e);
                 throw new TrackerServiceException("Wrong service delete product",e);
             }
+        } else {
+            throw new TrackerServiceException("Wrong service delete product");
         }
-        return status;
     }
 
-    public boolean addProduct(String name, String calories, String fats, String carbs,
+    public void addProduct(String name, String calories, String fats, String carbs,
                            String proteins) throws TrackerServiceException {
         MinMaxCaloriesValidator caloriesValidator = new MinMaxCaloriesValidator();
         DoubleValidator doubleValidator = new DoubleValidator();
         ProductNameValidator nameValidator = new ProductNameValidator();
-        boolean status = false;
         if (doubleValidator.isValidate(fats) && doubleValidator.isValidate(carbs) &&
                 doubleValidator.isValidate(proteins) && caloriesValidator.isValidate(calories) &&
                 nameValidator.isValidate(name)) {
@@ -153,22 +155,20 @@ public class ProductService {
             product.setCarbs(carbsPr);
             product.setFats(fatsPr);
             product.setProteins(proteinsPr);
-            ProductDaoJdbc dao = new ProductDaoJdbc();
             try {
-                status = dao.insert(product);
+                dao.insert(product);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service add product",e);
                 throw new TrackerServiceException("Wrong service add product",e);
             }
+        } else {
+            throw new TrackerServiceException("Wrong service add product");
         }
-       return status;
     }
 
     public List<Product> searchProducts(String param) throws TrackerServiceException {
         List<Product> list = new ArrayList<>();
-        ProductDaoJdbc dao;
         if(param != null && !param.isEmpty()){
-            dao = new ProductDaoJdbc();
             String [] products = param.split(" ");
             try {
                 list = dao.searchProducts(products);

@@ -14,9 +14,11 @@ public interface ProgramsNameDao extends TrackerDao{
 
     List<ProgramsName> selectAll(int page, int type) throws TrackerDBException;
 
-    boolean deleteById(int id, int type) throws TrackerDBException;
+    void deleteById(int id, int type) throws TrackerDBException;
 
-    boolean insert(ProgramsName name) throws TrackerDBException;
+    void insert(ProgramsName name) throws TrackerDBException;
 
-    public boolean updateProgramsName(ProgramsName programsName) throws TrackerDBException;
+    void updateProgramsName(ProgramsName programsName) throws TrackerDBException;
+
+    List<ProgramsName> selectCuratorPrograms(String login ,int page, int type) throws  TrackerDBException;
     }

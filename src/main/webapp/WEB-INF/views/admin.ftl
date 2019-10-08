@@ -52,7 +52,7 @@
             <a href="/user/update"><@spring.message "button.edit"/></a>
         </div>
         <div class="message">
-            <h4><fmt:message key="label.message" bundle="${rb}"/></h4>
+            <h4><@spring.message "label.message" /></h4>
             <h5><a href="/message/input"><@spring.message "label.input"/></a></h5>
             <h5><a href="/message/output"><@spring.message "label.output"/></a></h5>
             <h5><a href="/message/send"><@spring.message "label.sendmessage"/> </a></h5>

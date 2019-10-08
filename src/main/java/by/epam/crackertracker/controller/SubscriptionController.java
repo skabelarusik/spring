@@ -12,4 +12,9 @@ public class SubscriptionController {
     public String select(){
         return null;
     }
+
+    @GetMapping("select_curator")
+    public String selectCurator(){
+        return null;
+    }
 }

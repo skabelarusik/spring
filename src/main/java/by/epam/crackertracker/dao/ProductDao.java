@@ -14,12 +14,14 @@ public interface ProductDao extends TrackerDao {
 
     List<Product> selectAll(int pag, String type) throws TrackerDBException;
 
-    boolean deleteById(int id, String name) throws TrackerDBException;
+    void deleteById(int id, String name) throws TrackerDBException;
 
-    boolean insert(Product product) throws TrackerDBException;
+    void insert(Product product) throws TrackerDBException;
 
-    boolean updateProduct(Product product) throws TrackerDBException;
+    void updateProduct(Product product) throws TrackerDBException;
 
-    public List<Product> selectAllByRangeCallories(int min, int max, int page, String type) throws TrackerDBException;
+    List<Product> selectAllByRangeCallories(int min, int max, int page, String type) throws TrackerDBException;
 
-    }
+    List<Product> searchProducts(String[] product) throws TrackerDBException;
+
+}

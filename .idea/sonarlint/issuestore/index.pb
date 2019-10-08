@@ -117,8 +117,6 @@ Z
 *src/main/webapp/WEB-INF/views/editUser.ftl,1\5\15d3a3e92a8ade4cbcd7fe0e57bf199b3304e373
 Z
 *src/main/webapp/WEB-INF/views/showUser.ftl,6\5\65dc8763f55e9c248ca72bb2946f9dfa2e72aac3
-[
-+src/main/webapp/WEB-INF/views/usersList.ftl,6\e\6e23b924cd373dd47747248022193f77d630ec8f
 \
 ,src/main/webapp/WEB-INF/views/showAdvice.ftl,8\0\80cc7a88d956e6a87eb15b5ab3a69f8b661b80ae
 m
@@ -153,8 +151,6 @@ N
 src/main/webapp/jsp/review.jsp,b\0\b0b313dfbf103ed093a795a76184657b21f44565
 Y
 )src/main/webapp/WEB-INF/views/curator.ftl,9\e\9ea39932abad0cc6081719414f49226e4b9bcb9b
-X
-(src/main/webapp/WEB-INF/views/review.ftl,f\c\fcf6b18bcc1693ba068707eceda942e7e39a01b3
 R
 "src/main/webapp/jsp/calculator.jsp,5\1\51474e718af7c93fc73a8f411cad374c472d6237
 O

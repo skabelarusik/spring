@@ -23,4 +23,9 @@ public class AdviceController {
    public String addAdvice(){
        return null;
    }
+
+   @PostMapping("/delete")
+   public String delete(){
+       return null;
+   }
 }

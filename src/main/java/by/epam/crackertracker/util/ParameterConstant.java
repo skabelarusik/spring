@@ -42,6 +42,13 @@ public class ParameterConstant {
     public static final int SHOW = 1;
     public static final int SHOW_DELETED = 0;
 
+    //PRODUCT PARAMETERS
+    public static final String PRODUCT_CALORIES = "calories";
+    public static final String PRODUCT_ID = "idproducts";
+    public static final String PRODUCT_CARBS = "carbs";
+    public static final String PRODUCT_FATS = "fats";
+    public static final String PRODUCT_PROTEINS = "proteins";
+
     public static final String START_PAGE = "startPage";
 
 
@@ -65,7 +72,6 @@ public class ParameterConstant {
     public static final String PARAM_BALANCE = "balance";
     public static final String PARAM_SUM_DEPOSIT = "sum";
     public static final String PARAM_TYPE = "type";
-    public static final String PARAM_COMMAND = "command";
     public static final String PARAM_MIN_CALORIES = "minCalories";
     public static final String PARAM_MAX_CALORIES = "maxCalories";
     public static final String PARAM_AGE = "age";

@@ -1,6 +1,5 @@
 package by.epam.crackertracker.config;
 
-import jdk.jfr.ContentType;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -62,10 +61,11 @@ public class WebConfig extends WebMvcConfigurerAdapter{
         source.setDefaultEncoding(DEFAULT_ENCODING);
         return source;
     }
+
     @Bean
     public LocaleResolver localeResolver() {
         SessionLocaleResolver localeResolver = new SessionLocaleResolver();
-        localeResolver.setDefaultLocale(Locale.ENGLISH); // change this
+        localeResolver.setDefaultLocale(Locale.ENGLISH);
         return localeResolver;
     }
 
