@@ -19,12 +19,15 @@
 
     <div class="languageMain">
         <form class="language" method="get" action="/lang/en">
+            <input type="hidden" name="currentPage" value="admin">
             <input type="submit" class="lan1" name="langv" value="EN">
         </form>
         <form class="language" method="get" action="/lang/ru">
+            <input type="hidden" name="currentPage" value="admin">
             <input type="submit" class="lan2" name="langv" value="RU">
         </form>
         <form class="language" method="get" action="/lang/by">
+            <input type="hidden" name="currentPage" value="admin">
             <input type="submit" class="lan3" name="langv" value="BY">
         </form>
     </div>
@@ -32,7 +35,7 @@
     <div class="wrapperBlocks">
         <!-- left column -->
         <div class="block1">
-            <h3><@spring.message "label.welcome"/>, ${user.login}, ${test}</h3>
+            <h3><@spring.message "label.welcome"/>, ${user.login}</h3>
 
             <!-- avatar -->
             <div class="icon">
@@ -52,7 +55,7 @@
             <a href="/user/update"><@spring.message "button.edit"/></a>
         </div>
         <div class="message">
-            <h4><fmt:message key="label.message" bundle="${rb}"/></h4>
+            <h4><@spring.message "label.message" /></h4>
             <h5><a href="/message/input"><@spring.message "label.input"/></a></h5>
             <h5><a href="/message/output"><@spring.message "label.output"/></a></h5>
             <h5><a href="/message/send"><@spring.message "label.sendmessage"/> </a></h5>
@@ -62,11 +65,13 @@
         <div class="block2">
             <div class="searchheader">
                 <form class="adviceForm" method="post" action="/product/search">
+                 <input type="hidden" name="currentPage" value="admin">
                     <p><input  class="adminBlock" type="search" name="text" value="" placeholder="Поиск продуктов по сайту">
+                        <input type="hidden" name="currentPage" value="admin">
                         <input  class="adminBlock" type="submit" value="Найти"></p>
                 </form>
             </div>
-            <h4><br/><@spring.message "label.logoutmess"/> </h4>
+            <h4><br/><@spring.message "label.logoutmess"/></h4>
             <a href="/logout" class="aBlock2"><h5><@spring.message "label.logout"/></h5></a>
             <br/>
 
@@ -106,6 +111,7 @@
 
                         <!-- update role user -->
                         <form class="adminBlock" method="post" action="/user/update_role">
+                            <input type="hidden" name="currentPage" value="admin">
                             <h4 class="adminBlock"><@spring.message "label.updateroleuser" /></h4>
                             <p><label for="idRole" class="formText2">Id</label>
                                 <input type="text" name = "id" id="idRole"  value="" placeholder="id" class="formInput2"/></p>
@@ -134,6 +140,7 @@
                         <a href="/review/show_del"><h5 class="adminBlock">SelectAllReview</h5></a><br/>
                         <!-- delete review -->
                         <form class="adminBlock" method="post" action="/review/delete">
+                            <input type="hidden" name="currentPage" value="admin">
                             <input type="hidden" name="command" value="delete_review">
                             <h4 class="adminBlock"><@spring.message "label.deletereview" /></h4>
                             <p><label for="idRev" class="formText2">Id</label>
@@ -167,6 +174,7 @@
                             <h5 class="adminBlock"><@spring.message "label.selectproduct" /> </h5>
                         </a><br/>
                         <form class="adminBlock" method="post" action="/product/select_by_calories">
+                            <input type="hidden" name="currentPage" value="admin">
                             <p>
                                 <label for="minCalories" class="formText2"><@spring.message "label.mincalor"/></label>
                                 <input type="number" name="minCalories" maxlength="4" autofocus id="minCalories"
@@ -180,7 +188,10 @@
                             <input type="submit" class="login-button" value="<@spring.message "button.show"/>"/>
                         </form><br/>
                         ${messageWrongProduct}
+
+                        <!-- update product -->
                         <form class="adminBlock" method="post" action="/product/update">
+                            <input type="hidden" name="currentPage" value="admin">
                             <h4 class="adminBlock"><@spring.message "label.updateproduct"/></h4>
                             <p>
                                 <label for="idproduct" class="formText2">Id</label>
@@ -217,6 +228,7 @@
                         </form>
                         <!-- delete product -->
                         <form class="adminBlock" method="post" action="/product/delete">
+                            <input type="hidden" name="currentPage" value="admin">
                             <h4 class="adminBlock"><@spring.message "label.deleteproduct" /></h4>
                             <p>
                                 <label for="idProd" class="formText2">Id</label>
@@ -234,6 +246,7 @@
 
                         <!-- add product -->
                         <form class="adminBlock" method="post" action="/product/add">
+                            <input type="hidden" name="currentPage" value="admin">
                             <h4 class="adminBlock"><@spring.message "label.addproduct" /></h4>
                             <p>
                                 <label for="nameNewProduct" class="formText2"><@spring.message "label.name" /></label>
@@ -271,6 +284,7 @@
                         <a href="/advice/select"><h5 class="adminBlock">
                                 <@spring.message "label.selectadvice" /> </h5></a><br/>
                         <form class="adviceForm" method="post" action="/advice/add">
+                            <input type="hidden" name="currentPage" value="admin">
                             <h4 class="adminBlock">
                                 <@spring.message "label.addadvice" /></h4>
                             <input type="text" name = "advice" placeholder="message" id="advice" value="" class="formInputAdmin"/>
@@ -290,7 +304,7 @@
             <br/>
             <h4><@spring.message "label.oursponsors" /></h4>
             <div class="icon">
-                <img src="/views/picture/oracle.png" class="icon1">
+                <img src="//picture/oracle.png" class="icon1">
             </div>
             <br/>
             <div class="icon">

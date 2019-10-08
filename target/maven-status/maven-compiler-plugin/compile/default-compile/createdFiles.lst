@@ -52,6 +52,7 @@ by\epam\crackertracker\dao\ProductDao.class
 by\epam\crackertracker\Main.class
 by\epam\crackertracker\validator\EmailValidator.class
 by\epam\crackertracker\config\SpringConfig.class
+by\epam\crackertracker\mapper\ProductMapper.class
 by\epam\crackertracker\entity\ProgramsName.class
 by\epam\crackertracker\validator\BirthdayValidator.class
 by\epam\crackertracker\entity\MealTime.class
@@ -60,7 +61,7 @@ by\epam\crackertracker\validator\DayValidator.class
 by\epam\crackertracker\dao\AdviceDaoJdbcImpl.class
 by\epam\crackertracker\entity\Message.class
 by\epam\crackertracker\controller\UploadServlet.class
-by\epam\crackertracker\filter\ServletSecurityFilter.class
+by\epam\crackertracker\mapper\ProgramNameMapper.class
 by\epam\crackertracker\dao\ProgramDao.class
 by\epam\crackertracker\dao\UserDao.class
 by\epam\crackertracker\validator\RoleValidator.class

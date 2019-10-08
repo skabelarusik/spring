@@ -5,6 +5,9 @@
 
 package by.epam.crackertracker.validator;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class LoginValidator implements ValidatorI {
 
     private static final String LOGIN_REGEX = "[(\\w)-]{3,16}";

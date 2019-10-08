@@ -5,9 +5,12 @@
 
 package by.epam.crackertracker.validator;
 
+import org.springframework.stereotype.Component;
+
 import java.time.LocalDate;
 import java.time.Month;
 
+@Component
 public class BirthdayValidator implements ValidatorI {
     private static final int MIN_AGE = 3;
     private static final int MAX_AGE = 120;

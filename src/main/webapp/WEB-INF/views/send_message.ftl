@@ -25,7 +25,7 @@
             <p>
             <label for="loginField" class="formText3"><@spring.message "label.login"/> </label>
             <input type="text" name="login" maxlength="16" autofocus id="loginField" pattern="^[(\w)-]{3,16}"
-                   data-required="true" class="formInput4" placeholder="<@spring.message "input.login"/>">
+                   data-required="true" class="formInput4" value="${recipient}" placeholder="<@spring.message "input.login"/>">
             </p><br/>
             <p>
                 <label for="topikField" class="formText3"><@spring.message "label.topik" /> </label>
@@ -40,7 +40,7 @@
             </p>
             <br/>
             <input type="submit" value="<@spring.message "button.send" />" class="login-button"/>
-                ${wrongData}
+                ${wrongDataMessage}
             </form>
         </div>
         </body>

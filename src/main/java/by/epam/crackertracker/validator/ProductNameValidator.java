@@ -5,6 +5,9 @@
 
 package by.epam.crackertracker.validator;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ProductNameValidator implements ValidatorI{
     private static final String PRODUCT_NAME_REGEX = "[a-zA-Zа-яА-ЯёЁ]{2,35}";
 

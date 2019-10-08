@@ -1,5 +1,5 @@
 
+psquid:UselessImportCheck"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ
+Ysquid:HiddenFieldCheck%"7Rename "dao" which hides the field declared at line 28.(ä‰„÷
 Bsquid:S1481>"+Remove this unused "status" local variable.(³Éë“
 Ysquid:HiddenFieldCheck="7Rename "dao" which hides the field declared at line 28.(ä‰„÷
-Ysquid:HiddenFieldCheck%"7Rename "dao" which hides the field declared at line 28.(ä‰„÷
-psquid:UselessImportCheck"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ

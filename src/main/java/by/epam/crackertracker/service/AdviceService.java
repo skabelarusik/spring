@@ -26,6 +26,12 @@ public class AdviceService {
     @Autowired
     private AdviceDaoJdbcImpl dao;
 
+    @Autowired
+    private AdviceLengthValidator validator;
+
+    @Autowired
+    private IdValidator idValidator;
+
     public String selectRandomAdvice() throws TrackerServiceException {
         AdviceDaoJdbcImpl dao = new AdviceDaoJdbcImpl();
         String advice = null;
@@ -42,28 +48,21 @@ public class AdviceService {
         return dao.selectAll();
     }
 
-    public boolean addAdvice(String message) throws TrackerServiceException {
-        boolean status = false;
-        AdviceDaoJdbcImpl dao;
-        AdviceLengthValidator validator = new AdviceLengthValidator();
+    public void addAdvice(String message) throws TrackerServiceException {
         if(validator.isValidate(message)){
-            dao = new AdviceDaoJdbcImpl();
             try {
                 dao.insert(message);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service select random advice", e);
                 throw new TrackerServiceException("Wrong service select random advice ", e);
             }
+        } else {
+            throw new TrackerServiceException("Wrong service select random advice");
         }
-       return status;
     }
 
-    public boolean deleteAdviceById(String id) throws TrackerServiceException {
-        boolean status = false;
-        AdviceDaoJdbcImpl dao = null;
-        IdValidator validator = new IdValidator();
+    public void deleteAdviceById(String id) throws TrackerServiceException {
         if(validator.isValidate(id)){
-            dao = new AdviceDaoJdbcImpl();
             int numb = Integer.parseInt(id);
             try {
                 dao.deleteById(numb);
@@ -71,7 +70,8 @@ public class AdviceService {
                 LOGGER.error("Wrong service delete by id", e);
                 throw new TrackerServiceException("Wrong service delete by id" , e);
             }
+        } else {
+            throw new TrackerServiceException("Wrong service delete by id");
         }
-        return status;
     }
 }

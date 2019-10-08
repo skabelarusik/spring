@@ -1,7 +1,5 @@
 
-ksquid:S2095P"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(—Ê·ûÿÿÿÿ
-lsquid:S2095Ş"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ê„»Êıÿÿÿÿ
-lsquid:S2095…"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Öø³İıÿÿÿÿ
-fsquid:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¯‚»Î
-lsquid:S2095Ì"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ïß²÷şÿÿÿÿ
-gsquid:S2095ò"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(í¶ŒÃ
+\squid:UselessImportCheck"1Remove this unused import 'java.math.BigDecimal'.(êêŠ8Í¹ÉÕÚ-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Í¹ÉÕÚ-
+wsquid:UselessImportCheck"GRemove this unused import 'by.epam.crackertracker.pool.ConnectionPool'.(îŒÜ¡üÿÿÿÿ8Í¹ÉÕÚ-
+†squid:UselessImportCheck	"\Remove this unused import 'by.epam.crackertracker.exception.TrackerConnectionPoolException'.(Â¸Ük8Í¹ÉÕÚ-

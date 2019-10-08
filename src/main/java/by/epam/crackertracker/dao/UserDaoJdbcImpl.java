@@ -28,6 +28,9 @@ public class UserDaoJdbcImpl implements UserDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    private UserMapper userMapper;
+
     public static final String SELECT_ALL_USERS = "SELECT u.name, u.surname, u.login, u.password, u.sex, u.email," +
             "u.birthday, u.registrdate, u.money, u.avatar, r1.name, u.id, u.active from users u INNER JOIN role r1 on u.status = r1.id where u.active = 1 limit ? offset ?";
     public static final String SELECT_ALL_USERS_INC_AGE = "SELECT u.name, u.surname, u.login, u.password, u.sex, u.email," +
@@ -95,7 +98,7 @@ public class UserDaoJdbcImpl implements UserDao {
                 sqlReq = SELECT_ALL_USERS;
                 break;
         }
-        return jdbcTemplate.query(sqlReq, new UserMapper(), COUNT_USERS, ((currentPage - 1) * COUNT_USERS - (currentPage - 1)));
+        return jdbcTemplate.query(sqlReq, userMapper, COUNT_USERS, ((currentPage - 1) * COUNT_USERS - (currentPage - 1)));
     }
 
     @Override
@@ -111,7 +114,7 @@ public class UserDaoJdbcImpl implements UserDao {
                 break;
         }
         try {
-           userList = jdbcTemplate.query(sqlReq, new UserMapper(), gender, COUNT_USERS, ((page - 1) * COUNT_USERS - (page - 1)));
+           userList = jdbcTemplate.query(sqlReq, userMapper, gender, COUNT_USERS, ((page - 1) * COUNT_USERS - (page - 1)));
         } catch (Exception e){
             throw new TrackerDBException("Wrong select userList by gender");
         }
@@ -131,7 +134,7 @@ public class UserDaoJdbcImpl implements UserDao {
                 break;
         }
         try{
-            userList =  jdbcTemplate.query(sqlReq, new UserMapper(), role, COUNT_USERS, ((page - 1) * COUNT_USERS - (page - 1)));
+            userList =  jdbcTemplate.query(sqlReq, userMapper, role, COUNT_USERS, ((page - 1) * COUNT_USERS - (page - 1)));
         } catch (Exception e){
             throw new TrackerDBException("Wrong select userList by gender");
         }

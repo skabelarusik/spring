@@ -17,8 +17,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 //@WebFilter(urlPatterns = {"/*"})
-public class ServletSecurityFilter implements Filter {
-
+//public class ServletSecurityFilter implements Filter {
+/*
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
@@ -82,7 +82,9 @@ public class ServletSecurityFilter implements Filter {
         return status;
     }
 
-}
+ */
+
+
 
 
 

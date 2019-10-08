@@ -1,5 +1,8 @@
 package by.epam.crackertracker.validator;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ProgramNameValidator implements ValidatorI {
     public static final int MAX_LENGTH = 40;
     public static final int MIN_LENGTH = 2;

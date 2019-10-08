@@ -1,5 +1,8 @@
 package by.epam.crackertracker.validator;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PositiveIntValidator {
 
     public boolean isValidate(int str) {

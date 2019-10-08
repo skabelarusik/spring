@@ -4,11 +4,12 @@ import by.epam.crackertracker.entity.Product;
 
 import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
+@Component
 public class ProductMapper implements RowMapper<Product> {
 
     @Override

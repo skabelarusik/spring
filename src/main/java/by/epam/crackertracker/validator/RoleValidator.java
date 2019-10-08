@@ -6,7 +6,9 @@
 package by.epam.crackertracker.validator;
 
 import by.epam.crackertracker.entity.Role;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RoleValidator implements ValidatorI{
     @Override
     public boolean isValidate(String str) {

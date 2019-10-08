@@ -10,10 +10,12 @@ import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.awt.*;
+import java.util.Map;
 
 @Controller
 @RequestMapping(PageConstant.REQUEST_USER)
@@ -23,10 +25,10 @@ public class UserController {
     public UserService userService;
 
     @GetMapping(PageConstant.URI_SELECT)
-    public String selectAllUsers(HttpServletRequest request, Model model) {
+    public String selectAllUsers(@RequestParam Map<String,String> allRequestParams, ModelMap model) {
         String page;
         try {
-            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectAllUsers(request));
+            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectAllUsers(allRequestParams, model));
             page = PageConstant.PATH_RESULT_USER;
         } catch (TrackerServiceException e) {
             page = PageConstant.PATH_PAGE_ERROR;
@@ -35,10 +37,10 @@ public class UserController {
     }
 
     @PostMapping(PageConstant.URI_SELECT_USER_BY_STATUS)
-    public String selectAllUsersByStatus(HttpServletRequest request, Model model) {
+    public String selectAllUsersByStatus(@RequestParam Map<String,String> allRequestParams, ModelMap model) {
         String page;
         try {
-            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByRole(request));
+            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByRole(allRequestParams, model));
             page = PageConstant.PATH_RESULT_USER;
         } catch (TrackerServiceException e) {
             page = PageConstant.PATH_PAGE_ERROR;
@@ -47,10 +49,10 @@ public class UserController {
     }
 
     @PostMapping(PageConstant.URI_SELECT_USER_BY_GENDER)
-    public String selectAllUsersByGender(HttpServletRequest request, Model model) {
+    public String selectAllUsersByGender(@RequestParam Map<String, String> allRequestParam, Model model) {
         String page;
         try {
-            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByGender(request));
+            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByGender(allRequestParam, model));
             page = PageConstant.PATH_RESULT_USER;
         } catch (TrackerServiceException e) {
             page = PageConstant.PATH_PAGE_ERROR;
@@ -76,7 +78,7 @@ public class UserController {
 
     @GetMapping(PageConstant.URI_UPDATE_USER)
     public String moveUpdateUser() {
-        return "editUser";
+        return PageConstant.PATH_PAGE_EDIT_USER;
     }
 
     @PostMapping(PageConstant.UPDATE_PASS)
@@ -118,7 +120,7 @@ public class UserController {
                     request.getParameter(ParameterConstant.PARAM_PASSWORD));
             if(user.getActive() == 0){
                 request.setAttribute(ParameterConstant.MESAGE_WRONG_AUTH, "YOU WAS BANNED");
-                return  PageConstant.PATH_PAGE_MAIN_INDEX;
+                return PageConstant.PATH_PAGE_MAIN_INDEX;
             }
             request.getSession(true).setAttribute(ParameterConstant.USER, user);
             request.getSession().setAttribute(ParameterConstant.ATTRIBUTE_ROLE, user.getRole());
@@ -128,18 +130,25 @@ public class UserController {
             request.setAttribute(ParameterConstant.MESAGE_WRONG_AUTH, "WRONG PASSWORD OR LOGIN");
             page = PageConstant.PATH_PAGE_MAIN_INDEX;
         }
+     //   request.getSession().setAttribute(ParameterConstant.ATTRIBUTE_CURRENT_PAGE, page);
         request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
         return page;
     }
-
 
     @PostMapping(PageConstant.URI_REGISTER)
     public String registration(){
         return PageConstant.PATH_PAGE_REGISTER;
     }
 
-    @PostMapping(PageConstant.URI_DEP)
+    @GetMapping(PageConstant.URI_DEP)
     public String deposit(){
+        return PageConstant.PATH_DEPOSIT;
+    }
+
+    @PostMapping(PageConstant.URI_DEP)
+    public String makeDeposit(@RequestParam Map<String,String> allRequestParams, ModelMap model){
+        model.addAttribute("depositMessage", allRequestParams.get("sum"));
+    //model.addAttribute("depositMessage", "WRONG");
         return PageConstant.PATH_DEPOSIT;
     }
 

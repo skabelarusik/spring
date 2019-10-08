@@ -6,12 +6,14 @@ import by.epam.crackertracker.entity.User;
 import by.epam.crackertracker.util.ParameterConstant;
 import by.epam.crackertracker.validator.PathAvatarValidator;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
+@Component
 public class UserMapper implements RowMapper<User> {
 
     public User mapRow(ResultSet resultSet, int i) throws SQLException {

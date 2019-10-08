@@ -34,10 +34,10 @@ public class ParameterConstant {
 
     //ADVICE PARAMETERS
     public static final String TEXT_ADVICE = "message";
-    public static final String ID_ADVICE = "idreview";
+    public static final String ID_ADVICE = "idadvices";
 
     //REVIEW PARAMETERS
-    public static final String ID_REVIEW = "idadvices";
+    public static final String ID_REVIEW = "idreview";
     public static final String SHOW_REVIEW = "show_review";
     public static final int SHOW = 1;
     public static final int SHOW_DELETED = 0;
@@ -91,11 +91,11 @@ public class ParameterConstant {
     public static final String PARAM_RECIPIENT = "recipient";
     public static final String PARAM_SENDER = "sender";
 
-    public static final String RU = "ru_RU";
-    public static final String EN = "en_US";
-    public static final String BY = "by_BY";
+    public static final String RU = "ru";
+    public static final String EN = "en";
+    public static final String BY = "by";
     public static final String SUBMIT_BY = "BY";
-    public static final String SUBMIT_EN = "EN";
+    public static final String SUBMIT_EN = "US";
     public static final String SUBMIT_RU = "RU";
 
     public static final String INPUT_MESSAGE = "input";
@@ -109,7 +109,7 @@ public class ParameterConstant {
     public static final String ATTRIBUTE_UPDATE = "editmessage";
     public static final String ATTRIBUTE_RES_ADD = "addmessage";
     public static final String ATTRIBUTE_ADD_DELETE_MESS = "addmessagedelete";
-    public static final String ATTRIBUTE_LIST_ADVICES = "listAdvices";
+    public static final String ATTRIBUTE_LIST_ADVICES = "listAdvice";
     public static final String ATTRIBUTE_LIST_USERS = "listUser";
     public static final String ATTRIBUTE_LIST_USERS_GENDER = "listUserGender";
     public static final String ATTRIBUTE_LIST_USERS_ROLE = "listUserRole";

@@ -50,6 +50,9 @@ public class ProductDaoJdbc implements ProductDao {
     @Autowired
     private JdbcTemplate template;
 
+    @Autowired
+    private ProductMapper mapper;
+
     @Override
     public List<Product> selectAll(int page, String type) throws TrackerDBException {
         List<Product> listProduct;
@@ -67,7 +70,7 @@ public class ProductDaoJdbc implements ProductDao {
                 break;
         }
         try {
-            listProduct = template.query(sqlReq, new ProductMapper(), COUNT_PRODUCTS, ((page - 1) * COUNT_PRODUCTS - (page - 1)));
+            listProduct = template.query(sqlReq, mapper, COUNT_PRODUCTS, ((page - 1) * COUNT_PRODUCTS - (page - 1)));
         } catch (Exception ex) {
             LOGGER.error(ex);
             throw new TrackerDBException("Wrong statement or connection");
@@ -119,7 +122,7 @@ public class ProductDaoJdbc implements ProductDao {
                     default: sqlReq = SELECT_PRODUCTS_RANGE_CALORIES_INCREASE;
                         break;
                 }
-                listProduct = template.query(sqlReq, new ProductMapper(), min, max, COUNT_PRODUCTS,
+                listProduct = template.query(sqlReq, mapper, min, max, COUNT_PRODUCTS,
                         ((page - 1) * COUNT_PRODUCTS - (page - 1)));
             } else  {
                 throw new TrackerDBException("Wrong range calories");
@@ -148,7 +151,7 @@ public class ProductDaoJdbc implements ProductDao {
         List<Product> list = new ArrayList<>();
         try{
             for(int i = 0; i < param.length; i++){
-                tempList = template.query(SEARCH_PRODUCTS, new ProductMapper(), ("%" + param[i] + "%"));
+                tempList = template.query(SEARCH_PRODUCTS, mapper, ("%" + param[i] + "%"));
                 list.addAll(tempList);
             }
         } catch (Exception e) {

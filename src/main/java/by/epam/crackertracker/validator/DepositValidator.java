@@ -6,7 +6,9 @@
 package by.epam.crackertracker.validator;
 
 import by.epam.crackertracker.entity.Payment;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DepositValidator implements ValidatorI {
     @Override
     public boolean isValidate(String str) {

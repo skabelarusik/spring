@@ -36,9 +36,12 @@ public class ReviewDaoJdbc implements ReviewDao {
     @Autowired
     private JdbcTemplate template;
 
+    @Autowired
+    private ReviewMapper mapper;
+
     @Override
     public List<Review> selectAllReview(int show){
-        return template.query(SELECT_ALL_REVIEW, new ReviewMapper(), show);
+        return template.query(SELECT_ALL_REVIEW, mapper, show);
     }
 
     @Override

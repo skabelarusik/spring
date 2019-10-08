@@ -6,12 +6,15 @@
     <meta charset="UTF-8">
     <title><@spring.message "title.result"/></title>
     <#setting classic_compatible=true>
+            <style type="text/css">
+                <#include "/css/style.css">
+            </style>
 </head>
 <body>
 
 <div class="wrapResult">
 <h1>Review list</h1>
-<table>
+<table border="1" width="560px" class="userTable" cellspacing="0" cellpadding="4" border="1">
     <tr>
         <th>Id</th>
         <th>Name</th>

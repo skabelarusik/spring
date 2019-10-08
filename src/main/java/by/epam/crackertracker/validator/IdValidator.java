@@ -5,6 +5,9 @@
 
 package by.epam.crackertracker.validator;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class IdValidator implements ValidatorI {
     public static final String NUMBER_REGEX = "[0-9]{1,9}";
 

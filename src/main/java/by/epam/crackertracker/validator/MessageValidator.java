@@ -6,7 +6,9 @@
 package by.epam.crackertracker.validator;
 
 import by.epam.crackertracker.util.ParameterConstant;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MessageValidator implements ValidatorI {
 
     @Override

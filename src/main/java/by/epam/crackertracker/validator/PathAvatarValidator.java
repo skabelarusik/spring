@@ -1,7 +1,9 @@
 package by.epam.crackertracker.validator;
 
 import by.epam.crackertracker.util.PageConstant;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PathAvatarValidator {
     public static final String SPLIT_PARAM = "\\.";
     public static final int ZERO = 0;

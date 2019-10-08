@@ -19,6 +19,8 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 
 import javax.servlet.http.HttpServletRequest;
 import java.math.BigDecimal;
@@ -31,15 +33,25 @@ import java.util.Map;
 public class UserService {
 
     @Autowired
-    public UserDao userDao;
+    private UserDao userDao;
+
+    @Autowired
+    private GenderValidator genderValidator;
+
+    @Autowired
+    private TypeSortedValidator typeSortedValidator;
+
+    @Autowired
+    private LoginValidator validator;
+
+    @Autowired
+    private PasswordValidator validator1;
 
     private static final Logger LOGGER = Logger.getRootLogger();
     public static final int MAX_TABLE_USERS = 11;
 
     public User checkUser(String loginValue, String passValue) throws TrackerServiceException {
         User user = null;
-        LoginValidator validator = new LoginValidator();
-        PasswordValidator validator1 = new PasswordValidator();
         try{
             if(validator.isValidate(loginValue) && validator1.isValidate(passValue)) {
                 user = userDao.selectByLogin(loginValue, passValue);
@@ -84,9 +96,9 @@ public class UserService {
         return status;
     }
 
-    public List<User> selectAllUsers(HttpServletRequest request) throws TrackerServiceException {
-        String currentPage = request.getParameter(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
-        String type = request.getParameter(ParameterConstant.PARAM_TYPE);
+    public List<User> selectAllUsers( Map<String,String> allRequestParams,  ModelMap model) throws TrackerServiceException {
+        String currentPage = allRequestParams.get(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
+        String type = allRequestParams.get(ParameterConstant.PARAM_TYPE);
         List<User> userList;
         if(type == null){
             type = ParameterConstant.SORTED_NOTHING;
@@ -99,9 +111,9 @@ public class UserService {
                 LOGGER.error(" Wrong service select all users",e);
                 throw new TrackerServiceException("Wrong service select all users",e);
             }
-            request.setAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
             if(userList.size() == MAX_TABLE_USERS){
-                request.setAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
+                model.addAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
             }
         } else {
             int intPage = Integer.parseInt(currentPage);
@@ -111,12 +123,12 @@ public class UserService {
                 LOGGER.error("Wrong service  select all users",e);
                 throw new TrackerServiceException("Wrong service select all users",e);
             }
-            request.setAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
             if(userList.size() == MAX_TABLE_USERS){
-                request.setAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
+                model.addAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
             }
             if(intPage > 1){
-                request.setAttribute(ParameterConstant.ATTRIBUTE_PREV_PAGE, intPage - 1);
+                model.addAttribute(ParameterConstant.ATTRIBUTE_PREV_PAGE, intPage - 1);
             }
         }
         List<User> newUserList = null;
@@ -194,12 +206,12 @@ public class UserService {
         return status;
     }
 
-    public List<User> selectUsersByRole(HttpServletRequest request) throws TrackerServiceException {
-        String role = request.getParameter(ParameterConstant.ATTRIBUTE_ROLE);
+    public List<User> selectUsersByRole( Map<String,String> allRequestParams, ModelMap model) throws TrackerServiceException {
+        String role = allRequestParams.get(ParameterConstant.ATTRIBUTE_ROLE);
         RoleValidator roleValidator = new RoleValidator();
         TypeSortedValidator typeSortedValidator = new TypeSortedValidator();
-        String currentPage = request.getParameter(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
-        String type = request.getParameter(ParameterConstant.PARAM_TYPE);
+        String currentPage = allRequestParams.get(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
+        String type = allRequestParams.get(ParameterConstant.PARAM_TYPE);
         List<User> userList;
         int intPage;
         if(type == null){
@@ -210,12 +222,12 @@ public class UserService {
         }
         if(currentPage == null){
             intPage = 1;
-            request.setAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
         } else {
             intPage = Integer.parseInt(currentPage);
-            request.setAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
             if(intPage > 1){
-                request.setAttribute(ParameterConstant.ATTRIBUTE_PREV_PAGE, intPage - 1);
+                model.addAttribute(ParameterConstant.ATTRIBUTE_PREV_PAGE, intPage - 1);
             }
         }
         try {
@@ -235,17 +247,15 @@ public class UserService {
             for(int i = 0 ; i < userList.size() - 1; i++){
                 newUserList.add(userList.get(i));
             }
-            request.setAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
+            model.addAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
         }
         return newUserList;
     }
 
-    public List<User> selectUsersByGender(HttpServletRequest request) throws TrackerServiceException {
-        GenderValidator genderValidator = new GenderValidator();
-        TypeSortedValidator typeSortedValidator = new TypeSortedValidator();
-        String gender = request.getParameter(ParameterConstant.PARAM_GENDER);
-        String currentPage = request.getParameter(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
-        String type = request.getParameter(ParameterConstant.PARAM_TYPE);
+    public List<User> selectUsersByGender( Map<String, String> allRequestParam, Model model) throws TrackerServiceException {
+        String gender = allRequestParam.get(ParameterConstant.PARAM_GENDER);
+        String currentPage = allRequestParam.get(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
+        String type = allRequestParam.get(ParameterConstant.PARAM_TYPE);
         List<User> userList;
             if(type == null){
                 type = ParameterConstant.SORTED_NOTHING;
@@ -257,19 +267,19 @@ public class UserService {
             if(currentPage == null){
             int intPage = 1;
             userList = userDao.selectByGender(intPage, type, gender);
-            request.setAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
             if(userList.size() == MAX_TABLE_USERS){
-                request.setAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
+               model.addAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
             }
         } else {
             int intPage = Integer.parseInt(currentPage);
             userList = userDao.selectByGender(intPage, type, gender);
-            request.setAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
             if(userList.size() == MAX_TABLE_USERS){
-                request.setAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
+                model.addAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
             }
             if(intPage > 1){
-                request.setAttribute(ParameterConstant.ATTRIBUTE_PREV_PAGE, intPage - 1);
+               model.addAttribute(ParameterConstant.ATTRIBUTE_PREV_PAGE, intPage - 1);
             }
         }
         } catch (TrackerDBException e){

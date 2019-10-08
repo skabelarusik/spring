@@ -5,6 +5,9 @@
 
 package by.epam.crackertracker.validator;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class EmailValidator implements ValidatorI {
     private static final String EMAIL_REGEX = "[-0-9a-zA-Z.+_]{2,64}+@[-0-9a-zA-Z.+_]+\\.[a-zA-Z]{2,4}";
     private static final int MAX_EMAIL_SIZE = 254;

@@ -6,7 +6,9 @@
 package by.epam.crackertracker.validator;
 
 import by.epam.crackertracker.entity.Gender;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GenderValidator implements ValidatorI{
     @Override
     public boolean isValidate(String str) {

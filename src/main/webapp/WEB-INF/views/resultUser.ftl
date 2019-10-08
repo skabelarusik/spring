@@ -6,11 +6,14 @@
     <meta charset="UTF-8">
     <title><@spring.message "title.result"/></title>
     <#setting classic_compatible=true>
+        <style type="text/css">
+            <#include "/css/style.css">
+        </style>
 </head>
 <body>
 <div class="wrapResult">
 <h1>Users list</h1>
-<table>
+<table border="1" width="60%" class="userTable" cellspacing="0" cellpadding="4" border="1">
     <tr>
         <th>Id</th>
         <th>Login</th>
@@ -32,7 +35,7 @@
         <td width="70px">${user.birthDate}</td>
         <td width="70px">${user.registrDate}</td>
            <td width="60px">
-               <form class="changePageForm" method="post" action="/message/send">
+               <form class="changePageForm" method="post" action="/message/send_mes">
                    <input type="hidden" name="command" value="user_message">
                    <input type="hidden" name="recipient" value="${user.login}">
                    <input type="submit"  value="message" class="uploadButtonTable"/>

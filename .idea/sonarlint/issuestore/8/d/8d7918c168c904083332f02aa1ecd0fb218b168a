@@ -1,0 +1,12 @@
+
+tsquid:HiddenFieldCheck˜"ERename "caloriesValidator" which hides the field declared at line 31.(¼³ùÄûÿÿÿÿ8”¡ÚÚ-
+ssquid:HiddenFieldCheck["ERename "caloriesValidator" which hides the field declared at line 31.(¼³ùÄûÿÿÿÿ8”¡ÚÚ-
+zsquid:UselessImportCheck"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8çØÚÚ-
+ysquid:S1192~"]Define a constant instead of duplicating this literal "Wrong service update product" 3 times.(ÏÆÓ»ıÿÿÿÿ
+osquid:S3776–"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(†ØË“úÿÿÿÿ
+ksquid:HiddenFieldCheckI"=Rename "validator" which hides the field declared at line 34.(©İîíùÿÿÿÿ8ØÀŸÚÚ-
+usquid:S1192"]Define a constant instead of duplicating this literal "Wrong service delete product" 3 times.(„¶½‹
+isquid:S3776Y"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ã¨—ˆ
+lsquid:HiddenFieldCheck‡"=Rename "validator" which hides the field declared at line 34.(õ¼£çÿÿÿÿÿ8ØÀŸÚÚ-
+^squid:HiddenFieldCheckz"7Rename "dao" which hides the field declared at line 28.(ËñÁ†ûÿÿÿÿ
+wsquid:S1192¸"ZDefine a constant instead of duplicating this literal "Wrong service add product" 3 times.(¯„Çõüÿÿÿÿ

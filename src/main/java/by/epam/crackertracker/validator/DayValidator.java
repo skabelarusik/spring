@@ -1,7 +1,9 @@
 package by.epam.crackertracker.validator;
 
 import by.epam.crackertracker.entity.MealDay;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DayValidator implements ValidatorI {
     @Override
     public boolean isValidate(String str) {

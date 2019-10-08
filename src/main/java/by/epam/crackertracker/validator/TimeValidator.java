@@ -1,7 +1,9 @@
 package by.epam.crackertracker.validator;
 
 import by.epam.crackertracker.entity.MealTime;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TimeValidator implements ValidatorI{
 
     @Override

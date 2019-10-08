@@ -44,6 +44,7 @@ C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\b
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\creator\ConnectionCreatorFactory.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\service\AdviceService.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\entity\ProgramsName.java
+C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\mapper\ProgramNameMapper.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\util\ParameterConstant.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\filter\XssFilter.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\service\BucketService.java
@@ -56,6 +57,7 @@ C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\b
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\EmailValidator.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\ProgramDao.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\UserDao.java
+C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\mapper\ProductMapper.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\config\WebAppInitializer.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\TrackerDao.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\BucketDao.java

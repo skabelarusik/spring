@@ -46,7 +46,10 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
     @Override
     public void deleteById(int id) throws TrackerDBException {
         try{
-            template.update(DELETE_BY_ID, id);
+            int i = template.update(DELETE_BY_ID, id);
+            if(i != 1){
+                throw new TrackerDBException("");
+            }
             LOGGER.warn("Advice: " + id + " was deleted");
         } catch (Exception e){
             LOGGER.error("Wrong delete advice");

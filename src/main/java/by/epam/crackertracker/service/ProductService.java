@@ -14,7 +14,9 @@ import by.epam.crackertracker.util.ParameterConstant;
 import by.epam.crackertracker.validator.*;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,18 +28,39 @@ public class ProductService {
     @Autowired
     private ProductDao dao;
 
-    public List<Product> selectProduct(int min, int max, int intPage, String type) throws TrackerServiceException {
+    @Autowired
+    private MinMaxCaloriesValidator caloriesValidator;
+
+    @Autowired
+    private TypeSortedValidator validator;
+
+    public List<Product> selectProduct(String min, String max, String intPage, String type, Model model) throws TrackerServiceException {
         List<Product> productList;
-        TypeSortedValidator validator = new TypeSortedValidator();
         if(type == null){
             type = ParameterConstant.SORTED_NOTHING;
         }
-        if(!validator.isValidate(type)){
-            LOGGER.warn("Wrong sort type products  exception ");
-            throw new TrackerServiceException(" Wrong sort type products exception");
+        int pageInt;
+        if(intPage == null){
+            pageInt = 1;
+        } else {
+            pageInt = Integer.parseInt(intPage);
         }
+        if(!validator.isValidate(type) || !caloriesValidator.isValidate(min) ||
+                !caloriesValidator.isValidate(max)){
+            LOGGER.warn("Wrong sort type or min-max calories products");
+             throw new TrackerServiceException("Wrong sort type or min-max calories products");
+        }
+        int minCalories = Integer.parseInt(min);
+        int maxCalories = Integer.parseInt(max);
         try {
-            productList = dao.selectAllByRangeCallories(min, max, intPage, type);
+            productList = dao.selectAllByRangeCallories(minCalories, maxCalories, pageInt, type);
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, pageInt);
+            if(productList.size() == 11){
+                model.addAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, pageInt + 1);
+            }
+            if(pageInt > 1){
+                model.addAttribute(ParameterConstant.ATTRIBUTE_PREV_PAGE, pageInt - 1);
+            }
         } catch (TrackerDBException e) {
             LOGGER.error("Wrong service select product by range calories",e);
             throw new TrackerServiceException("Wrong service select product by range calories",e);

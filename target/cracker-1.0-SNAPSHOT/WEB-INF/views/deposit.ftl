@@ -17,12 +17,10 @@
 </div>
 
 <div class="wrapperLogin">
-
     <div class="blockLogin">
         <!-- Login form -->
         <h3 class="h3login"><@spring.message "label.choose_dep"/> </h3><br/><br/>
-        <form class="loginForm" method="post" action="/deposit">
-            <input type="hidden" name="command" value="deposit">
+        <form class="loginForm" method="post" action="/user/deposit">
             <p>
                 <!-- sum -->
                 <label for="loginField" class="formText"><@spring.message "label.sum"/> * </label>
@@ -55,22 +53,22 @@
 <!-- registration block -->
 <div class="blockReg">
     <h4 class="h3login"><@spring.message "label.backmain" />
-        <a class="registration" href='${startPage}'>
+        <a class="registration" href='/back'>
             <@spring.message "label.back" /></a>
     </h4>
 </div>
 
 <div class="languageLogin">
-    <form class="language" name="lanEn" method="post" action="/lang_deposit">
-        <input type="hidden" name="command" value="language">
+    <form class="language" name="lanEn" method="get" action="/lang/en">
+        <input type="hidden" name="currentPage" value="deposit">
         <input type="submit" class="lan1" name="langv" value="EN">
     </form>
-    <form class="language" name="lanEn" method="post" action="/lang_deposit">
-        <input type="hidden" name="command" value="language">
+    <form class="language" name="lanEn" method="get" action="/lang/ru">
+    <input type="hidden" name="currentPage" value="deposit">
         <input type="submit" class="lan2" name="langv" value="RU">
     </form>
-    <form class="language" name="lanEn" method="post" action="/lang_deposit">
-        <input type="hidden" name="command" value="language">
+    <form class="language" name="lanEn" method="get" action="/lang/by">
+    <input type="hidden" name="currentPage" value="deposit">
         <input type="submit" class="lan3" name="langv" value="BY">
     </form>
 </div>

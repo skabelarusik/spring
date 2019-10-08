@@ -1,5 +1,8 @@
 package by.epam.crackertracker.validator;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PortionsValidator implements ValidatorI {
     public static final String PRODUCT_PARAM_REGEX = "([0-9]{1}[.]?)?[0-9]{0,1}";
 

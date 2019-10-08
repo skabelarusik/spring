@@ -45,11 +45,14 @@ public class ProgramsNameDaoJdbc implements ProgramsNameDao {
     @Autowired
     private JdbcTemplate template;
 
+    @Autowired
+    private ProgramNameMapper mapper;
+
     @Override
     public List<ProgramsName> selectAll(int page, int type) throws TrackerDBException {
         List<ProgramsName> list;
         try {
-            list = template.query(SELECT_ALL_PROGRAMS_NAME, new ProgramNameMapper(), type, COUNT_NAMES, ((page - 1) * COUNT_NAMES - (page - 1)));
+            list = template.query(SELECT_ALL_PROGRAMS_NAME, mapper, type, COUNT_NAMES, ((page - 1) * COUNT_NAMES - (page - 1)));
         } catch (Exception e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong selecting program name");
@@ -61,7 +64,7 @@ public class ProgramsNameDaoJdbc implements ProgramsNameDao {
     public List<ProgramsName> selectCuratorPrograms(String login ,int page, int type) throws  TrackerDBException {
         List<ProgramsName> list;
         try {
-            list = template.query(SELECT_CURATOR_PROGRAM_NAME, new ProgramNameMapper(), login, type, COUNT_NAMES,
+            list = template.query(SELECT_CURATOR_PROGRAM_NAME, mapper, login, type, COUNT_NAMES,
                     ((page - 1) * COUNT_NAMES - (page - 1)));
         } catch (Exception e) {
             LOGGER.error(e);

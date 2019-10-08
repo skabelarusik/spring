@@ -27,21 +27,22 @@
 <div class="blockReg">
     <c:url value="/jsp/register.jsp" var="reg" />
     <h4 class="h3login"><@spring.message "label.backlogin"/>
-        <a class="registration" href='/login'>
+        <a class="registration" href='/'>
             <@spring.message "label.back"/></a>
     </h4>
-            <h1>${name}</h1>
-
 </div>
 
 <div class="languageLogin">
     <form class="language" method="get" action="/lang/en">
+        <input type="hidden" name="currentPage" value="about">
         <input type="submit" class="lan1" name="langv" value="EN">
     </form>
     <form class="language" method="get" action="/lang/ru">
+        <input type="hidden" name="currentPage" value="about">
         <input type="submit" class="lan2" name="langv" value="RU">
     </form>
     <form class="language" method="get" action="/lang/by">
+        <input type="hidden" name="currentPage" value="about">
         <input type="submit" class="lan3" name="langv" value="BY">
     </form>
 </div>

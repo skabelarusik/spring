@@ -66,7 +66,7 @@ public class ProgramsNameService {
                 throw new TrackerServiceException("Wrong type delete program name by id ");
             }
             try {
-                status = dao.deleteById(idProgram, typeShow);
+                dao.deleteById(idProgram, typeShow);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service delete programs name by id ",e);
                 throw new TrackerServiceException("Wrong service delete programs name by id ",e);
@@ -90,7 +90,7 @@ public class ProgramsNameService {
             int durationProg = Integer.parseInt(duration);
             ProgramsName programsName = new ProgramsName(nameProg, login, costProg, durationProg);
             try {
-                status = dao.insert(programsName);
+                dao.insert(programsName);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service insert program name ",e);
                 throw new TrackerServiceException("Wrong service insert program name ",e);
@@ -116,7 +116,7 @@ public class ProgramsNameService {
             programsName.setId(idPr);
             dao = new ProgramsNameDaoJdbc();
             try {
-                status = dao.updateProgramsName(programsName);
+                dao.updateProgramsName(programsName);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service update program name ",e);
                 throw new TrackerServiceException("Wrong service update program name ",e);
