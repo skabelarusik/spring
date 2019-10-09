@@ -273,3 +273,11 @@ y
 Isrc/main/java/by/epam/crackertracker/validator/AdviceLengthValidator.java,7\0\703b8f73835c9a35f801c69a5458b288d7d8fdad
 ^
 .src/main/webapp/WEB-INF/views/resultAdvice.ftl,4\3\433d9df5775f486590dee3c1504948b81628b160
+a
+1src/main/webapp/WEB-INF/views/calculator_rate.ftl,6\9\6955aeaf279c3da9ee588b74ce8139b1ee4191a5
+S
+#src/main/webapp/jsp/send_review.jsp,3\b\3be6658893382eb836e43cdc9e58856189334c0f
+]
+-src/main/webapp/WEB-INF/views/send_review.ftl,c\7\c7f6d7dc2a1ced63be9e83982d79c89e1f5a6e4a
+x
+Hsrc/main/java/by/epam/crackertracker/service/UserDetailsServiceImpl.java,c\f\cf4c47ee1a31ff34178fe5dc5b8e8d1365b3a107

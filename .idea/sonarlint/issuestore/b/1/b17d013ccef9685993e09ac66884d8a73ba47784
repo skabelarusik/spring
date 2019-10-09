@@ -1,4 +1,4 @@
 
-|squid:UselessImportCheck"QRemove this unused import 'by.epam.crackertracker.validator.PathAvatarValidator'.(ºüÑÿ8åË¯Ù-
-Dsquid:S2111"!Use "BigDecimal.valueOf" instead.(íÉ¡ùûÿÿÿÿ8ô·ÿ«Ú-
 tsquid:UselessImportCheck"JRemove this unused import 'by.epam.crackertracker.util.ParameterConstant'.(÷˜48æ¯›³Ú-
+Dsquid:S2111"!Use "BigDecimal.valueOf" instead.(íÉ¡ùûÿÿÿÿ8ô·ÿ«Ú-
+|squid:UselessImportCheck"QRemove this unused import 'by.epam.crackertracker.validator.PathAvatarValidator'.(ºüÑÿ8åË¯Ù-

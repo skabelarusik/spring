@@ -67,18 +67,17 @@
 <!-- block buttom -->
 <div class="languageLogin">
     <form class="language" name="lanEn" method="post" action="/lang/en">
+    <input type="hidden" name="currentPage" value="editUser">
         <input type="submit" class="lan1" name="langv" value="EN">
     </form>
     <form class="language" name="lanEn" method="post" action="/lang/ru">
+    <input type="hidden" name="currentPage" value="editUser">
         <input type="submit" class="lan2" name="langv" value="RU">
     </form>
     <form class="language" name="lanEn" method="post" action="/lang/by">
+        <input type="hidden" name="currentPage" value="editUser">
         <input type="submit" class="lan3" name="langv" value="BY">
     </form>
-    <a class="extra" href="#" ><@spring.message "label.service"/> </a>
-    <a class="extra" href="#" ><@spring.message "label.feedback" /> </a>
-    <input type="submit" class="lan3" value="<@spring.message "label.vk" />" />
-    <input type="submit" class="lan3" value="<@spring.message "label.facebook" />">
 </div>
 </body>
 </html>

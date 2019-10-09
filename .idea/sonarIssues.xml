@@ -63,6 +63,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SpringConfig.java">
           <value>
             <set />
@@ -283,6 +293,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/UserDetailsServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/UserService.java">
           <value>
             <set />
@@ -428,6 +443,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/database.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/resources/message.properties">
           <value>
             <set />
@@ -449,6 +469,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/resources/simplelogger.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/validation.properties">
           <value>
             <set />
           </value>
@@ -523,7 +548,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sendReview.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/send_message.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/send_review.ftl">
           <value>
             <set />
           </value>
@@ -579,6 +614,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/jsp/result.jsp">
           <value>
             <set />
           </value>

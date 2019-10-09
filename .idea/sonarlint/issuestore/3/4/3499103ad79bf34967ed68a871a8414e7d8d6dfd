@@ -1,5 +1,5 @@
 
-\squid:UselessImportCheck"1Remove this unused import 'java.math.BigDecimal'.(êêŠ8Í¹ÉÕÚ-
+†squid:UselessImportCheck	"\Remove this unused import 'by.epam.crackertracker.exception.TrackerConnectionPoolException'.(Â¸Ük8Í¹ÉÕÚ-
 [squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Í¹ÉÕÚ-
 wsquid:UselessImportCheck"GRemove this unused import 'by.epam.crackertracker.pool.ConnectionPool'.(îŒÜ¡üÿÿÿÿ8Í¹ÉÕÚ-
-†squid:UselessImportCheck	"\Remove this unused import 'by.epam.crackertracker.exception.TrackerConnectionPoolException'.(Â¸Ük8Í¹ÉÕÚ-
+\squid:UselessImportCheck"1Remove this unused import 'java.math.BigDecimal'.(êêŠ8Í¹ÉÕÚ-

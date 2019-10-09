@@ -9,10 +9,6 @@
 </head>
 <body>
 <div class="wrapper">
-    <script type="text/javascript">
-        alert("HELLO USER!!!")
-    </script>
-
     <header>
         <#include "header.ftl">
     </header>
@@ -21,12 +17,15 @@
 
     <div class="languageMain">
         <form class="language" method="get" action="/lang/en">
+        <input type="hidden" name="currentPage" value="user">
             <input type="submit" class="lan1" name="langv" value="EN">
         </form>
         <form class="language" method="get" action="/lang/ru">
+        <input type="hidden" name="currentPage" value="user">
             <input type="submit" class="lan2" name="langv" value="RU">
         </form>
         <form class="language" method="get" action="/lang/by">
+        <input type="hidden" name="currentPage" value="user">
             <input type="submit" class="lan3" name="langv" value="BY">
         </form>
     </div>
@@ -64,6 +63,7 @@
         <div class="block2">
             <div class="searchheader">
                 <form class="adviceForm" method="post" action="/product/search">
+                <input type="hidden" name="currentPage" value="user">
                     <p><input  class="adminBlock" type="search" name="text" value="" placeholder="Поиск продуктов по сайту">
                         <input  class="adminBlock" type="submit" value="Найти"></p>
                 </form>
@@ -126,6 +126,7 @@
                         </a><br/>
                         <!-- select products by callories -->
                         <form class="adminBlock" method="post" action="/product/select_by_calories">
+                        <input type="hidden" name="currentPage" value="superuser">
                             <p>
                                 <label for="minCalories" class="formText2"><@spring.message "label.mincalor"/></label>
                                 <input type="number" name="minCalories" maxlength="4" autofocus id="minCalories"

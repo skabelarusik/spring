@@ -29,7 +29,7 @@ public class ReviewDaoJdbc implements ReviewDao {
     public static final String SELECT_ALL_REVIEW = "SELECT r.idreview, u.login, r.date, r.text from\n" +
             " review r INNER JOIN users u on r.name = u.id where r.show_review = ? order by r.date desc";
     public static final String DELETE_BY_ID = "UPDATE review set show_review = ? where idreview = ?";
-    public static final String INSERT_REVIEW = "INSERT INTO review (name, date, text) values (?,?,?)";
+    public static final String INSERT_REVIEW = "INSERT INTO review (name, date, text) values ((select id from users where name = ?),?,?)";
 
     private static final Logger LOGGER = LogManager.getRootLogger();
 
@@ -47,7 +47,7 @@ public class ReviewDaoJdbc implements ReviewDao {
     @Override
     public void deleteById(int id, int typeShow) throws TrackerDBException {
         try{
-            template.update(DELETE_BY_ID, id, typeShow);
+            template.update(DELETE_BY_ID, typeShow,id);
             LOGGER.warn("Review: " + id + " was deleted");
         } catch (Exception e){
             LOGGER.error("Wrong delete review");

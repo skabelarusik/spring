@@ -3,53 +3,72 @@ package by.epam.crackertracker.controller;
 import by.epam.crackertracker.entity.Review;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.ReviewService;
+import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
-@RequestMapping("/review")
+@RequestMapping(PageConstant.PATH_REVIEW)
 public class ReviewController {
 
     @Autowired
     private ReviewService service;
 
 
-    @GetMapping("/show")
+    @GetMapping(PageConstant.URI_SHOW)
     public String show(Model model){
-        model.addAttribute("reviewList", service.selectAllReview(ParameterConstant.SHOW));
-        return "resultReview";
+        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW, service.selectAllReview(ParameterConstant.SHOW));
+        model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
+        return PageConstant.PATH_RESULT_REVIEW;
     }
 
-    @GetMapping("/show_del")
+    @GetMapping(PageConstant.URI_SHOW_DEL)
     public String showDeleted(Model model){
-       model.addAttribute("reviewList",service.selectAllReview(ParameterConstant.SHOW_DELETED));
-       return "resultReview";
+       model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW,service.selectAllReview(ParameterConstant.SHOW_DELETED));
+        model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_RESTORE_TYPE);
+        return PageConstant.PATH_RESULT_REVIEW;
     }
 
-    @PostMapping("/delete")
-    public String delete(){
-        return null;
+    @PostMapping(PageConstant.URI_DELETE)
+    public String delete(@RequestParam String id, @RequestParam String buttonName, Model model){
+        try {
+            service.deleteById(id ,buttonName);
+            if(buttonName.equals(ParameterConstant.ATTRIBUTE_DELETE_TYPE)){
+                model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW, service.selectAllReview(ParameterConstant.SHOW));
+                model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
+            } else {
+                model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW,service.selectAllReview(ParameterConstant.SHOW_DELETED));
+                model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_RESTORE_TYPE);
+            }
+            model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_CONGRAT);
+        } catch (TrackerServiceException e) {
+            model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_ERROR_REGIST);
+        }
+        return PageConstant.PATH_RESULT_REVIEW;
     }
 
-    @PostMapping("/send")
-    public String send(HttpServletRequest request){
-        String login = (String) request.getSession(true).getAttribute(ParameterConstant.LOGIN);
-        String text = request.getParameter(ParameterConstant.TEXT);
+    @PostMapping(PageConstant.URI_SEND_REVIEW)
+    public String send(@SessionAttribute String login, @RequestParam String text, Model model){
         try {
             service.sendReview(login, text);
-            request.setAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_CONGRAT);
+            model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
-            request.setAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.WRONG_DATA);
+          //  model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.WRONG_DATA);
+            model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, text);
+
         }
-        return "review";
+        return PageConstant.PATH_PAGE_SEND_REVIEW;
+    }
+
+    @GetMapping(PageConstant.URI_SEND_REVIEW)
+    public String sendReview(){
+        return PageConstant.PATH_PAGE_SEND_REVIEW;
     }
 }

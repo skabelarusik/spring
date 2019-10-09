@@ -87,6 +87,7 @@ by\epam\crackertracker\util\ParameterConstant.class
 by\epam\crackertracker\validator\PositiveIntValidator.class
 by\epam\crackertracker\entity\User.class
 by\epam\crackertracker\validator\DepositValidator.class
+by\epam\crackertracker\service\UserDetailsServiceImpl.class
 by\epam\crackertracker\validator\TypeSortedValidator.class
 by\epam\crackertracker\dao\TrackerSubscriptionDao.class
 by\epam\crackertracker\service\BucketService.class

@@ -52,6 +52,13 @@ public class UserService {
 
     public User checkUser(String loginValue, String passValue) throws TrackerServiceException {
         User user = null;
+//        user.setActive(1);
+//        user.setBalance(new BigDecimal(10));
+//        user.setLogin("Andrey");
+//        user.setName("And");
+//        user.setGender(Gender.MALE);
+//        user.setRole(Role.ADMIN);
+
         try{
             if(validator.isValidate(loginValue) && validator1.isValidate(passValue)) {
                 user = userDao.selectByLogin(loginValue, passValue);
@@ -60,6 +67,7 @@ public class UserService {
             LOGGER.error(" Wrong service check user",e);
             throw new TrackerServiceException("Wrong service check user",e);
         }
+
         return user;
     }
 

@@ -28,14 +28,21 @@ public class ReviewService {
     @Autowired
     private ReviewDao dao;
 
+    @Autowired
+    private IdValidator validator;
+
+    @Autowired
+    private LoginValidator loginValidator;
+
+    @Autowired
+    private ReviewLengthValidator reviewLengthValidator;
+
     public List<Review> selectAllReview(int show) {
         return  dao.selectAllReview(show);
     }
 
     public void deleteById(String id, String buttonName) throws TrackerServiceException {
-        IdValidator validator = new IdValidator();
-        ReviewDaoJdbc dao = new ReviewDaoJdbc();
-        if(id != null && !id.isEmpty() && validator.isValidate(id)){
+        if(validator.isValidate(id)){
             int idRev = Integer.parseInt(id);
             int typeShow;
             if(buttonName.equals(ParameterConstant.ATTRIBUTE_DELETE_TYPE)){
@@ -52,21 +59,24 @@ public class ReviewService {
                 LOGGER.error("Wrong service delete by id review",e);
                 throw new TrackerServiceException("Wrong service delete by id review",e);
             }
+        } else {
+            LOGGER.error("Wrong service delete by id review");
+            throw new TrackerServiceException("Wrong service delete by id review");
         }
     }
 
     public void sendReview(String sender, String text) throws TrackerServiceException {
-        LoginValidator validator = new LoginValidator();
-        ReviewLengthValidator reviewLengthValidator = new ReviewLengthValidator();
-        ReviewDaoJdbc dao = new ReviewDaoJdbc();
-        boolean status = false;
-        if(validator.isValidate(sender) && reviewLengthValidator.isValidate(text)){
-            try {
+      //  if(loginValidator.isValidate(sender) && reviewLengthValidator.isValidate(text)){
+            if(true){
+
+                try {
                 dao.insertReview(sender, text);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service send review",e);
                 throw new TrackerServiceException("Wrong service send review",e);
             }
+        } else {
+            throw new TrackerServiceException("Wrong service send review");
         }
     }
 }

@@ -20,7 +20,7 @@ create table users
     money decimal(10,0) DEFAULT '0',
     registrdate date DEFAULT NULL,
     avatar varchar(30) DEFAULT '/jsp/picture/user.png',
-    active boolean NOT NULL DEFAULT '1',
+    active integer NOT NULL DEFAULT '1',
     primary key (id),
     FOREIGN KEY (status) REFERENCES role (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
@@ -106,7 +106,7 @@ CREATE TABLE review (
   name integer NOT NULL,
   date date NOT NULL,
   text varchar(300) NOT NULL,
-  show_review boolean NOT NULL DEFAULT '1',
+  show_review integer NOT NULL DEFAULT '1',
     FOREIGN KEY (name) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE
 ); 
 

@@ -113,7 +113,7 @@ public class ParameterConstant {
     public static final String ATTRIBUTE_LIST_USERS = "listUser";
     public static final String ATTRIBUTE_LIST_USERS_GENDER = "listUserGender";
     public static final String ATTRIBUTE_LIST_USERS_ROLE = "listUserRole";
-    public static final String ATTRIBUTE_LIST_REVIEW = "listReview";
+    public static final String ATTRIBUTE_LIST_REVIEW = "reviewList";
     public static final String ATTRIBUTE_LIST_MESSAGE_IN = "listMessageInput";
     public static final String ATTRIBUTE_LIST_MESSAGE_OUT = "listMessageOutput";
     public static final String ATTRIBUTE_LIST_CURATOR  = "mapCurator";

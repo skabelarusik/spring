@@ -5,9 +5,8 @@
 
 package by.epam.crackertracker.util;
 
-import java.util.concurrent.atomic.DoubleAccumulator;
-
 public class PageConstant {
+
 
 
 
@@ -29,6 +28,8 @@ public class PageConstant {
     public static final String PATH_RESULT_PROGRAMS = "resultPrograms";
     public static final String PATH_RESULT_ADVICE = "resultAdvice";
     public static final String PATH_SEND_MESSAGE = "send_message";
+    public static final String PATH_RESULT_REVIEW = "resultReview";
+
 
     public static final String PATH_LIST_USER = "listUser";
     public static final String PATH_PAGE_REGISTER = "register";
@@ -57,6 +58,9 @@ public class PageConstant {
 
     public static final String URI_ADD = "/add";
     public static final String URI_DELETE = "/delete";
+    public static final String URI_SHOW = "/show";
+    public static final String URI_SHOW_DEL = "/show_del";
+    public static final String URI_SEND_REVIEW = "/send";
 
     public static final String URI_LOGIN = "/login";
     public static final String LOGOUT = "/logout";
@@ -66,7 +70,9 @@ public class PageConstant {
     public static final String URI_BACK = "/back";
     public static final String URI_REQUEST = "/request";
     public static final String URI_ABOUT = "/about";
+
     public static final String PATH_MESSAGE = "/message";
+    public static final String PATH_REVIEW = "/review";
 
     public static final String URI_LANG_BY = "/lang/by";
     public static final String URI_LANG_RU = "/lang/ru";

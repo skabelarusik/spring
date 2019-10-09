@@ -1,11 +1,13 @@
 package by.epam.crackertracker.config;
 
+import by.epam.crackertracker.service.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.io.Resource;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -67,6 +69,11 @@ public class WebConfig extends WebMvcConfigurerAdapter{
         SessionLocaleResolver localeResolver = new SessionLocaleResolver();
         localeResolver.setDefaultLocale(Locale.ENGLISH);
         return localeResolver;
+    }
+
+    @Bean
+    public UserDetailsService getUserDetailsService(){
+        return new UserDetailsServiceImpl();
     }
 
 

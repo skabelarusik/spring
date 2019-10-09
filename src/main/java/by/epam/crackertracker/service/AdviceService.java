@@ -32,8 +32,8 @@ public class AdviceService {
     @Autowired
     private IdValidator idValidator;
 
+
     public String selectRandomAdvice() throws TrackerServiceException {
-        AdviceDaoJdbcImpl dao = new AdviceDaoJdbcImpl();
         String advice = null;
         try {
            dao.selectRandomAdvice();
