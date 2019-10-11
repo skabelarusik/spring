@@ -1,5 +1,5 @@
 <#import "/spring.ftl" as spring/>
-<!DOCTYPE html>
+<html>
 <head>
     <style type="text/css">
         <#include "/css/style.css">
@@ -171,6 +171,9 @@
                             <input type="submit" class="login-button" value="<@spring.message "button.show"/>"/>
                         </form><br/>
                         ${messageWrongProduct}
+
+                        <!-- update product -->
+
                         <form class="adminBlock" method="post" action="/product/update">
                         <input type="hidden" name="currentPage" value="curator">
                             <h4 class="adminBlock"><@spring.message "label.updateproduct"/></h4>
@@ -207,6 +210,7 @@
                             <input type="submit" class="login-button" value="<@spring.message "button.update"/>"/><br/>
                             ${messageUpdateProduct}
                         </form>
+
                         <!-- delete product -->
                         <form class="adminBlock" method="post" action="/product/delete">
                         <input type="hidden" name="currentPage" value="curator">

@@ -1,2 +1,7 @@
 
-ksquid:S2095<"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÑæÏÈøÿÿÿÿ
+]squid:UselessImportCheck"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8Óö¼ÑÛ-
+†squid:UselessImportCheck"\Remove this unused import 'by.epam.crackertracker.exception.TrackerConnectionPoolException'.(Â¸Ük8Óö¼ÑÛ-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Óö¼ÑÛ-
+[squid:UselessImportCheck"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ8Óö¼ÑÛ-
+gsquid:UselessImportCheck"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8Óö¼ÑÛ-
+Ysquid:UselessImportCheck"/Remove this unused import 'java.sql.ResultSet'.(ˆóÚw8Óö¼ÑÛ-

@@ -1,6 +1,6 @@
 
+osquid:UselessImportCheck	"ERemove this unused import 'by.epam.crackertracker.dao.ReviewDaoJdbc'.(ÓŽñz8„Œ›þÚ-
 €squid:S1192;"bDefine a constant instead of duplicating this literal "Wrong service delete by id review" 4 times.(‚ÿ¤’8Óš‹üÚ-
 psquid:UselessImportCheck"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ
-isquid:CommentedOutCodeLineE"<This block of commented-out lines of code should be removed.(Ÿð–Ö8Ÿï¬þÚ-
-osquid:UselessImportCheck	"ERemove this unused import 'by.epam.crackertracker.dao.ReviewDaoJdbc'.(ÓŽñz8„Œ›þÚ-
 xsquid:S1192K"ZDefine a constant instead of duplicating this literal "Wrong service send review" 3 times.(ââ­í8™ÇŸþÚ-
+isquid:CommentedOutCodeLineE"<This block of commented-out lines of code should be removed.(Ÿð–Ö8Ÿï¬þÚ-

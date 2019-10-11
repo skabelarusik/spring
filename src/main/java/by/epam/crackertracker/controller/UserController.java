@@ -104,9 +104,9 @@ public class UserController {
         Role role = Role.valueOf(request.getParameter(ParameterConstant.ATTRIBUTE_ROLE).toUpperCase().trim());
         try {
             userService.updateRole(id, role);
-            request.setAttribute("updateMessage", ParameterConstant.MESSAGE_CONGRAT);
+            request.setAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
-            request.setAttribute("updateMessage", ParameterConstant.WRONG_DATA);
+            request.setAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.WRONG_DATA);
         }
         return PageSelector.selectHomePage((Role) request.getSession(true).getAttribute(ParameterConstant.ATTRIBUTE_ROLE));
     }
@@ -147,8 +147,7 @@ public class UserController {
 
     @PostMapping(PageConstant.URI_DEP)
     public String makeDeposit(@RequestParam Map<String,String> allRequestParams, ModelMap model){
-        model.addAttribute("depositMessage", allRequestParams.get("sum"));
-    //model.addAttribute("depositMessage", "WRONG");
+        model.addAttribute("depositMessage", "WRONG");
         return PageConstant.PATH_DEPOSIT;
     }
 

@@ -1,23 +1,37 @@
 package by.epam.crackertracker.service;
 
+import by.epam.crackertracker.dao.BucketDao;
 import by.epam.crackertracker.dao.BucketDaoJdbcImpl;
 import by.epam.crackertracker.entity.Bucket;
 import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.validator.*;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class BucketService {
+    @Autowired
+    private BucketDao dao;
+
+    @Autowired
+    private LoginValidator loginValidator;
+
+    @Autowired
+    private ProductNameValidator productNameValidator;
+
+    @Autowired
+    private PortionsValidator portionsValidator;
+
+    @Autowired
+    private IdValidator idValidator;
+
     public List<Bucket> addProduct(String login, String product, String portions) throws TrackerServiceException {
-        LoginValidator validator = new LoginValidator();
-        ProductNameValidator productNameValidator = new ProductNameValidator();
-        PortionsValidator portionsValidator = new PortionsValidator();
-        BucketDaoJdbcImpl dao;
         List<Bucket> list = new ArrayList<>();
         boolean status = false;
         try{
-            if(validator.isValidate(login) && productNameValidator.isValidate(product) &&
+            if(loginValidator.isValidate(login) && productNameValidator.isValidate(product) &&
                     portionsValidator.isValidate(portions)) {
                 Double port = Double.parseDouble(portions);
                 dao = new BucketDaoJdbcImpl();
@@ -34,11 +48,8 @@ public class BucketService {
         return list;
     }
 
-    public boolean removeAll(String login) throws TrackerServiceException {
-        LoginValidator validator = new LoginValidator();
-        BucketDaoJdbcImpl dao;
-        boolean status = false;
-        if(validator.isValidate(login)){
+    public void removeAll(String login) throws TrackerServiceException {
+        if(loginValidator.isValidate(login)){
             dao = new BucketDaoJdbcImpl();
             try {
                 dao.removeAll(login);
@@ -48,16 +59,12 @@ public class BucketService {
         } else {
             throw new TrackerServiceException("Wrong login in bucket service");
         }
-        return status;
     }
 
     public List<Bucket> removeId(String id, String login) throws TrackerServiceException {
-        IdValidator validator = new IdValidator();
-        LoginValidator validator1 = new LoginValidator();
         List<Bucket> list = new ArrayList<>();
         boolean status = false;
-        BucketDaoJdbcImpl dao;
-        if(validator.isValidate(id) && validator1.isValidate(login)){
+        if(idValidator.isValidate(id) && loginValidator.isValidate(login)){
             dao = new BucketDaoJdbcImpl();
             int idProd = Integer.parseInt(id);
             try {

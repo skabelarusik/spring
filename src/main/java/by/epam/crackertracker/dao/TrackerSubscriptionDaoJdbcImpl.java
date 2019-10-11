@@ -5,10 +5,11 @@
 
 package by.epam.crackertracker.dao;
 
-import by.epam.crackertracker.pool.ConnectionPool;
 import by.epam.crackertracker.entity.TrackerSubscription;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
+import by.epam.crackertracker.mapper.SubscriptionMapper;
+import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,82 +48,53 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
     @Autowired
     private JdbcTemplate template;
 
+    @Autowired
+    private SubscriptionMapper mapper;
+
     @Override
     public List<TrackerSubscription> selectAll() throws TrackerDBException {
-        Connection connection = null;
-        Statement statement = null;
-        ResultSet resultSet = null;
         List<TrackerSubscription> list;
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery(SELECT_ALL);
-            list = fillingListSubscr (resultSet);
-        } catch (TrackerConnectionPoolException | SQLException e){
+            list = template.query(SELECT_ALL, mapper);
+        } catch (Exception e){
             LOGGER.error(e);
             throw new TrackerDBException("Wrong select all subscribtions");
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
         }
         return list;
     }
-
 
     @Override
     public List<TrackerSubscription> selectAllByCurator(String login) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         List<TrackerSubscription> list;
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(SELECT_ALL_BY_CURATOR);
-            statement.setString(1, login);
-            resultSet = statement.executeQuery();
-            list = fillingListSubscr(resultSet);
-        } catch (TrackerConnectionPoolException | SQLException e) {
+
+            list = template.query(SELECT_ALL_BY_CURATOR, mapper, login);
+        } catch (Exception e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong select subscribers by login of curator");
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
         }
         return list;
     }
 
     @Override
-    public boolean deleteById(int id) {
-        return false;
+    public void deleteById(int id) throws TrackerDBException {
+        try {
+            template.update(DELETE_BY_ID, id);
+        } catch (Exception e){
+            LOGGER.error("Wrong delete subscription", e);
+            throw new TrackerDBException("Wrong delete subscription");
+        }
     }
 
 
     public boolean checkSubscription(String loginValue) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-        boolean status = false;
+        LocalDate localDate = LocalDate.now();
+        boolean status = true;
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            LocalDate localDate = LocalDate.now();
-            Date date = Date.valueOf(localDate);
-            statement = connection.prepareStatement(CHECK_SUPERUSER_STATUS);
-            statement.setString(1, loginValue);
-            statement.setString(2, localDate.toString());
-            statement.setString(3, localDate.toString());
-            resultSet = statement.executeQuery();
-            if(resultSet.next()){
-                status = true;
-            }
-        } catch (SQLException | TrackerConnectionPoolException e){
+        template.update(CHECK_SUPERUSER_STATUS, loginValue, localDate, localDate);
+        } catch (Exception e){
             LOGGER.error(e);
             throw new TrackerDBException("Wrong check superuser subscrib");
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
         }
         return status;
     }
@@ -189,6 +161,7 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
 
     public static final String CHECK_BALANCE_CUR = "SELECT money from users where id = (SELECT curator from programs_name where id = ?)";
 
+
     public boolean insert(int idProgram, BigDecimal cost, int duration, String login, BigDecimal balance) throws TrackerDBException, SQLException {
         Connection connection = null;
         PreparedStatement statementUser = null;
@@ -254,4 +227,6 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
         }
         return status;
     }
+
+
 }

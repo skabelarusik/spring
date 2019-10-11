@@ -3,6 +3,7 @@ package by.epam.crackertracker.controller;
 import by.epam.crackertracker.entity.Message;
 import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.User;
+import by.epam.crackertracker.util.LanguageSelector;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.PageSelector;
 import by.epam.crackertracker.util.ParameterConstant;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.LocaleResolver;
 
@@ -24,6 +26,9 @@ public class CommonController {
 
     @Autowired
     private LocaleResolver localeResolver;
+
+    @Autowired
+    private LanguageSelector selector;
 
     @GetMapping(PageConstant.PATH_PAGE_INDEX)
     public String index(){
@@ -64,8 +69,8 @@ public class CommonController {
     }
 
     @RequestMapping("/lang")
-    public String lang(HttpServletRequest request, HttpServletResponse response){
-        localeResolver.setLocale(request, response, new Locale(ParameterConstant.EN, ParameterConstant.SUBMIT_EN));
+    public String lang(@RequestParam String langv,  HttpServletRequest request, HttpServletResponse response){
+        localeResolver.setLocale(request, response, new Locale(selector.select(langv), langv));
         return request.getParameter(ParameterConstant.ATTRIBUTE_CURRENT_PAGE);
     }
 

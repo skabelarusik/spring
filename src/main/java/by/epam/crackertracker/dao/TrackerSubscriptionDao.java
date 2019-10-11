@@ -16,5 +16,6 @@ interface TrackerSubscriptionDao extends TrackerDao{
 
     List<TrackerSubscription> selectAllByCurator(String login) throws TrackerDBException;
 
-    boolean deleteById(int id);
-}
+    void deleteById(int id) throws TrackerDBException;
+
+    }

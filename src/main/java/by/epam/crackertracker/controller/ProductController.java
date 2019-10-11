@@ -76,13 +76,14 @@ public class ProductController {
     }
 
     @PostMapping("/delete")
-    public String delete(@RequestParam String nameProduct, @RequestParam String id, @RequestParam String currentPage,  Model model){
+    public String delete(@RequestParam String id, @RequestParam String currentPage,  Model model){
         try {
-            service.deleteProduct(nameProduct, id);
+            service.deleteProduct(id);
             model.addAttribute(ParameterConstant.MESSAGE_DELETE_PRODUCT, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.MESSAGE_DELETE_PRODUCT, ParameterConstant.MESSAGE_ERROR_REGIST);
         }
+
         return currentPage;
     }
 

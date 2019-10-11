@@ -1,4 +1,3 @@
 
-wsquid:UselessImportCheck"GRemove this unused import 'by.epam.crackertracker.pool.ConnectionPool'.(îŒÜ¡üÿÿÿÿ8ÆŠàÚ-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ãúŸ‰Ù-
 †squid:UselessImportCheck	"\Remove this unused import 'by.epam.crackertracker.exception.TrackerConnectionPoolException'.(Â¸Ük8ÆŠàÚ-
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ãúŸ‰Ù-

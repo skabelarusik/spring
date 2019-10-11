@@ -12,6 +12,8 @@ import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.validator.*;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -20,8 +22,30 @@ import java.util.List;
 public class SubscriptionService {
     private static final Logger LOGGER = Logger.getRootLogger();
 
+    @Autowired
+    private TrackerSubscriptionDaoJdbcImpl dao;
+
+    @Autowired
+    private IdValidator idValidator;
+
+    @Autowired
+    private CostValidator costValidator;
+
+    @Autowired
+    private LoginValidator loginValidator;
+
+    @Autowired
+    private RoleValidator roleValidator;
+
+    @Autowired
+    private DurationValidator durationValidator;
+
+
+
     public List<TrackerSubscription> selectSubscribersCurator(String loginCurator) throws TrackerServiceException {
-        List<TrackerSubscription> list;
+
+        List<TrackerSubscription> list = null;
+        /*
         TrackerSubscriptionDaoJdbcImpl dao = new TrackerSubscriptionDaoJdbcImpl();
         try {
             list = dao.selectAllByCurator(loginCurator);
@@ -29,29 +53,27 @@ public class SubscriptionService {
             LOGGER.error("Wrong service select curators subscriptions",e);
             throw new TrackerServiceException("Wrong service select curators subscriptions",e);
         }
+
+         */
         return list;
     }
 
     public List<TrackerSubscription> selectAllSubscriptions() throws TrackerServiceException {
-        TrackerSubscriptionDaoJdbcImpl dao = new TrackerSubscriptionDaoJdbcImpl();
-        List<TrackerSubscription> list;
+        List<TrackerSubscription> list = null;
+        /*
         try {
             list = dao.selectAll();
         } catch (TrackerDBException e) {
             LOGGER.error("Wrong service select all subscriptions",e);
             throw new TrackerServiceException("Wrong service select all subscriptions",e);
         }
+
+         */
         return list;
     }
 
     public boolean buySubscribe(String id, String cost, String duration, String login, BigDecimal balance,
              String role) throws TrackerServiceException {
-        TrackerSubscriptionDaoJdbcImpl dao;
-        IdValidator idValidator = new IdValidator();
-        CostValidator costValidator = new CostValidator();
-        DurationValidator durationValidator = new DurationValidator();
-        LoginValidator loginValidator = new LoginValidator();
-        RoleValidator roleValidator = new RoleValidator();
         boolean status = false;
         try{
             if(idValidator.isValidate(id) && costValidator.isValidate(cost) && loginValidator.isValidate(login)
@@ -73,11 +95,9 @@ public class SubscriptionService {
     }
 
     public boolean checkSubscription(String loginValue) throws TrackerServiceException {
-        TrackerSubscriptionDaoJdbcImpl dao;
         boolean status = false;
-        LoginValidator validator = new LoginValidator();
         try{
-            if(validator.isValidate(loginValue)){
+            if(loginValidator.isValidate(loginValue)){
                 dao = new TrackerSubscriptionDaoJdbcImpl();
                 status = dao.checkSubscription(loginValue);
             }
@@ -88,12 +108,9 @@ public class SubscriptionService {
     }
 
     public List<TrackerSubscription> selectHistorySubs(int id, String login) throws TrackerServiceException {
-        TrackerSubscriptionDaoJdbcImpl dao;
-        LoginValidator validator = new LoginValidator();
         List<TrackerSubscription> list = new ArrayList<>();
-        IdValidator idValidator = new IdValidator();
         try {
-            if (idValidator.isValidate(String.valueOf(id)) && validator.isValidate(login)) {
+            if (idValidator.isValidate(String.valueOf(id)) && loginValidator.isValidate(login)) {
                 dao = new TrackerSubscriptionDaoJdbcImpl();
                 list = dao.historySubscr(id, login);
             }

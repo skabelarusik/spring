@@ -8,69 +8,177 @@
   <component name="ChangeListManager">
     <list default="true" id="8dd54e56-7913-4e54-9d46-8e48b33bb191" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/01f7bc60b931619edc3a9fe72b9db8253d267319" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/01f7bc60b931619edc3a9fe72b9db8253d267319" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/0235f02f1fa33705166a694b7623cfefebf6f300" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/0235f02f1fa33705166a694b7623cfefebf6f300" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0ca2b9a330a2f973d39362077f2d9b70fb430b28" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0ca2b9a330a2f973d39362077f2d9b70fb430b28" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/192fe4890e0dc5bdbdf8dc6e5222eb05babe5db1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1b2077bf759f7e4c244f73aa793df87270a32496" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1b2077bf759f7e4c244f73aa793df87270a32496" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/21c8332b0f0fb8992fce96f01ad310ebe7b3f6c3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/21c8332b0f0fb8992fce96f01ad310ebe7b3f6c3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a43fcd4b6c93374eacfc572e61cee93acc3d5e9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a43fcd4b6c93374eacfc572e61cee93acc3d5e9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30d262b1d069af4bfc700798a4b9a729bafbc86c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/3499103ad79bf34967ed68a871a8414e7d8d6dfd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/3499103ad79bf34967ed68a871a8414e7d8d6dfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3be6658893382eb836e43cdc9e58856189334c0f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c933475dcad1a119471424c0ea44074d36961da" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c933475dcad1a119471424c0ea44074d36961da" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/51474e718af7c93fc73a8f411cad374c472d6237" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/523e5671ed79875e1d61a3b13f5809158ae02d8b" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/549402a00c7ccb890ff7467444428938c2876a56" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/549402a00c7ccb890ff7467444428938c2876a56" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b8d651fe7644053012cc4e7eef05e7055039b32" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/577e59ad0c3c4578be9dd01241363bdbef09e787" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b3fa24c2bd24f79d377ec22274db94e840198e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/3/73792b54bce4d138bc5d0db043d5f4910c7248a6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/3/73792b54bce4d138bc5d0db043d5f4910c7248a6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7b98b5ab7835e662733342a84f67a0e9d5766829" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7b98b5ab7835e662733342a84f67a0e9d5766829" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81ff90d338569441c47951da221b5eada8ab7597" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/996fa324626ade6240f021032908c3cdfcc0028b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9ec6583895c99bce7ae06aacca2130128e61aa77" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7dc2831c21c8fdb664ed323a3e706c720de37869" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7dc2831c21c8fdb664ed323a3e706c720de37869" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/5/857549cb52ef6a2dbf74f7bbbc43a27b5712cd7c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8c461d8e756316b53a860af3e6b66d3291edfe99" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/d/8d205fafc69ede613c89fbfbb11f2e5c1d777459" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/d/8d7918c168c904083332f02aa1ecd0fb218b168a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/d/8d7918c168c904083332f02aa1ecd0fb218b168a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0948119720a7f9c14e5a218e0d1d765bab897d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a6e6c9354afb0d57be2cce78af003f6a3266bbad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/af55eee015fec33e99bf54ec2d8713a26133aad7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b0b313dfbf103ed093a795a76184657b21f44565" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b0cafc230948fe68122768a6de0c07ded5c0b427" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b17d013ccef9685993e09ac66884d8a73ba47784" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b17d013ccef9685993e09ac66884d8a73ba47784" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b468515f58d143922c28e1b50008f31af36ffd43" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b468515f58d143922c28e1b50008f31af36ffd43" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b528947aa8e33b821baa005a9da05a1e3c14bfd8" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7e8bfd9460d1afa7ef1e06f4eddd880c985021f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7e8bfd9460d1afa7ef1e06f4eddd880c985021f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b93cc30788b4ad095f1c90ea47a8980ab50eeef4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b93cc30788b4ad095f1c90ea47a8980ab50eeef4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bb7897ffb925ef20e6a3c9c4d716276e93639f4f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cf4c47ee1a31ff34178fe5dc5b8e8d1365b3a107" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4cdda5da4e0d12112624370b34ad94a0f52dd33" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4cdda5da4e0d12112624370b34ad94a0f52dd33" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bbeff794419a490fd553aa3150d4e23edd83c880" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c892c740013a19ec56d59b582c332d0392befb04" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4202fa0bd347e492dc74d948e32d0d83b37690d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4202fa0bd347e492dc74d948e32d0d83b37690d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de4e23a6946955c19773ca4939ae0df69da27a7a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/0/e01c6bc02ea040f81c898bf2b2a84a71e6ea628f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/0/e01c6bc02ea040f81c898bf2b2a84a71e6ea628f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e26bbe26d0cc93d327b567f1e502e643d208bb70" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e26bbe26d0cc93d327b567f1e502e643d208bb70" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/5/e5963997e5df50a386ecc4db9e660067f96e9ed7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f07901c1a6737c04764b8bbbfdfdefe4ca1e4cff" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe0dc5e0d607d9139dc1437447acfa21a49dd236" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe0dc5e0d607d9139dc1437447acfa21a49dd236" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cracker.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityInitializer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/WebAppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/WebAppInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/AdviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/AdviceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/CommonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/EncodingFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/ServletSecurityFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/StaticFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/filter/XssFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ProgramNameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ProgramNameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/SubscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/BucketDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/BucketDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/MessageDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/MessageDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProductDaoJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProductDaoJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ReviewDaoJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ReviewDaoJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/TrackerSubscriptionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/TrackerSubscriptionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramsNameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramsNameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/SubscriptionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/WebAppInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/WebAppInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/ParameterConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/ParameterConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/curator.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/curator.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/KOLOBOK.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/KOLOBOK.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/SLON.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/SLON.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/Tatsiana.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/Tatsiana.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/admin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/admin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/bendercot.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/bendercot.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/clockworktimes.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/clockworktimes.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/mysql.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/mysql.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/niaura.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/niaura.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/niaura.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/niaura.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/oracle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/oracle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/superuser.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/superuser.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/tomcat.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/tomcat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/picture/user1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/picture/user1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/WebConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/CommonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/CommonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/filter/EncodingFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/filter/StaticFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/filter/XssFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/UserDetailsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mail.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ProgramNameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ProgramNameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ReviewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/SubscriptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/SubscriptionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/BucketDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/BucketDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/MessageDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/MessageDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProductDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProductDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProductDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ReviewDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ReviewDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/TrackerSubscriptionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/TrackerSubscriptionDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/ProgramService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/ProgramService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/ProgramsNameService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/ProgramsNameService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/SubscriptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/SubscriptionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/util/PageConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/util/PageConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/util/ParameterConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/util/ParameterConstant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/config/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/config/SecurityConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/config/WebAppInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/config/WebAppInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/config/WebConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/CommonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/CommonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/filter/EncodingFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/filter/ServletSecurityFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/filter/StaticFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/filter/XssFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/service/UserDetailsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/mail.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/lib/spring-security-config-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/lib/spring-security-core-5.1.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/lib/spring-security-web-5.2.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/views/sendReview.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/views/test.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/views/test.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/ProgramNameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/ProgramNameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/ReviewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/SubscriptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/SubscriptionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/BucketDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/BucketDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/MessageDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/MessageDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProductDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProductDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProductDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ReviewDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/ReviewDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/TrackerSubscriptionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/TrackerSubscriptionDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/service/ProgramService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/service/ProgramService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/service/ProgramsNameService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/service/ProgramsNameService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/service/SubscriptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/service/SubscriptionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/util/PageConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/util/PageConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/util/ParameterConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/classes/by/epam/crackertracker/util/ParameterConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/views/admin.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/views/admin.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/views/curator.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/views/curator.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/views/hello.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/WEB-INF/views/logout.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/imdex2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/about_service.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/calculator.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/calculator_calories.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/calculator_rate.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/curator.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/deposit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/editing.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/editprogram.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/error/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/message.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/KOLOBOK.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/SLON.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/Tatsiana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/admin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/bendercot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/clockworktimes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/mysql.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/niaura.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/niaura.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/oracle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/superuser.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/tomcat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/picture/user1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/program_component.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/result.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/review.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/send_review.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/superuser.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cracker-1.0-SNAPSHOT/jsp/user.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -161,18 +269,18 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="by.epam.crackertracker.dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\resources" />
+      <recent name="C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\webapp" />
       <recent name="C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\webapp\WEB-INF\views" />
+      <recent name="C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\resources" />
       <recent name="C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\test\resources" />
-      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\WEB-INF\tld" />
-      <recent name="C:\Users\User\Desktop\cracker\src\main\webapp\jsp\tld" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\resources" />

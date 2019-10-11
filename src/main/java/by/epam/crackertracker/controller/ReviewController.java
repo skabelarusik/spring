@@ -21,7 +21,6 @@ public class ReviewController {
     @Autowired
     private ReviewService service;
 
-
     @GetMapping(PageConstant.URI_SHOW)
     public String show(Model model){
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW, service.selectAllReview(ParameterConstant.SHOW));
@@ -60,9 +59,7 @@ public class ReviewController {
             service.sendReview(login, text);
             model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
-          //  model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.WRONG_DATA);
-            model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, text);
-
+            model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.WRONG_DATA);
         }
         return PageConstant.PATH_PAGE_SEND_REVIEW;
     }

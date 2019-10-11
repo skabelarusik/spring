@@ -9,7 +9,6 @@ import by.epam.crackertracker.entity.Message;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.mapper.MessageMapper;
-import by.epam.crackertracker.pool.ConnectionPool;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -17,7 +16,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.sql.*;
 import java.util.List;
 
 @Repository

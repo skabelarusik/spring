@@ -28,10 +28,17 @@ public class MessageService {
     @Autowired
     public MessageDao dao;
 
+    @Autowired
+    private LoginValidator loginValidator;
+
+    @Autowired
+    private PositiveIntValidator intValidator;
+
+    @Autowired
+    private IdValidator validator;
+
     public List<Message> checkInputMessage(String login, int page) throws TrackerServiceException {
         List<Message> result;
-        LoginValidator loginValidator = new LoginValidator();
-        PositiveIntValidator intValidator = new PositiveIntValidator();
         if(!loginValidator.isValidate(login) && intValidator.isValidate(page)){
             LOGGER.warn("Wrong login or int to check input message");
             throw new TrackerServiceException("Wrong login to check input message");
@@ -47,8 +54,6 @@ public class MessageService {
 
     public List<Message> checkOutputMessage(String login, int page) throws TrackerServiceException {
         List<Message> result;
-        LoginValidator loginValidator = new LoginValidator();
-        PositiveIntValidator intValidator = new PositiveIntValidator();
         if(!loginValidator.isValidate(login) && intValidator.isValidate(page)){
             LOGGER.warn("Wrong login or int to check output message");
             throw new TrackerServiceException("Wrong login to check imput message");
@@ -63,7 +68,6 @@ public class MessageService {
     }
 
     public void sendMessage(String sender, String recipient, String topic, String text) throws TrackerServiceException {
-        LoginValidator loginValidator = new LoginValidator();
         boolean status = false;
         if(loginValidator.isValidate(recipient) && topic!= null && !topic.isEmpty() &&
             text!=null && !text.isEmpty() && text.length()<=MAX_SIZE_TEXT &&
@@ -87,7 +91,6 @@ public class MessageService {
     }
 
     public void deleteMessage(String id, String type) throws TrackerServiceException {
-        IdValidator validator = new IdValidator();
         if(validator.isValidate(id)){
             int idMessage= Integer.parseInt(id);
             try {

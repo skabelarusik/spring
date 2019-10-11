@@ -1,9 +1,9 @@
 
+osquid:CommentedOutCodeLineÎ"<This block of commented-out lines of code should be removed.(‰Æ «ÿÿÿÿÿ8µöÜÛÛ-
+qsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(êÐ´š8á‹ÔÛÛ-
+Jsquid:S1481Æ"+Remove this unused "status" local variable.(³Éë“8¯ÂÐÛÛ-
 msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8ï†‡×Ú-
-Jsquid:S1481¹"+Remove this unused "status" local variable.(³Éë“8ëŒ‰×Ú-
-nsquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(ÎË²¦úÿÿÿÿ8ºó°ÿÚ-
-usquid:S3776k"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¿òƒêþÿÿÿÿ8ëŒ‰×Ú-
-qsquid:HiddenFieldCheckÜ"GRename "typeSortedValidator" which hides the field declared at line 41.(µð¯Œ8ëŒ‰×Ú-
+nsquid:CommentedOutCodeLineO"<This block of commented-out lines of code should be removed.(ÎË²¦úÿÿÿÿ8ºó°ÿÚ-
+usquid:S3776~"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¿òƒêþÿÿÿÿ8ëŒ‰×Ú-
+osquid:CommentedOutCodeLineÕ"<This block of commented-out lines of code should be removed.(±‚ï½ÿÿÿÿÿ8ÜÒÛÛ-
 psquid:UselessImportCheck"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ
-qsquid:S3776‡"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(êÐ´š8ëŒ‰×Ú-
-lsquid:HiddenFieldCheck¹"=Rename "validator" which hides the field declared at line 44.(õ¼£çÿÿÿÿÿ8ÿûš×Ú-

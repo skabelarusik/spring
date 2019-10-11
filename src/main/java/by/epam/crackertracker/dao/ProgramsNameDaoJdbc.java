@@ -9,16 +9,12 @@ import by.epam.crackertracker.entity.ProgramsName;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.mapper.ProgramNameMapper;
-import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.math.BigDecimal;
-import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -27,16 +23,10 @@ public class ProgramsNameDaoJdbc implements ProgramsNameDao {
             "from programs_name p inner join users u on p.curator = u.id where p.show_name = ? limit ? offset ? ";
     public static final String INSERT_PROGRAMS_NAME = "INSERT INTO programs_name (name, curator, duration, cost)" +
             " VALUES (?,(SELECT id from users where login = ?),?,?)";
-    public static final String SELECT_ID_PROGRAM = "SELECT id from programs_name where id = ?";
-    public static final String SELECT_LOGIN_CURATOR = "SELECT u.login from programs_name pn inner join users u \n" +
-            "on u.id = pn.curator where u.login = ? limit 1";
     public static final String SELECT_CURATOR_PROGRAM_NAME = "SELECT pn.id, pn.name, u.login, pn.duration, pn.cost from programs_name pn inner join users u \n" +
             "on u.id = pn.curator where u.login = ? and pn.show_name = ? limit ? offset ?";
     public static final String DELETE_BY_ID = "UPDATE programs_name set show_name = ? where id = ?";
     public static final String UPDATE_PROGRAM_NAME = "UPDATE programs_name SET name = ?, duration = ?, cost = ? WHERE id = ?";
-    public static final String SELECT_NAME_PROGRAM = "SELECT name from programs_name where name = ?";
-    public static final String HAS_NAME_PROGRAM = "SELECT * from programs_name where id = ? and curator = " +
-            "(select id from users where login = ?) ";
 
     public static final int COUNT_NAMES = 11;
 

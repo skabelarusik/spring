@@ -9,7 +9,6 @@ import by.epam.crackertracker.entity.Advice;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.mapper.AdviceMapper;
-import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +30,9 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
 
     @Autowired
     private JdbcTemplate template;
+
+    @Autowired
+    private AdviceMapper mapper;
 
     @Override
     public void insert(String text) throws TrackerDBException {
@@ -59,14 +61,14 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
 
     @Override
     public List<Advice> selectAll() {
-        return template.query(SELECT_ALL, new AdviceMapper());
+        return template.query(SELECT_ALL, mapper);
     }
 
     @Override
     public Advice selectRandomAdvice() throws TrackerDBException {
         Advice advice;
         try{
-            advice= template.queryForObject(SELECT_ADVICE, new AdviceMapper());
+            advice= template.queryForObject(SELECT_ADVICE, mapper);
         } catch (Exception e){
             LOGGER.warn("Wrong select random advice");
             throw new TrackerDBException("Wrong select random advice");

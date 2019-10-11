@@ -14,7 +14,7 @@ public interface ProductDao extends TrackerDao {
 
     List<Product> selectAll(int pag, String type) throws TrackerDBException;
 
-    void deleteById(int id, String name) throws TrackerDBException;
+    void deleteById(int id) throws TrackerDBException;
 
     void insert(Product product) throws TrackerDBException;
 

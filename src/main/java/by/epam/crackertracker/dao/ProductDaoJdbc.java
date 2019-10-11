@@ -41,6 +41,8 @@ public class ProductDaoJdbc implements ProductDao {
     public static final String SEARCH_PRODUCTS = "SELECT idproducts, name, calories, proteins,  fats, carbs from products where name like ?";
     public static final String INSERT_PRODUCT = "INSERT INTO products (name, calories, proteins, fats, carbs) VALUES (?,?,?,?,?)";
     public static final String DELETE_BY_ID = "DELETE FROM products where idproducts = ?";
+    public static final String SELECT_BY_ID = "SELECT idproducts FROM products where idproducts = ?";
+
     public static final String UPDATE_PRODUCT_DATA = "UPDATE products SET name = ?, calories = ?, proteins = ?, fats = ? , " +
             "carbs = ? WHERE idproducts = ?";
     public static final int COUNT_PRODUCTS = 11;
@@ -79,12 +81,9 @@ public class ProductDaoJdbc implements ProductDao {
     }
 
     @Override
-    public void deleteById(int id, String name) throws TrackerDBException {
+    public void deleteById(int id) throws TrackerDBException {
         try {
-            int i = template.update(DELETE_BY_ID);
-            if(i != 1){
-                throw new TrackerDBException("Wrong delete product");
-            }
+            int result = template.queryForObject(DELETE_BY_ID, Integer.class, id);
         } catch (Exception e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong delete product");
@@ -93,7 +92,6 @@ public class ProductDaoJdbc implements ProductDao {
 
     @Override
     public void insert(Product product) throws TrackerDBException  {
-
         try {
             template.update(INSERT_PRODUCT, product.getName(),product.getCalories(), product.getProteins(),
                     product.getFats(),product.getCarbs() );

@@ -8,20 +8,43 @@ import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.validator.*;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public class ProgramService {
     private static final Logger LOGGER = Logger.getRootLogger();
+
+    @Autowired
+    private ProgramDaoJdbcImpl dao;
+
+    @Autowired
+    private DayValidator dayValidator;
+
+    @Autowired
+    private TimeValidator timeValidator;
+
+    @Autowired
+    private PortionsValidator portionsValidator;
+
+    @Autowired
+    private ProgramNameValidator programNameValidator;
+
+    @Autowired
+    private ProductNameValidator productNameValidator;
+
+    @Autowired
+    private LoginValidator loginValidator;
+
+    @Autowired
+    private IdValidator idValidator;
+
 
     public boolean insert(String day, String time, String product, String nameProgram,
             String portions) throws TrackerServiceException {
         boolean status = false;
-        DayValidator dayValidator = new DayValidator();
-        TimeValidator timeValidator = new TimeValidator();
-        PortionsValidator portionsValidator = new PortionsValidator();
-        ProgramNameValidator programNameValidator = new ProgramNameValidator();
-        ProductNameValidator productNameValidator = new ProductNameValidator();
-        ProgramDaoJdbcImpl dao;
         if(dayValidator.isValidate(day) && timeValidator.isValidate(time) &&  portionsValidator.isValidate(portions) &&
             programNameValidator.isValidate(nameProgram) && productNameValidator.isValidate(product)){
             dao = new ProgramDaoJdbcImpl();
@@ -40,7 +63,6 @@ public class ProgramService {
     }
 
     public List<Program> selectAll(String name, String login) throws TrackerServiceException {
-        ProgramDaoJdbcImpl dao;
         List<Program> listComponent;
         try {
             dao = new ProgramDaoJdbcImpl();
@@ -53,9 +75,6 @@ public class ProgramService {
     }
 
     public boolean deleteById(String id, String login) throws TrackerServiceException {
-        IdValidator idValidator = new IdValidator();
-        LoginValidator loginValidator = new LoginValidator();
-        ProgramDaoJdbcImpl dao;
         boolean status = false;
         if(idValidator.isValidate(id) && loginValidator.isValidate(login)){
             dao = new ProgramDaoJdbcImpl();
@@ -71,8 +90,6 @@ public class ProgramService {
     }
 
     public List<Program> selectSuperuserProducts(String loginValue) throws TrackerServiceException {
-        LoginValidator loginValidator = new LoginValidator();
-        ProgramDaoJdbcImpl dao;
         List<Program> list;
         if(loginValidator.isValidate(loginValue)){
             dao = new ProgramDaoJdbcImpl();

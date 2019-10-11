@@ -34,6 +34,19 @@ public class ProductService {
     @Autowired
     private TypeSortedValidator validator;
 
+    @Autowired
+    private IdValidator idValidator;
+
+    @Autowired
+    private DoubleValidator doubleValidator;
+
+    @Autowired
+    private IdValidator intValidator;
+
+    @Autowired
+    private ProductNameValidator nameValidator;
+
+
     public List<Product> selectProduct(String min, String max, String intPage, String type, Model model) throws TrackerServiceException {
         List<Product> productList;
         if(type == null){
@@ -70,7 +83,6 @@ public class ProductService {
 
     public List<Product> selectAllProduct(String type, int page) throws TrackerServiceException {
         List<Product> productList;
-        TypeSortedValidator validator = new TypeSortedValidator();
         if(type == null){
             type = ParameterConstant.SORTED_NOTHING;
         }
@@ -88,10 +100,6 @@ public class ProductService {
 
     public void updateProduct(String id, String name, String calories, String fats, String carbs,
                                  String proteins) throws TrackerServiceException {
-        MinMaxCaloriesValidator caloriesValidator = new MinMaxCaloriesValidator();
-        DoubleValidator doubleValidator = new DoubleValidator();
-        IdValidator intValidator = new IdValidator();
-        ProductNameValidator nameValidator = new ProductNameValidator();
         if(doubleValidator.isValidate(fats) && doubleValidator.isValidate(carbs) &&
                 doubleValidator.isValidate(proteins) && caloriesValidator.isValidate(calories) &&
             nameValidator.isValidate(name) && intValidator.isValidate(id)){
@@ -131,15 +139,13 @@ public class ProductService {
         }
     }
 
-    public void deleteProduct(String name, String id) throws TrackerServiceException {
-        IdValidator validator = new IdValidator();
-        ProductNameValidator nameValidator = new ProductNameValidator();
-        if(validator.isValidate(id) && nameValidator.isValidate(name)){
+    public void deleteProduct(String id) throws TrackerServiceException {
+        if(idValidator.isValidate(id)){
             int idProd = Integer.parseInt(id);
             try {
-                dao.deleteById(idProd, name);
+                dao.deleteById(idProd);
             } catch (TrackerDBException e) {
-                LOGGER.error("Wrong service delete product",e);
+               LOGGER.error("Wrong service delete product",e);
                 throw new TrackerServiceException("Wrong service delete product",e);
             }
         } else {
@@ -149,9 +155,6 @@ public class ProductService {
 
     public void addProduct(String name, String calories, String fats, String carbs,
                            String proteins) throws TrackerServiceException {
-        MinMaxCaloriesValidator caloriesValidator = new MinMaxCaloriesValidator();
-        DoubleValidator doubleValidator = new DoubleValidator();
-        ProductNameValidator nameValidator = new ProductNameValidator();
         if (doubleValidator.isValidate(fats) && doubleValidator.isValidate(carbs) &&
                 doubleValidator.isValidate(proteins) && caloriesValidator.isValidate(calories) &&
                 nameValidator.isValidate(name)) {

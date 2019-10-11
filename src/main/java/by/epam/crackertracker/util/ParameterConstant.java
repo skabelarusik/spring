@@ -8,6 +8,7 @@ package by.epam.crackertracker.util;
 public class ParameterConstant {
 
     public static final String USER = "user";
+    public static final int STARTING_PAGE = 1 ;
 
     private ParameterConstant(){}
 
@@ -90,6 +91,7 @@ public class ParameterConstant {
     public static final String PARAM_COST = "cost";
     public static final String PARAM_RECIPIENT = "recipient";
     public static final String PARAM_SENDER = "sender";
+    public static final String UPDATE_MESSAGE = "updateMessage";
 
     public static final String RU = "ru";
     public static final String EN = "en";
@@ -100,6 +102,7 @@ public class ParameterConstant {
 
     public static final String INPUT_MESSAGE = "input";
     public static final String OUTPUT_MESSAGE = "output";
+    public static final String ADD_PROGRAM = "/add";
 
     public static final String ATTRIBUTE_ROLE = "role";
     public static final String SUBMIT_LANGUAGE = "langv";
@@ -179,6 +182,7 @@ public class ParameterConstant {
     public static final String TYPE_0 = "0";
     public static final String TYPE_1 = "1";
     public static final String ATTRIBUTE_NAME_PROGRAM = "nameProgramName";
+    public static final String ATTRIBUTE_NAME_PROGRAM_NAME = "programName";
     public static final String ATTRIBUTE_COST_PROGRAM = "costProgramName";
     public static final String ATTRIBUTE_DUR_PROGRAM = "durProgramName";
     public static final String PARAM_DAY = "day";

@@ -28,6 +28,7 @@ public class PageConstant {
     public static final String PATH_RESULT_ADVICE = "resultAdvice";
     public static final String PATH_SEND_MESSAGE = "send_message";
     public static final String PATH_RESULT_REVIEW = "resultReview";
+    public static final String PATH_RESULT_PROGRAM_NAME = "resultProgramName";
 
 
     public static final String PATH_LIST_USER = "listUser";
@@ -50,6 +51,12 @@ public class PageConstant {
     public static final String URI_SELECT = "/select";
     public static final String URI_SELECT_USER_BY_STATUS = "/select_by_status";
     public static final String URI_SELECT_USER_BY_GENDER = "/select_by_gender";
+    public static final String URI_SELECT_DEL = "/select_del";
+    public static final String URI_SELECT_CURATOR = "/select_curator";
+    public static final String URI_SELECT_CURATOR_DEL = "/select_del_curator";
+    public static final String URI_SUBSCRIPTION = "/subscription";
+
+
 
     public static final String URI_UPDATE_USER = "/update";
     public static final String URI_UPDATE_USER_ROLE = "/update_role";
@@ -73,6 +80,7 @@ public class PageConstant {
     public static final String PATH_MESSAGE = "/message";
     public static final String PATH_REVIEW = "/review";
     public static final String PATH_ADVICE = "/advice";
+    public static final String PATH_PROGRAM_NAME = "/program_name";
 
 
     public static final String URI_LANG_BY = "/lang/by";

@@ -42,10 +42,34 @@ public class UserService {
     private TypeSortedValidator typeSortedValidator;
 
     @Autowired
-    private LoginValidator validator;
+    private LoginValidator loginValidator;
 
     @Autowired
     private PasswordValidator validator1;
+
+    @Autowired
+    private PasswordValidator passwordValidator;
+
+    @Autowired
+    private NameSurnameValidator nameSurnameValidator;
+
+    @Autowired
+    private BirthdayValidator birthdayValidator;
+
+    @Autowired
+    private EmailValidator emailValidator;
+
+    @Autowired
+    private RoleValidator roleValidator;
+
+    @Autowired
+    private IdValidator idValidator;
+
+    @Autowired
+    private DoubleValidator doubleValidator;
+
+    @Autowired
+    private DepositValidator depositValidator;
 
     private static final Logger LOGGER = Logger.getRootLogger();
     public static final int MAX_TABLE_USERS = 11;
@@ -60,7 +84,7 @@ public class UserService {
 //        user.setRole(Role.ADMIN);
 
         try{
-            if(validator.isValidate(loginValue) && validator1.isValidate(passValue)) {
+            if(loginValidator.isValidate(loginValue) && validator1.isValidate(passValue)) {
                 user = userDao.selectByLogin(loginValue, passValue);
             }
         } catch (TrackerDBException e){
@@ -73,11 +97,6 @@ public class UserService {
 
     public boolean registerUser(String login, String pass, String name, String surname, Gender gender, String email,
                                String dateOfBirth) throws TrackerServiceException {
-        LoginValidator loginValidator = new LoginValidator();
-        PasswordValidator passwordValidator = new PasswordValidator();
-        EmailValidator emailValidator = new EmailValidator();
-        BirthdayValidator birthdayValidator = new BirthdayValidator();
-        NameSurnameValidator nameSurnameValidator = new NameSurnameValidator();
         boolean status = false;
         if(login != null && !login.isEmpty() && pass != null && !pass.isEmpty() && gender != null && email != null &&
                 !email.isEmpty() && dateOfBirth != null && !dateOfBirth.isEmpty()){
@@ -156,10 +175,6 @@ public class UserService {
 
     public void updateDataUser(String login, String name, String surname,
                                   String email, String birthday) throws TrackerServiceException {
-        EmailValidator emailValidator = new EmailValidator();
-        BirthdayValidator birthdayValidator = new BirthdayValidator();
-        NameSurnameValidator nameSurnameValidator = new NameSurnameValidator();
-        LoginValidator loginValidator = new LoginValidator();
         try{
             if(emailValidator.isValidate(email) && birthdayValidator.isValidate(birthday) && nameSurnameValidator.isValidate(name) &&
                     nameSurnameValidator.isValidate(surname) && loginValidator.isValidate(login)) {
@@ -180,8 +195,6 @@ public class UserService {
 
     public void updatePasswordUser(String login, String oldPass, String currentPass,
                                       String newPass, String newPassCheck) throws TrackerServiceException {
-        LoginValidator loginValidator = new LoginValidator();
-        PasswordValidator passwordValidator = new PasswordValidator();
         boolean status = false;
         try{
             if(loginValidator.isValidate(login) && passwordValidator.isValidate(oldPass) && passwordValidator.isValidate(currentPass) &&
@@ -197,27 +210,23 @@ public class UserService {
         }
     }
 
-    public boolean sendAvatar(String login, String path) throws TrackerServiceException {
-        LoginValidator loginValidator = new LoginValidator();
-        PathAvatarValidator pathAvatarValidator = new PathAvatarValidator();
-        UserDaoJdbcImpl dao;
-        boolean status = false;
-        try{
-            if(loginValidator.isValidate(login) && pathAvatarValidator.isValide(login, path)){
-                dao = new UserDaoJdbcImpl();
-                status = dao.updateFilePath(login, path);
-            }
-        } catch (TrackerDBException e){
-            LOGGER.error("Wrong service send avatar user",e);
-            throw new TrackerServiceException("Wrong service send avatar user",e);
-        }
-        return status;
-    }
+//    public boolean sendAvatar(String login, String path) throws TrackerServiceException {
+//        PathAvatarValidator pathAvatarValidator = new PathAvatarValidator();
+//        boolean status = false;
+//        try{
+//            if(loginValidator.isValidate(login) && pathAvatarValidator.isValide(login, path)){
+//                userDao = new UserDaoJdbcImpl();
+//                status = userDao.updateFilePath(login, path);
+//            }
+//        } catch (TrackerDBException e){
+//            LOGGER.error("Wrong service send avatar user",e);
+//            throw new TrackerServiceException("Wrong service send avatar user",e);
+//        }
+//        return status;
+//    }
 
     public List<User> selectUsersByRole( Map<String,String> allRequestParams, ModelMap model) throws TrackerServiceException {
         String role = allRequestParams.get(ParameterConstant.ATTRIBUTE_ROLE);
-        RoleValidator roleValidator = new RoleValidator();
-        TypeSortedValidator typeSortedValidator = new TypeSortedValidator();
         String currentPage = allRequestParams.get(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
         String type = allRequestParams.get(ParameterConstant.PARAM_TYPE);
         List<User> userList;
@@ -310,9 +319,7 @@ public class UserService {
     }
 
     public void updateRole(String id, Role role) throws TrackerServiceException {
-       IdValidator validator = new IdValidator();
-       RoleValidator roleValidator = new RoleValidator();
-        if (validator.isValidate(id) && roleValidator.isValidate(role.name())) {
+        if (idValidator.isValidate(id) && roleValidator.isValidate(role.name())) {
             try {
                 userDao.updateRoleUser(Integer.parseInt(id), role);
             } catch (TrackerDBException e) {
@@ -324,25 +331,22 @@ public class UserService {
         }
     }
 
-    public boolean deposit(String sum, String type, String login, BigDecimal oldSum) throws TrackerServiceException {
-        DoubleValidator doubleValidator = new DoubleValidator();
-        DepositValidator depositValidator = new DepositValidator();
-        UserDaoJdbcImpl dao;
-        boolean status = false;
-        try{
-            if(doubleValidator.isValidate(sum) && depositValidator.isValidate(type)){
-                double sumDeposit = Double.parseDouble(sum);
-                if(sumDeposit >= 5){
-                    BigDecimal totalSum = oldSum.add(BigDecimal.valueOf(sumDeposit));
-                    dao = new UserDaoJdbcImpl();
-                    status = dao.deposit(login, totalSum);
-                }
-            }
-        } catch (TrackerDBException e){
-            LOGGER.error("Wrong service deposit to account user",e);
-            throw new TrackerServiceException("Wrong service deposit to account user",e);
-        }
-        return status;
-    }
+//    public boolean deposit(String sum, String type, String login, BigDecimal oldSum) throws TrackerServiceException {
+//        boolean status = false;
+//        try{
+//            if(doubleValidator.isValidate(sum) && depositValidator.isValidate(type)){
+//                double sumDeposit = Double.parseDouble(sum);
+//                if(sumDeposit >= 5){
+//                    BigDecimal totalSum = oldSum.add(BigDecimal.valueOf(sumDeposit));
+//                    userDao = new UserDaoJdbcImpl();
+//                    status = userDao.deposit(login, totalSum);
+//                }
+//            }
+//        } catch (TrackerDBException e){
+//            LOGGER.error("Wrong service deposit to account user",e);
+//            throw new TrackerServiceException("Wrong service deposit to account user",e);
+//        }
+//        return status;
+//    }
 
 }

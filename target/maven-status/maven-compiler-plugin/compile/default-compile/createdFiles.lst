@@ -20,6 +20,7 @@ by\epam\crackertracker\validator\DurationValidator.class
 by\epam\crackertracker\validator\IdValidator.class
 by\epam\crackertracker\dao\ReviewDaoJdbc.class
 by\epam\crackertracker\exception\TrackerServiceException.class
+by\epam\crackertracker\filter\XssFilter.class
 by\epam\crackertracker\dao\BucketDao.class
 by\epam\crackertracker\controller\CommonController.class
 by\epam\crackertracker\dao\ReviewDao.class
@@ -33,13 +34,17 @@ by\epam\crackertracker\dao\MessageDaoJdbcImpl.class
 by\epam\crackertracker\validator\MessageValidator.class
 by\epam\crackertracker\validator\DoubleValidator.class
 by\epam\crackertracker\dao\TrackerSubscriptionDaoJdbcImpl.class
+by\epam\crackertracker\mapper\SubscriptionMapper.class
 by\epam\crackertracker\entity\Program.class
 by\epam\crackertracker\controller\ProgramNameController.class
 by\epam\crackertracker\exception\TrackerDBException.class
+by\epam\crackertracker\filter\EncodingFilter.class
 by\epam\crackertracker\validator\LoginValidator.class
 by\epam\crackertracker\controller\AdviceController.class
 by\epam\crackertracker\dao\ProgramDaoJdbcImpl.class
+by\epam\crackertracker\util\LanguageSelector.class
 by\epam\crackertracker\creator\ConnectionCreatorFactory.class
+by\epam\crackertracker\filter\StaticFilter.class
 by\epam\crackertracker\entity\TrackerSubscription.class
 by\epam\crackertracker\util\PageConstant.class
 by\epam\crackertracker\mapper\ReviewMapper.class

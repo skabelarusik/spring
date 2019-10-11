@@ -9,10 +9,6 @@ K
 sqlscripts/script table.txt,4\7\4765b48ab32bd43f049c2e9c844bdd1a16383022
 o
 ?src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java,b\7\b7e8bfd9460d1afa7ef1e06f4eddd880c985021f
-Q
-!src/main/webapp/jsp/css/style.css,b\0\b0cafc230948fe68122768a6de0c07ded5c0b427
-N
-src/main/webapp/jsp/footer.jsp,8\5\857549cb52ef6a2dbf74f7bbbc43a27b5712cd7c
 m
 =src/main/java/by/epam/crackertracker/pool/ConnectionPool.java,e\5\e58fd334a5918881c005417f666c882018c51456
 g
@@ -43,14 +39,6 @@ r
 Bsrc/main/java/by/epam/crackertracker/controller/UploadServlet.java,7\3\73bb5137bd0ed7ba516256949958f2246473b345
 z
 Jsrc/main/java/by/epam/crackertracker/creator/ConnectionCreatorFactory.java,d\0\d072cbb49058ef8fa2d502a3a4b60596ff3ee4d1
-M
-src/main/webapp/jsp/admin.jsp,b\b\bbeff794419a490fd553aa3150d4e23edd83c880
-O
-src/main/webapp/jsp/deposit.jsp,8\c\8c461d8e756316b53a860af3e6b66d3291edfe99
-L
-src/main/webapp/jsp/user.jsp,b\5\b528947aa8e33b821baa005a9da05a1e3c14bfd8
-M
-src/main/webapp/jsp/login.jsp,a\f\af55eee015fec33e99bf54ec2d8713a26133aad7
 o
 ?src/main/java/by/epam/crackertracker/service/AdviceService.java,d\4\d4cdda5da4e0d12112624370b34ad94a0f52dd33
 r
@@ -114,35 +102,19 @@ m
 g
 7src/main/java/by/epam/crackertracker/entity/Advice.java,4\b\4b170e948b798f72b557b563f9507c7b9fdc4273
 W
-'src/main/webapp/WEB-INF/views/hello.ftl,5\2\523e5671ed79875e1d61a3b13f5809158ae02d8b
-W
 'src/main/webapp/WEB-INF/views/admin.ftl,a\7\a79596fd25632f12582477080bf944a634c5fa95
-P
- src/main/webapp/jsp/register.jsp,f\0\f07901c1a6737c04764b8bbbfdfdefe4ca1e4cff
 Z
 *src/main/webapp/WEB-INF/views/register.ftl,5\6\565d3545ba73e975b934bda24cde4774c254f1b7
 g
 7src/main/java/by/epam/crackertracker/dao/BucketDao.java,d\5\d57be07f296b98b8797703dc0bd3200c351cce14
 e
 5src/main/java/by/epam/crackertracker/dao/UserDao.java,1\a\1aef99681e9de33ffab1efd401b8db835fdf1c20
-S
-#src/main/webapp/jsp/editprogram.jsp,a\6\a6e6c9354afb0d57be2cce78af003f6a3266bbad
-U
-%src/main/webapp/jsp/about_service.jsp,5\b\5b3fa24c2bd24f79d377ec22274db94e840198e5
 W
 'src/main/webapp/WEB-INF/views/about.ftl,9\5\9512f2150c821e1a4931f683bf138a8a4bc8140d
 {
 Ksrc/main/java/by/epam/crackertracker/exception/TrackerServiceException.java,d\4\d4d395cb3535372c0deb85e6507bcfd2bde97372
-[
-+src/main/webapp/jsp/calculator_calories.jsp,c\8\c892c740013a19ec56d59b582c332d0392befb04
-N
-src/main/webapp/jsp/review.jsp,b\0\b0b313dfbf103ed093a795a76184657b21f44565
 Y
 )src/main/webapp/WEB-INF/views/curator.ftl,9\e\9ea39932abad0cc6081719414f49226e4b9bcb9b
-R
-"src/main/webapp/jsp/calculator.jsp,5\1\51474e718af7c93fc73a8f411cad374c472d6237
-O
-src/main/webapp/jsp/curator.jsp,8\d\8d205fafc69ede613c89fbfbb11f2e5c1d777459
 [
 +src/main/webapp/WEB-INF/views/superuser.ftl,4\e\4e4e95ebb09d799b37106f6be647d18223980e5e
 V
@@ -155,10 +127,6 @@ m
 =src/main/java/by/epam/crackertracker/mapper/BucketMapper.java,7\6\76bf7cce7ff6304ed2cc3f944ed9a49bbec97d35
 o
 ?src/main/java/by/epam/crackertracker/service/BucketService.java,c\7\c7bbf0f8c722e8d70fcc140de6198097f3c0f825
-N
-src/main/webapp/jsp/result.jsp,5\7\577e59ad0c3c4578be9dd01241363bdbef09e787
-O
-src/main/webapp/jsp/editing.jsp,d\e\de4e23a6946955c19773ca4939ae0df69da27a7a
 X
 (src/main/webapp/WEB-INF/views/footer.ftl,a\d\ad321e5852518a8bd69e45eab5122c0792513bdf
 n
@@ -169,8 +137,6 @@ p
 @src/main/java/by/epam/crackertracker/service/MessageService.java,7\3\73792b54bce4d138bc5d0db043d5f4910c7248a6
 h
 8src/main/java/by/epam/crackertracker/dao/MessageDao.java,8\2\825e778fd089362ae9ff79c825a39d03433a8958
-O
-src/main/webapp/jsp/message.jsp,a\0\a0948119720a7f9c14e5a218e0d1d765bab897d1
 o
 ?src/main/java/by/epam/crackertracker/service/ReviewService.java,7\b\7b98b5ab7835e662733342a84f67a0e9d5766829
 g
@@ -183,8 +149,6 @@ _
 .src/main/webapp/WEB-INF/views/send_message.ftl,d\1\d1f7f966fc27bc0946f151b2d2b0fe54ad906edc
 \
 ,src/main/webapp/WEB-INF/views/resultUser.ftl,2\9\29986afb0791b57a4bd48bb49383284c09f6b51b
-Q
-!src/main/webapp/jsp/superuser.jsp,e\5\e5963997e5df50a386ecc4db9e660067f96e9ed7
 ^
 .src/main/webapp/WEB-INF/views/resultReview.ftl,1\b\1b8f370f2709586bc8ea5f3fc68744facf88a982
 r
@@ -263,17 +227,31 @@ Isrc/main/java/by/epam/crackertracker/validator/AdviceLengthValidator.java,7\0\
 .src/main/webapp/WEB-INF/views/resultAdvice.ftl,4\3\433d9df5775f486590dee3c1504948b81628b160
 a
 1src/main/webapp/WEB-INF/views/calculator_rate.ftl,6\9\6955aeaf279c3da9ee588b74ce8139b1ee4191a5
-S
-#src/main/webapp/jsp/send_review.jsp,3\b\3be6658893382eb836e43cdc9e58856189334c0f
 ]
 -src/main/webapp/WEB-INF/views/send_review.ftl,c\7\c7f6d7dc2a1ced63be9e83982d79c89e1f5a6e4a
-X
-(src/main/webapp/WEB-INF/views/logout.ftl,3\0\30d262b1d069af4bfc700798a4b9a729bafbc86c
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 W
 'src/main/webapp/WEB-INF/views/login.ftl,4\6\46dbd7550c467712c6ed580862b8d7f9993484c3
-J
-src/main/webapp/imdex2.txt,1\9\192fe4890e0dc5bdbdf8dc6e5222eb05babe5db1
 ]
 -src/main/webapp/WEB-INF/views/error/error.jsp,a\0\a03ddc9a7b4f0307a1a7103fe927751a0d3ac78f
+t
+Dsrc/main/java/by/epam/crackertracker/dao/TrackerSubscriptionDao.java,0\9\09cb111e5e391accfe39f065862ded35c3ba914f
+h
+8src/main/java/by/epam/crackertracker/dao/TrackerDao.java,e\1\e1a2c5ef1d2e674c1961cb1ce26d5869f6452b4a
+o
+?src/main/java/by/epam/crackertracker/util/LanguageSelector.java,c\1\c1fd5133d3285228592c0811fa24e40d8b396aab
+u
+Esrc/main/java/by/epam/crackertracker/service/SubscriptionService.java,2\7\270813e5a32aacde59e029085c7e9e6dc0d3f8ac
+p
+@src/main/java/by/epam/crackertracker/service/ProgramService.java,6\0\6018f3aec9bf744631e3200d217ceb8dd9ba4765
+W
+'src/main/webapp/WEB-INF/views/error.ftl,a\6\a61252421d9eaf67db84ac036465623eaa23aa30
+c
+3src/main/webapp/WEB-INF/views/resultProgramName.ftl,5\1\510cdb4887d2e68cbde06bd12aff4a0693df677a
+m
+=src/main/java/by/epam/crackertracker/dao/ProgramsNameDao.java,6\d\6df8df04fd5adbde4bd6b3f877c8bdc749d3089c
+z
+Jsrc/main/java/by/epam/crackertracker/controller/ProgramNameController.java,1\9\19d9d9d4524589bd6da59d78ea21dcc9c0b3eb0e
+s
+Csrc/main/java/by/epam/crackertracker/mapper/SubscriptionMapper.java,7\e\7e95a1f78e69957bbe35877d97174f43b64d1c11
