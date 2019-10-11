@@ -13,6 +13,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../cracker/src/main/java/by/epam/mapper/UserMapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/.travis.yml">
           <value>
             <set />
@@ -63,12 +68,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/AbstractSecurityWebApplicationInitializer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityConfig.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityInitializer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityWebApplicationInitializer.java">
           <value>
             <set />
           </value>
@@ -508,6 +528,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login2.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/logout.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/message.ftl">
           <value>
             <set />
@@ -584,6 +619,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/usersList.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/imdex2.txt">
           <value>
             <set />
           </value>
@@ -814,6 +859,36 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../my_proj/cracker/src/main/webapp/index.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-framework-21-master/spring-framework-21-master/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-framework-21-master/spring-framework-21-master/src/main/java/ru/otus/spring/security/SecurityInitializer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-framework-21-master/spring-framework-21-master/src/main/java/ru/otus/spring/security/SpringConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-framework-21-master/spring-framework-21-master/src/main/java/ru/otus/spring/security/WebAppInitializer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-framework-21-master/spring-framework-21-master/src/main/java/ru/otus/spring/security/WebConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../spring-framework-21-master/spring-framework-21-master/src/main/webapp/WEB-INF/web.xml">
           <value>
             <set />
           </value>

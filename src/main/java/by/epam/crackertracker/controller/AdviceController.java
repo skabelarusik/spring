@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/advice")
+@RequestMapping(PageConstant.PATH_ADVICE)
 public class AdviceController {
 
    @Autowired
-    private AdviceService adviceService;
+   private AdviceService adviceService;
 
    @GetMapping(PageConstant.URI_SELECT)
    public String selectAdvice(Model model){

@@ -1,8 +1,4 @@
 
-o
-?src/main/java/by/epam/crackertracker/filter/EncodingFilter.java,9\e\9ec6583895c99bce7ae06aacca2130128e61aa77
-v
-Fsrc/main/java/by/epam/crackertracker/filter/ServletSecurityFilter.java,5\b\5b8d651fe7644053012cc4e7eef05e7055039b32
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 M
@@ -11,10 +7,6 @@ M
 Lsrc/main/java/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.java,3\c\3c933475dcad1a119471424c0ea44074d36961da
 K
 sqlscripts/script table.txt,4\7\4765b48ab32bd43f049c2e9c844bdd1a16383022
-j
-:src/main/java/by/epam/crackertracker/filter/XssFilter.java,9\9\996fa324626ade6240f021032908c3cdfcc0028b
-m
-=src/main/java/by/epam/crackertracker/filter/StaticFilter.java,8\1\81ff90d338569441c47951da221b5eada8ab7597
 o
 ?src/main/java/by/epam/crackertracker/dao/AdviceDaoJdbcImpl.java,b\7\b7e8bfd9460d1afa7ef1e06f4eddd880c985021f
 Q
@@ -59,8 +51,6 @@ L
 src/main/webapp/jsp/user.jsp,b\5\b528947aa8e33b821baa005a9da05a1e3c14bfd8
 M
 src/main/webapp/jsp/login.jsp,a\f\af55eee015fec33e99bf54ec2d8713a26133aad7
-O
-src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 o
 ?src/main/java/by/epam/crackertracker/service/AdviceService.java,d\4\d4cdda5da4e0d12112624370b34ad94a0f52dd33
 r
@@ -127,8 +117,6 @@ W
 'src/main/webapp/WEB-INF/views/hello.ftl,5\2\523e5671ed79875e1d61a3b13f5809158ae02d8b
 W
 'src/main/webapp/WEB-INF/views/admin.ftl,a\7\a79596fd25632f12582477080bf944a634c5fa95
-^
-.src/main/java/by/epam/crackertracker/Main.java,b\b\bb7897ffb925ef20e6a3c9c4d716276e93639f4f
 P
  src/main/webapp/jsp/register.jsp,f\0\f07901c1a6737c04764b8bbbfdfdefe4ca1e4cff
 Z
@@ -279,5 +267,13 @@ S
 #src/main/webapp/jsp/send_review.jsp,3\b\3be6658893382eb836e43cdc9e58856189334c0f
 ]
 -src/main/webapp/WEB-INF/views/send_review.ftl,c\7\c7f6d7dc2a1ced63be9e83982d79c89e1f5a6e4a
-x
-Hsrc/main/java/by/epam/crackertracker/service/UserDetailsServiceImpl.java,c\f\cf4c47ee1a31ff34178fe5dc5b8e8d1365b3a107
+X
+(src/main/webapp/WEB-INF/views/logout.ftl,3\0\30d262b1d069af4bfc700798a4b9a729bafbc86c
+O
+src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+W
+'src/main/webapp/WEB-INF/views/login.ftl,4\6\46dbd7550c467712c6ed580862b8d7f9993484c3
+J
+src/main/webapp/imdex2.txt,1\9\192fe4890e0dc5bdbdf8dc6e5222eb05babe5db1
+]
+-src/main/webapp/WEB-INF/views/error/error.jsp,a\0\a03ddc9a7b4f0307a1a7103fe927751a0d3ac78f

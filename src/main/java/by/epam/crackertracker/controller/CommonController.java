@@ -63,8 +63,19 @@ public class CommonController {
         return request.getParameter(ParameterConstant.ATTRIBUTE_CURRENT_PAGE);
     }
 
+    @RequestMapping("/lang")
+    public String lang(HttpServletRequest request, HttpServletResponse response){
+        localeResolver.setLocale(request, response, new Locale(ParameterConstant.EN, ParameterConstant.SUBMIT_EN));
+        return request.getParameter(ParameterConstant.ATTRIBUTE_CURRENT_PAGE);
+    }
+
     @GetMapping(PageConstant.LOGOUT)
     public String logout(){
         return PageConstant.PATH_PAGE_MAIN_INDEX;
+    }
+
+    @RequestMapping("/login")
+    public String login2(){
+        return "login";
     }
 }

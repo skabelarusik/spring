@@ -9,7 +9,6 @@ public class PageConstant {
 
 
 
-
     private PageConstant(){}
 
     public static final String REQUEST_USER = "/user";
@@ -73,6 +72,8 @@ public class PageConstant {
 
     public static final String PATH_MESSAGE = "/message";
     public static final String PATH_REVIEW = "/review";
+    public static final String PATH_ADVICE = "/advice";
+
 
     public static final String URI_LANG_BY = "/lang/by";
     public static final String URI_LANG_RU = "/lang/ru";
