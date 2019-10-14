@@ -9,13 +9,14 @@ import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.User;
 import by.epam.crackertracker.exception.TrackerDBException;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public interface UserDao extends TrackerDao {
 
     List<User> selectAll(int currentPage, String type) ;
 
-    boolean insert(User user) throws TrackerDBException;
+    void insert(User user) throws TrackerDBException;
 
     void updateRoleUser(int id, Role role) throws TrackerDBException;
 
@@ -28,4 +29,8 @@ public interface UserDao extends TrackerDao {
     List<User> selectByRole(int page, String type, String role) throws TrackerDBException;
 
     void updatePasswordUser(String login, String newPassword) throws TrackerDBException;
+
+    void deposit(String login, BigDecimal sum) throws TrackerDBException;
+
+    List<User> selectAdmin();
 }

@@ -51,11 +51,11 @@ public class UploadServlet extends HttpServlet {
             part.write(path);
             UserService service = new UserService();
             boolean status = false;
-            try {
-                status = service.sendAvatar((String) request.getSession(true).getAttribute(ParameterConstant.PARAM_LOGIN), pathFile);
-            } catch (TrackerServiceException e) {
-                LOGGER.error("Wrong upload picture");
-            }
+        //    try {
+            //    status = service.sendAvatar((String) request.getSession(true).getAttribute(ParameterConstant.PARAM_LOGIN), pathFile);
+         //   } catch (TrackerServiceException e) {
+          //      LOGGER.error("Wrong upload picture");
+         //   }
             if(status) {
                 if(!oldPath.equals(PageConstant.DEFAULT_AVATAR_PATH)){
                     Files.deleteIfExists(Paths.get(oldPath));

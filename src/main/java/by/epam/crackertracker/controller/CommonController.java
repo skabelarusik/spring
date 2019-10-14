@@ -3,16 +3,16 @@ package by.epam.crackertracker.controller;
 import by.epam.crackertracker.entity.Message;
 import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.User;
+import by.epam.crackertracker.exception.TrackerServiceException;
+import by.epam.crackertracker.service.CalculatorService;
 import by.epam.crackertracker.util.LanguageSelector;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.PageSelector;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.LocaleResolver;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,6 +29,10 @@ public class CommonController {
 
     @Autowired
     private LanguageSelector selector;
+
+    @Autowired
+    private CalculatorService service;
+
 
     @GetMapping(PageConstant.PATH_PAGE_INDEX)
     public String index(){
@@ -83,4 +87,27 @@ public class CommonController {
     public String login2(){
         return "login";
     }
+
+    @PostMapping(PageConstant.CALCULATE)
+    public String calculate(@SessionAttribute String startPage, @RequestParam String weight,
+                            @RequestParam String height, Model model){
+        try {
+            model.addAttribute("result", service.calculate(weight, height));
+        } catch (TrackerServiceException e) {
+            model.addAttribute("result", ParameterConstant.MESSAGE_ERROR_REGIST);
+        }
+        return startPage;
+    }
+
+    @PostMapping(PageConstant.CALCULATE_CALORIES)
+    public String calculate_calories(@SessionAttribute String startPage, @RequestParam String age,
+                                     @RequestParam String height, @RequestParam String weight, @RequestParam String gender,
+                                     @RequestParam String active, Model model){
+            String result = service.calculateCalories(height, weight, age, gender, active);
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RESULT_CALORIES, result);
+            return startPage;
+    }
+
+
+
 }

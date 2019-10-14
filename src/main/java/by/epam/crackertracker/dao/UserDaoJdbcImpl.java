@@ -73,6 +73,9 @@ public class UserDaoJdbcImpl implements UserDao {
     public static final String UPDATE_BALANCE = "UPDATE users set money = ? where login = ?";
     public static final String UPDATE_PATH = "UPDATE users SET avatar = ? where login = ?";
 
+    public static final String SELECT_ALL_ADMINS = "SELECT u.name, u.surname, u.login, u.password, u.sex, u.email," +
+            "u.birthday, u.registrdate, u.money, u.avatar, r1.name, u.id, u.active from users u INNER JOIN role r1 on u.status = r1.id where r1.name = 'admin'";
+
     public static final int COUNT_USERS = 11;
 
     private static final Logger LOGGER = LogManager.getRootLogger();
@@ -156,14 +159,12 @@ public class UserDaoJdbcImpl implements UserDao {
     }
 
     @Override
-    public boolean insert(User user) throws TrackerDBException {
+    public void insert(User user) throws TrackerDBException {
         Connection connection = null;
         PreparedStatement statement = null;
         boolean status;
         try{
             connection = ConnectionPool.getInstance().takeConnection();
-            status = isUniqueUser(connection, user.getLogin());
-            if(status){
                 statement = connection.prepareStatement(INSERT_USER);
                 statement.setString(1, user.getName());
                 statement.setString(3, user.getLogin());
@@ -176,7 +177,7 @@ public class UserDaoJdbcImpl implements UserDao {
                 statement.setString(9, user.getPath());
                 statement.executeUpdate();
                 LOGGER.warn("User: " + user.getLogin()+ " registered");
-            }
+
         } catch (SQLException | TrackerConnectionPoolException ex) {
             LOGGER.error(ex);
             throw new TrackerDBException("Wrong insert user");
@@ -184,7 +185,6 @@ public class UserDaoJdbcImpl implements UserDao {
             this.closeQuietly(statement);
             this.closeQuietly(connection);
         }
-        return status;
     }
 
     @Override
@@ -217,14 +217,13 @@ public class UserDaoJdbcImpl implements UserDao {
         PreparedStatement statement = null;
         try{
             connection = ConnectionPool.getInstance().takeConnection();
-            if(!isUniqueUser(connection, login)){
                 statement = connection.prepareStatement(UPDATE_PATH);
                 statement.setString(1,path);
                 statement.setString(2,login);
                 statement.execute();
                 status = true;
                 LOGGER.warn("User login: " + login + " updated path");
-            }
+
         } catch (TrackerConnectionPoolException | SQLException e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrond update path");
@@ -245,72 +244,20 @@ public class UserDaoJdbcImpl implements UserDao {
         }
     }
 
-
-    public boolean deposit(String login, BigDecimal sum) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        boolean status  = false;
+    @Override
+    public void deposit(String login, BigDecimal sum) throws TrackerDBException {
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            if(!isUniqueUser(connection, login)){
-                statement = connection.prepareStatement(UPDATE_BALANCE);
-                statement.setBigDecimal(1,sum);
-                statement.setString(2,login);
-                statement.executeUpdate();
-                status = true;
-                LOGGER.warn("User: " + login + " deposited " + sum + "$");
-            }
-        }catch (TrackerConnectionPoolException | SQLException e){
+            jdbcTemplate.update(UPDATE_BALANCE, sum, login);
+            LOGGER.warn("User: " + login + " deposited " + sum + "$");
+        }catch (Exception e){
             LOGGER.error(e);
             throw new TrackerDBException("Wrong deposit");
-        } finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
         }
-        return status;
+    }
+        @Override
+        public List<User> selectAdmin(){
+            return jdbcTemplate.query(SELECT_ALL_ADMINS, new UserMapper());
     }
 
-
-    public boolean isUniqueUser(Connection connection, String login) throws TrackerDBException {
-        boolean status = true;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-        try{
-            statement = connection.prepareStatement(SELECT_LOGIN_USER);
-            statement.setString(1, login);
-            resultSet = statement.executeQuery();
-            if(resultSet.next()){
-            status = false;
-            }
-        } catch (SQLException e){
-            LOGGER.error(e);
-            throw new TrackerDBException("error check uniqe user");
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-        }
-        return status;
-    }
-
-    private boolean hasId(Connection connection, int id) throws TrackerDBException {
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-        boolean status = false;
-        try{
-            statement = connection.prepareStatement(SELECT_USER_BY_ID);
-            statement.setInt(1,id);
-            resultSet = statement.executeQuery();
-            if(resultSet.next()){
-                status = true;
-            }
-        } catch (SQLException e) {
-            LOGGER.error(e);
-            throw new TrackerDBException("Wrong checking user by id");
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-        }
-        return status;
-    }
 
 }

@@ -19,6 +19,7 @@ by\epam\crackertracker\validator\CostValidator.class
 by\epam\crackertracker\validator\DurationValidator.class
 by\epam\crackertracker\validator\IdValidator.class
 by\epam\crackertracker\dao\ReviewDaoJdbc.class
+by\epam\crackertracker\validator\WeightHeightValidator.class
 by\epam\crackertracker\exception\TrackerServiceException.class
 by\epam\crackertracker\filter\XssFilter.class
 by\epam\crackertracker\dao\BucketDao.class
@@ -65,6 +66,7 @@ by\epam\crackertracker\controller\UploadServlet.class
 by\epam\crackertracker\mapper\ProgramNameMapper.class
 by\epam\crackertracker\dao\ProgramDao.class
 by\epam\crackertracker\dao\UserDao.class
+by\epam\crackertracker\service\CalculatorService.class
 by\epam\crackertracker\validator\RoleValidator.class
 by\epam\crackertracker\entity\Product.class
 by\epam\crackertracker\creator\ConnectionCreatorTrackerJdbc.class
@@ -72,7 +74,6 @@ by\epam\crackertracker\service\ReviewService.class
 by\epam\crackertracker\controller\ProductController.class
 by\epam\crackertracker\config\WebConfig.class
 by\epam\crackertracker\controller\UserController.class
-by\epam\crackertracker\service\DefaultService.class
 by\epam\crackertracker\validator\AdviceLengthValidator.class
 by\epam\crackertracker\validator\ValidatorI.class
 by\epam\crackertracker\controller\SubscriptionController.class
@@ -90,6 +91,7 @@ by\epam\crackertracker\entity\User.class
 by\epam\crackertracker\validator\DepositValidator.class
 by\epam\crackertracker\validator\TypeSortedValidator.class
 by\epam\crackertracker\dao\TrackerSubscriptionDao.class
+by\epam\crackertracker\validator\AgeValidator.class
 by\epam\crackertracker\service\BucketService.class
 by\epam\crackertracker\service\ProductService.class
 by\epam\crackertracker\service\ProgramService.class

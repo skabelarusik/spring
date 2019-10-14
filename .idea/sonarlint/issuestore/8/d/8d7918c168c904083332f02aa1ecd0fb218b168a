@@ -1,8 +1,8 @@
 
+zsquid:S1192†"]Define a constant instead of duplicating this literal "Wrong service update product" 3 times.(ÏÆÓ»ıÿÿÿÿ
 zsquid:UselessImportCheck"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8çØÚÚ-
 isquid:S3776e"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ã¨—ˆ
-zsquid:S1192†"]Define a constant instead of duplicating this literal "Wrong service update product" 3 times.(ÏÆÓ»ıÿÿÿÿ
 osquid:S3776œ"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(†ØË“úÿÿÿÿ
 |squid:S1192”"]Define a constant instead of duplicating this literal "Wrong service delete product" 3 times.(„¶½‹8ß¿—ØÛ-
-wsquid:S1192»"ZDefine a constant instead of duplicating this literal "Wrong service add product" 3 times.(¯„Çõüÿÿÿÿ
 _squid:HiddenFieldCheck‚"7Rename "dao" which hides the field declared at line 28.(ËñÁ†ûÿÿÿÿ
+wsquid:S1192»"ZDefine a constant instead of duplicating this literal "Wrong service add product" 3 times.(¯„Çõüÿÿÿÿ

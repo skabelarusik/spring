@@ -37,7 +37,7 @@
 
             <!-- avatar -->
             <div class="icon">
-                <img src="${user.avatar}" class="icon1"/>
+                <img src="${user.path}" class="icon1"/>
             </div>
             <h5><@spring.message "label.avatar"/></h5>
             <div class="uploadFile">
@@ -67,6 +67,7 @@
                     <p><input  class="adminBlock" type="search" name="text" value="" placeholder="Поиск продуктов по сайту">
                         <input  class="adminBlock" type="submit" value="Найти"></p>
                 </form>
+                ${wrongSearch}
             </div>
             <h4><br/><@spring.message "label.logoutmess"/> </h4>
             <a href="/logout" class="aBlock2"><h5><@spring.message "label.logout"/></h5></a>
@@ -174,7 +175,7 @@
             <br/>
             <h4><@spring.message "label.oursponsors" /></h4>
             <div class="icon">
-                <img src="/views/picture/oracle.png" class="icon1">
+                <img src="/picture/oracle.png" class="icon1">
             </div>
             <br/>
             <div class="icon">
@@ -182,7 +183,7 @@
             </div>
             <br/>
             <div class="icon">
-                <img src="picture/tomcat.png" class="icon1">
+                <img src="/picture/tomcat.png" class="icon1">
             </div>
         </div>
 

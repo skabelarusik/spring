@@ -11,7 +11,7 @@ public class PageConstant {
 
     private PageConstant(){}
 
-    public static final String REQUEST_USER = "/user";
+
 
     public static final String PATH_PAGE_LOGIN = "login";
     public static final String PATH_PAGE_MAIN_USER = "user";
@@ -34,10 +34,7 @@ public class PageConstant {
     public static final String PATH_LIST_USER = "listUser";
     public static final String PATH_PAGE_REGISTER = "register";
     public static final String PATH_PAGE_ERROR = "error";
-    public static final String PATH_PAGE_RESULT = "/jsp/result.jsp";
-    public static final String PATH_PAGE_EDITING = "/jsp/editing.jsp";
     public static final String DEFAULT_AVATAR_PATH = "/jsp/picture/user.png";
-    public static final String PATH_PAGE_REVIEW = "review";
     public static final String PATH_PAGE_SEND_REVIEW = "send_review";
     public static final String PATH_PAGE_CALCULATOR = "/jsp/calculator.jsp";
     public static final String PATH_PAGE_MESSAGE = "resultMessage";
@@ -55,7 +52,7 @@ public class PageConstant {
     public static final String URI_SELECT_CURATOR = "/select_curator";
     public static final String URI_SELECT_CURATOR_DEL = "/select_del_curator";
     public static final String URI_SUBSCRIPTION = "/subscription";
-
+    public static final String URI_SEARCH_PRODUCT = "/search";
 
 
     public static final String URI_UPDATE_USER = "/update";
@@ -81,6 +78,11 @@ public class PageConstant {
     public static final String PATH_REVIEW = "/review";
     public static final String PATH_ADVICE = "/advice";
     public static final String PATH_PROGRAM_NAME = "/program_name";
+    public static final String REQUEST_USER = "/user";
+    public static final String URI_PRODUCT = "/product";
+    public static final String CALCULATE = "/calculate";
+    public static final String CALCULATE_CALORIES = "/calculate_calories";
+
 
 
     public static final String URI_LANG_BY = "/lang/by";

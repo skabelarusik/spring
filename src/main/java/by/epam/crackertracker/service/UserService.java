@@ -95,7 +95,7 @@ public class UserService {
         return user;
     }
 
-    public boolean registerUser(String login, String pass, String name, String surname, Gender gender, String email,
+    public void registerUser(String login, String pass, String name, String surname, Gender gender, String email,
                                String dateOfBirth) throws TrackerServiceException {
         boolean status = false;
         if(login != null && !login.isEmpty() && pass != null && !pass.isEmpty() && gender != null && email != null &&
@@ -113,14 +113,13 @@ public class UserService {
                 user.setRegistrDate(LocalDate.now());
                 user.setEmail(email);
                 user.setPath(PageConstant.DEFAULT_AVATAR_PATH);
-                status = dao.insert(user);
+                dao.insert(user);
                 }
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service register user", e);
                 throw new TrackerServiceException("Wrong service register user", e);
             }
         }
-        return status;
     }
 
     public List<User> selectAllUsers( Map<String,String> allRequestParams,  ModelMap model) throws TrackerServiceException {
@@ -331,22 +330,26 @@ public class UserService {
         }
     }
 
-//    public boolean deposit(String sum, String type, String login, BigDecimal oldSum) throws TrackerServiceException {
-//        boolean status = false;
-//        try{
-//            if(doubleValidator.isValidate(sum) && depositValidator.isValidate(type)){
-//                double sumDeposit = Double.parseDouble(sum);
-//                if(sumDeposit >= 5){
-//                    BigDecimal totalSum = oldSum.add(BigDecimal.valueOf(sumDeposit));
-//                    userDao = new UserDaoJdbcImpl();
-//                    status = userDao.deposit(login, totalSum);
-//                }
-//            }
-//        } catch (TrackerDBException e){
-//            LOGGER.error("Wrong service deposit to account user",e);
-//            throw new TrackerServiceException("Wrong service deposit to account user",e);
-//        }
-//        return status;
-//    }
+    public void deposit(String sum, String type, String login, BigDecimal oldSum) throws TrackerServiceException {
+        try{
+            if(doubleValidator.isValidate(sum) && depositValidator.isValidate(type)){
+                double sumDeposit = Double.parseDouble(sum);
+                if(sumDeposit >= 5){
+                    BigDecimal totalSum = oldSum.add(BigDecimal.valueOf(sumDeposit));
+                    userDao.deposit(login, totalSum);
+                } else {
+                    throw new TrackerServiceException("Wrong service deposit to account user");
+                }
+            } else {
+                throw new TrackerServiceException("Wrong service deposit to account user");
+            }
+        } catch (TrackerDBException e){
+            LOGGER.error("Wrong service deposit to account user",e);
+            throw new TrackerServiceException("Wrong service deposit to account user",e);
+        }
+    }
 
+    public List<User> selectAllAdmins() {
+        return userDao.selectAdmin();
+    }
 }

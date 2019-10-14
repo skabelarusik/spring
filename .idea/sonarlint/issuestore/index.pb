@@ -255,3 +255,9 @@ z
 Jsrc/main/java/by/epam/crackertracker/controller/ProgramNameController.java,1\9\19d9d9d4524589bd6da59d78ea21dcc9c0b3eb0e
 s
 Csrc/main/java/by/epam/crackertracker/mapper/SubscriptionMapper.java,7\e\7e95a1f78e69957bbe35877d97174f43b64d1c11
+y
+Isrc/main/java/by/epam/crackertracker/validator/WeightHeightValidator.java,e\f\efb62cee8a13b6295dee6b8091797746617d96c3
+p
+@src/main/java/by/epam/crackertracker/validator/AgeValidator.java,d\b\db34348cd36ad2fc654e3b454263dfdd541a9d2e
+s
+Csrc/main/java/by/epam/crackertracker/service/CalculatorService.java,5\8\587e6fb61eaf1b49b4dc230eac9f3ea5136e1b6b

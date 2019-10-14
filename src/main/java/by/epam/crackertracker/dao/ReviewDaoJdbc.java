@@ -28,7 +28,7 @@ public class ReviewDaoJdbc implements ReviewDao {
     public static final String SELECT_ALL_REVIEW = "SELECT r.idreview, u.login, r.date, r.text from\n" +
             " review r INNER JOIN users u on r.name = u.id where r.show_review = ? order by r.date desc";
     public static final String DELETE_BY_ID = "UPDATE review set show_review = ? where idreview = ?";
-    public static final String INSERT_REVIEW = "INSERT INTO review (name, date, text) values ((select id from users where name = ?),?,?)";
+    public static final String INSERT_REVIEW = "INSERT INTO review (name, date, text) values ((select id from users where login = ?),?,?)";
 
     private static final Logger LOGGER = LogManager.getRootLogger();
 
@@ -56,8 +56,9 @@ public class ReviewDaoJdbc implements ReviewDao {
 
     @Override
     public void insertReview(String sender, String text) throws TrackerDBException {
+        LocalDate localDate = LocalDate.now();
         try {
-            template.update(INSERT_REVIEW, sender, LocalDate.now().toString(), text);
+            template.update(INSERT_REVIEW, sender,localDate, text);
             LOGGER.warn("Review: " + text + " was inserted");
         } catch (Exception e){
             LOGGER.error("Wrong insert review: " + text + " from " + sender);

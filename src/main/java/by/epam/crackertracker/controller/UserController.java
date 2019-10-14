@@ -15,11 +15,13 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.awt.*;
+import java.math.BigDecimal;
 import java.util.Map;
 
 @Controller
 @RequestMapping(PageConstant.REQUEST_USER)
 public class UserController {
+
 
     @Autowired
     public UserService userService;
@@ -125,6 +127,7 @@ public class UserController {
             request.getSession(true).setAttribute(ParameterConstant.USER, user);
             request.getSession().setAttribute(ParameterConstant.ATTRIBUTE_ROLE, user.getRole());
             request.getSession().setAttribute(ParameterConstant.LOGIN, user.getLogin());
+            request.getSession().setAttribute(ParameterConstant.PARAM_BALANCE, user.getBalance());
             page = PageSelector.selectHomePage(user.getRole());
         } catch (TrackerServiceException e) {
             request.setAttribute(ParameterConstant.MESAGE_WRONG_AUTH, "WRONG PASSWORD OR LOGIN");
@@ -146,14 +149,24 @@ public class UserController {
     }
 
     @PostMapping(PageConstant.URI_DEP)
-    public String makeDeposit(@RequestParam Map<String,String> allRequestParams, ModelMap model){
-        model.addAttribute("depositMessage", "WRONG");
+    public String makeDeposit( HttpServletRequest request, @RequestParam String sum, @RequestParam String type, @SessionAttribute String login,
+                              @SessionAttribute String balance,  ModelMap model){
+        try {
+            userService.deposit(sum, type, login, BigDecimal.valueOf(Double.parseDouble(balance)));
+            model.addAttribute(ParameterConstant.MESSAGE_DEPOSIT, ParameterConstant.MESSAGE_CONGRAT);
+            Double newSum = Double.parseDouble(sum) + Double.parseDouble(balance);
+            request.getSession().setAttribute(ParameterConstant.PARAM_BALANCE, newSum);
+
+        } catch (TrackerServiceException e) {
+            model.addAttribute(ParameterConstant.MESSAGE_DEPOSIT, ParameterConstant.MESSAGE_ERROR_REGIST);
+        }
         return PageConstant.PATH_DEPOSIT;
     }
 
     @GetMapping(PageConstant.URI_REQUEST)
-    public String request(){
-        return PageConstant.PATH_LIST_USER;
+    public String request(Model model){
+        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectAllAdmins());
+        return PageConstant.PATH_RESULT_USER;
     }
 
 }

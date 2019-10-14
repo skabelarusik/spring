@@ -1,9 +1,10 @@
 
-osquid:CommentedOutCodeLineÎ"<This block of commented-out lines of code should be removed.(‰Æ «ÿÿÿÿÿ8µöÜÛÛ-
-qsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(êÐ´š8á‹ÔÛÛ-
-Jsquid:S1481Æ"+Remove this unused "status" local variable.(³Éë“8¯ÂÐÛÛ-
-msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8ï†‡×Ú-
-nsquid:CommentedOutCodeLineO"<This block of commented-out lines of code should be removed.(ÎË²¦úÿÿÿÿ8ºó°ÿÚ-
-usquid:S3776~"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¿òƒêþÿÿÿÿ8ëŒ‰×Ú-
-osquid:CommentedOutCodeLineÕ"<This block of commented-out lines of code should be removed.(±‚ï½ÿÿÿÿÿ8ÜÒÛÛ-
+osquid:CommentedOutCodeLineÔ"<This block of commented-out lines of code should be removed.(±‚ï½ÿÿÿÿÿ8ÜÒÛÛ-
+Jsquid:S1481Å"+Remove this unused "status" local variable.(³Éë“8¯ÂÐÛÛ-
 psquid:UselessImportCheck"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ
+msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8ï†‡×Ú-
+usquid:S3776}"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¿òƒêþÿÿÿÿ8ëŒ‰×Ú-
+„squid:S1192Õ"fDefine a constant instead of duplicating this literal "Wrong service deposit to account user" 4 times.(óãs8„Ž¬ÒÜ-
+Isquid:S1481d"+Remove this unused "status" local variable.(³Éë“8òÁñÑÜ-
+nsquid:CommentedOutCodeLineO"<This block of commented-out lines of code should be removed.(ÎË²¦úÿÿÿÿ8ºó°ÿÚ-
+qsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(êÐ´š8á‹ÔÛÛ-

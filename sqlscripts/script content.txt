@@ -104,45 +104,45 @@ insert into role (id, name) values('2', 'user');
 
 -- add content to users
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'27', 'Andrey', 'Krupin', 'clockworktimes', '$2a$12$PEpfpTsA6Dokushn2Mq02eurA/Ntu7Cj61KPkuJV6/NfRpyN.9Gg.', 'male', '1987-10-22', 'ber-linn@tut.by', '2', '81', '2019-07-19', '/jsp/picture/user.png', '1');
+'27', 'Andrey', 'Krupin', 'clockworktimes', '$2a$12$PEpfpTsA6Dokushn2Mq02eurA/Ntu7Cj61KPkuJV6/NfRpyN.9Gg.', 'male', '1987-10-22', 'ber-linn@tut.by', '2', '81', '2019-07-19', '/picture/user.png', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'28', 'Татьяная', 'Крупина', 'niaura', '$2a$12$neBeucHLnLq9bG2oz2L0vuNch3XBIVEMpEoWGGJszzp1OedEQ/Zcm', 'female', '1987-10-13', 'ber-linn@tut.by', '4', '30', '2019-07-19', '/jsp/picture/niaura.jpg', '1');
+'28', 'Татьяная', 'Крупина', 'niaura', '$2a$12$neBeucHLnLq9bG2oz2L0vuNch3XBIVEMpEoWGGJszzp1OedEQ/Zcm', 'female', '1987-10-13', 'ber-linn@tut.by', '4', '30', '2019-07-19', '/picture/niaura.jpg', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'36', 'КОТ', 'БЕНДЕР', 'kotbender', '$2a$12$sGA1dxeRXcdawQdOKZSDEe./azYRh4Pw8i.cB7DnxQHJlLIYBuUda', 'male', '1970-01-01', 'kot@tut.by', '4', '0', '2019-07-19', '/jsp/picture/user.png', '1');
+'36', 'КОТ', 'БЕНДЕР', 'kotbender', '$2a$12$sGA1dxeRXcdawQdOKZSDEe./azYRh4Pw8i.cB7DnxQHJlLIYBuUda', 'male', '1970-01-01', 'kot@tut.by', '4', '0', '2019-07-19', '/picture/user.png', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
 '37', '', '', 'sss', '$2a$12$yPG52q5KjmFjyzwSMD46IeMvsyHTnoKDz0ZuwGsQ0Xsz4tGGDJnRS', 'male', '1970-01-01', '', '4', '0', '2019-07-19', '/jsp/picture/user.png', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'41', 'asdasd', 'fafdsf', 'kotbender2', '$2a$12$61B3lttXgVd.PmdbMfJiZ.OJH2J.omRJ9eNUohJoYnyZRYCc9SWba', 'male', '1970-01-21', 'kot@tut.by', '4', '0', '2019-07-19', '/jsp/picture/user.png', '1');
+'41', 'asdasd', 'fafdsf', 'kotbender2', '$2a$12$61B3lttXgVd.PmdbMfJiZ.OJH2J.omRJ9eNUohJoYnyZRYCc9SWba', 'male', '1970-01-21', 'kot@tut.by', '4', '0', '2019-07-19', '/picture/user.png', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'49', 'Крупин', 'Андрей', 'admin', '$2a$12$NQdI5bal5cDeFOoJHGOwW.FVQ1IiIbRO1Vry3vu.PShRztXvgN0Ae', 'male', '1970-01-01', 'skacwt@gmail.com', '1', '11', '2019-07-19', '/jsp/picture/admin.jpg', '1');
+'49', 'Крупин', 'Андрей', 'admin', '$2a$12$NQdI5bal5cDeFOoJHGOwW.FVQ1IiIbRO1Vry3vu.PShRztXvgN0Ae', 'male', '1970-01-01', 'skacwt@gmail.com', '1', '11', '2019-07-19', '/picture/admin.jpg', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'64', 'Andrey', 'Krupinz', 'test', '$2a$12$sADlduHpehssTXkguCocvuzBuCaBj5g9KD45jf0i1B36uyqw51.Ye', 'female', '1970-01-01', 'kot@tut.by', '4', '0', '2019-07-25', '/jsp/picture/user.png', '0');
+'64', 'Andrey', 'Krupinz', 'test', '$2a$12$sADlduHpehssTXkguCocvuzBuCaBj5g9KD45jf0i1B36uyqw51.Ye', 'female', '1970-01-01', 'kot@tut.by', '4', '0', '2019-07-25', '/picture/user.png', '0');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'65', 'Curator', '', 'curator', '$2a$12$Hj8CoEgZ1IJLAIAgar8Ok.571diECY62.DG0tAgghOqRZ3lQSxXsa', 'female', '1986-01-02', 'test@gmail.com', '4', '13', '2019-07-26', '/jsp/picture/user.png', '1');
+'65', 'Curator', '', 'curator', '$2a$12$Hj8CoEgZ1IJLAIAgar8Ok.571diECY62.DG0tAgghOqRZ3lQSxXsa', 'female', '1986-01-02', 'test@gmail.com', '4', '13', '2019-07-26', '/picture/user.png', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'66', 'Декстер', '', 'dexter', '$2a$12$v0ZQTgUXbuuq0j39RzjBhOR3L6llZLBEM8ZXgUGL6DBpsiSi9X9Iu', 'male', '1995-12-13', 'test@tut.nu', '4', '0', '2019-08-07', '/jsp/picture/user.png', '1');
+'66', 'Декстер', '', 'dexter', '$2a$12$v0ZQTgUXbuuq0j39RzjBhOR3L6llZLBEM8ZXgUGL6DBpsiSi9X9Iu', 'male', '1995-12-13', 'test@tut.nu', '4', '0', '2019-08-07', '/picture/user.png', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'67', 'Александр', 'Лукашенко', 'Lukashenko88', '$2a$12$47WW/02xj2Ftdk/yf/37P.kgsuiMMJI0KVuYUiORz/gp6dVZIo44G', 'male', '1955-04-08', 'alex@gmail.com', '2', '0', '2019-08-07', '/jsp/picture/user.png', '1');
+'67', 'Александр', 'Лукашенко', 'Lukashenko88', '$2a$12$47WW/02xj2Ftdk/yf/37P.kgsuiMMJI0KVuYUiORz/gp6dVZIo44G', 'male', '1955-04-08', 'alex@gmail.com', '2', '0', '2019-08-07', '/picture/user.png', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'68', 'Слоняраё', 'Hobot', 'SLON', '$2a$12$oTooBx.4/KCqeRVnjCX7Mei8rC/OeJ.lcZx5L2Ou80ODh85W.3XMC', 'male', '2005-02-15', 'ber-linn@tut.by', '3', '688', '2019-08-07', '/jsp/picture/SLON.jpg', '1');
+'68', 'Слоняраё', 'Hobot', 'SLON', '$2a$12$oTooBx.4/KCqeRVnjCX7Mei8rC/OeJ.lcZx5L2Ou80ODh85W.3XMC', 'male', '2005-02-15', 'ber-linn@tut.by', '3', '688', '2019-08-07', '/picture/SLON.jpg', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'69', 'Andre', 'Krupin', 'BUGAGA', '$2a$12$OaMv9ElIs5dvkljn7pwFT.EKGPnPTZmm4lJMRnJgPLmJ2vDFf9WWm', 'male', '1999-01-01', 'asfasf@tut.nu', '2', '0', '2019-08-09', '/jsp/picture/user.png', '1');
+'69', 'Andre', 'Krupin', 'BUGAGA', '$2a$12$OaMv9ElIs5dvkljn7pwFT.EKGPnPTZmm4lJMRnJgPLmJ2vDFf9WWm', 'male', '1999-01-01', 'asfasf@tut.nu', '2', '0', '2019-08-09', '/picture/user.png', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'70', 'Andrey', 'Krupin', '123', '$2a$12$TXh3wRUJ3rXmvzjcdwm4YeP3Nh3hiM0Wa4kwalCeCZJX4uySznj0.', 'male', '1970-01-01', 'kot@tut.by', '2', '0', '2019-08-13', '/jsp/picture/user.png', '1');
+'70', 'Andrey', 'Krupin', '123', '$2a$12$TXh3wRUJ3rXmvzjcdwm4YeP3Nh3hiM0Wa4kwalCeCZJX4uySznj0.', 'male', '1970-01-01', 'kot@tut.by', '2', '0', '2019-08-13', '/picture/user.png', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'71', 'Andre', '', 'superuser', '$2a$12$OVgf6XV1bZETbpOosOXjNuh1Em28JB9mHCuMzfUo6.XpbR2cq1HUy', 'female', '1970-01-01', 'nia@tut.by', '3', '4', '2019-08-14', '/jsp/picture/superuser.jpg', '1');
+'71', 'Andre', '', 'superuser', '$2a$12$OVgf6XV1bZETbpOosOXjNuh1Em28JB9mHCuMzfUo6.XpbR2cq1HUy', 'female', '1970-01-01', 'nia@tut.by', '3', '4', '2019-08-14', '/picture/superuser.jpg', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'72', '', '', 'bendercot', '$2a$12$v3RtJd.JNFdMhQS2r.pQ1enUAZHKGoUowWpAg1kIDSj2mTumtmPg6', 'male', '1970-01-01', 'ber-linn@tut.by', '2', '9', '2019-08-14', '/jsp/picture/bendercot.jpg', '1');
+'72', '', '', 'bendercot', '$2a$12$v3RtJd.JNFdMhQS2r.pQ1enUAZHKGoUowWpAg1kIDSj2mTumtmPg6', 'male', '1970-01-01', 'ber-linn@tut.by', '2', '9', '2019-08-14', '/picture/bendercot.jpg', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'73', '', '', 'KOLOBOK', '$2a$12$6VB5UybppUqZtbTlDT5aXOzev7iSiQgC/2LhsPYiUSXWguMu0Xupq', 'male', '1970-01-01', 'kot@tut.by', '2', '7', '2019-08-14', '/jsp/picture/KOLOBOK.jpg', '0');
+'73', '', '', 'KOLOBOK', '$2a$12$6VB5UybppUqZtbTlDT5aXOzev7iSiQgC/2LhsPYiUSXWguMu0Xupq', 'male', '1970-01-01', 'kot@tut.by', '2', '7', '2019-08-14', '/picture/KOLOBOK.jpg', '0');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'74', 'Татьяна', '', 'Tatsiana', '$2a$12$BM3CuQ25OHybNYv06lGbG.myDh2ZvDk/4RC2IcmvmO0bvSQJoMkKm', 'female', '1970-01-01', 'niaur@lz.vk', '2', '11', '2019-08-16', '/jsp/picture/Tatsiana.jpg', '1');
+'74', 'Татьяна', '', 'Tatsiana', '$2a$12$BM3CuQ25OHybNYv06lGbG.myDh2ZvDk/4RC2IcmvmO0bvSQJoMkKm', 'female', '1970-01-01', 'niaur@lz.vk', '2', '11', '2019-08-16', '/picture/Tatsiana.jpg', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'75', '', '', 'niaura123', '$2a$12$pAh4ZIM6d.ADONJo0T9tAueA3e6jjd8jRQHyoWwrwUIdEutzV.S.e', 'male', '1970-01-01', 'ber-linn@tut.by', '2', '0', '2019-08-16', '/jsp/picture/user.png', '1');
+'75', '', '', 'niaura123', '$2a$12$pAh4ZIM6d.ADONJo0T9tAueA3e6jjd8jRQHyoWwrwUIdEutzV.S.e', 'male', '1970-01-01', 'ber-linn@tut.by', '2', '0', '2019-08-16', '/picture/user.png', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'76', '', '', 'niaurasss', '$2a$12$mdLKsaYAUqh9FJpNPV4dXe.SN.DBu82NI/b7fpbdRNEfSmbZo0YLW', 'male', '1970-01-01', 'skacwt@gmail.com', '2', '6', '2019-08-16', '/jsp/picture/user.png', '1');
+'76', '', '', 'niaurasss', '$2a$12$mdLKsaYAUqh9FJpNPV4dXe.SN.DBu82NI/b7fpbdRNEfSmbZo0YLW', 'male', '1970-01-01', 'skacwt@gmail.com', '2', '6', '2019-08-16', '/picture/user.png', '1');
 insert into users (id, name, surname, login, password, sex, birthday, email, status, money, registrdate, avatar, active) values(
-'77', '', '', 'SLON123', '$2a$12$zldIhc1fSFfknOlv6IsNteMgNQwJOJn5f12ofo8X7MrQ84RIOeZ0G', 'male', '1970-01-01', 'ber-linn@tut.by', '2', '0', '2019-08-16', '/jsp/picture/user.png', '1');
+'77', '', '', 'SLON123', '$2a$12$zldIhc1fSFfknOlv6IsNteMgNQwJOJn5f12ofo8X7MrQ84RIOeZ0G', 'male', '1970-01-01', 'ber-linn@tut.by', '2', '0', '2019-08-16', '/picture/user.png', '1');
 
 
 -- add content to programs_name

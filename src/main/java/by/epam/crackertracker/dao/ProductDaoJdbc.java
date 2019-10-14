@@ -95,6 +95,7 @@ public class ProductDaoJdbc implements ProductDao {
         try {
             template.update(INSERT_PRODUCT, product.getName(),product.getCalories(), product.getProteins(),
                     product.getFats(),product.getCarbs() );
+
             LOGGER.warn("product" + product.getName() + " inserted");
         } catch (Exception e) {
             LOGGER.error(e);
@@ -145,7 +146,7 @@ public class ProductDaoJdbc implements ProductDao {
     }
 
     public List<Product> searchProducts(String [] param) throws TrackerDBException {
-        List<Product> tempList;
+        List<Product> tempList = new ArrayList<>();
         List<Product> list = new ArrayList<>();
         try{
             for(int i = 0; i < param.length; i++){

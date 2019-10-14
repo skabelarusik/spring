@@ -37,7 +37,7 @@
 
             <!-- avatar -->
             <div class="icon">
-                <img src="${user.avatar}" class="icon1"/>
+                <img src="${user.path}" class="icon1"/>
             </div>
             <h5><@spring.message "label.avatar"/></h5>
             <div class="uploadFile">
@@ -175,7 +175,7 @@
             <br/>
             <h4><@spring.message "label.oursponsors" /></h4>
             <div class="icon">
-                <img src="/views/picture/oracle.png" class="icon1">
+                <img src="/picture/oracle.png" class="icon1">
             </div>
             <br/>
             <div class="icon">
@@ -183,7 +183,7 @@
             </div>
             <br/>
             <div class="icon">
-                <img src="picture/tomcat.png" class="icon1">
+                <img src="/picture/tomcat.png" class="icon1">
             </div>
         </div>
     <footer>
