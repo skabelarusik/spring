@@ -53,6 +53,17 @@ public class ReviewController {
         return PageConstant.PATH_RESULT_REVIEW;
     }
 
+    @PostMapping(PageConstant.URI_DELETE_BY_ID)
+    public String delete_by_id(@RequestParam String id, @RequestParam String currentPage, Model model){
+        try {
+            service.deleteById(id, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
+            model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_CONGRAT);
+        } catch (TrackerServiceException e) {
+            model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_ERROR_REGIST);
+        }
+        return currentPage;
+    }
+
     @PostMapping(PageConstant.URI_SEND_REVIEW)
     public String send(@SessionAttribute String login, @RequestParam String text, Model model){
         try {

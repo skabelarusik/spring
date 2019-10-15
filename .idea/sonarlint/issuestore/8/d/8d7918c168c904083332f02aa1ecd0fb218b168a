@@ -1,8 +1,8 @@
 
-zsquid:S1192†"]Define a constant instead of duplicating this literal "Wrong service update product" 3 times.(ÏÆÓ»ıÿÿÿÿ
-zsquid:UselessImportCheck"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8çØÚÚ-
+osquid:S3776›"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(†ØË“úÿÿÿÿ
+|squid:S1192“"]Define a constant instead of duplicating this literal "Wrong service delete product" 3 times.(„¶½‹8ß¿—ØÛ-
 isquid:S3776e"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ã¨—ˆ
-osquid:S3776œ"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(†ØË“úÿÿÿÿ
-|squid:S1192”"]Define a constant instead of duplicating this literal "Wrong service delete product" 3 times.(„¶½‹8ß¿—ØÛ-
-_squid:HiddenFieldCheck‚"7Rename "dao" which hides the field declared at line 28.(ËñÁ†ûÿÿÿÿ
-wsquid:S1192»"ZDefine a constant instead of duplicating this literal "Wrong service add product" 3 times.(¯„Çõüÿÿÿÿ
+zsquid:S1192…"]Define a constant instead of duplicating this literal "Wrong service update product" 3 times.(ÏÆÓ»ıÿÿÿÿ
+wsquid:S1192º"ZDefine a constant instead of duplicating this literal "Wrong service add product" 3 times.(¯„Çõüÿÿÿÿ
+zsquid:UselessImportCheck"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8çØÚÚ-
+qsquid:UselessImportCheck	"FRemove this unused import 'by.epam.crackertracker.dao.ProductDaoJdbc'.(’¢Ÿª8µ¾õıÜ-

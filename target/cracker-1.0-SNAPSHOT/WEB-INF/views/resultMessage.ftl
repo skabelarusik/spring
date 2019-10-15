@@ -35,9 +35,17 @@
                 <td width="80px">${message.sender}</td>
                 <td width="80px">${message.recipient}</td>
                 <td width="60px">${message.localDate}</td>
+                <td class="prod3" width="60px">
+                    <form class="changePageForm" method="post" action="/message/delete">
+                       <input type="hidden" name="id" value="${message.id}">
+                       <input type="hidden" name="sender" value="${message.sender}">
+                       <input type="submit"  value="delete" class="uploadButtonTable"/>
+                   </form>
+                </td>
              </tr>
         </#list>
         </table>
+            ${wrongData}
     </div>
         <br/>
     <h4 class="h3login"><a class="registration" href='/back'>

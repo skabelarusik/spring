@@ -1,5 +1,5 @@
 
-rsquid:UselessImportCheck"BRemove this unused import 'by.epam.crackertracker.entity.Product'.(Ù¹øÙøÿÿÿÿ8È¤ÌÑÜ-
 usquid:UselessImportCheck	"ERemove this unused import 'by.epam.crackertracker.util.PageSelector'.(ðÁ¦¬þÿÿÿÿ8§µÆÛÚ-
+rsquid:UselessImportCheck"BRemove this unused import 'by.epam.crackertracker.entity.Product'.(Ù¹øÙøÿÿÿÿ8È¤ÌÑÜ-
 €squid:UselessImportCheck"PRemove this unused import 'by.epam.crackertracker.exception.TrackerDBException'.(žŸÐ†ÿÿÿÿÿ8¸×ÌÝÚ-
 osquid:UselessImportCheck"?Remove this unused import 'by.epam.crackertracker.entity.Role'.(ÉÍ¢€úÿÿÿÿ8§µÆÛÚ-

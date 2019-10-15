@@ -24,7 +24,7 @@
                 <h4><@spring.message "label.sendmessage"/></h4>
             <p>
             <label for="loginField" class="formText3"><@spring.message "label.login"/> </label>
-            <input type="text" name="login" maxlength="16" autofocus id="loginField" pattern="^[(\w)-]{3,16}"
+            <input type="text" name="recipient" maxlength="16" autofocus id="loginField" pattern="^[(\w)-]{3,16}"
                    data-required="true" class="formInput4" value="${recipient}" placeholder="<@spring.message "input.login"/>">
             </p><br/>
             <p>
@@ -40,7 +40,7 @@
             </p>
             <br/>
             <input type="submit" value="<@spring.message "button.send" />" class="login-button"/>
-                ${wrongDataMessage}
+                ${wrongData}
             </form>
         </div>
         </body>

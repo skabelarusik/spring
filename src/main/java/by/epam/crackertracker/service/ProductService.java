@@ -127,7 +127,6 @@ public class ProductService {
             product.setFats(fatsPr);
             product.setIdProducts(Integer.parseInt(id));
             product.setProteins(proteinsPr);
-            ProductDaoJdbc dao = new ProductDaoJdbc();
             try {
                 dao.updateProduct(product);
             } catch (TrackerDBException e) {

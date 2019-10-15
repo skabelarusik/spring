@@ -16,8 +16,8 @@ public class MessageMapper implements RowMapper<Message> {
     public Message mapRow(ResultSet resultSet, int i) throws SQLException {
         Message message = new Message();
         message.setId(resultSet.getInt(1));
-        message.setSender(resultSet.getString(3));
-        message.setRecipient(resultSet.getString(2));
+        message.setSender(resultSet.getString(2));
+        message.setRecipient(resultSet.getString(3));
         message.setTopik(resultSet.getString(4));
         message.setText(resultSet.getString(5));
         message.setLocalDate(resultSet.getDate(6).toLocalDate());

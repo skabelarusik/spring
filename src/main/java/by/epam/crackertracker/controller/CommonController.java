@@ -108,6 +108,11 @@ public class CommonController {
             return startPage;
     }
 
+    @GetMapping("/test")
+    public String test(){
+        return "test";
+    }
+
 
 
 }

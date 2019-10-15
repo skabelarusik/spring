@@ -50,6 +50,9 @@ public class ParameterConstant {
     public static final String PRODUCT_FATS = "fats";
     public static final String PRODUCT_PROTEINS = "proteins";
 
+    //MESSAGES PARAMETRES
+    public static final String MESSAGES = "messages";
+
     public static final String START_PAGE = "startPage";
 
 

@@ -1,5 +1,5 @@
 <#import "/spring.ftl" as spring/>
-html>
+<html>
 <body>
 <div class="calcBlock2">
     <form class="adminBlock" method="post" action="/bucket/add">
@@ -25,7 +25,6 @@ html>
     </form>
     <form id="calculator" class="adminBlock" action="/bucket/calculate" method="post">
         <p>
-         <!--
             <c:if test="${listProductsBucket}">
                 <table border="1" width="220" class="userTable" cellspacing="0" cellpadding="4">
                     <td width="80" class="prod3">PRODUCT</td>
@@ -49,7 +48,6 @@ html>
                     </tr>
                 </table>
             </c:forEach>
-            -->
             <br/>
         <form class="changePageForm" method="post" action="/clear_bucket">
             <input type="hidden" name="command" value="calculate_calories_bucket">

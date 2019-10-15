@@ -11,8 +11,6 @@ public class PageConstant {
 
     private PageConstant(){}
 
-
-
     public static final String PATH_PAGE_LOGIN = "login";
     public static final String PATH_PAGE_MAIN_USER = "user";
     public static final String PATH_PAGE_MAIN_ADMIN = "admin";
@@ -34,7 +32,7 @@ public class PageConstant {
     public static final String PATH_LIST_USER = "listUser";
     public static final String PATH_PAGE_REGISTER = "register";
     public static final String PATH_PAGE_ERROR = "error";
-    public static final String DEFAULT_AVATAR_PATH = "/jsp/picture/user.png";
+    public static final String DEFAULT_AVATAR_PATH = "/picture/user.png";
     public static final String PATH_PAGE_SEND_REVIEW = "send_review";
     public static final String PATH_PAGE_CALCULATOR = "/jsp/calculator.jsp";
     public static final String PATH_PAGE_MESSAGE = "resultMessage";
@@ -64,6 +62,9 @@ public class PageConstant {
     public static final String URI_SHOW = "/show";
     public static final String URI_SHOW_DEL = "/show_del";
     public static final String URI_SEND_REVIEW = "/send";
+    public static final String URI_DELETE_BY_ID = "/delete_by_id";
+    public static final String URI_SEND_MESS = "/send_mes";
+
 
     public static final String URI_LOGIN = "/login";
     public static final String LOGOUT = "/logout";
@@ -73,6 +74,8 @@ public class PageConstant {
     public static final String URI_BACK = "/back";
     public static final String URI_REQUEST = "/request";
     public static final String URI_ABOUT = "/about";
+    public static final String URI_INPUT_MESSAGE = "/input";
+    public static final String URI_OUTPUT_MESSAGE = "/output";
 
     public static final String PATH_MESSAGE = "/message";
     public static final String PATH_REVIEW = "/review";
@@ -82,6 +85,7 @@ public class PageConstant {
     public static final String URI_PRODUCT = "/product";
     public static final String CALCULATE = "/calculate";
     public static final String CALCULATE_CALORIES = "/calculate_calories";
+    public static final String PATH_BUCKET = "/bucket";
 
 
 

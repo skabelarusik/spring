@@ -65,16 +65,16 @@ public class ProductController {
     }
 
     @PostMapping("/update")
-    public String updateProduct(@RequestParam Map<String, String> allRequestParam, Model model){
+    public String updateProduct(@RequestParam String idproduct, @RequestParam String nameProduct, @RequestParam String caloriesProduct,
+                                @RequestParam String proteinsProduct, @RequestParam String fatsProduct,
+                                @RequestParam String carbsProduct, @RequestParam String currentPage, Model model){
         try {
-            service.updateProduct(allRequestParam.get(ParameterConstant.PRODUCT_ID), allRequestParam.get(ParameterConstant.PARAM_NAME_PRODUCT),
-                    allRequestParam.get(ParameterConstant.PARAM_CALORIES_PRODUCT), allRequestParam.get(ParameterConstant.PARAM_FATS_PRODUCT),
-                    allRequestParam.get(ParameterConstant.PARAM_CARBS_PRODUCT), allRequestParam.get(ParameterConstant.PARAM_PROTEINS_PRODUCT));
+            service.updateProduct(idproduct, nameProduct,caloriesProduct, fatsProduct, carbsProduct, proteinsProduct);
             model.addAttribute(ParameterConstant.MESSAGE_UPDATE_PRODUCT, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.MESSAGE_UPDATE_PRODUCT, ParameterConstant.MESSAGE_ERROR_REGIST);
         }
-        return  allRequestParam.get(ParameterConstant.ATTRIBUTE_CURRENT_PAGE);
+        return  currentPage;
     }
 
     @PostMapping("/delete")

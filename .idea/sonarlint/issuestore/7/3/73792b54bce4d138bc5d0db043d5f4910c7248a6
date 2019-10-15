@@ -1,3 +1,2 @@
 
-Isquid:S1481G"+Remove this unused "status" local variable.(³Éë“8ŒŸŠµÚ-
-{squid:S1192c"]Define a constant instead of duplicating this literal "Wrong service delete message" 4 times.(ùšµ8š±‰µÚ-
+{squid:S1192b"]Define a constant instead of duplicating this literal "Wrong service delete message" 4 times.(ùšµ8š±‰µÚ-

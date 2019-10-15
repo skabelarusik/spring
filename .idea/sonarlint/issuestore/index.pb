@@ -261,3 +261,5 @@ p
 @src/main/java/by/epam/crackertracker/validator/AgeValidator.java,d\b\db34348cd36ad2fc654e3b454263dfdd541a9d2e
 s
 Csrc/main/java/by/epam/crackertracker/service/CalculatorService.java,5\8\587e6fb61eaf1b49b4dc230eac9f3ea5136e1b6b
+u
+Esrc/main/java/by/epam/crackertracker/controller/BucketController.java,6\0\60f90d00ab9c06b747c29c230c3a902a18cf3a18

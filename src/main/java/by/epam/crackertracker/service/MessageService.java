@@ -68,7 +68,6 @@ public class MessageService {
     }
 
     public void sendMessage(String sender, String recipient, String topic, String text) throws TrackerServiceException {
-        boolean status = false;
         if(loginValidator.isValidate(recipient) && topic!= null && !topic.isEmpty() &&
             text!=null && !text.isEmpty() && text.length()<=MAX_SIZE_TEXT &&
             topic.length()<=MAX_SIZE_TOPIC){

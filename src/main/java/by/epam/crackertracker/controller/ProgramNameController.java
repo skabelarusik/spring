@@ -21,6 +21,7 @@ public class ProgramNameController {
     @GetMapping(PageConstant.URI_SELECT)
     public String select(Model model){
         try {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
             model.addAttribute(ParameterConstant.ATTRIBUTE_NAME_PROGRAM_NAME, service.selectAllProgramsName(1,1));
         } catch (TrackerServiceException e) {
             return PageConstant.PATH_PAGE_ERROR;
@@ -31,6 +32,7 @@ public class ProgramNameController {
     @GetMapping(PageConstant.URI_SELECT_DEL)
     public String selectDeleted(Model model){
         try {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_RESTORE_TYPE);
             model.addAttribute(ParameterConstant.ATTRIBUTE_NAME_PROGRAM_NAME, service.selectAllProgramsName(1,0));
         } catch (TrackerServiceException e) {
             return PageConstant.PATH_PAGE_ERROR;
@@ -41,6 +43,7 @@ public class ProgramNameController {
     @GetMapping(PageConstant.URI_SELECT_CURATOR)
     public String selectCurator(@SessionAttribute String login,  Model model){
         try {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
             model.addAttribute(ParameterConstant.ATTRIBUTE_NAME_PROGRAM_NAME, service.selectCuratorProgramsName(login,
                     ParameterConstant.STARTING_PAGE, ParameterConstant.SHOW));
         } catch (TrackerServiceException e) {
@@ -52,6 +55,7 @@ public class ProgramNameController {
     @GetMapping(PageConstant.URI_SELECT_CURATOR_DEL)
     public String selectDeletedCurator(@SessionAttribute String login, Model model){
         try{
+            model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_RESTORE_TYPE);
             model.addAttribute(ParameterConstant.ATTRIBUTE_NAME_PROGRAM_NAME, service.selectCuratorProgramsName(login,
                     ParameterConstant.STARTING_PAGE, ParameterConstant.SHOW_DELETED));
         } catch (TrackerServiceException e){

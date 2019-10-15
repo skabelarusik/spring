@@ -58,7 +58,7 @@
             <h4><@spring.message "label.message" /></h4>
             <h5><a href="/message/input"><@spring.message "label.input"/></a></h5>
             <h5><a href="/message/output"><@spring.message "label.output"/></a></h5>
-            <h5><a href="/message/send"><@spring.message "label.sendmessage"/> </a></h5>
+            <h5><a href="/message/send_mes"><@spring.message "label.sendmessage"/> </a></h5>
         </div>
     </div>
 
@@ -139,9 +139,8 @@
                         <h4 class="adminBlock"><@spring.message "label.reviewdeleted"/></h4>
                         <a href="/review/show_del"><h5 class="adminBlock">SelectAllReview</h5></a><br/>
                         <!-- delete review -->
-                        <form class="adminBlock" method="post" action="/review/delete">
+                        <form class="adminBlock" method="post" action="/review/delete_by_id">
                             <input type="hidden" name="currentPage" value="admin">
-                            <input type="hidden" name="command" value="delete_review">
                             <h4 class="adminBlock"><@spring.message "label.deletereview" /></h4>
                             <p><label for="idRev" class="formText2">Id</label>
                                 <input type="text" name = "id" id="idRev"  value="" placeholder="id" class="formInput2"/></p>

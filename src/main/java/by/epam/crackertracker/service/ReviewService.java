@@ -66,10 +66,8 @@ public class ReviewService {
     }
 
     public void sendReview(String sender, String text) throws TrackerServiceException {
-      //  if(loginValidator.isValidate(sender) && reviewLengthValidator.isValidate(text)){
-            if(true){
-
-                try {
+        if(loginValidator.isValidate(sender) && reviewLengthValidator.isValidate(text)){
+            try {
                 dao.insertReview(sender, text);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service send review",e);

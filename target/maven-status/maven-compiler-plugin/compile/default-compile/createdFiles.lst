@@ -47,6 +47,7 @@ by\epam\crackertracker\util\LanguageSelector.class
 by\epam\crackertracker\creator\ConnectionCreatorFactory.class
 by\epam\crackertracker\filter\StaticFilter.class
 by\epam\crackertracker\entity\TrackerSubscription.class
+by\epam\crackertracker\controller\BucketController.class
 by\epam\crackertracker\util\PageConstant.class
 by\epam\crackertracker\mapper\ReviewMapper.class
 by\epam\crackertracker\validator\ReviewLengthValidator.class

@@ -37,6 +37,7 @@ public class User implements Serializable {
         surname = null;
         role = Role.USER;
         active = 1;
+        path = "/picture/user.png";
     }
 
     public User(String login){

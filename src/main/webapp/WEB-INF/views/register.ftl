@@ -1,9 +1,11 @@
-﻿<!DOCTYPE html>
+﻿<#import "/spring.ftl" as spring/>
+<html>
     <head>
         <style type="text/css">
             <#include "/css/style.css">
         </style>
         <title>REGISTER</title>
+    <#setting classic_compatible=true>
     </head>
 
     <body>
@@ -15,7 +17,7 @@
     <div class="wrapperLogin">
         <div class="blockRegist">
             <h3 class="h3login">РЕГИСТРАЦИЯ </h3><br/><br/>
-            <form class="loginForm" method="post" action="/register">
+            <form class="loginForm" method="post" action="/user/registration">
                 <p>
                     <!-- login -->
                 <label for="loginField" class="formText">Введите логин * </label>
@@ -60,6 +62,7 @@
                 <br/><br/>
                 <br/><br/>
             </form>
+            ${wrongData}
         </div>
     </div>
     <!-- back to login -->

@@ -21,11 +21,12 @@ import java.util.List;
 @Repository
 public class MessageDaoJdbcImpl implements MessageDao {
 
-   private static final String SELECT_INPUT_MESSAGE = "SELECT m.idmessages, u.login, m.recipient, m.topik, m.text, m.date from messages m inner join users u\n" +
+   private static final String SELECT_INPUT_MESSAGE = "SELECT m.idmessages, u.login, u1.login, m.topik, m.text, m.date from messages m inner join users u\n" +
            "on m.sender = u.id inner join users u1 on m.recipient = u1.id where u1.login = ? and m.show_recipient=1 order by m.date desc limit ? offset ? ";
-   private static final String SELECT_OUTPUT_MESSAGE = "SELECT m.idmessages, u1.login, m.recepient, m.topik, m.text, m.date from messages m " +
+   private static final String SELECT_OUTPUT_MESSAGE = "SELECT m.idmessages, u.login, u1.login, m.topik, m.text, m.date from messages m " +
            "inner join users u on m.sender = u.id inner join users u1 on m.recipient = u1.id where u.login = ? and m.show_sender=1 order by m.date desc limit ? offset ?";
-   private static final String INSERT_MESSAGE = "insert into messages (sender, recipient, topik, text, date) values (?,?,?,?,?)";
+    private static final String INSERT_MESSAGE = "insert into messages (sender, recipient, topik, text, date) values ((select id from users " +
+            "where login = ?),(select id from users where login = ?),?,?,?::date)";
    public static final String DELETE_MESSAGE_INPUT = "UPDATE messages set show_recipient = 0 where idmessages = ?";
    public static final String DELETE_MESSAGE_OUTPUT = "UPDATE messages set show_sender = 0 where idmessages = ?";
 
@@ -60,11 +61,12 @@ public class MessageDaoJdbcImpl implements MessageDao {
         return list;
     }
 
+
     @Override
     public void addMessage(Message message) throws TrackerDBException {
         try{
             template.update(INSERT_MESSAGE, message.getSender(), message.getRecipient(), message.getTopik(),
-                    message.getText(), message.getLocalDate());
+                    message.getText(), message.getLocalDate().toString());
         } catch (Exception e) {
             LOGGER.error("Wrong insert message");
             throw new TrackerDBException("Wrong insert message from user : " + message.getSender());

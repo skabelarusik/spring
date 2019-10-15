@@ -160,30 +160,14 @@ public class UserDaoJdbcImpl implements UserDao {
 
     @Override
     public void insert(User user) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        boolean status;
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-                statement = connection.prepareStatement(INSERT_USER);
-                statement.setString(1, user.getName());
-                statement.setString(3, user.getLogin());
-                statement.setString(2, user.getSurname());
-                statement.setString(4, BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(12)));
-                statement.setString(5, user.getGender().toString().toLowerCase().trim());
-                statement.setString(6, user.getBirthDate().toString());
-                statement.setString(7, user.getEmail());
-                statement.setString(8, user.getRegistrDate().toString());
-                statement.setString(9, user.getPath());
-                statement.executeUpdate();
-                LOGGER.warn("User: " + user.getLogin()+ " registered");
-
-        } catch (SQLException | TrackerConnectionPoolException ex) {
+            jdbcTemplate.update(INSERT_USER, user.getName(), user.getSurname(), user.getLogin(),
+                    BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(12)), user.getGender().toString().toLowerCase().trim(),
+                    user.getBirthDate().toString(),  user.getEmail(),  user.getRegistrDate().toString(), user.getPath());
+                    LOGGER.warn("User: " + user.getLogin()+ " registered");
+        } catch (Exception ex) {
             LOGGER.error(ex);
             throw new TrackerDBException("Wrong insert user");
-        } finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
         }
     }
 

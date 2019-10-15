@@ -24,53 +24,71 @@ public class MessageController {
     @Autowired
     MessageService service;
 
-    @GetMapping("/input")
-    public String checkInputMessage(@SessionAttribute User user, HttpServletRequest request, Model model){
+    @GetMapping(PageConstant.URI_INPUT_MESSAGE)
+    public String checkInputMessage(@SessionAttribute User user, Model model){
         try {
-           model.addAttribute("messages", service.checkInputMessage(user.getLogin(), 1));
+           model.addAttribute(ParameterConstant.MESSAGES, service.checkInputMessage(user.getLogin(), 1));
         } catch (TrackerServiceException e) {
             e.printStackTrace();
         }
         return PageConstant.PATH_PAGE_MESSAGE;
     }
 
-    @GetMapping("/output")
-    public String checkOutputMessage(HttpServletRequest request, Model model){
-        User user = (User) request.getSession(true).getAttribute(ParameterConstant.USER);
-        try {
-            model.addAttribute("messages", service.checkOutputMessage(user.getLogin(), 1));
-        } catch (TrackerServiceException e) {
-            e.printStackTrace();
-        }
+    @GetMapping(PageConstant.URI_OUTPUT_MESSAGE)
+    public String checkOutputMessage(@SessionAttribute User user, Model model) throws TrackerServiceException {
+        model.addAttribute(ParameterConstant.MESSAGES, service.checkOutputMessage(user.getLogin(), 1));
         return PageConstant.PATH_PAGE_MESSAGE;
     }
 
-    @GetMapping("/send")
+    @GetMapping(PageConstant.URI_SEND_REVIEW)
     public String writeMessage(@RequestParam String recipient, Model model){
-        model.addAttribute("recipient", recipient);
+        model.addAttribute(ParameterConstant.PARAM_RECIPIENT, recipient);
         return PageConstant.PATH_SEND_MESSAGE;
     }
 
-    @PostMapping("/send_mes")
+    @PostMapping(PageConstant.URI_SEND_MESS)
     public String sendMessage(@RequestParam String recipient, Model model){
-        model.addAttribute("recipient", recipient);
+        model.addAttribute(ParameterConstant.PARAM_RECIPIENT, recipient);
         return PageConstant.PATH_SEND_MESSAGE;
     }
 
-    @PostMapping("/send")
-    public String sendMessage(HttpServletRequest request){
-        String sender = (String) request.getSession(true).getAttribute(ParameterConstant.LOGIN);
-        String recipient = request.getParameter(ParameterConstant.PARAM_LOGIN);
-        String topic = request.getParameter(ParameterConstant.PARAM_TOPIC);
-        String text = request.getParameter(ParameterConstant.TEXT);
-        try {
-            service.sendMessage(sender, recipient, topic, text);
-            request.setAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_CONGRAT);
-        } catch (TrackerServiceException e) {
-            request.setAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
-        }
-
+    @GetMapping(PageConstant.URI_SEND_MESS)
+    public String sendMess(){
         return PageConstant.PATH_SEND_MESSAGE;
+    }
+
+    @PostMapping(PageConstant.URI_SEND_REVIEW)
+    public String sendMessage(@SessionAttribute String login, @RequestParam String recipient, @RequestParam String topic,
+                              @RequestParam String text, Model model){
+        try {
+            service.sendMessage(login, recipient, topic, text);
+            model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_CONGRAT);
+        } catch (TrackerServiceException e) {
+            model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
+        }
+        return PageConstant.PATH_SEND_MESSAGE;
+    }
+
+    @PostMapping(PageConstant.URI_DELETE)
+    public String delete(@RequestParam String id, Model model, @SessionAttribute String login, @RequestParam String sender){
+        try {
+            String type;
+            if(login.equals(sender)){
+                type = ParameterConstant.OUTPUT_MESSAGE;
+            } else {
+                type = ParameterConstant.INPUT_MESSAGE;
+            }
+            service.deleteMessage(id, type);
+            model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_CONGRAT);
+            if(type.equals(ParameterConstant.INPUT_MESSAGE)){
+                model.addAttribute(ParameterConstant.MESSAGES, service.checkInputMessage(login, 1));
+            } else {
+                model.addAttribute(ParameterConstant.MESSAGES, service.checkOutputMessage(login, 1));
+            }
+        } catch (TrackerServiceException e){
+            model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_ERROR_REGIST);
+        }
+        return PageConstant.PATH_PAGE_MESSAGE;
     }
 
 

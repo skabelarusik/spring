@@ -1,8 +1,11 @@
 package by.epam.crackertracker.controller;
 
+import by.epam.crackertracker.entity.Advice;
+import by.epam.crackertracker.entity.Gender;
 import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.User;
 import by.epam.crackertracker.exception.TrackerServiceException;
+import by.epam.crackertracker.service.AdviceService;
 import by.epam.crackertracker.service.UserService;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.PageSelector;
@@ -24,7 +27,10 @@ public class UserController {
 
 
     @Autowired
-    public UserService userService;
+    private UserService userService;
+
+    @Autowired
+    private AdviceService adviceService;
 
     @GetMapping(PageConstant.URI_SELECT)
     public String selectAllUsers(@RequestParam Map<String,String> allRequestParams, ModelMap model) {
@@ -63,17 +69,14 @@ public class UserController {
     }
 
     @PostMapping(PageConstant.URI_UPDATE_USER)
-    public String updateUser(HttpServletRequest request) {
-        String name = request.getParameter(ParameterConstant.PARAM_NAME);
-        String surname = request.getParameter(ParameterConstant.PARAM_SURNAME);
-        String email = request.getParameter(ParameterConstant.EMAIL);
-        String birthday = request.getParameter(ParameterConstant.PARAM_BIRTHDAY);
-        String login = (String) request.getSession(true).getAttribute(ParameterConstant.LOGIN);
+    public String updateUser(@RequestParam String  username, @RequestParam String usersurname, @RequestParam String email,
+                             @RequestParam String birthday, Model model, @SessionAttribute String login) {
+
         try {
-            userService.updateDataUser(login, name, surname, email, birthday);
-            request.setAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_CONGRAT);
+            userService.updateDataUser(login, username, usersurname, email, birthday);
+            model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
-            request.setAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_ERROR_REGIST);
+            model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_ERROR_REGIST);
         }
         return PageConstant.PATH_PAGE_EDIT_USER;
     }
@@ -101,16 +104,15 @@ public class UserController {
     }
 
     @PostMapping(PageConstant.URI_UPDATE_USER_ROLE)
-    public String updateUserRole(HttpServletRequest request) {
-        String id = request.getParameter(ParameterConstant.PARAM_ID);
-        Role role = Role.valueOf(request.getParameter(ParameterConstant.ATTRIBUTE_ROLE).toUpperCase().trim());
+    public String updateUserRole(@RequestParam String id, @RequestParam String role, Model model, @SessionAttribute String startPage) {
+        Role paramRole = Role.valueOf(role.toUpperCase().trim());
         try {
-            userService.updateRole(id, role);
-            request.setAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.MESSAGE_CONGRAT);
+            userService.updateRole(id, paramRole);
+            model.addAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
-            request.setAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.WRONG_DATA);
+           model.addAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.WRONG_DATA);
         }
-        return PageSelector.selectHomePage((Role) request.getSession(true).getAttribute(ParameterConstant.ATTRIBUTE_ROLE));
+        return startPage;
     }
 
     @PostMapping(PageConstant.URI_LOGIN)
@@ -128,20 +130,41 @@ public class UserController {
             request.getSession().setAttribute(ParameterConstant.ATTRIBUTE_ROLE, user.getRole());
             request.getSession().setAttribute(ParameterConstant.LOGIN, user.getLogin());
             request.getSession().setAttribute(ParameterConstant.PARAM_BALANCE, user.getBalance());
+            request.getSession().setAttribute(ParameterConstant.PARAM_ADVICE, adviceService.selectRandomAdvice());
             page = PageSelector.selectHomePage(user.getRole());
         } catch (TrackerServiceException e) {
             request.setAttribute(ParameterConstant.MESAGE_WRONG_AUTH, "WRONG PASSWORD OR LOGIN");
             page = PageConstant.PATH_PAGE_MAIN_INDEX;
         }
-     //   request.getSession().setAttribute(ParameterConstant.ATTRIBUTE_CURRENT_PAGE, page);
         request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
         return page;
     }
 
     @PostMapping(PageConstant.URI_REGISTER)
-    public String registration(){
+    public String registration(@RequestParam String login, @RequestParam String password, @RequestParam String username,
+                               @RequestParam String usersurname, @RequestParam String email,
+                               @RequestParam String birthday, @RequestParam String gender, HttpServletRequest request){
+       String page =  PageConstant.PATH_PAGE_MAIN_USER;
+        try {
+            User user = userService.registerUser(login, password, username, usersurname, Gender.valueOf(gender.toUpperCase().trim()), email, birthday);
+            request.getSession(true).setAttribute(ParameterConstant.USER, user);
+            request.getSession().setAttribute(ParameterConstant.ATTRIBUTE_ROLE, Role.USER);
+            request.getSession().setAttribute(ParameterConstant.LOGIN, login);
+            request.getSession().setAttribute(ParameterConstant.PARAM_BALANCE, 0);
+            request.getSession().setAttribute(ParameterConstant.PARAM_ADVICE, adviceService.selectRandomAdvice());
+        } catch (TrackerServiceException e) {
+            page = PageConstant.PATH_PAGE_REGISTER;
+            request.setAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
+        }
+        request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
+        return page;
+    }
+
+    @GetMapping(PageConstant.URI_REGISTER)
+    public String registr(){
         return PageConstant.PATH_PAGE_REGISTER;
     }
+
 
     @GetMapping(PageConstant.URI_DEP)
     public String deposit(){
@@ -155,7 +178,7 @@ public class UserController {
             userService.deposit(sum, type, login, BigDecimal.valueOf(Double.parseDouble(balance)));
             model.addAttribute(ParameterConstant.MESSAGE_DEPOSIT, ParameterConstant.MESSAGE_CONGRAT);
             Double newSum = Double.parseDouble(sum) + Double.parseDouble(balance);
-            request.getSession().setAttribute(ParameterConstant.PARAM_BALANCE, newSum);
+            request.getSession(true).setAttribute(ParameterConstant.PARAM_BALANCE, newSum);
 
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.MESSAGE_DEPOSIT, ParameterConstant.MESSAGE_ERROR_REGIST);

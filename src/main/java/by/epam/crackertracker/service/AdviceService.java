@@ -34,14 +34,16 @@ public class AdviceService {
 
 
     public String selectRandomAdvice() throws TrackerServiceException {
-        String advice = null;
+        Advice advice = null;
+        String text;
         try {
-           dao.selectRandomAdvice();
+           advice = dao.selectRandomAdvice();
+           text = advice.getText();
         } catch (TrackerDBException e) {
             LOGGER.error("wrong service select random advice", e);
             throw new TrackerServiceException("Wrong service select random advice ", e);
         }
-        return advice;
+        return text;
     }
 
     public List<Advice> selectAllAdvices() {

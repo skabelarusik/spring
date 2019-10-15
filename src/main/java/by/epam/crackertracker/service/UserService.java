@@ -95,17 +95,16 @@ public class UserService {
         return user;
     }
 
-    public void registerUser(String login, String pass, String name, String surname, Gender gender, String email,
+    public User registerUser(String login, String pass, String name, String surname, Gender gender, String email,
                                String dateOfBirth) throws TrackerServiceException {
-        boolean status = false;
+        User user = null;
         if(login != null && !login.isEmpty() && pass != null && !pass.isEmpty() && gender != null && email != null &&
                 !email.isEmpty() && dateOfBirth != null && !dateOfBirth.isEmpty()){
             try {
                 if(loginValidator.isValidate(login) && passwordValidator.isValidate(pass) && emailValidator.isValidate(email) &&
                     birthdayValidator.isValidate(dateOfBirth) && nameSurnameValidator.isValidate(name) &&
                     nameSurnameValidator.isValidate(surname)){
-                UserDaoJdbcImpl dao = new UserDaoJdbcImpl();
-                User user = new User(login, pass);
+                user = new User(login, pass);
                 user.setName(name);
                 user.setSurname(surname);
                 user.setGender(gender);
@@ -113,13 +112,16 @@ public class UserService {
                 user.setRegistrDate(LocalDate.now());
                 user.setEmail(email);
                 user.setPath(PageConstant.DEFAULT_AVATAR_PATH);
-                dao.insert(user);
+                userDao.insert(user);
                 }
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service register user", e);
                 throw new TrackerServiceException("Wrong service register user", e);
             }
+        } else {
+            throw new TrackerServiceException("Wrong service register user");
         }
+        return user;
     }
 
     public List<User> selectAllUsers( Map<String,String> allRequestParams,  ModelMap model) throws TrackerServiceException {

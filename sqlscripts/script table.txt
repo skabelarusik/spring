@@ -72,8 +72,8 @@ CREATE TABLE messages (
   topik varchar(40) NOT NULL,
   text varchar(500) NOT NULL,
   date date NOT NULL,
-  show_recipient boolean NOT NULL DEFAULT '1',
-  show_sender boolean NOT NULL DEFAULT '1',
+  show_recipient integer NOT NULL DEFAULT '1',
+  show_sender integer NOT NULL DEFAULT '1',
   PRIMARY KEY (idmessages),
   FOREIGN KEY (recipient) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY (sender) REFERENCES users (id) ON UPDATE CASCADE ON DELETE CASCADE

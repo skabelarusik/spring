@@ -83,7 +83,7 @@ public class ProductDaoJdbc implements ProductDao {
     @Override
     public void deleteById(int id) throws TrackerDBException {
         try {
-            int result = template.queryForObject(DELETE_BY_ID, Integer.class, id);
+            template.update(DELETE_BY_ID, id);
         } catch (Exception e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong delete product");
@@ -95,7 +95,6 @@ public class ProductDaoJdbc implements ProductDao {
         try {
             template.update(INSERT_PRODUCT, product.getName(),product.getCalories(), product.getProteins(),
                     product.getFats(),product.getCarbs() );
-
             LOGGER.warn("product" + product.getName() + " inserted");
         } catch (Exception e) {
             LOGGER.error(e);

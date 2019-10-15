@@ -101,7 +101,6 @@ public class ProgramsNameService {
     public void insert(String login, String nameProg, String cost, String duration) throws TrackerServiceException {
         if(loginValidator.isValidate(login) && nameValidator.isValidate(nameProg) && costValidator.isValidate(cost) &&
             durationValidator.isValidate(duration)){
-            dao = new ProgramsNameDaoJdbc();
             BigDecimal costProg = BigDecimal.valueOf(Double.parseDouble(cost));
             int durationProg = Integer.parseInt(duration);
             ProgramsName programsName = new ProgramsName(nameProg, login, costProg, durationProg);

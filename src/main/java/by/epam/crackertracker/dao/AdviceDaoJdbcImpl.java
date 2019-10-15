@@ -22,7 +22,7 @@ import java.util.List;
 @Repository
 public class AdviceDaoJdbcImpl implements AdviceDao {
     private static final String SELECT_ALL = "SELECT idadvices, message from advices";
-    private static final String SELECT_ADVICE = "SELECT message from advices ORDER BY RANDOM() LIMIT 1";
+    private static final String SELECT_ADVICE = "SELECT idadvices, message from advices ORDER BY RANDOM() LIMIT 1";
     private static final String DELETE_BY_ID = "DELETE from advices where idadvices = ?";
     private static final String INSERT_ADVICE = "INSERT into advices (message) values (?)";
 
@@ -68,7 +68,7 @@ public class AdviceDaoJdbcImpl implements AdviceDao {
     public Advice selectRandomAdvice() throws TrackerDBException {
         Advice advice;
         try{
-            advice= template.queryForObject(SELECT_ADVICE, mapper);
+            advice=  template.queryForObject(SELECT_ADVICE, mapper);
         } catch (Exception e){
             LOGGER.warn("Wrong select random advice");
             throw new TrackerDBException("Wrong select random advice");

@@ -33,6 +33,13 @@
                 <td width=100px">${program.curator}</td>
                 <td width="80px">${program.cost}</td>
                 <td width="80px">${program.duration}</td>
+                <td class="prod3" width="60px">
+                    <form class="changePageForm" method="post" action="/program_name/delete">
+                       <input type="hidden" name="id" value="${message.id}">
+                       <input type="hidden" name="buttonName" value="${buttonName}">
+                       <input type="submit"  value="${buttonName}" class="uploadButtonTable"/>
+                   </form>
+                </td>
              </tr>
         </#list>
         </table>
