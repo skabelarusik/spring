@@ -74,14 +74,15 @@ public class UserService {
     private static final Logger LOGGER = Logger.getRootLogger();
     public static final int MAX_TABLE_USERS = 11;
 
+    public User getUser(String login){
+        User user = new User();
+        user.setLogin(login);
+        user.setPassword("123");
+        return user;
+    }
+
     public User checkUser(String loginValue, String passValue) throws TrackerServiceException {
         User user = null;
-//        user.setActive(1);
-//        user.setBalance(new BigDecimal(10));
-//        user.setLogin("Andrey");
-//        user.setName("And");
-//        user.setGender(Gender.MALE);
-//        user.setRole(Role.ADMIN);
 
         try{
             if(loginValidator.isValidate(loginValue) && validator1.isValidate(passValue)) {

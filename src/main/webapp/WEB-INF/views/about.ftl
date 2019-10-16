@@ -1,5 +1,5 @@
 ﻿<#import "/spring.ftl" as spring/>
-<!DOCTYPE html>
+<html>
     <head>
         <style type="text/css">
             <#include "/css/style.css">

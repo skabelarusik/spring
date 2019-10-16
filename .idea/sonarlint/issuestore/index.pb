@@ -263,3 +263,15 @@ s
 Csrc/main/java/by/epam/crackertracker/service/CalculatorService.java,5\8\587e6fb61eaf1b49b4dc230eac9f3ea5136e1b6b
 u
 Esrc/main/java/by/epam/crackertracker/controller/BucketController.java,6\0\60f90d00ab9c06b747c29c230c3a902a18cf3a18
+n
+>src/main/java/by/epam/crackertracker/validator/ValidatorI.java,e\5\e553641787a7742769bd909eb5fb4e1f59b1bf0f
+_
+/src/main/webapp/myresources/bootstrap/js/npm.js,1\4\14d8f9cb2c06403584290d5ec246e208f277adb9
+b
+2src/main/webapp/myresources/images/ic_logo_UUi.svg,c\8\c8b4fbbc0de81522a7c5c412803ff917aa0d2608
+[
++src/main/webapp/WEB-INF/views/css/style.css,c\6\c683c7ec34712cb1ede26fc46976c67e36e4f021
+t
+Dsrc/main/java/by/epam/crackertracker/config/SecurityInitializer.java,3\8\38746e5f04534a887b64c6d0145f3525c8f484a8
+o
+?src/main/java/by/epam/crackertracker/config/SecurityConfig.java,1\a\1ac7c202e9dbb4cc810f88b067946335a63df064

@@ -1,12 +1,12 @@
 
-asquid:S3752?">Add a "method" parameter to this "@RequestMapping" annotation.(»‰Âñıÿÿÿÿ8ØíÏßÚ-
-msquid:S00100g"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³æÄ«8ÒºÕÜ-
-jsquid:UselessImportCheck"?Remove this unused import 'by.epam.crackertracker.entity.User'.(şüà»8¬è†´Ú-
 \squid:S3752V">Add a "method" parameter to this "@RequestMapping" annotation.(ô¸èÉ8²Í¹ÑÛ-
-osquid:UselessImportCheck"?Remove this unused import 'by.epam.crackertracker.entity.Role'.(ÉÍ¢€úÿÿÿÿ8èÕ·ßÚ-
-\squid:S37529">Add a "method" parameter to this "@RequestMapping" annotation.(ù…ÿ²8Å™ĞßÚ-
-\squid:S3752E">Add a "method" parameter to this "@RequestMapping" annotation.(ÔÉé‹8Å™ĞßÚ-
-[squid:S3752K">Add a "method" parameter to this "@RequestMapping" annotation.(ÚØj8²Í¹ÑÛ-
+msquid:S00100g"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³æÄ«8ÒºÕÜ-
+rsquid:UselessImportCheck"BRemove this unused import 'by.epam.crackertracker.entity.Message'.(à¢¥¶ùÿÿÿÿ8Ëœ…´Ú-
 usquid:UselessImportCheck
 "ERemove this unused import 'by.epam.crackertracker.util.PageSelector'.(ğÁ¦¬şÿÿÿÿ8èÕ·ßÚ-
-rsquid:UselessImportCheck"BRemove this unused import 'by.epam.crackertracker.entity.Message'.(à¢¥¶ùÿÿÿÿ8Ëœ…´Ú-
+jsquid:UselessImportCheck"?Remove this unused import 'by.epam.crackertracker.entity.User'.(şüà»8¬è†´Ú-
+asquid:S3752?">Add a "method" parameter to this "@RequestMapping" annotation.(»‰Âñıÿÿÿÿ8ØíÏßÚ-
+\squid:S37529">Add a "method" parameter to this "@RequestMapping" annotation.(ù…ÿ²8Å™ĞßÚ-
+[squid:S3752K">Add a "method" parameter to this "@RequestMapping" annotation.(ÚØj8²Í¹ÑÛ-
+osquid:UselessImportCheck"?Remove this unused import 'by.epam.crackertracker.entity.Role'.(ÉÍ¢€úÿÿÿÿ8èÕ·ßÚ-
+\squid:S3752E">Add a "method" parameter to this "@RequestMapping" annotation.(ÔÉé‹8Å™ĞßÚ-

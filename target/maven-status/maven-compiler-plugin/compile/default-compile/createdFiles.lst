@@ -32,7 +32,9 @@ by\epam\crackertracker\dao\AdviceDao.class
 by\epam\crackertracker\validator\GenderValidator.class
 by\epam\crackertracker\util\RouteType.class
 by\epam\crackertracker\dao\MessageDaoJdbcImpl.class
+by\epam\crackertracker\config\SecurityInitializer.class
 by\epam\crackertracker\validator\MessageValidator.class
+by\epam\crackertracker\config\SecurityConfig.class
 by\epam\crackertracker\validator\DoubleValidator.class
 by\epam\crackertracker\dao\TrackerSubscriptionDaoJdbcImpl.class
 by\epam\crackertracker\mapper\SubscriptionMapper.class

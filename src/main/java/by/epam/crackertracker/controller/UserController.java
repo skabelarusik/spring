@@ -120,8 +120,8 @@ public class UserController {
         User user = null;
         String page = null;
         try{
-            user = userService.checkUser(request.getParameter(ParameterConstant.PARAM_LOGIN),
-                    request.getParameter(ParameterConstant.PARAM_PASSWORD));
+            user = userService.checkUser(request.getParameter(ParameterConstant.LOGIN),
+                    request.getParameter(ParameterConstant.PASSWORD));
             if(user.getActive() == 0){
                 request.setAttribute(ParameterConstant.MESAGE_WRONG_AUTH, "YOU WAS BANNED");
                 return PageConstant.PATH_PAGE_MAIN_INDEX;

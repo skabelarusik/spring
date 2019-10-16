@@ -73,6 +73,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/AuthProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityConfig.java">
           <value>
             <set />
@@ -239,6 +244,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/entity/Advice.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/entity/Role.java">
           <value>
             <set />
           </value>
@@ -979,6 +989,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../spring-framework-21-master/spring-framework-21-master/src/main/webapp/WEB-INF/web.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../spring-security-example-master/spring-security-example-master/pom.xml">
           <value>
             <set />
           </value>

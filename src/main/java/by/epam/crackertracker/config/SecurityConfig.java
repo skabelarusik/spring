@@ -1,98 +1,58 @@
 package by.epam.crackertracker.config;
 
-import by.epam.crackertracker.dao.UserDaoJdbcImpl;
-import by.epam.crackertracker.entity.User;
-import by.epam.crackertracker.service.UserDetailsServiceImpl;
-import by.epam.crackertracker.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+
+import java.security.AuthProvider;
+import java.util.*;
+import java.util.ArrayList;
 
 @EnableWebSecurity
 @Configuration
-@ComponentScan("by.epam.crackertracker")
-@EnableGlobalMethodSecurity(securedEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Bean
+    @Override
+    protected UserDetailsService userDetailsService() {
 
-    @Autowired
-    private UserDetailsServiceImpl userDetailsService;
+        List<UserDetails> users = new ArrayList<>();
+        users.add(User.withDefaultPasswordEncoder().username("Andrey").password("Ferdinand2").roles("USER").build());
 
-    @Autowired
-    public void registerGlobalAuthentication(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .userDetailsService(userDetailsService)
-                ;
+        return new InMemoryUserDetailsManager(users);
     }
 
     @Override
     public void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .authorizeRequests().antMatchers("/","/about", "/review/show", "/user/registration", "/lang", "/user/login").permitAll()
+              //  .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+              //  .and()
+                .authorizeRequests().antMatchers("/","/about", "/review/show", "/user/registration", "/lang", "/user/login", "/test").permitAll()
                 .anyRequest().authenticated()
                 .and();
 
-        httpSecurity.formLogin().loginPage("/login").loginProcessingUrl("/j_spring_security_check").failureUrl("/login?error").usernameParameter("j_username")
-                .passwordParameter("j_password").permitAll();
+        httpSecurity.formLogin().loginPage("/login")
+               // .loginProcessingUrl("/j_spring_security_check").failureUrl("/login?error").usernameParameter("j_login")
+               // .passwordParameter("j_password")
+                .permitAll();
 
-        httpSecurity.logout().logoutUrl("/logout").logoutSuccessUrl("/login?logout").invalidateHttpSession(true);
+        httpSecurity.logout()
+                // .logoutUrl("/logout").logoutSuccessUrl("/login?logout").invalidateHttpSession(true)
+        .permitAll();
 
     }
-/*
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new PasswordEncoder() {
-            @Override
-            public String encode(CharSequence charSequence) {
-                return charSequence.toString();
-            }
 
-            @Override
-            public boolean matches(CharSequence charSequence, String s) {
-                return charSequence.toString().equals(s);
-            }
-        };
-    }
-
- */
-
-
-/*
-    public Authentication authenticate(Authentication authentication) throws AuthenticationException
-    {
-        String username = authentication.getName();
-        String password = (String) authentication.getCredentials();
-
-        User user = (User) userService.loadUserByUsername(username);
-
-        if(user != null && (user.getUsername().equals(username) || user.getName().equals(username)))
-        {
-            if(!passwordEncoder.matches(password, user.getPassword()))
-            {
-                throw new BadCredentialsException("Wrong password");
-            }
-
-            Collection<? extends GrantedAuthority> authorities = user.getAuthorities();
-
-            return new UsernamePasswordAuthenticationToken(user, password, authorities);
-        }
-        else
-            throw new BadCredentialsException("Username not found");
-    }
-
- */
 }

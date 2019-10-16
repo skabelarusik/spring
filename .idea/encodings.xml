@@ -1,9 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="NO_ENCODING">
+  <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/exception/Custom.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityConfig.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityInitializer.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/NameSurnameValidator.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/by/epam/crackertracker/validator/ProductNameValidator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/css/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/bootstrap" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-accordion.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-accordion.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-alerts.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-alerts.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-all.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-all.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-animated-image-panel.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-animated-image-panel.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-autocomplete.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-autocomplete.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-breadcrumbs.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-breadcrumbs.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-buttons.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-buttons.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-carousel.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-carousel.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-core.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-core.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-datepicker-2.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-datepicker-2.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-datepicker.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-datepicker.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-file-uploader.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-file-uploader.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-form-elements.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-form-elements.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-image-text.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-image-text.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-items-list.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-items-list.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-labels.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-labels.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-loaders.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-loaders.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-login-panel.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-login-panel.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-modal.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-modal.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-multiswitch.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-multiswitch.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-pagination.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-pagination.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-panels.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-panels.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-popovers.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-popovers.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-profile-menu.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-profile-menu.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-profile.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-profile.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-progress-bars.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-progress-bars.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-rating.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-rating.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-search.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-search.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-show-text.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-show-text.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-sliders.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-sliders.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-switch.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-switch.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-tables.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-tables.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-tabs.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-tabs.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-tagit.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-tagit.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-timeline.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-timeline.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-timepicker.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-timepicker.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-tooltips.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/css/uui-tooltips.min.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/fonts" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/images" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/jquery-ui" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/less" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/slick" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/tinymce" charset="windows-1251" />
   </component>
 </project>
