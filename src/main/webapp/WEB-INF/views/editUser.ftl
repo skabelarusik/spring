@@ -36,6 +36,10 @@
                 <input type="date" class="formInput" name="birthday" min="1920-01-01" value="${user.birthday}" id="birthdayField"/>
                 <br/><br/>
             </p>
+<h1>TEST</h1>
+${test}
+
+<h1>TEST</h1>
             ${wrongData}
             <input type="submit" value="update" class="login-button"/>
             <br/><br/>

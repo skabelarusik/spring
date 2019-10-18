@@ -1,12 +1,17 @@
 
-\squid:S3752V">Add a "method" parameter to this "@RequestMapping" annotation.(ô¸èÉ8²Í¹ÑÛ-
-msquid:S00100g"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³æÄ«8ÒºÕÜ-
-rsquid:UselessImportCheck"BRemove this unused import 'by.epam.crackertracker.entity.Message'.(à¢¥¶ùÿÿÿÿ8Ëœ…´Ú-
+\squid:S3752V">Add a "method" parameter to this "@RequestMapping" annotation.(îæŠÔ8¡ÙÅğİ-
+\squid:S3752J">Add a "method" parameter to this "@RequestMapping" annotation.(ÔÉé‹8¡ÙÅğİ-
+[squid:S3752P">Add a "method" parameter to this "@RequestMapping" annotation.(ÚØj8¡ÙÅğİ-
 usquid:UselessImportCheck
-"ERemove this unused import 'by.epam.crackertracker.util.PageSelector'.(ğÁ¦¬şÿÿÿÿ8èÕ·ßÚ-
-jsquid:UselessImportCheck"?Remove this unused import 'by.epam.crackertracker.entity.User'.(şüà»8¬è†´Ú-
-asquid:S3752?">Add a "method" parameter to this "@RequestMapping" annotation.(»‰Âñıÿÿÿÿ8ØíÏßÚ-
-\squid:S37529">Add a "method" parameter to this "@RequestMapping" annotation.(ù…ÿ²8Å™ĞßÚ-
-[squid:S3752K">Add a "method" parameter to this "@RequestMapping" annotation.(ÚØj8²Í¹ÑÛ-
-osquid:UselessImportCheck"?Remove this unused import 'by.epam.crackertracker.entity.Role'.(ÉÍ¢€úÿÿÿÿ8èÕ·ßÚ-
-\squid:S3752E">Add a "method" parameter to this "@RequestMapping" annotation.(ÔÉé‹8Å™ĞßÚ-
+"ERemove this unused import 'by.epam.crackertracker.util.PageSelector'.(ğÁ¦¬şÿÿÿÿ8¡ÙÅğİ-
+msquid:S00100q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³æÄ«8¡ÙÅğİ-
+\squid:S3752[">Add a "method" parameter to this "@RequestMapping" annotation.(ô¸èÉ8¡ÙÅğİ-
+osquid:UselessImportCheck"?Remove this unused import 'by.epam.crackertracker.entity.Role'.(ÉÍ¢€úÿÿÿÿ8¡ÙÅğİ-
+asquid:S3752D">Add a "method" parameter to this "@RequestMapping" annotation.(»‰Âñıÿÿÿÿ8¡ÙÅğİ-
+dsquid:S1192]"FDefine a constant instead of duplicating this literal "login" 3 times.(Íı‡Ç8ÖÖ‹úİ-
+\squid:S3752>">Add a "method" parameter to this "@RequestMapping" annotation.(ù…ÿ²8¡ÙÅğİ-
+zsquid:UselessImportCheck"ORemove this unused import 'org.springframework.security.core.userdetails.User'.(–Ä€8¡ÙÅğİ-
+asquid:S3752z">Add a "method" parameter to this "@RequestMapping" annotation.(³•éÚüÿÿÿÿ8ÖÖ‹úİ-
+\squid:S3752'">Add a "method" parameter to this "@RequestMapping" annotation.(ëãûæ8¡ÙÅğİ-
+rsquid:UselessImportCheck"BRemove this unused import 'by.epam.crackertracker.entity.Message'.(à¢¥¶ùÿÿÿÿ8¡ÙÅğİ-
+asquid:S3752`">Add a "method" parameter to this "@RequestMapping" annotation.(»úŒùÿÿÿÿ8¡ÙÅğİ-

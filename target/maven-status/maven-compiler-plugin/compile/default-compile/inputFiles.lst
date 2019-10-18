@@ -24,6 +24,7 @@ C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\b
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\AdviceLengthValidator.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\entity\Review.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\ProductNameValidator.java
+C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\config\MyUserDetailsService.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\AdviceDaoJdbcImpl.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\BucketDaoJdbcImpl.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\filter\EncodingFilter.java
@@ -34,7 +35,6 @@ C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\b
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\AdviceDao.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\pool\ConnectionPool.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\service\ProgramService.java
-C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\service\UserDetailsServiceImpl.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\RoleValidator.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\TypeSortedValidator.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\exception\TrackerConnectionPoolException.java
@@ -47,6 +47,7 @@ C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\b
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\service\AdviceService.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\entity\ProgramsName.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\mapper\ProgramNameMapper.java
+C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\config\UserPrincipal.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\util\ParameterConstant.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\filter\XssFilter.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\service\BucketService.java

@@ -1,5 +1,6 @@
 package by.epam.crackertracker.controller;
 
+import by.epam.crackertracker.config.UserPrincipal;
 import by.epam.crackertracker.entity.Advice;
 import by.epam.crackertracker.entity.Gender;
 import by.epam.crackertracker.entity.Role;
@@ -11,6 +12,8 @@ import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.PageSelector;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -82,7 +85,9 @@ public class UserController {
     }
 
     @GetMapping(PageConstant.URI_UPDATE_USER)
-    public String moveUpdateUser() {
+    public String moveUpdateUser(@AuthenticationPrincipal UserPrincipal user, Model model) {
+        model.addAttribute("test", user.getRole());
+        model.addAttribute("test2", "TEST2");
         return PageConstant.PATH_PAGE_EDIT_USER;
     }
 
@@ -115,12 +120,13 @@ public class UserController {
         return startPage;
     }
 
-    @PostMapping(PageConstant.URI_LOGIN)
-    public String loginUser(HttpServletRequest request) throws TrackerServiceException {
+
+    @RequestMapping(PageConstant.URI_LOGIN)
+    public String loginUserP(HttpServletRequest request) throws TrackerServiceException {
         User user = null;
         String page = null;
         try{
-            user = userService.checkUser(request.getParameter(ParameterConstant.LOGIN),
+            user = userService.checkUser(request.getParameter("username"),
                     request.getParameter(ParameterConstant.PASSWORD));
             if(user.getActive() == 0){
                 request.setAttribute(ParameterConstant.MESAGE_WRONG_AUTH, "YOU WAS BANNED");
@@ -139,6 +145,7 @@ public class UserController {
         request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
         return page;
     }
+
 
     @PostMapping(PageConstant.URI_REGISTER)
     public String registration(@RequestParam String login, @RequestParam String password, @RequestParam String username,
@@ -190,6 +197,13 @@ public class UserController {
     public String request(Model model){
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectAllAdmins());
         return PageConstant.PATH_RESULT_USER;
+    }
+
+    @RequestMapping("/main")
+    public String main(@AuthenticationPrincipal UserPrincipal user, Model model) {
+        model.addAttribute("login", "TRTRTR");
+        model.addAttribute("test2", "TEST2");
+        return "admin";
     }
 
 }

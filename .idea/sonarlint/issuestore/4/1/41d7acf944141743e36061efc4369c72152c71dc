@@ -1,0 +1,5 @@
+
+usquid:UselessImportCheck
+"ERemove this unused import 'org.springframework.stereotype.Component'.(Þ÷Ñ¸ÿÿÿÿÿ8ƒÙƒùÝ-
+rsquid:UselessImportCheck"GRemove this unused import 'by.epam.crackertracker.service.UserService'.(‡ÞÿÉ8„ÙƒùÝ-
+Ë%squid:RedundantThrowsDeclarationCheck"’Remove the declaration of thrown exception 'org.springframework.security.core.userdetails.UsernameNotFoundException' which is a runtime exception.(É­½Ô8„ÙƒùÝ-

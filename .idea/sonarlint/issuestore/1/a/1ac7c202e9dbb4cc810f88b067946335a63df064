@@ -1,10 +1,14 @@
 
-qsquid:CallToDeprecatedMethod!"BRemove this use of "withDefaultPasswordEncoder"; it is deprecated.(ÖêéÃ8äí ¥İ-
-squid:UselessImportCheck"QRemove this unused import 'org.springframework.context.annotation.ComponentScan'.(æëòÒûÿÿÿÿ8äğ¥İ-
-bsquid:UselessImportCheck"7Remove this unused import 'java.security.AuthProvider'.(’Ã‡Ã8ÉÒ¥İ-
-ƒsquid:UselessImportCheck"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8ÉÒ¥İ-
-squid:UselessImportCheck"]Remove this unused import 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder'.(åÅÚ…ûÿÿÿÿ8ÉÒ¥İ-
-¬squid:UselessImportCheck"€Remove this unused import 'org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder'.(£ØÓ‰8ÉÒ¥İ-
-‰squid:UselessImportCheck"YRemove this unused import 'org.springframework.security.crypto.password.PasswordEncoder'.(‰¡ßáÿÿÿÿÿ8ÉÒ¥İ-
-squid:UselessImportCheck"_Remove this unused import 'org.springframework.security.authentication.AuthenticationProvider'.(±­¼üÿÿÿÿ8ÉÒ¥İ-
-¦squid:UselessImportCheck	"{Remove this unused import 'org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity'.(Ô¦ø8™…¥İ-
+nsquid:UselessImportCheck"DRemove this unused import 'org.springframework.util.AntPathMatcher'.(ï‡Ù8Åøƒùİ-
+zsquid:UselessImportCheck"ORemove this unused import 'org.springframework.security.core.userdetails.User'.(–Ä€8Åøƒùİ-
+ˆsquid:UselessImportCheck"]Remove this unused import 'org.springframework.security.core.userdetails.UserDetailsService'.(¶…¥à8Åøƒùİ-
+¦squid:UselessImportCheck
+"{Remove this unused import 'org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity'.(Ô¦ø8Åøƒùİ-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Åøƒùİ-
+¬squid:UselessImportCheck	"€Remove this unused import 'org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder'.(£ØÓ‰8Åøƒùİ-
+‰squid:UselessImportCheck"YRemove this unused import 'org.springframework.security.crypto.password.PasswordEncoder'.(‰¡ßáÿÿÿÿÿ8Åøƒùİ-
+bsquid:UselessImportCheck"7Remove this unused import 'java.security.AuthProvider'.(’Ã‡Ã8Åøƒùİ-
+‘squid:UselessImportCheck"aRemove this unused import 'org.springframework.security.provisioning.InMemoryUserDetailsManager'.(îŒúùÿÿÿÿ8Åøƒùİ-
+ˆsquid:UselessImportCheck"]Remove this unused import 'org.springframework.security.crypto.password.NoOpPasswordEncoder'.(ƒ»ÅÅ8Åøƒùİ-
+vsquid:S3305$"SInject this field value directly into "authProvider", the only method that uses it.(ØĞ¬æøÿÿÿÿ8Åøƒùİ-
+squid:UselessImportCheck"VRemove this unused import 'org.springframework.security.core.userdetails.UserDetails'.(ÊÁ¥8Åøƒùİ-

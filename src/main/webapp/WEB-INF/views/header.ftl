@@ -1,23 +1,24 @@
-
-<#import "/spring.ftl" as spring/>
-
-<html>
-<head>
-</head>
-<body>
-
-<div class="nameheader" id="crackhead">
-    <h3>Tracker Cracker</h3>
-    <h5>It is the best of fit applications</h5>
+<header>
+<div class="uui-header">
+                <nav>
+<!--Responsive html-layuot-->
+<div class="uui-responsive-header">
+                        <div class="responsive-header">
+                            <a href="#" class="responsive-brand-logo">
+                                <span class="logo">
+                                    <img src="myresources/images/ic_logo_UUi.svg" alt="" />
+                                </span>
+<span class="title">Unified UI</span>
+</a>
 </div>
-
-<div class="infoheader">
-    <small>${advice}</small>
 </div>
-<div id="userHeader" class="adminBlock">
-    <h5 class="adminBlock"><small>${user.role}</small>, ${balance}$</h5>
-    <h6><a href="/user/deposit" class="adminBlock">Пополнить баланс?</a></h6>
+<!---->
+<a href="#" class="brand-logo">
+                        <span class="logo">
+                            <img src="myresources/images/ic_logo_UUi.svg" alt="" />
+                        </span>
+                        CRACKER TRACKER <small> - your best helper! </small>
+                    </a>
+</nav>
 </div>
-
-</body>
-</html>
+</header>

@@ -90,5 +90,14 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/less" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/slick" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/myresources/tinymce" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/user/myresources/bootstrap" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/user/myresources/css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/user/myresources/fonts" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/user/myresources/images" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/user/myresources/jquery-ui" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/user/myresources/js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/user/myresources/less" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/user/myresources/slick" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/user/myresources/tinymce" charset="windows-1251" />
   </component>
 </project>

@@ -1,9 +1,9 @@
 
-zsquid:S1192w"\Define a constant instead of duplicating this literal "Wrong service register user" 3 times.(Ä¤ş8ßĞ•úÜ-
-qsquid:S3776’"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(êĞ´š8á‹ÔÛÛ-
-psquid:UselessImportCheck"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ
-osquid:CommentedOutCodeLine×"<This block of commented-out lines of code should be removed.(±‚ï½ÿÿÿÿÿ8ÜÒÛÛ-
-Jsquid:S1481È"+Remove this unused "status" local variable.(³Éë“8¯ÂĞÛÛ-
-„squid:S1192Ø"fDefine a constant instead of duplicating this literal "Wrong service deposit to account user" 4 times.(óãs8„¬ÒÜ-
 vsquid:S3776€"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¿òƒêşÿÿÿÿ8ëŒ‰×Ú-
+„squid:S1192Ø"fDefine a constant instead of duplicating this literal "Wrong service deposit to account user" 4 times.(óãs8„¬ÒÜ-
+qsquid:S3776’"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(êĞ´š8á‹ÔÛÛ-
 msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8ï†‡×Ú-
+osquid:CommentedOutCodeLine×"<This block of commented-out lines of code should be removed.(±‚ï½ÿÿÿÿÿ8ÜÒÛÛ-
+zsquid:S1192w"\Define a constant instead of duplicating this literal "Wrong service register user" 3 times.(Ä¤ş8ßĞ•úÜ-
+Jsquid:S1481È"+Remove this unused "status" local variable.(³Éë“8¯ÂĞÛÛ-
+psquid:UselessImportCheck"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ

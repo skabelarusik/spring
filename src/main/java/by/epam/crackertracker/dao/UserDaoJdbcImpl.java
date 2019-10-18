@@ -80,7 +80,6 @@ public class UserDaoJdbcImpl implements UserDao {
 
     private static final Logger LOGGER = LogManager.getRootLogger();
 
-
     @Override
     public List<User> selectAll(int currentPage, String type) {
         String sqlReq;
@@ -148,7 +147,7 @@ public class UserDaoJdbcImpl implements UserDao {
     public User selectByLogin(String login, String pass) throws TrackerDBException {
         User user;
         try{
-            user = jdbcTemplate.queryForObject(SELECT_USER_BY_LOGIN_PASS, new UserMapper(), login);
+            user = jdbcTemplate.queryForObject(SELECT_USER_BY_LOGIN_PASS, userMapper, login);
             if(!BCrypt.checkpw(pass, user.getPassword())){
                 throw new TrackerDBException("Wrong data");
             }
@@ -244,4 +243,7 @@ public class UserDaoJdbcImpl implements UserDao {
     }
 
 
+    public User findUser(String login) {
+        return jdbcTemplate.queryForObject(SELECT_USER_BY_LOGIN_PASS, userMapper, login);
+    }
 }

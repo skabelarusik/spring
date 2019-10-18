@@ -1,2 +1,5 @@
 
-ksquid:UselessImportCheck"ARemove this unused import 'by.epam.crackertracker.entity.Advice'.(ùÓİ 8Øß€ùÜ-
+ksquid:UselessImportCheck"ARemove this unused import 'by.epam.crackertracker.entity.Advice'.(ùÓİ 8ÂÈÄğİ-
+”squid:UselessImportCheck"dRemove this unused import 'org.springframework.security.core.userdetails.UsernameNotFoundException'.(Í£Ö¶ùÿÿÿÿ8ÂÈÄğİ-
+asquid:S3752|">Add a "method" parameter to this "@RequestMapping" annotation.(·éÇ¾øÿÿÿÿ8ÂÈÄğİ-
+bsquid:S3752Ê">Add a "method" parameter to this "@RequestMapping" annotation.(³•éÚüÿÿÿÿ8Î¦½úİ-

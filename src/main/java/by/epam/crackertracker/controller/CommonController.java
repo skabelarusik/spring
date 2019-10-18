@@ -1,8 +1,8 @@
 package by.epam.crackertracker.controller;
 
+import by.epam.crackertracker.config.UserPrincipal;
 import by.epam.crackertracker.entity.Message;
 import by.epam.crackertracker.entity.Role;
-import by.epam.crackertracker.entity.User;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.CalculatorService;
 import by.epam.crackertracker.util.LanguageSelector;
@@ -10,6 +10,8 @@ import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.PageSelector;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -34,7 +36,7 @@ public class CommonController {
     private CalculatorService service;
 
 
-    @GetMapping(PageConstant.PATH_PAGE_INDEX)
+    @RequestMapping(PageConstant.PATH_PAGE_INDEX)
     public String index(){
         return PageConstant.PATH_PAGE_MAIN_INDEX;
     }
@@ -46,13 +48,16 @@ public class CommonController {
 
 
     @GetMapping(PageConstant.URI_BACK)
-    public String back(@SessionAttribute String startPage){
-        String page = startPage;
-        if(page.isEmpty()){
-            page = PageConstant.PATH_PAGE_MAIN_INDEX;
+    public String back(@AuthenticationPrincipal UserPrincipal user,  @SessionAttribute String startPage){
+        String page;
+        if(startPage == null || startPage.isEmpty()){
+            page = user.getRole().toLowerCase();
+        } else {
+            page = startPage;
         }
         return page;
     }
+
 
     @RequestMapping(PageConstant.URI_LANG_BY)
     public String langBy(HttpServletRequest request, HttpServletResponse response){
@@ -78,7 +83,7 @@ public class CommonController {
         return request.getParameter(ParameterConstant.ATTRIBUTE_CURRENT_PAGE);
     }
 
-    @GetMapping(PageConstant.LOGOUT)
+    @RequestMapping(PageConstant.LOGOUT)
     public String logout(){
         return PageConstant.PATH_PAGE_MAIN_INDEX;
     }
@@ -86,6 +91,11 @@ public class CommonController {
     @RequestMapping("/login")
     public String login2(){
         return "login";
+    }
+
+    @RequestMapping("/logout-success")
+    public String logoutt(){
+       return "login";
     }
 
     @PostMapping(PageConstant.CALCULATE)
@@ -108,9 +118,12 @@ public class CommonController {
             return startPage;
     }
 
-    @GetMapping("/test")
-    public String test(){
-        return "test";
+
+    @RequestMapping("/main")
+    public String main(@AuthenticationPrincipal UserPrincipal user, Model model) {
+        model.addAttribute("login", "TRTRTR");
+        model.addAttribute("test2", "TEST2");
+        return "admin";
     }
 
 
