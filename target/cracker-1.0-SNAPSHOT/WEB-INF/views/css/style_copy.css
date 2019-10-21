@@ -1,10 +1,37 @@
+
 .wrapperLogin{
     background-color: #c2aac0;
     width: 100%;
     margin-top: 0%;
-    height: 100%;
+    min-height: 100%;
     border: 2px solid black;
 }
+
+.wrapperResult{
+    background-color: #c2aac0;
+    width: 100%;
+    margin-top: 0%;
+    min-height: 100%;
+    border: 2px solid black;
+}
+
+.wrapperLoginAdmin{
+    background-color: #c2aac0;
+    width: 100%;
+    margin-top: 0%;
+    min-height: 170%;
+    border: 2px solid black;
+}
+
+.wrapperLoginCurator{
+    background-color: #c2aac0;
+    width: 100%;
+    margin-top: 0%;
+    min-height: 150%;
+    border: 2px solid black;
+}
+
+
 
 .wrapperLoginInner{
     background-color: transparent;
@@ -15,7 +42,87 @@
     min-height: 300px;
 }
 
+.wrapperUserResultInner{
+    background-color: transparent;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    min-height: 300px;
+}
+
+.wrapperRegInner{
+    background-color: transparent;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    min-height: 300px;
+}
+
+/* blocks */
+
+.wrapperBlocks{
+    width: 1000px;
+    background-color: transparent;
+    min-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.blockAdvice{
+    margin-top: 15px;
+    margin-left: 30px;
+    width: 280px;
+    min-height: 100px;
+    border: 2px dashed black;
+    background-color: #f3deb3;
+}
+
+.blockLearner{
+    margin-top: 15px;
+    margin-left: 30px;
+    width: 280px;
+    min-height: 100px;
+    border: 2px dashed black;
+    background-color: #f3deb3;
+}
+
+.wrapperBlock2{
+    margin-top: 10px;
+}
+
 .blockLogin{
+    margin-top: 30px;
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 30px;
+    min-height: 200px;
+    padding-left: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.adminBlock{
+    margin-left: 10px;
+    background-color: #f3deb3;
+}
+
+.adminBlock2{
+    margin-left: 10px;
+    background-color: white;
+    font-size: 18px;
+}
+
+.adminBlock3{
+    margin-left: 10px;
+    background-color: #f3deb3;
+}
+
+
+.blockLogin2{
     margin-top: 30px;
     background-color: white;
     margin-left: 50px;
@@ -24,36 +131,6 @@
     border: 2px solid black;
     border-radius: 5px;
 }
-
-.loginForm{
-    background-color: white;
-    display: table;
-}
-
-.h3login{
-    margin-left: 10px;
-    background-color: transparent;
-    width: 500px;
-}
-
-.login-button{
-    background: -moz-linear-gradient(#D0ECF4, #5BC9E1, #D0ECF4);
-    background: -webkit-gradient(linear, 0 0, 0  100%, from(#D0ECF4), to(#D0ECF4), color-stop(0.5, #5BC9E1));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
-    padding: 3px 7px;
-    color: #333;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px solid #666;
-}
-
-.formInput{
-    background-color: white;
-    display: table-cell;
-    font-size: 24px;
-    height: 32px;
-    width: 200px;}
 
 .blockReg{
     margin-top: 50px;
@@ -68,6 +145,164 @@
     border-radius: 5px;
 }
 
+.blockDataReg{
+    margin-top: 30px;
+    background-color: white;
+    padding-top: 20px;
+    margin-left: 50px;
+    margin-right: 30px;
+    padding-left: 40px;
+    min-height: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.block1, .block2, .block3{
+    float: left;
+    border: 5px;
+    min-height: 300px;
+}
+
+.block1 {
+    width: 15%;
+    background-color: transparent;
+}
+
+.block3 {
+    width: 10%;
+    background-color: transparent;
+}
+
+.block2 {
+    width: 68%;
+    margin-right: 3%;
+    margin-left: 3%;
+    background-color: #f3deb3;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.blockUsers, .anotherBlock{
+    float: left;
+}
+
+.blockUsers{
+    margin-top: 15px;
+    margin-left: 0px;
+    width: 300px;
+    min-height: 150px;
+    background-color: #f3deb3;
+}
+
+.productBlock{
+    margin-top: 0px;
+    margin-left: 30px;
+    width: 280px;
+    min-height: 150px;
+    border: 2px dashed black;
+    background-color: #f3deb3;
+}
+
+.anotherBlock{
+    margin-top: 15px;
+    margin-left: 30px;
+    width: 280px;
+    min-height: 150px;
+    background-color: #f3deb3;
+}
+
+
+/* FONTS */
+
+.h3login{
+    margin-left: 10px;
+    background-color: transparent;
+    width: 500px;
+    font-family: "Comic Sans MS" ;
+    font-size: 24px;
+}
+
+.styleMessage{
+    font-family: "Comic Sans MS";
+}
+
+.styleMessageSmall{
+    font-family: "Comic Sans MS";
+    font-size: 10px;
+}
+
+.styleMessageTitle{
+    font-family: "Arial Black";
+}
+
+.styleMessageTitleSmall{
+    font-family: "Arial Black";
+    font-size: 12px;
+}
+
+/* BUTTONS */
+
+.login-button{
+    background: -moz-linear-gradient(#D0ECF4, #5BC9E1, #D0ECF4);
+    background: -webkit-gradient(linear, 0 0, 0  100%, from(#D0ECF4), to(#D0ECF4), color-stop(0.5, #5BC9E1));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+    padding: 3px 7px;
+    color: #333;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #666;
+}
+
+/* FORMS */
+
+.loginForm{
+    background-color: white;
+    display: table;
+}
+
+.formText{
+    background-color: white;
+    display: table-cell;
+    font-size: 16px;
+}
+
+.formGender{
+    background-color: transparent;
+}
+
+.formInput{
+    background-color: white;
+    display: table-cell;
+    font-size: 24px;
+    height: 32px;
+    width: 200px;
+    padding-right: 20px;
+}
+
+.adviceForm{
+    background-color: transparent;
+}
+
+.formText2{
+    background-color: #f3deb3;
+    display: table-cell;
+    font-size: 14px}
+
+.formInput2{
+    background-color: white;
+    display: table-cell;
+    font-size: 14px;
+    height: 16px;
+    width: 120px;
+    margin-left: 10px}
+
+.formInput2, .formText2{
+    float: left;
+}
+
+/* LANGUAGE */
+
 .languageLogin{
     margin-top: 30px;
     width: 400px;
@@ -77,12 +312,72 @@
     background-color: transparent;
 }
 
+.languageMain{
+    margin-top: 100px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 30px;
+    background-color: transparent;
+}
+
 .language {
     float: left;
 }
 
-.h3login{
-    margin-left: 10px;
+/* PICTURE */
+
+.iconMain{
+    width: 100%;
     background-color: transparent;
-    width: 500px;
+}
+
+.icon1{
+    max-width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+.uploadFile{
+    background-color: transparent;
+    margin-left: 0px;
+    margin-top: 5px;
+}
+
+.invisibleForm{
+    background-color: transparent;
+}
+
+.uploadButton {
+    display: block;
+    width: 80px;
+    background: #3df;
+    padding: 5px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Tahoma;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 0px;
+}
+
+
+/* main page block advice */
+.messageMain{
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+/* search */
+
+.searchheader{
+    width: 400px;
+    height: 50px;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
 }

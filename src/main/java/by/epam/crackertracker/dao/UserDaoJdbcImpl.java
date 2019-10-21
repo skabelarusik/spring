@@ -7,10 +7,8 @@ package by.epam.crackertracker.dao;
 
 import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.User;
-import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.mapper.UserMapper;
-import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.mindrot.jbcrypt.BCrypt;
@@ -193,7 +191,7 @@ public class UserDaoJdbcImpl implements UserDao {
         }
     }
 
-
+/*
     public boolean updateFilePath(String login, String path) throws TrackerDBException {
         Connection connection = null;
         boolean status = false;
@@ -216,6 +214,8 @@ public class UserDaoJdbcImpl implements UserDao {
         }
         return status;
     }
+
+ */
 
 
     @Override

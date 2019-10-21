@@ -77,6 +77,27 @@ public class ProgramNameController {
         return startPage;
     }
 
+    @PostMapping(PageConstant.URI_DELETE)
+    public String delete(@RequestParam String id, @RequestParam String buttonName, Model model){
+        try {
+            service.deleteById(id, buttonName);
+            if (buttonName.equals(ParameterConstant.ATTRIBUTE_DELETE_TYPE)) {
+                model.addAttribute(ParameterConstant.ATTRIBUTE_NAME_PROGRAM_NAME, service.selectAllProgramsName(1, ParameterConstant.SHOW));
+                model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
+            } else {
+                model.addAttribute(ParameterConstant.ATTRIBUTE_NAME_PROGRAM_NAME, service.selectAllProgramsName(1, ParameterConstant.SHOW_DELETED));
+                model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_RESTORE_TYPE);
+            }
+            model.addAttribute(ParameterConstant.MESSAGE_SEND_PROGRAM, ParameterConstant.MESSAGE_CONGRAT);
+        } catch (TrackerServiceException e){
+                model.addAttribute(ParameterConstant.MESSAGE_SEND_PROGRAM, ParameterConstant.MESSAGE_ERROR_REGIST);
+        }
+        return PageConstant.PATH_RESULT_PROGRAM_NAME;
+
+    }
+
+
+
 
 
 }

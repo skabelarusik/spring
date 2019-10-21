@@ -5,7 +5,6 @@ import by.epam.crackertracker.entity.MealTime;
 import by.epam.crackertracker.entity.Program;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
-import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +35,7 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
     @Autowired
     private JdbcTemplate template;
 
+    /*
     public boolean insert(Program program) throws TrackerDBException {
         boolean status = false;
         Connection connection = null;
@@ -196,6 +196,8 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
         return true;
     }
 
+
+
     String SQL = "SELECT p.id, pr1.name, pr2.name, p.portions, p.time, p.day from programs p \n"+
             "         inner join programs_name pr1 on pr1.id = p.name inner join products pr2 on pr2.idproducts = p.product \n"+
             "         inner join subscriptions s on s.program = pr1.id  where p.day = 'thursday' and s.subscriber = (SELECT id from users where login = 'SLON') \n"+
@@ -234,5 +236,8 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
         return programList;
 
     }
+
+
+     */
 
 }

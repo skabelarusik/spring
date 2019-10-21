@@ -5,6 +5,7 @@ import by.epam.crackertracker.entity.Advice;
 import by.epam.crackertracker.entity.Gender;
 import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.User;
+import by.epam.crackertracker.exception.ResourceNotFoundException;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.AdviceService;
 import by.epam.crackertracker.service.UserService;
@@ -12,6 +13,7 @@ import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.PageSelector;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Controller;
@@ -22,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.awt.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Map;
 
 @Controller
@@ -86,8 +89,6 @@ public class UserController {
 
     @GetMapping(PageConstant.URI_UPDATE_USER)
     public String moveUpdateUser(@AuthenticationPrincipal UserPrincipal user, Model model) {
-        model.addAttribute("test", user.getRole());
-        model.addAttribute("test2", "TEST2");
         return PageConstant.PATH_PAGE_EDIT_USER;
     }
 
@@ -137,7 +138,7 @@ public class UserController {
             request.getSession().setAttribute(ParameterConstant.LOGIN, user.getLogin());
             request.getSession().setAttribute(ParameterConstant.PARAM_BALANCE, user.getBalance());
             request.getSession().setAttribute(ParameterConstant.PARAM_ADVICE, adviceService.selectRandomAdvice());
-            page = PageSelector.selectHomePage(user.getRole());
+            page = PageSelector.selectHomePage(user.getRole().name());
         } catch (TrackerServiceException e) {
             request.setAttribute(ParameterConstant.MESAGE_WRONG_AUTH, "WRONG PASSWORD OR LOGIN");
             page = PageConstant.PATH_PAGE_MAIN_INDEX;
@@ -153,11 +154,17 @@ public class UserController {
                                @RequestParam String birthday, @RequestParam String gender, HttpServletRequest request){
        String page =  PageConstant.PATH_PAGE_MAIN_USER;
         try {
-            User user = userService.registerUser(login, password, username, usersurname, Gender.valueOf(gender.toUpperCase().trim()), email, birthday);
+           userService.registerUser(login, password, username, usersurname, Gender.valueOf(gender.toUpperCase().trim()), email, birthday);
+            User user = new User(login, password);
+            user.setRole(Role.USER);
+            user.setBalance(new BigDecimal(0));
+            user.setName(username);
+            user.setSurname(usersurname);
+            user.setEmail(email);
+            user.setGender(Gender.valueOf(gender.toUpperCase().trim()));
+            user.setBirthDate(LocalDate.parse(birthday));
             request.getSession(true).setAttribute(ParameterConstant.USER, user);
-            request.getSession().setAttribute(ParameterConstant.ATTRIBUTE_ROLE, Role.USER);
             request.getSession().setAttribute(ParameterConstant.LOGIN, login);
-            request.getSession().setAttribute(ParameterConstant.PARAM_BALANCE, 0);
             request.getSession().setAttribute(ParameterConstant.PARAM_ADVICE, adviceService.selectRandomAdvice());
         } catch (TrackerServiceException e) {
             page = PageConstant.PATH_PAGE_REGISTER;
@@ -199,11 +206,14 @@ public class UserController {
         return PageConstant.PATH_RESULT_USER;
     }
 
-    @RequestMapping("/main")
-    public String main(@AuthenticationPrincipal UserPrincipal user, Model model) {
-        model.addAttribute("login", "TRTRTR");
-        model.addAttribute("test2", "TEST2");
-        return "admin";
+
+    @RequestMapping(PageConstant.URI_MAIN)
+    public String main(@AuthenticationPrincipal UserPrincipal user, Model model, HttpServletRequest request) {
+        String page = PageSelector.selectHomePage(user.getRole());
+        request.getSession(true).setAttribute(ParameterConstant.LOGIN, user.getUsername());
+        request.getSession().setAttribute(ParameterConstant.USER, user.getUser());
+        request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
+        return page;
     }
 
 }

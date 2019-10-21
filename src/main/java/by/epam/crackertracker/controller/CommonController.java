@@ -48,14 +48,8 @@ public class CommonController {
 
 
     @GetMapping(PageConstant.URI_BACK)
-    public String back(@AuthenticationPrincipal UserPrincipal user,  @SessionAttribute String startPage){
-        String page;
-        if(startPage == null || startPage.isEmpty()){
-            page = user.getRole().toLowerCase();
-        } else {
-            page = startPage;
-        }
-        return page;
+    public String back(@AuthenticationPrincipal UserPrincipal user){
+        return user.getRole().toLowerCase();
     }
 
 
@@ -77,7 +71,7 @@ public class CommonController {
         return request.getParameter(ParameterConstant.ATTRIBUTE_CURRENT_PAGE);
     }
 
-    @RequestMapping("/lang")
+    @RequestMapping(PageConstant.URI_LANG)
     public String lang(@RequestParam String langv,  HttpServletRequest request, HttpServletResponse response){
         localeResolver.setLocale(request, response, new Locale(selector.select(langv), langv));
         return request.getParameter(ParameterConstant.ATTRIBUTE_CURRENT_PAGE);
@@ -88,23 +82,23 @@ public class CommonController {
         return PageConstant.PATH_PAGE_MAIN_INDEX;
     }
 
-    @RequestMapping("/login")
+    @RequestMapping(PageConstant.URI_LOGIN)
     public String login2(){
-        return "login";
+        return ParameterConstant.LOGIN;
     }
 
-    @RequestMapping("/logout-success")
+    @RequestMapping(PageConstant.LOGOUT_SUCCESS)
     public String logoutt(){
-       return "login";
+       return ParameterConstant.LOGIN;
     }
 
     @PostMapping(PageConstant.CALCULATE)
     public String calculate(@SessionAttribute String startPage, @RequestParam String weight,
                             @RequestParam String height, Model model){
         try {
-            model.addAttribute("result", service.calculate(weight, height));
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RESULT, service.calculate(weight, height));
         } catch (TrackerServiceException e) {
-            model.addAttribute("result", ParameterConstant.MESSAGE_ERROR_REGIST);
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RESULT, ParameterConstant.MESSAGE_ERROR_REGIST);
         }
         return startPage;
     }
@@ -117,15 +111,6 @@ public class CommonController {
             model.addAttribute(ParameterConstant.ATTRIBUTE_RESULT_CALORIES, result);
             return startPage;
     }
-
-
-    @RequestMapping("/main")
-    public String main(@AuthenticationPrincipal UserPrincipal user, Model model) {
-        model.addAttribute("login", "TRTRTR");
-        model.addAttribute("test2", "TEST2");
-        return "admin";
-    }
-
 
 
 }

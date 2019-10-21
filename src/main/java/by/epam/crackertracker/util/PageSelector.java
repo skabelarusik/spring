@@ -11,16 +11,16 @@ public class PageSelector {
 
     private PageSelector(){}
 
-    public static String selectHomePage(Role role){
+    public static String selectHomePage(String role){
         String page;
-        switch (role){
-            case ADMIN: page = PageConstant.PATH_PAGE_MAIN_ADMIN;
+        switch (role.toUpperCase()){
+            case "ADMIN": page = PageConstant.PATH_PAGE_MAIN_ADMIN;
                 break;
-            case USER: page = PageConstant.PATH_PAGE_MAIN_USER;
+            case "USER": page = PageConstant.PATH_PAGE_MAIN_USER;
                 break;
-            case CURATOR: page=PageConstant.PATH_PAGE_MAIN_CURATOR;
+            case "CURATOR": page=PageConstant.PATH_PAGE_MAIN_CURATOR;
                 break;
-            case SUPERUSER: page = PageConstant.PATH_PAGE_MAIN_SUPERUSER;
+            case "SUPERUSER": page = PageConstant.PATH_PAGE_MAIN_SUPERUSER;
                 break;
             default: page = PageConstant.PATH_PAGE_MAIN_INDEX;
         }

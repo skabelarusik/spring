@@ -1,9 +1,5 @@
 
-nsquid:S2095Â"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‡ß‡£8ø³ÓÖÛ-
-nsquid:S2095¾"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÒÔÂ–8ø³ÓÖÛ-
-ksquid:S2095Ä"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(šêæùÿÿÿÿÿ8ø³ÓÖÛ-
-msquid:S2095m"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(„¹àï8ø³ÓÖÛ-
-ssquid:S2095º"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(˜Ãúúúÿÿÿÿ8ø³ÓÖÛ-
-nsquid:S2095´"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(í„Åü8ø³ÓÖÛ-
-ssquid:S2095Ê"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(µ’ù¡ÿÿÿÿÿ8ø³ÓÖÛ-
-bsquid:UnusedPrivateMethod{"6Remove this unused private "fillingListSubscr" method.(ÜÈ´Š8ø³ÓÖÛ-
+dsquid:UnusedPrivateMethod"7Remove this unused private "fillingListHistory" method.(¬€Ë²8²‹ÒíŞ-
+jsquid:CommentedOutCodeLine§"<This block of commented-out lines of code should be removed.(¼úÎ 8²‹ÒíŞ-
+nsquid:CommentedOutCodeLinee"<This block of commented-out lines of code should be removed.(Ó¬èÆıÿÿÿÿ8¡øÑíŞ-
+bsquid:UnusedPrivateMethod|"6Remove this unused private "fillingListSubscr" method.(ÜÈ´Š8²‹ÒíŞ-

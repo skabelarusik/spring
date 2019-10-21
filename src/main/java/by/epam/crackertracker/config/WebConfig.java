@@ -29,6 +29,9 @@ public class WebConfig extends WebMvcConfigurerAdapter{
     public static final String DEFAULT_ENCODING = "UTF-8";
     public static final String ENCODING = "text/html; charset=utf-8";
     public static final String RESOURCE_BUNDLE = "message";
+    public static final String RESOURCE_PATH = "/**";
+    public static final String PICTURE_PATH = "/picture";
+    public static final String UUI_PATH = "/uui";
 
 
     @Bean
@@ -67,7 +70,8 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**").addResourceLocations("/picture", "/myresources");
+        registry.addResourceHandler(RESOURCE_PATH).addResourceLocations(PICTURE_PATH, UUI_PATH);
     }
+
 
 }

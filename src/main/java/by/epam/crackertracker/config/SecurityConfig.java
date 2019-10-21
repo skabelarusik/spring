@@ -1,5 +1,7 @@
 package by.epam.crackertracker.config;
 
+import by.epam.crackertracker.util.PageConstant;
+import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -28,7 +30,7 @@ import java.util.ArrayList;
 
 @EnableWebSecurity
 @Configuration
-@ComponentScan("by.epam.crackertracker")
+@ComponentScan(PageConstant.PROJECT)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
@@ -50,25 +52,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
                 .and()
-                .authorizeRequests().antMatchers("/", "/review/show", "/user/registration", "/lang", "/picture/**"
-                , "/myresources/**")
-//        , "/picture/**", "/myresources/css/**", "/myresources/fonts/**", "/myresources/images/**", "/myresources/css/lib/components**",
-//                "/myresources/images/icons/**", "/myresources/jquer/icons/**")
-    .permitAll()
-                .antMatchers("/product/select").hasRole("ADMIN")
+                .authorizeRequests().antMatchers(PageConstant.PATH_PAGE_INDEX, PageConstant.PATH_REVIEW + PageConstant.URI_SHOW,
+                PageConstant.REQUEST_USER + PageConstant.URI_REGISTER, PageConstant.URI_LANG, PageConstant.PATH_PICTURE,
+                PageConstant.URI_RESOURCES, PageConstant.URI_ABOUT).permitAll()
+
+                //ADMINS
+                .antMatchers(PageConstant.SECUR_PATH_UPDATE_ROLE, PageConstant.SECUR_PATH_REVIEW_DELETE)
+                .hasRole(ParameterConstant.ROLE_ADMIN)
+
+                //ADMINS + CURATORS
+                .antMatchers(PageConstant.SECUR_PATH_ADVICE_ADD, PageConstant.SECUR_PATH_ADVICE_DELETE, PageConstant.SECUR_PATH_PRODUCT_ADD,
+                        PageConstant.SECUR_PATH_PRODUCT_DELETE, PageConstant.SECUR_PATH_PRODUCT_UPDATE)
+                .hasAnyRole(ParameterConstant.ROLE_ADMIN, ParameterConstant.ROLE_CURATOR)
                 .anyRequest().authenticated()
+
                 .and();
 
-        httpSecurity.formLogin().loginPage("/login")
+        httpSecurity.formLogin().loginPage(PageConstant.URI_LOGIN)
                 .permitAll();
 
         httpSecurity.logout().invalidateHttpSession(true).clearAuthentication(true)
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/logout-success")
-                // .logoutUrl("/logout").logoutSuccessUrl("/login?logout").invalidateHttpSession(true)
+                .logoutRequestMatcher(new AntPathRequestMatcher(PageConstant.LOGOUT)).logoutSuccessUrl(PageConstant.LOGOUT_SUCCESS)
         .permitAll();
 
     }
-
-
-
 }

@@ -72,12 +72,9 @@ public class ProgramsNameService {
         return list;
     }
 
-    public boolean deleteById(String id, String type) throws TrackerServiceException {
-        IdValidator validator = new IdValidator();
-        boolean status = false;
-        if(validator.isValidate(id)){
+    public void deleteById(String id, String type) throws TrackerServiceException {
+        if(idValidator.isValidate(id)){
             int idProgram = Integer.parseInt(id);
-            dao = new ProgramsNameDaoJdbc();
             int typeShow;
             if(type.equals(ParameterConstant.ATTRIBUTE_DELETE_TYPE)){
                 typeShow = 0;
@@ -94,7 +91,6 @@ public class ProgramsNameService {
                 throw new TrackerServiceException("Wrong service delete programs name by id ",e);
             }
         }
-       return status;
 
     }
 

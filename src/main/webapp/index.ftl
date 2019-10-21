@@ -2,14 +2,14 @@
 <html>
 <head>
 <title><@spring.message "title.login"/></title>
-<#include "template_main.ftl">
+<#include "/WEB-INF/views/static/template_main.ftl">
 </head>
 
 <body>
-<#include "header.ftl">
+<#include "/WEB-INF/views/static/header.ftl">
 <div class="wrapperLogin">
                  <div class="wrapperLoginInner">
-                       <div class="blockLogin">
+                       <div class="blockLogin2">
                        <!-- Login form -->
 
 <div id="uuiCarousel" class="uui-carousel carousel slide" data-ride="carousel">
@@ -71,12 +71,12 @@ $('.uui-carousel').carousel({
 </form>
 <form class="language" method="post" action="/lang">
                                                                 <input type="hidden" name="currentPage" value="index">
-                                                                <button class="uui-button small" name="langv" value="EN">EN</button>
+                                                                <button class="uui-button small" name="langv" value="US">EN</button>
 </form>
 </div>
 </div>
 </div>
 </div>
-<#include "footer.ftl">
+<#include "/WEB-INF/views/static/footer_main.ftl">
 </body>
 </html>

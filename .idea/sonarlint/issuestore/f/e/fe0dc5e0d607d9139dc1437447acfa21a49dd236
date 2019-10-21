@@ -1,5 +1,7 @@
 
+]squid:S3752Ò">Add a "method" parameter to this "@RequestMapping" annotation.(ë²Â¹8ŠÇ²íŞ-
+”squid:UselessImportCheck"dRemove this unused import 'org.springframework.security.core.userdetails.UsernameNotFoundException'.(Í£Ö¶ùÿÿÿÿ8ÂÈÄğİ-
 ksquid:UselessImportCheck"ARemove this unused import 'by.epam.crackertracker.entity.Advice'.(ùÓİ 8ÂÈÄğİ-
-”squid:UselessImportCheck"dRemove this unused import 'org.springframework.security.core.userdetails.UsernameNotFoundException'.(Í£Ö¶ùÿÿÿÿ8ÂÈÄğİ-
-asquid:S3752|">Add a "method" parameter to this "@RequestMapping" annotation.(·éÇ¾øÿÿÿÿ8ÂÈÄğİ-
-bsquid:S3752Ê">Add a "method" parameter to this "@RequestMapping" annotation.(³•éÚüÿÿÿÿ8Î¦½úİ-
+‡squid:UselessImportCheck"WRemove this unused import 'by.epam.crackertracker.exception.ResourceNotFoundException'.(î®†âşÿÿÿÿ8ŠÇ²íŞ-
+asquid:S3752}">Add a "method" parameter to this "@RequestMapping" annotation.(·éÇ¾øÿÿÿÿ8ÂÈÄğİ-
+psquid:UselessImportCheck"@Remove this unused import 'org.springframework.http.HttpStatus'.(íŸ¤Šúÿÿÿÿ8ŠÇ²íŞ-

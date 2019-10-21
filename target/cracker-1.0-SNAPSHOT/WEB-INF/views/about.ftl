@@ -2,21 +2,21 @@
 <html>
 <head>
 <title><@spring.message "title.about"/></title>
-<#include "template_main.ftl">
+<#include "/WEB-INF/views/static/template_main.ftl">
 </head>
 
 <body>
-<#include "header.ftl">
+<#include "/WEB-INF/views/static/header.ftl">
 <div class="wrapperLogin">
                  <div class="wrapperLoginInner">
                        <div class="blockLogin">
-                            <h3 class="h3login"><@spring.message "text.aboutservice"/></h3><br/><br/>
+                            <h3 class="h3login2"><@spring.message "text.aboutservice"/></h3><br/><br/>
                         </div>
 <!-- registration block -->
 <div class="blockReg">
                              <a class="aTagCrackerLogin" href="/user/registration">
-                             <h5 class="h3login"><@spring.message "label.withoutacc"/></h5></a>
-                            <h6 class="h3login"><@spring.message "label.backlogin"/>
+                             <h5 class="styleMessageTitle"><@spring.message "label.withoutacc"/></h5></a>
+                            <h6 class="styleMessageTitle"><@spring.message "label.backlogin"/>
                             <a class="registration" href='/'>
                                         <@spring.message "label.back"/></a>
                             </h6>
@@ -42,6 +42,6 @@
 </div>
 </div>
 </div>
-<#include "footer.ftl">
+<#include "static/footer_main.ftl">
 </body>
 </html>

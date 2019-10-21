@@ -96,7 +96,7 @@ public class UserService {
         return user;
     }
 
-    public User registerUser(String login, String pass, String name, String surname, Gender gender, String email,
+    public void registerUser(String login, String pass, String name, String surname, Gender gender, String email,
                                String dateOfBirth) throws TrackerServiceException {
         User user = null;
         if(login != null && !login.isEmpty() && pass != null && !pass.isEmpty() && gender != null && email != null &&
@@ -122,7 +122,6 @@ public class UserService {
         } else {
             throw new TrackerServiceException("Wrong service register user");
         }
-        return user;
     }
 
     public List<User> selectAllUsers( Map<String,String> allRequestParams,  ModelMap model) throws TrackerServiceException {

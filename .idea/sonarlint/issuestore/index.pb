@@ -205,8 +205,6 @@ Esrc/main/java/by/epam/crackertracker/service/ProgramsNameService.java,e\2\e26b
 Ksrc/main/java/by/epam/crackertracker/controller/SubscriptionController.java,d\8\d879d24e38cbf774f9d11f11c1cfa0159c1094ef
 h
 8src/main/java/by/epam/crackertracker/dao/ProductDao.java,e\b\eb13fb0e62cbd01034312a1154466cfc60351b43
-V
-&src/main/webapp/WEB-INF/views/test.ftl,9\5\95b938729652d190f679d009fc4a3b28fb8accba
 p
 @src/main/java/by/epam/crackertracker/service/ProductService.java,8\d\8d7918c168c904083332f02aa1ecd0fb218b168a
 v
@@ -279,14 +277,10 @@ k
 ;src/test/java/by/epam/crackertracker/config/TestConfig.java,1\f\1f29e838b2986cad9c6121f466c316a471c31be0
 y
 Isrc/test/java/by/epam/crackertracker/controller/AdviceControllerTest.java,9\f\9fe7db0792f7f28ce308a69058e798e38769a29c
-j
-:src/main/java/by/epam/crackertracker/aspect/LogAspect.java,6\7\67d695599f1a459586ddef58768f50a7e4063b14
 u
 Esrc/main/java/by/epam/crackertracker/config/MyUserDetailsService.java,4\1\41d7acf944141743e36061efc4369c72152c71dc
 n
 >src/main/java/by/epam/crackertracker/config/UserPrincipal.java,b\9\b91f11735e6660df24bf6e4c53361a8bf8df753b
-R
-"src/main/webapp/WEB-INF/views/copy,7\9\79615768ad91e0f351a53dc3e59c28a78a53bd5b
 ^
 .src/main/webapp/WEB-INF/views/backup/about.ftl,b\4\b4df1441ba340b9835c82f23042e0aa36386d242
 f

@@ -18,18 +18,25 @@
     </header>
 
     <div class="languageMain">
-        <form class="language" method="get" action="/lang/en">
-            <input type="hidden" name="currentPage" value="admin">
-            <input type="submit" class="lan1" name="langv" value="EN">
-        </form>
-        <form class="language" method="get" action="/lang/ru">
-            <input type="hidden" name="currentPage" value="admin">
-            <input type="submit" class="lan2" name="langv" value="RU">
-        </form>
-        <form class="language" method="get" action="/lang/by">
-            <input type="hidden" name="currentPage" value="admin">
-            <input type="submit" class="lan3" name="langv" value="BY">
-        </form>
+        <div class="uui-input-group horizontal">
+            <form class="language" method="get" action="/lang/en">
+                <button class="uui-button transparent"  name="langv" value="EN">EN</button>
+                <input type="hidden" name="currentPage" value="admin">
+            </form>
+            <form class="language" method="get" action="/lang/ru">
+                <button class="uui-button transparent"  name="langv" value="RU">RU</button>
+                <input type="hidden" name="currentPage" value="admin">
+            </form>
+            <form class="language" method="get" action="/lang/by">
+                <button class="uui-button transparent"  name="langv" value="BY">BY</button>
+                <input type="hidden" name="currentPage" value="admin">
+            </form>
+        </div>
+
+<#--        <form class="language" method="get" action="/lang/by">-->
+<#--            <input type="hidden" name="currentPage" value="admin">-->
+<#--            <input type="submit" class="lan3" name="langv" value="BY">-->
+<#--        </form>-->
     </div>
 
     <div class="wrapperBlocks">
@@ -71,8 +78,10 @@
                         <input  class="adminBlock" type="submit" value="Найти"></p>
                 </form>
             </div>
-            <h4><br/><@spring.message "label.logoutmess"/></h4>
-            <a href="/logout" class="aBlock2"><h5><@spring.message "label.logout"/></h5></a>
+<#--            <h4>-->
+                <br/>
+<#--            <@spring.message "label.logoutmess"/></h4>-->
+<#--            <a href="/logout" class="aBlock2"><h5><@spring.message "label.logout"/></h5></a>-->
             <br/>
 
             <!-- panel users -->

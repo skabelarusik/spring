@@ -168,6 +168,8 @@ public class ParameterConstant {
     public static final String MESSAGE_DONT_HAVE_SUBS = "you dont have subscribers";
     public static final String MESSAGE_WRONG_PRODUCTS = "messageWrongProduct";
     public static final String MESSAGE_PRODUCT_TO_PROGRAM = "messageInsertProduct";
+    public static final String MESSAGE_SEND_PROGRAM = "messageProgram";
+
 
     public static final String ATTRIBUTE_PREV_PAGE = "previousPage";
     public static final String ATTRIBUTE_NEXT_PAGE = "nextPage";
@@ -193,6 +195,12 @@ public class ParameterConstant {
     public static final String PARAM_NUM_PRODUCT = "numProduct";
     public static final String PARAM_NUM_PROGRAM = "idProgram";
     public static final String PARAM_PORTIONS = "portions";
+
+    public static final String ROLE_ADMIN = "ADMIN";
+    public static final String ROLE_USER = "USER";
+    public static final String ROLE_SUPERUSER = "SUPERUSER";
+    public static final String ROLE_CURATOR = "CURATOR";
+
 
 
 

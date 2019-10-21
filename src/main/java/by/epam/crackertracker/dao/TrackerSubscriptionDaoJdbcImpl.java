@@ -9,7 +9,6 @@ import by.epam.crackertracker.entity.TrackerSubscription;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
 import by.epam.crackertracker.mapper.SubscriptionMapper;
-import by.epam.crackertracker.pool.ConnectionPool;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -98,7 +97,7 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
         }
         return status;
     }
-
+/*
     public List<TrackerSubscription> historySubscr(int id, String login) throws TrackerDBException {
         Connection connection = null;
         PreparedStatement statement = null;
@@ -119,6 +118,8 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
         }
         return list;
     }
+
+ */
 
     private List<TrackerSubscription> fillingListSubscr(ResultSet resultSet) throws TrackerDBException {
         List<TrackerSubscription> list = new ArrayList<>();
@@ -161,6 +162,7 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
 
     public static final String CHECK_BALANCE_CUR = "SELECT money from users where id = (SELECT curator from programs_name where id = ?)";
 
+    /*
 
     public boolean insert(int idProgram, BigDecimal cost, int duration, String login, BigDecimal balance) throws TrackerDBException, SQLException {
         Connection connection = null;
@@ -227,6 +229,8 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
         }
         return status;
     }
+
+     */
 
 
 }

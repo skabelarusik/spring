@@ -17,9 +17,13 @@ public class UserPrincipal implements UserDetails {
         this.user = user;
     }
 
+    public User getUser(){
+        return user;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singleton(new SimpleGrantedAuthority(user.getRole().name().toUpperCase()));
+        return Collections.singleton(new SimpleGrantedAuthority(takeRole(user.getRole().name().toUpperCase())));
     }
 
     @Override
@@ -54,5 +58,25 @@ public class UserPrincipal implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    private String takeRole(String roleParam){
+        String role;
+        switch (roleParam){
+            case "ADMIN":
+                role = "ROLE_ADMIN";
+                break;
+            case "USER":
+                role = "ROLE_USER";
+                break;
+            case "SUPERUSER":
+                role = "ROLE_SUPERUSER";
+                break;
+            case "CURATOR":
+                role = "ROLE_CURATOR";
+                break;
+                default: role = "ROLE_GUEST";
+        }
+        return role;
     }
 }

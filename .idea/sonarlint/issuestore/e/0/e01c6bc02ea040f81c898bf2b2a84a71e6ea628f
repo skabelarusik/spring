@@ -1,7 +1,3 @@
 
-rsquid:S2095K"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ì‡Ì¬úÿÿÿÿ8’”ÞÑÛ-
-nsquid:S2095Ž"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ù¶—Í8’”ÞÑÛ-
-rsquid:S2095x"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÙàÀýÿÿÿÿÿ8’”ÞÑÛ-
-gsquid:S00116Ç"NRename this field "SQL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á«þ¢
-rsquid:S2095c"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½²£¹üÿÿÿÿ8’”ÞÑÛ-
-ssquid:S2095Ü"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(†ñè¶ùÿÿÿÿ8’”ÞÑÛ-
+Msquid:S1068!"*Remove this unused "LOGGER" private field.(¥Ì¨Àúÿÿÿÿ8ëãÔíÞ-
+isquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(‰öï›8ëãÔíÞ-

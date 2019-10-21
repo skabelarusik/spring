@@ -37,10 +37,11 @@ public class PageConstant {
     public static final String PATH_PAGE_CALCULATOR = "/jsp/calculator.jsp";
     public static final String PATH_PAGE_MESSAGE = "resultMessage";
     public static final String PATH_PAGE_PRODUCT = "resultProduct";
+    public static final String PATH_PAGE_SUBSCRIPTION = "resultSubscription";
     public static final String PATH_PAGE_INDEX = "/";
     public static final String PAGE_ABOUT = "about";
     public static final String PATH_DEPOSIT = "deposit";
-    public static final String PATH_PICTURE = "/jsp/picture/";
+    public static final String PATH_PICTURE = "/picture/**";
     public static final String PATH_PAGE_SERVICE = "about";
 
     public static final String URI_SELECT = "/select";
@@ -68,6 +69,7 @@ public class PageConstant {
 
     public static final String URI_LOGIN = "/login";
     public static final String LOGOUT = "/logout";
+    public static final String LOGOUT_SUCCESS ="/logout-success" ;
     public static final String URI_REGISTER = "/registration";
     public static final String URI_RESULT = "/result";
     public static final String URI_DEP = "/deposit";
@@ -76,6 +78,9 @@ public class PageConstant {
     public static final String URI_ABOUT = "/about";
     public static final String URI_INPUT_MESSAGE = "/input";
     public static final String URI_OUTPUT_MESSAGE = "/output";
+    public static final String URI_MAIN = "/main";
+    public static final String URI_RESOURCES = "/uui/**";
+
 
     public static final String PATH_MESSAGE = "/message";
     public static final String PATH_REVIEW = "/review";
@@ -88,10 +93,25 @@ public class PageConstant {
     public static final String PATH_BUCKET = "/bucket";
 
 
-
+    public static final String URI_LANG = "/lang";
     public static final String URI_LANG_BY = "/lang/by";
     public static final String URI_LANG_RU = "/lang/ru";
     public static final String URI_LANG_EN = "/lang/en";
+
+    public static final String PROJECT = "by.epam.crackertracker";
+
+
+    public static final String SECUR_PATH_UPDATE_ROLE = "/user/update_role";
+    public static final String SECUR_PATH_REVIEW_DELETE = "/review/delete_by_id";
+    public static final String SECUR_PATH_ADVICE_ADD = "/advice/add";
+    public static final String SECUR_PATH_ADVICE_DELETE = "/advice/delete";
+    public static final String SECUR_PATH_PRODUCT_UPDATE = "/product/update";
+    public static final String SECUR_PATH_PRODUCT_DELETE = "/product/delete";
+    public static final String SECUR_PATH_PRODUCT_ADD = "/product/add";
+
+
+
+
 
 
 

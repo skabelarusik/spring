@@ -1,7 +1,8 @@
 
-Ÿsquid:S1192""€Define a constant instead of duplicating this literal "SELECT u.name, u.surname, u.login, u.password, u.sex, u.email," 12 times.(‹ÓÍ‘8»Ùğİ-
-ßsquid:S1192%"»Define a constant instead of duplicating this literal "u.birthday, u.registrdate, u.money, u.avatar, r1.name, u.id, u.active from users u INNER JOIN role r1 on u.status = r1.id " 4 times.(¡µöøÿÿÿÿ8»Ùğİ-
-msquid:S1192`"ODefine a constant instead of duplicating this literal "DECREASE_LOGIN" 3 times.(´¦ü¹8»Ùğİ-
-msquid:S1192]"ODefine a constant instead of duplicating this literal "INCREASE_LOGIN" 3 times.(û³ìĞ8»Ùğİ-
-ysquid:S2068C"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(¶ÔŸâûÿÿÿÿ8»Ùğİ-
-esquid:S00112²"FDefine and throw a dedicated exception instead of using a generic one.(‰Æáe8»Ùğİ-
+msquid:S1192["ODefine a constant instead of duplicating this literal "INCREASE_LOGIN" 3 times.(û³ìĞ8»Ùğİ-
+Ÿsquid:S1192 "€Define a constant instead of duplicating this literal "SELECT u.name, u.surname, u.login, u.password, u.sex, u.email," 12 times.(‹ÓÍ‘8»Ùğİ-
+msquid:S1192^"ODefine a constant instead of duplicating this literal "DECREASE_LOGIN" 3 times.(´¦ü¹8»Ùğİ-
+isquid:CommentedOutCodeLineÃ"<This block of commented-out lines of code should be removed.(êË¥88À¡ÓíŞ-
+ßsquid:S1192#"»Define a constant instead of duplicating this literal "u.birthday, u.registrdate, u.money, u.avatar, r1.name, u.id, u.active from users u INNER JOIN role r1 on u.status = r1.id " 4 times.(¡µöøÿÿÿÿ8»Ùğİ-
+ysquid:S2068A"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(¶ÔŸâûÿÿÿÿ8»Ùğİ-
+esquid:S00112°"FDefine and throw a dedicated exception instead of using a generic one.(‰Æáe8»Ùğİ-

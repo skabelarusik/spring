@@ -13,12 +13,14 @@ import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.validator.*;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class SubscriptionService {
     private static final Logger LOGGER = Logger.getRootLogger();
 
@@ -60,18 +62,16 @@ public class SubscriptionService {
 
     public List<TrackerSubscription> selectAllSubscriptions() throws TrackerServiceException {
         List<TrackerSubscription> list = null;
-        /*
         try {
             list = dao.selectAll();
         } catch (TrackerDBException e) {
             LOGGER.error("Wrong service select all subscriptions",e);
             throw new TrackerServiceException("Wrong service select all subscriptions",e);
         }
-
-         */
         return list;
     }
 
+    /*
     public boolean buySubscribe(String id, String cost, String duration, String login, BigDecimal balance,
              String role) throws TrackerServiceException {
         boolean status = false;
@@ -107,6 +107,8 @@ public class SubscriptionService {
         return status;
     }
 
+
+
     public List<TrackerSubscription> selectHistorySubs(int id, String login) throws TrackerServiceException {
         List<TrackerSubscription> list = new ArrayList<>();
         try {
@@ -119,4 +121,7 @@ public class SubscriptionService {
         }
         return list;
     }
+
+
+     */
 }
