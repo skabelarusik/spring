@@ -1,19 +1,15 @@
 package by.epam.crackertracker.controller;
 
-import by.epam.crackertracker.entity.Product;
-import by.epam.crackertracker.entity.Role;
-import by.epam.crackertracker.exception.TrackerDBException;
+
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.ProductService;
 import by.epam.crackertracker.util.PageConstant;
-import by.epam.crackertracker.util.PageSelector;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.*;
 import java.util.Map;
 
 @Controller
@@ -28,12 +24,12 @@ public class ProductController {
         try {
             model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS, service.searchProducts(text));
         } catch (TrackerServiceException e) {
-            model.addAttribute("wrongSearch", "WRONG");
+            model.addAttribute(ParameterConstant.WRONG_SEARCH, ParameterConstant.WRONG_DATA);
         }
         return PageConstant.PATH_PAGE_PRODUCT;
     }
 
-    @GetMapping("/select")
+    @GetMapping(PageConstant.URI_SELECT)
     public String selectAll( Model model) throws TrackerServiceException {
         int pageNum = 1;
         model.addAttribute(ParameterConstant.ATTRIBUTE_CURRENT_PAGE, pageNum);
@@ -41,17 +37,17 @@ public class ProductController {
         return PageConstant.PATH_PAGE_PRODUCT;
     }
 
-    @PostMapping("/select")
+    @PostMapping(PageConstant.URI_SELECT)
     public String selectAll(@RequestParam Map<String,String> allRequestParams, Model model) throws TrackerServiceException {
         int page = Integer.parseInt(allRequestParams.get(ParameterConstant.ATTRIBUTE_CURRENT_PAGE));
-        model.addAttribute("currPage", page);
+        model.addAttribute(ParameterConstant.ATTRIBUTE_CURR_PAGE, page);
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS, service.selectAllProduct(null,page));
         return PageConstant.PATH_PAGE_PRODUCT;
     }
 
-    @PostMapping("/select_by_calories")
+    @PostMapping(PageConstant.URI_SELECT_BY_CALORIES)
     public String selectByCalories(@RequestParam Map<String,String> allRequestParams, Model model) throws TrackerServiceException {
-        String page = allRequestParams.get("nextPage");
+        String page = allRequestParams.get(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
         String min = allRequestParams.get(ParameterConstant.PARAM_MIN_CALORIES);
         String max = allRequestParams.get(ParameterConstant.PARAM_MAX_CALORIES);
         String type = allRequestParams.get(ParameterConstant.PARAM_TYPE);
@@ -64,7 +60,7 @@ public class ProductController {
         return PageConstant.PATH_PAGE_PRODUCT;
     }
 
-    @PostMapping("/update")
+    @PostMapping(PageConstant.URI_UPDATE_USER)
     public String updateProduct(@RequestParam String idproduct, @RequestParam String nameProduct, @RequestParam String caloriesProduct,
                                 @RequestParam String proteinsProduct, @RequestParam String fatsProduct,
                                 @RequestParam String carbsProduct, @RequestParam String currentPage, Model model){
@@ -77,7 +73,7 @@ public class ProductController {
         return  currentPage;
     }
 
-    @PostMapping("/delete")
+    @PostMapping(PageConstant.URI_DELETE)
     public String delete(@RequestParam String id, @RequestParam String currentPage,  Model model){
         try {
             service.deleteProduct(id);
@@ -89,7 +85,7 @@ public class ProductController {
         return currentPage;
     }
 
-    @PostMapping("/add")
+    @PostMapping(PageConstant.URI_ADD)
     public String add(@RequestParam String currentPage, Model model, @RequestParam String nameProduct,
                       @RequestParam String caloriesProduct, @RequestParam String proteinsProduct,
                       @RequestParam String fatsProduct, @RequestParam String carbsProduct){
@@ -98,7 +94,6 @@ public class ProductController {
             model.addAttribute("messageInsertProduct", ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
             model.addAttribute("messageInsertProduct", ParameterConstant.MESSAGE_ERROR_REGIST);
-
         }
         return currentPage;
     }

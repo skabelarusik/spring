@@ -16,6 +16,7 @@ import by.epam.crackertracker.entity.Gender;
 import by.epam.crackertracker.entity.User;
 import by.epam.crackertracker.exception.TrackerDBException;
 import org.apache.log4j.Logger;
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -70,6 +71,9 @@ public class UserService {
 
     @Autowired
     private DepositValidator depositValidator;
+
+    @Autowired
+    private PathAvatarValidator pathAvatarValidator;
 
     private static final Logger LOGGER = Logger.getRootLogger();
     public static final int MAX_TABLE_USERS = 11;
@@ -196,11 +200,10 @@ public class UserService {
 
     public void updatePasswordUser(String login, String oldPass, String currentPass,
                                       String newPass, String newPassCheck) throws TrackerServiceException {
-        boolean status = false;
         try{
-            if(loginValidator.isValidate(login) && passwordValidator.isValidate(oldPass) && passwordValidator.isValidate(currentPass) &&
+            if(loginValidator.isValidate(login) && passwordValidator.isValidate(oldPass) &&
                     passwordValidator.isValidate(newPass) && passwordValidator.isValidate(newPassCheck) &&
-                    oldPass.equals(currentPass) && newPass.equals(newPassCheck)) {
+                    BCrypt.checkpw(oldPass,currentPass) && newPass.equals(newPassCheck)) {
                 userDao.updatePasswordUser(login, newPass);
             } else{
                 throw new TrackerServiceException("Not valide data");
@@ -211,20 +214,19 @@ public class UserService {
         }
     }
 
-//    public boolean sendAvatar(String login, String path) throws TrackerServiceException {
-//        PathAvatarValidator pathAvatarValidator = new PathAvatarValidator();
-//        boolean status = false;
-//        try{
-//            if(loginValidator.isValidate(login) && pathAvatarValidator.isValide(login, path)){
-//                userDao = new UserDaoJdbcImpl();
-//                status = userDao.updateFilePath(login, path);
-//            }
-//        } catch (TrackerDBException e){
-//            LOGGER.error("Wrong service send avatar user",e);
-//            throw new TrackerServiceException("Wrong service send avatar user",e);
-//        }
-//        return status;
-//    }
+    public void sendAvatar(String login, String path) throws TrackerServiceException {
+        try{
+            if(loginValidator.isValidate(login) && pathAvatarValidator.isValide(login, path)){
+                userDao.updateFilePath(login, path);
+            } else {
+                LOGGER.error("Wrong service send avatar user");
+            throw new TrackerServiceException("Wrong service send avatar user");
+            }
+        } catch (TrackerDBException e){
+            LOGGER.error("Wrong service send avatar user",e);
+            throw new TrackerServiceException("Wrong service send avatar user",e);
+        }
+    }
 
     public List<User> selectUsersByRole( Map<String,String> allRequestParams, ModelMap model) throws TrackerServiceException {
         String role = allRequestParams.get(ParameterConstant.ATTRIBUTE_ROLE);

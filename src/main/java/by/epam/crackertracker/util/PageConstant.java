@@ -47,6 +47,7 @@ public class PageConstant {
     public static final String URI_SELECT = "/select";
     public static final String URI_SELECT_USER_BY_STATUS = "/select_by_status";
     public static final String URI_SELECT_USER_BY_GENDER = "/select_by_gender";
+    public static final String URI_SELECT_BY_CALORIES = "/select_by_calories";
     public static final String URI_SELECT_DEL = "/select_del";
     public static final String URI_SELECT_CURATOR = "/select_curator";
     public static final String URI_SELECT_CURATOR_DEL = "/select_del_curator";

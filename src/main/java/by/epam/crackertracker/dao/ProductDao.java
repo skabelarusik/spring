@@ -22,6 +22,6 @@ public interface ProductDao extends TrackerDao {
 
     List<Product> selectAllByRangeCallories(int min, int max, int page, String type) throws TrackerDBException;
 
-    List<Product> searchProducts(String[] product) throws TrackerDBException;
+    List<Product> searchProducts(String product) throws TrackerDBException;
 
 }

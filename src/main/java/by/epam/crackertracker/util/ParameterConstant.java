@@ -32,6 +32,8 @@ public class ParameterConstant {
     public static final String STATUS = "status";
     public static final String ACTIVE = "active";
     public static final String ATTRIBUTE_AVATAR = "avatar";
+    public static final String ATTRIBUTE_CURR_PAGE = "currPage";
+
 
     //ADVICE PARAMETERS
     public static final String TEXT_ADVICE = "message";
@@ -106,6 +108,7 @@ public class ParameterConstant {
     public static final String INPUT_MESSAGE = "input";
     public static final String OUTPUT_MESSAGE = "output";
     public static final String ADD_PROGRAM = "/add";
+    public static final String CLEAR_BUCKET = "/clear";
 
     public static final String ATTRIBUTE_ROLE = "role";
     public static final String SUBMIT_LANGUAGE = "langv";
@@ -149,7 +152,7 @@ public class ParameterConstant {
     public static final String MESSAGE_ERROR_DOWNLOAD = "errorDownload";
     public static final String WRONG = "Wrong download";
     public static final String WRONG_DATA = "wrongData";
-    public static final String WRONG_DATA_PASS = "wrongData";
+    public static final String WRONG_DATA_PASS = "wrongDataPass";
     public static final String WRONG_DELETE_USER = "addmessagedelete";
     public static final String MESSAGE_UPDATE_PRODUCT = "messageUpdateProduct";
     public static final String MESSAGE_DELETE_PRODUCT =  "messageDeleteProduct";
@@ -169,6 +172,8 @@ public class ParameterConstant {
     public static final String MESSAGE_WRONG_PRODUCTS = "messageWrongProduct";
     public static final String MESSAGE_PRODUCT_TO_PROGRAM = "messageInsertProduct";
     public static final String MESSAGE_SEND_PROGRAM = "messageProgram";
+    public static final String WRONG_SEARCH = "wrongSearch";
+
 
 
     public static final String ATTRIBUTE_PREV_PAGE = "previousPage";

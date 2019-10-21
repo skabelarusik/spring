@@ -1,5 +1,6 @@
 package by.epam.crackertracker.controller;
 
+import by.epam.crackertracker.config.UserPrincipal;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.SubscriptionService;
 import by.epam.crackertracker.util.PageConstant;
@@ -10,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 @Controller
 @RequestMapping(PageConstant.URI_SUBSCRIPTION)
@@ -30,7 +33,12 @@ public class SubscriptionController {
     }
 
     @GetMapping(PageConstant.URI_SELECT_CURATOR)
-    public String selectCurator(){
-        return null;
+    public String selectCurator(@AuthenticationPrincipal UserPrincipal user, Model model){
+        try {
+            model.addAttribute(ParameterConstant.MESSAGE_SUBSCRIBERS,service.selectSubscribersCurator(user.getUsername()));
+        } catch (TrackerServiceException e) {
+            return PageConstant.PATH_PAGE_ERROR;
+        }
+        return PageConstant.PATH_PAGE_SUBSCRIPTION;
     }
 }

@@ -194,9 +194,8 @@ public class ProductService {
     public List<Product> searchProducts(String param) throws TrackerServiceException {
         List<Product> list = new ArrayList<>();
         if(param != null && !param.isEmpty()){
-            String [] products = param.split(" ");
             try {
-                list = dao.searchProducts(products);
+                list = dao.searchProducts(param);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service search products",e);
                 throw new TrackerServiceException("Wrong service search products",e);

@@ -14,9 +14,9 @@ import java.sql.SQLException;
 public class BucketMapper implements RowMapper<Bucket> {
     @Override
     public Bucket mapRow(ResultSet resultSet, int i) throws SQLException {
-        Bucket bucket = new Bucket(resultSet.getString(ParameterConstant.LOGIN), resultSet.getString("name"),
-                resultSet.getInt("calories"), resultSet.getDouble(ParameterConstant.PARAM_PORTIONS));
-        bucket.setId(resultSet.getInt(ParameterConstant.PARAM_ID));
+        Bucket bucket = new Bucket(resultSet.getString(1), resultSet.getString(4),
+                resultSet.getInt(5), resultSet.getDouble(2));
+        bucket.setId(resultSet.getInt(3));
         return bucket;
     }
 }

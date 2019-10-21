@@ -8,6 +8,7 @@ import by.epam.crackertracker.entity.User;
 import by.epam.crackertracker.exception.ResourceNotFoundException;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.AdviceService;
+import by.epam.crackertracker.service.BucketService;
 import by.epam.crackertracker.service.UserService;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.PageSelector;
@@ -37,6 +38,9 @@ public class UserController {
 
     @Autowired
     private AdviceService adviceService;
+
+    @Autowired
+    private BucketService bucketService;
 
     @GetMapping(PageConstant.URI_SELECT)
     public String selectAllUsers(@RequestParam Map<String,String> allRequestParams, ModelMap model) {
@@ -93,18 +97,16 @@ public class UserController {
     }
 
     @PostMapping(PageConstant.UPDATE_PASS)
-    public String updatePass(HttpServletRequest request){
-        String oldPassword = request.getParameter(ParameterConstant.PARAM_NEW_PASSWORD);
-        User user = (User)request.getSession(true).getAttribute(ParameterConstant.USER);
+    public String updatePass(@RequestParam String  oldpassword, @RequestParam String newpassword, @RequestParam String newpasswordCheck,
+                             @AuthenticationPrincipal UserPrincipal user,  Model model){
         String password = user.getPassword();
-        String newPassword = request.getParameter(ParameterConstant.PARAM_NEW_PASSWORD);
-        String newCheckPassword = request.getParameter(ParameterConstant.PARAM_NEW_PASSWORD_CHECK);
-        String login = user.getLogin();
+        String login = user.getUsername();
         try {
-            userService.updatePasswordUser(login, oldPassword, password, newPassword, newCheckPassword);
-            request.setAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_CONGRAT);
+            userService.updatePasswordUser(login, oldpassword, password, newpassword, newpasswordCheck);
+            model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
-            request.setAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
+           model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
+
         }
         return PageConstant.PATH_PAGE_EDIT_USER;
     }
@@ -165,6 +167,8 @@ public class UserController {
             user.setBirthDate(LocalDate.parse(birthday));
             request.getSession(true).setAttribute(ParameterConstant.USER, user);
             request.getSession().setAttribute(ParameterConstant.LOGIN, login);
+            request.getSession().setAttribute(ParameterConstant.PARAM_BALANCE, 0);
+            request.getSession().setAttribute(ParameterConstant.ATTRIBUTE_ROLE, ParameterConstant.ROLE_USER);
             request.getSession().setAttribute(ParameterConstant.PARAM_ADVICE, adviceService.selectRandomAdvice());
         } catch (TrackerServiceException e) {
             page = PageConstant.PATH_PAGE_REGISTER;
@@ -186,14 +190,13 @@ public class UserController {
     }
 
     @PostMapping(PageConstant.URI_DEP)
-    public String makeDeposit( HttpServletRequest request, @RequestParam String sum, @RequestParam String type, @SessionAttribute String login,
-                              @SessionAttribute String balance,  ModelMap model){
+    public String makeDeposit(@RequestParam String sum, @AuthenticationPrincipal UserPrincipal user,  @RequestParam String type,
+                              @SessionAttribute String balance,  Model model, HttpServletRequest request){
         try {
-            userService.deposit(sum, type, login, BigDecimal.valueOf(Double.parseDouble(balance)));
+            userService.deposit(sum, type, user.getUsername(), BigDecimal.valueOf(Double.parseDouble(balance)));
             model.addAttribute(ParameterConstant.MESSAGE_DEPOSIT, ParameterConstant.MESSAGE_CONGRAT);
             Double newSum = Double.parseDouble(sum) + Double.parseDouble(balance);
             request.getSession(true).setAttribute(ParameterConstant.PARAM_BALANCE, newSum);
-
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.MESSAGE_DEPOSIT, ParameterConstant.MESSAGE_ERROR_REGIST);
         }
@@ -213,6 +216,14 @@ public class UserController {
         request.getSession(true).setAttribute(ParameterConstant.LOGIN, user.getUsername());
         request.getSession().setAttribute(ParameterConstant.USER, user.getUser());
         request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
+        request.getSession().setAttribute(ParameterConstant.ATTRIBUTE_ROLE, user.getRole());
+        request.getSession().setAttribute(ParameterConstant.PARAM_BALANCE, user.getBalance());
+        try {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS_BUCKET ,
+                    bucketService.selectAll(user.getUsername()));
+        } catch (TrackerServiceException e) {
+            return PageConstant.PATH_PAGE_ERROR;
+        }
         return page;
     }
 

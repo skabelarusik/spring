@@ -112,5 +112,10 @@ public class CommonController {
             return startPage;
     }
 
+    @GetMapping("/news")
+    public String news(){
+        return "news";
+    }
+
 
 }

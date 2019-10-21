@@ -33,4 +33,6 @@ public interface UserDao extends TrackerDao {
     void deposit(String login, BigDecimal sum) throws TrackerDBException;
 
     List<User> selectAdmin();
-}
+
+    public void updateFilePath(String login, String path) throws TrackerDBException;
+    }

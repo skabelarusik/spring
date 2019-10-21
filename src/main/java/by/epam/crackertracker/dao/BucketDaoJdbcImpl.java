@@ -21,13 +21,16 @@ public class BucketDaoJdbcImpl implements BucketDao {
     private static final Logger LOGGER = Logger.getRootLogger();
     public static final String ADD_ELEMENT = "INSERT INTO bucket (user_b, prod_b, portions) VALUES ((SELECT id from users " +
             "where login = ?), (SELECT idproducts from products where name = ?), ?)";
-    public static final String SELECT_ELEMENTS = "select b.portions,  b.idbucket, p.name, p.calories from bucket b inner join products p on b.prod_b = p.idproducts" +
+    public static final String SELECT_ELEMENTS = "select ?, b.portions, b.idbucket, p.name, p.calories from bucket b inner join products p on b.prod_b = p.idproducts" +
             " where user_b = (SELECT id from users where login = ?) ";
     public static final String DELETE_ELEMENT = "DELETE from bucket where idbucket = ?";
     public static final String DELETE_ALL = "DELETE from bucket where user_b = (SELECT id from users where login = ?)";
 
     @Autowired
     private JdbcTemplate template;
+
+    @Autowired
+    private BucketMapper mapper;
 
     public void insert(String login, String product, Double portions) throws TrackerDBException {
         try{
@@ -37,10 +40,11 @@ public class BucketDaoJdbcImpl implements BucketDao {
         }
     }
 
+    @Override
     public List<Bucket> selectAll(String login) throws TrackerDBException {
-        List<Bucket> bucketList = null;
+        List<Bucket> bucketList = new ArrayList<>();
         try{
-            bucketList = template.query(SELECT_ELEMENTS, new BucketMapper(), login);
+            bucketList = template.query(SELECT_ELEMENTS, mapper, login, login);
         } catch (Exception e){
             LOGGER.error("Wrong select all elements bucket for user: " + login);
             throw new TrackerDBException("Wrong select all elements bucket");

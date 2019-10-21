@@ -144,14 +144,11 @@ public class ProductDaoJdbc implements ProductDao {
         }
     }
 
-    public List<Product> searchProducts(String [] param) throws TrackerDBException {
-        List<Product> tempList = new ArrayList<>();
+    @Override
+    public List<Product> searchProducts(String param) throws TrackerDBException {
         List<Product> list = new ArrayList<>();
         try{
-            for(int i = 0; i < param.length; i++){
-                tempList = template.query(SEARCH_PRODUCTS, mapper, ("%" + param[i] + "%"));
-                list.addAll(tempList);
-            }
+            list = template.query(SEARCH_PRODUCTS, mapper, ("%" + param + "%"));
         } catch (Exception e) {
             LOGGER.error(e);
             throw new TrackerDBException("Wrong search products", e);

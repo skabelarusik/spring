@@ -17,7 +17,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
-import java.sql.*;
 import java.util.*;
 
 @Repository
@@ -191,31 +190,16 @@ public class UserDaoJdbcImpl implements UserDao {
         }
     }
 
-/*
-    public boolean updateFilePath(String login, String path) throws TrackerDBException {
-        Connection connection = null;
-        boolean status = false;
-        PreparedStatement statement = null;
-        try{
-            connection = ConnectionPool.getInstance().takeConnection();
-                statement = connection.prepareStatement(UPDATE_PATH);
-                statement.setString(1,path);
-                statement.setString(2,login);
-                statement.execute();
-                status = true;
-                LOGGER.warn("User login: " + login + " updated path");
 
-        } catch (TrackerConnectionPoolException | SQLException e) {
+    public void updateFilePath(String login, String path) throws TrackerDBException {
+        try {
+            jdbcTemplate.update(UPDATE_PATH, path, login);
+        } catch (Exception e){
             LOGGER.error(e);
-            throw new TrackerDBException("Wrond update path");
-        } finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
+            throw new TrackerDBException("Wrong path user: " + login);
         }
-        return status;
     }
 
- */
 
 
     @Override
