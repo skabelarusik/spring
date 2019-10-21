@@ -613,6 +613,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/calculator/calculator_calories.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/calculator_calories.ftl">
           <value>
             <set />
@@ -679,6 +684,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/message.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/news.ftl">
           <value>
             <set />
           </value>

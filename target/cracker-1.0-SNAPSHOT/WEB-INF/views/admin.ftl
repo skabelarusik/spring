@@ -178,7 +178,7 @@
 
                 <!-- panel product -->
                 <div class="anotherBlock">
-                    <div class="productBlock">
+                    <div class="productBlockAdmin">
                         <h6 class="styleMessageTitleSmall"><@spring.message "label.productbox" /></h6>
                         <a href="/product/select">
                             <h5 class="styleMessageSmall"><@spring.message "label.selectproduct" /> </h5>
@@ -195,7 +195,7 @@
                                 <input type="number" name="maxCalories" maxlength="4" autofocus id="maxCalories"
                                        data-required="true" value=""  class="formInput2" placeholder="Input max calories">
                             </p>
-                            <p><br/><br/><br/>
+                            <p><br/><br/><br/><br/><br/>
                             <button class="uui-button blue small left-icon">
                                 <img src="/resources/images/icons/no-results.png" alt="" /><@spring.message "button.show" />
                             </button>
@@ -241,7 +241,7 @@
                                 <input type="number" name="carbsProduct" maxlength="9" autofocus id="carbsProduct"
                                        value=""  class="formInput2" placeholder="Input proteins">
                                 <label for="carbsProduct" class="formText2"><@spring.message "label.carbs" /></label>
-                            </p> <br/><br/>
+                            </p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
                             <button class="uui-button blue small left-icon">
                                 <img src="/resources/images/icons/no-results.png" alt="" /><@spring.message "button.update" />
@@ -279,7 +279,6 @@
                                 <input type="text" name="nameProduct" maxlength="35" autofocus id="nameNewProduct"
                                        data-required="true" value=""  class="formInput2" placeholder="Input name">
                                 <label for="nameNewProduct" class="formText2"><@spring.message "label.name" /></label>
-
                             </p>
                             <p>
                                 <input type="number" name="caloriesProduct" maxlength="9" autofocus id="caloriesNewProduct"
@@ -304,7 +303,7 @@
                                        value=""  class="formInput2" placeholder="Input proteins">
                                 <label for="carbsNewProduct" class="formText2"><@spring.message "label.carbs" /></label>
 
-                            </p>
+                            </p><br/><br/><br/><br/><br/><br/><br/>
                             <button class="uui-button blue small left-icon">
                                 <img src="/resources/images/icons/no-results.png" alt="" /><@spring.message "button.insert" />
                             </button><br/>
@@ -337,8 +336,8 @@
         </div>
         <div class="block3">
             <h4>Информация аккаунта</h4>
-            <h6 class="styleMessage">Статус : ${user.role}</h6>
-            <h6 class="styleMessage">Баланс : ${user.balance} $</h6>
+            <h6 class="styleMessage">Статус : ${role}</h6>
+            <h6 class="styleMessage">Баланс : ${balance} $</h6>
             <h4><@spring.message "label.topcurator" /></h4>
             <h3>TEMP</h3>
             <br/>

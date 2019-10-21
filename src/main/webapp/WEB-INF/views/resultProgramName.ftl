@@ -48,6 +48,11 @@
         <h4 class="h3login"><a class="registration" href='/back'>
                 <@spring.message "label.backmain" /></a>
         </h4>
+<br/><br/>
+<br/>
+<br/>
+<br/>
+
     </div>
 </div>
 <#include "static/footer.ftl">

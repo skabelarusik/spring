@@ -29,7 +29,6 @@ create table users
 
 ALTER SEQUENCE users_id_seq start with 100 minvalue 100 restart 100;
 
-
 CREATE TABLE advices (
   idadvices serial UNIQUE,
   message varchar(100) NOT NULL UNIQUE,
@@ -50,7 +49,7 @@ CREATE TABLE products
   PRIMARY KEY (idproducts)
 );
 
-ALTER SEQUENCE products_idproducts_seq start with 100 minvalue 100 restart 100;
+ALTER SEQUENCE products_idproducts_seq start with 150 minvalue 150 restart 150;
 
 CREATE TABLE bucket
  (

@@ -1,87 +1,125 @@
 <#import "/spring.ftl" as spring/>
-<!DOCTYPE html>
+<html>
 <head>
-    <style type="text/css">
-        <#include "/css/style.css">
-    </style>
-    <meta charset="UTF-8">
-    <#setting classic_compatible=true>
-    <title><@spring.message "title.edit"/></title>
+<title><@spring.message "title.register"/></title>
+<#include "/WEB-INF/views/static/template.ftl">
 </head>
 
 <body>
-<header class="headLogin"></header>
-<!-- top menu -->
-<div class="headName">
-    <h2 class="headH2">CrackerTracker<small class="headH2small"> - your best helper!</small></h2>
-</div>
+<#include "/WEB-INF/views/static/header.ftl">
+
 <div class="wrapperLogin">
-    <div class="blockRegist">
-        <h3 class="h3login"><@spring.message "label.editing"/> </h3><br/><br/>
-       <!-- update entity -->
+                 <div class="wrapperRegInner">
+                       <div class="blockDataReg">
+                            <h3 class="h3login"><@spring.message "label.editing"/> </h3><br/><br/>
+                                           <form class="loginForm" method="post" action="/user/update">
 
-        <form class="loginForm" method="post" action="/user/update">
-            <p><label for="nameField" class="formText"><@spring.message "label.name"/></label>
-                <input autofocus id="nameField" class="formInput" type="text" pattern= "[A-Za-zА-Яа-яЁё]{2,35}"
-                       name="username" value="${user.name}" placeholder="<@spring.message "placeholder.name"/></p></br>
-            <p><label for="surnameField" class="formText"><@spring.message "label.surname" /></label>
-                <input autofocus id="surnameField" class="formInput" type="text" pattern= "[A-Za-zА-Яа-яЁё]{2,35}"
-                       name="usersurname" value="${user.surname}"
-                       placeholder="<@spring.message "placeholder.surname"/></p></br>
-            <p><label for="emailField" class="formText"><@spring.message "label.email"/></label>
-                <input autofocus id="emailField" class="formInput" type="email"
-                       name="email" maxlength="45" value="${user.email}"
-                       placeholder="<@spring.message "placeholder.surname" /></p></br>
-            <p><label for="birthdayField" class="formText">Введите дату рождения *</label>
-                <input type="date" class="formInput" name="birthday" min="1920-01-01" value="${user.birthday}" id="birthdayField"/>
-                <br/><br/>
-            </p>
-<h1>TEST</h1>
-${test}
+                                                <!-- name -->
+                        <p>
+                            <div class="uui-input-group input-login small default">
+                                                    <input type="text" class="uui-form-element"  id="nameField" name="username"
+                                                           value="${user.surname}" placeholder="<@spring.message "placeholder.name"/>" pattern="[A-Za-zА-Яа-яЁё]{2,35}"/>
+                                                    <label for="nameField" class="formText"><@spring.message "label.name"/>  </label>
+                            </div>
+                        </p><br/>
 
-<h1>TEST</h1>
-            ${wrongData}
-            <input type="submit" value="update" class="login-button"/>
-            <br/><br/>
-        </form>
+                                                <!-- surname -->
+                        <p>
+                            <div class="uui-input-group input-login small default">
+                                                                            <input type="text" class="uui-form-element"  id="surnameField" name="usersurname"
+                                                                                   value="${user.name}" placeholder="<@spring.message "placeholder.surname"/>" pattern="[A-Za-zА-Яа-яЁё]{2,35}"/>
+                                                                            <label for="surnameField" class="formText"><@spring.message "label.surname"/>  </label>
+                            </div>
+                        </p><br/>
 
-        <form class="loginForm" action="/user/update_pass" method="post">
-            <p>
-                <label for="oldpasswordField" class="formText"> <@spring.message "label.passwordold" /></label>
-                <input type="password" name="oldpassword" class="formInput" pattern="[A-Za-z0-9!@#$%^&*()_+={};:><.,/?`~±§-]{8,20}"
-                       required="" id="oldpasswordField"><br/><br/></p>
-            <p>
-            <label for="newPasswordField" class="formText"> <@spring.message "label.passwordnew" /></label>
-                <input type="password" name="newpassword" pattern="[A-Za-z0-9!@#$%^&*()_+={};:><.,/?`~±§-]{8,20}"
-                       required="" id="newPasswordField" class="formInput"><br/><br/></p>
-            <p>
-            <label for="newPasswordField2" class="formText"><@spring.message "label.trypassword" /></label>
-                <input type="password" name="newpasswordCheck" pattern="[A-Za-z0-9!@#$%^&*()_+={};:><.,/?`~±§-]{8,20}"
-                       required="" id="newPasswordField2" class="formInput"><br/><br/></p>
-                <input type="submit" class="login-button" value="update"><br/>
-            </label>
-        </form>
-            ${wrongDataPass}
-        <!-- back -->
-    </div><br/>
-        <a class="registration" href='/back'><h4 class="h3login">
-           <@spring.message "label.back" /></h4></a>
-    <br/>
+                                                <!-- email -->
+                        <p>
+                            <div class="uui-input-group input-login small default">
+                                                    <input type="email" class="uui-form-element"  id="emailField" type="text"
+                                                           name="email" placeholder="<@spring.message "placeholder.surname" />" value="${user.email}" />
+                                                    <label for="emailField" class="formText"><@spring.message "label.email"/> *</label>
+                            </div>
+                        </p><br/>
+
+                                                <!-- birthday -->
+                        <p>
+                        <div class="uui-input-group input-login small default">
+                                                                            <input type="date" class="uui-form-element"  id="birthdayField" type="text"
+                                                                                   name="birthday" min="1920-01-01" value="${user.birthday}" />
+                                                                            <label for="birthdayField" class="formText"><@spring.message "label.birthday"/> *</label>
+                        </div>
+                        </p><br/>
+                        <br/>
+                                                     <button class="uui-button"><@spring.message "label.update"/></button>
+                        </form>
+                        ${wrongData}
+                        </div>
+
+                <div class="blockDataReg">
+                            <h3 class="h3login"><@spring.message "label.editingPass"/> </h3><br/><br/>
+                                    <form class="loginForm" action="/user/update_pass" method="post">
+                                                <!-- old pass -->
+<p>
+<div class="uui-input-group input-login small default">
+                                                    <input type="password" class="uui-form-element"  id="oldpasswordField" name="oldpassword"
+                                                           value="" placeholder="" pattern="[A-Za-z0-9!@#$%^&*()_+={};:>.,/?`~±§-]{8,20}" required="true" />
+                                                    <label for="oldpasswordField" class="formText"><@spring.message "label.passwordold"/>  </label>
 </div>
-<!-- block buttom -->
+</p><br/>
+
+                                                <!-- new pass -->
+<p>
+<div class="uui-input-group input-login small default">
+                                                                            <input type="password" class="uui-form-element"  id="newPasswordField" name="newpassword"
+                                                                                   value="" placeholder="" pattern="[A-Za-z0-9!@#$%^&*()_+={};:>.,/?`~±§-]{8,20}" required="true" />
+                                                                            <label for="newPasswordField" class="formText"><@spring.message "label.passwordnew" />  </label>
+</div>
+</p><br/>
+
+                                                <!-- new pass 2 -->
+<p>
+<div class="uui-input-group input-login small default">
+                                                                            <input type="password" class="uui-form-element"  id="newPasswordField2" name="newpasswordCheck"
+                                                                                   value="" placeholder="" pattern="[A-Za-z0-9!@#$%^&*()_+={};:>.,/?`~±§-]{8,20}" required="true" />
+                                                                            <label for="newPasswordField2" class="formText"><@spring.message "label.trypassword" />  </label>
+</div>
+</p><br/>
+
+
+                             <button class="uui-button"><@spring.message "label.update"/></button>
+</form>
+${wrongDataPass}
+</div>
+</div>
+<!-- registration block -->
+<div class="blockReg">
+                                     <a href="/back">
+                                    <h4>
+<@spring.message "label.backmain"/>
+</h4></a>
+</div>
+<br/><br/><br/><br/>
+
 <div class="languageLogin">
-    <form class="language" name="lanEn" method="post" action="/lang/en">
-    <input type="hidden" name="currentPage" value="editUser">
-        <input type="submit" class="lan1" name="langv" value="EN">
-    </form>
-    <form class="language" name="lanEn" method="post" action="/lang/ru">
-    <input type="hidden" name="currentPage" value="editUser">
-        <input type="submit" class="lan2" name="langv" value="RU">
-    </form>
-    <form class="language" name="lanEn" method="post" action="/lang/by">
+<div class="uui-input-group horizontal">
+    <form class="language" method="post" action="/lang">
         <input type="hidden" name="currentPage" value="editUser">
-        <input type="submit" class="lan3" name="langv" value="BY">
-    </form>
+        <button class="uui-button small" name="langv" value="BY">BY</button>
+</form>
+<form class="language" method="post" action="/lang">
+          <input type="hidden" name="currentPage" value="editUser">
+           <button class="uui-button small" name="langv" value="RU">RU</button>
+</form>
+<form class="language" method="post" action="/lang">
+        <input type="hidden" name="currentPage" value="editUser">
+        <button class="uui-button small" name="langv" value="US">EN</button>
+</form>
 </div>
+</div>
+</div>
+</div>
+<#include "static/footer_main.ftl">
 </body>
 </html>
+
+

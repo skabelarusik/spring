@@ -203,6 +203,17 @@
     background-color: #f3deb3;
 }
 
+.productBlockAdmin{
+    margin-top: 0px;
+    margin-left: 30px;
+    width: 280px;
+    min-height: 550px;
+    border: 2px dashed black;
+    background-color: #f3deb3;
+}
+
+
+
 .anotherBlock{
     margin-top: 15px;
     margin-left: 30px;

@@ -16,6 +16,7 @@
                 <th>Name</th>
                 <th>Date</th>
                 <th>Text</th>
+                <th>Action</th>
             </tr>
             </tr>
             </thead>

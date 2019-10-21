@@ -72,7 +72,7 @@
         <div class="block2">
             <div class="searchheader">
                 <form class="adviceForm" method="post" action="/product/search">
-                    <input type="hidden" name="currentPage" value="admin">
+                    <input type="hidden" name="currentPage" value="superuser">
                     <input  class="adminBlock2" type="search" name="text" value="" placeholder="Поиск продуктов по сайту">
                     <button class="uui-button small dark-gray"><@spring.message "button.search"/></button>
                 </form>
@@ -135,7 +135,7 @@
                                 <h5 class="styleMessageSmall"><@spring.message "label.selectproduct" /> </h5>
                             </a>
                             <form class="adminBlock" method="post" action="/product/select_by_calories">
-                                <input type="hidden" name="currentPage" value="admin">
+                                <input type="hidden" name="currentPage" value="superuser">
                                 <p>
                                     <label for="minCalories" class="formText2"><@spring.message "label.mincalor"/></label>
                                     <input type="number" name="minCalories" maxlength="4" autofocus id="minCalories"

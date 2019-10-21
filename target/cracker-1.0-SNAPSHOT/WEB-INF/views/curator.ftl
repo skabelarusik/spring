@@ -71,7 +71,7 @@
         <div class="block2">
             <div class="searchheader">
                 <form class="adviceForm" method="post" action="/product/search">
-                    <input type="hidden" name="currentPage" value="admin">
+                    <input type="hidden" name="currentPage" value="curator">
                     <input  class="adminBlock2" type="search" name="text" value="" placeholder="Поиск продуктов по сайту">
                     <button class="uui-button small dark-gray"><@spring.message "button.search"/></button>
                 </form>
@@ -146,7 +146,7 @@
                                    value=""  class="formInput2" placeholder="Input duration">
                             <label for="durProg" class="formText2"><@spring.message "label.durprog" /></label>
 
-                        </p>
+                        </p><br/><br/><br/><br/>
                         <button class="uui-button blue small left-icon">
                             <img src="/myresources/images/icons/no-results.png" alt="" /><@spring.message "button.insert" />
                         </button>
@@ -165,7 +165,7 @@
                                     <a href="/advice/select"><h6 class="styleMessageSmall">
                                             <@spring.message "label.selectadvice" /> </h6></a><br/>
                                     <form class="adviceForm" method="post" action="/advice/add">
-                                        <input type="hidden" name="currentPage" value="admin">
+                                        <input type="hidden" name="currentPage" value="curator">
                                         <h6 class="styleMessageTitleSmall">
                                             <@spring.message "label.addadvice" /></h6>
                                         <input type="text" name = "advice" placeholder="message" id="advice" value="" class="formInputAdmin"/>
@@ -182,139 +182,139 @@
 
                 <!-- panel product -->
                 <div class="anotherBlock">
-                    <div class="productBlock">
+                    <div class="productBlockAdmin">
                         <h6 class="styleMessageTitleSmall"><@spring.message "label.productbox" /></h6>
-                        <a href="/product/select">
-                            <h5 class="styleMessageSmall"><@spring.message "label.selectproduct" /> </h5>
-                        </a>
-                        <form class="adminBlock" method="post" action="/product/select_by_calories">
-                            <input type="hidden" name="currentPage" value="admin">
-                            <p>
-                                <label for="minCalories" class="formText2"><@spring.message "label.mincalor"/></label>
-                                <input type="number" name="minCalories" maxlength="4" autofocus id="minCalories"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input min calories">
-                            </p>
-                            <p>
-                                <label for="maxCalories" class="formText2"><@spring.message "label.maxcalor" /></label>
-                                <input type="number" name="maxCalories" maxlength="4" autofocus id="maxCalories"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input max calories">
-                            </p>
-                            <p><br/><br/><br/>
-                                <button class="uui-button blue small left-icon">
-                                    <img src="/myresources/images/icons/no-results.png" alt="" /><@spring.message "button.show" />
-                                </button>
-                            </p>
-                        </form>
-                        ${messageWrongProduct}
+                                        <a href="/product/select">
+                                                                    <h5 class="styleMessageSmall"><@spring.message "label.selectproduct" /> </h5>
+                                        </a>
+                                        <form class="adminBlock" method="post" action="/product/select_by_calories">
+                                                                    <input type="hidden" name="currentPage" value="admin">
+                                                                    <p>
+                                        <label for="minCalories" class="formText2"><@spring.message "label.mincalor"/></label>
+                                        <input type="number" name="minCalories" maxlength="4" autofocus id="minCalories"
+                                                                               data-required="true" value=""  class="formInput2" placeholder="Input min calories">
+                                                                    </p>
+                                        <p>
+                                        <label for="maxCalories" class="formText2"><@spring.message "label.maxcalor" /></label>
+                                        <input type="number" name="maxCalories" maxlength="4" autofocus id="maxCalories"
+                                                                               data-required="true" value=""  class="formInput2" placeholder="Input max calories">
+                                                                    </p>
+                                        <p><br/><br/><br/><br/><br/>
+                                                                    <button class="uui-button blue small left-icon">
+                                                                        <img src="/resources/images/icons/no-results.png" alt="" /><@spring.message "button.show" />
+                                        </button>
+                                        </p>
+                                        </form>
+                                        ${messageWrongProduct}
 
-                        <!-- update product -->
-                        <form class="adminBlock" method="post" action="/product/update">
-                            <input type="hidden" name="currentPage" value="admin">
-                            <h6 class="styleMessageTitleSmall"><@spring.message "label.updateproduct"/></h6>
-                            <p>
-                                <input type="number" name="idproduct" maxlength="9" autofocus id="idproduct"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input id">
-                                <label for="idproduct" class="formText2">Id</label>
+                                        <!-- update product -->
+                                        <form class="adminBlock" method="post" action="/product/update">
+                                                                    <input type="hidden" name="currentPage" value="admin">
+                                                                    <h6 class="styleMessageTitleSmall"><@spring.message "label.updateproduct"/></h6>
+                                        <p>
+                                        <input type="number" name="idproduct" maxlength="9" autofocus id="idproduct"
+                                                                               data-required="true" value=""  class="formInput2" placeholder="Input id">
+                                                                        <label for="idproduct" class="formText2">Id</label>
 
-                            </p>
-                            <p>
-                                <input type="text" name="nameProduct" maxlength="35" autofocus id="nameProduct"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input name">
-                                <label for="nameProduct" class="formText2"><@spring.message "label.name" /></label>
+                                        </p>
+                                        <p>
+                                        <input type="text" name="nameProduct" maxlength="35" autofocus id="nameProduct"
+                                                                               data-required="true" value=""  class="formInput2" placeholder="Input name">
+                                                                        <label for="nameProduct" class="formText2"><@spring.message "label.name" /></label>
 
-                            </p>
-                            <p>
-                                <input type="number" name="caloriesProduct" maxlength="9" autofocus id="caloriesProduct"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input calories">
-                                <label for="caloriesProduct" class="formText2"><@spring.message "label.calor"/></label>
+                                        </p>
+                                        <p>
+                                        <input type="number" name="caloriesProduct" maxlength="9" autofocus id="caloriesProduct"
+                                                                               data-required="true" value=""  class="formInput2" placeholder="Input calories">
+                                                                        <label for="caloriesProduct" class="formText2"><@spring.message "label.calor"/></label>
 
-                            </p>
-                            <p>
-                                <input type="number" name="proteinsProduct" maxlength="9" autofocus id="proteinsProduct"
-                                       value=""  class="formInput2" placeholder="Input proteins">
-                                <label for="proteinsProduct" class="formText2"><@spring.message "label.proteins" /></label>
+                                        </p>
+                                        <p>
+                                        <input type="number" name="proteinsProduct" maxlength="9" autofocus id="proteinsProduct"
+                                                                               value=""  class="formInput2" placeholder="Input proteins">
+                                                                        <label for="proteinsProduct" class="formText2"><@spring.message "label.proteins" /></label>
 
-                            </p>
-                            <p>
-                                <input type="number" name="fatsProduct" maxlength="9" autofocus id="fatsProduct"
-                                       value=""  class="formInput2" placeholder="Input proteins">
-                                <label for="fatsProduct" class="formText2"><@spring.message "label.fats" /></label>
+                                        </p>
+                                        <p>
+                                        <input type="number" name="fatsProduct" maxlength="9" autofocus id="fatsProduct"
+                                                                               value=""  class="formInput2" placeholder="Input proteins">
+                                                                        <label for="fatsProduct" class="formText2"><@spring.message "label.fats" /></label>
 
-                            </p>
-                            <p>
-                                <input type="number" name="carbsProduct" maxlength="9" autofocus id="carbsProduct"
-                                       value=""  class="formInput2" placeholder="Input proteins">
-                                <label for="carbsProduct" class="formText2"><@spring.message "label.carbs" /></label>
-                            </p> <br/><br/>
+                                        </p>
+                                        <p>
+                                        <input type="number" name="carbsProduct" maxlength="9" autofocus id="carbsProduct"
+                                                                               value=""  class="formInput2" placeholder="Input proteins">
+                                                                        <label for="carbsProduct" class="formText2"><@spring.message "label.carbs" /></label>
+                                        </p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-                            <button class="uui-button blue small left-icon">
-                                <img src="/myresources/images/icons/no-results.png" alt="" /><@spring.message "button.update" />
-                            </button>
+                                                                    <button class="uui-button blue small left-icon">
+                                                                        <img src="/resources/images/icons/no-results.png" alt="" /><@spring.message "button.update" />
+                                        </button>
 
-                            ${messageUpdateProduct}
-                        </form>
-                        <!-- delete product -->
-                        <form class="adminBlock" method="post" action="/product/delete">
-                            <input type="hidden" name="currentPage" value="admin">
-                            <h6 class="styleMessageTitleSmall"><@spring.message "label.deleteproduct" /></h6>
-                            <p>
-                                <input type="number" name="id" maxlength="9" autofocus id="idProd"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input id">
-                                <label for="idProd" class="formText2">Id</label>
+                                        ${messageUpdateProduct}
+                                        </form>
+                                        <!-- delete product -->
+                                        <form class="adminBlock" method="post" action="/product/delete">
+                                                                    <input type="hidden" name="currentPage" value="admin">
+                                                                    <h6 class="styleMessageTitleSmall"><@spring.message "label.deleteproduct" /></h6>
+                                        <p>
+                                        <input type="number" name="id" maxlength="9" autofocus id="idProd"
+                                                                               data-required="true" value=""  class="formInput2" placeholder="Input id">
+                                                                        <label for="idProd" class="formText2">Id</label>
 
-                            </p>
-                            <p>
-                                <input type="text" name="nameProduct" maxlength="35" autofocus id="nameProd"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input name">
-                                <label for="nameProd" class="formText2"><@spring.message "label.name" /></label>
+                                        </p>
+                                        <p>
+                                        <input type="text" name="nameProduct" maxlength="35" autofocus id="nameProd"
+                                                                               data-required="true" value=""  class="formInput2" placeholder="Input name">
+                                                                        <label for="nameProd" class="formText2"><@spring.message "label.name" /></label>
 
-                            </p><br/><br/><br/>
-                            <button class="uui-button blue small left-icon">
-                                <img src="/myresources/images/icons/no-results.png" alt="" /><@spring.message "button.delete" />
-                            </button>
-                            ${messageDeleteProduct}
-                        </form>
+                                        </p><br/><br/><br/>
+                                                                    <button class="uui-button blue small left-icon">
+                                                                        <img src="/resources/images/icons/no-results.png" alt="" /><@spring.message "button.delete" />
+                                        </button>
+                                        ${messageDeleteProduct}
+                                        </form>
 
-                        <!-- add product -->
-                        <form class="adminBlock" method="post" action="/product/add">
-                            <input type="hidden" name="currentPage" value="admin">
-                            <h6 class="styleMessageTitleSmall"><@spring.message "label.addproduct" /></h6>
-                            <p>
-                                <input type="text" name="nameProduct" maxlength="35" autofocus id="nameNewProduct"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input name">
-                                <label for="nameNewProduct" class="formText2"><@spring.message "label.name" /></label>
+                                        <!-- add product -->
+                                        <form class="adminBlock" method="post" action="/product/add">
+                                                                    <input type="hidden" name="currentPage" value="curator">
+                                                                    <h6 class="styleMessageTitleSmall"><@spring.message "label.addproduct" /></h6>
+                                        <p>
+                                        <input type="text" name="nameProduct" maxlength="35" autofocus id="nameNewProduct"
+                                                                               data-required="true" value=""  class="formInput2" placeholder="Input name">
+                                                                        <label for="nameNewProduct" class="formText2"><@spring.message "label.name" /></label>
 
-                            </p>
-                            <p>
-                                <input type="number" name="caloriesProduct" maxlength="9" autofocus id="caloriesNewProduct"
-                                       data-required="true" value=""  class="formInput2" placeholder="Input calories">
-                                <label for="caloriesNewProduct" class="formText2"><@spring.message "label.calor" /></label>
+                                        </p>
+                                        <p>
+                                        <input type="number" name="caloriesProduct" maxlength="9" autofocus id="caloriesNewProduct"
+                                                                               data-required="true" value=""  class="formInput2" placeholder="Input calories">
+                                                                        <label for="caloriesNewProduct" class="formText2"><@spring.message "label.calor" /></label>
 
-                            </p>
-                            <p>
-                                <input type="number" name="proteinsProduct" maxlength="9" autofocus id="proteinsNewProduct"
-                                       value=""  class="formInput2" placeholder="Input proteins">
-                                <label for="proteinsNewProduct" class="formText2"><@spring.message "label.proteins" /></label>
+                                        </p>
+                                        <p>
+                                        <input type="number" name="proteinsProduct" maxlength="9" autofocus id="proteinsNewProduct"
+                                                                               value=""  class="formInput2" placeholder="Input proteins">
+                                                                        <label for="proteinsNewProduct" class="formText2"><@spring.message "label.proteins" /></label>
 
-                            </p>
-                            <p>
-                                <input type="number" name="fatsProduct" maxlength="9" autofocus id="fatsNewProduct"
-                                       value=""  class="formInput2" placeholder="Input proteins">
-                                <label for="fatsNewProduct" class="formText2"><@spring.message "label.fats" /></label>
+                                        </p>
+                                        <p>
+                                        <input type="number" name="fatsProduct" maxlength="9" autofocus id="fatsNewProduct"
+                                                                               value=""  class="formInput2" placeholder="Input proteins">
+                                                                        <label for="fatsNewProduct" class="formText2"><@spring.message "label.fats" /></label>
 
-                            </p>
-                            <p>
-                                <input type="number" name="carbsProduct" maxlength="9" autofocus id="carbsNewProduct"
-                                       value=""  class="formInput2" placeholder="Input proteins">
-                                <label for="carbsNewProduct" class="formText2"><@spring.message "label.carbs" /></label>
+                                        </p>
+                                        <p>
+                                        <input type="number" name="carbsProduct" maxlength="9" autofocus id="carbsNewProduct"
+                                                                               value=""  class="formInput2" placeholder="Input proteins">
+                                                                        <label for="carbsNewProduct" class="formText2"><@spring.message "label.carbs" /></label>
 
-                            </p>
-                            <button class="uui-button blue small left-icon">
-                                <img src="/myresources/images/icons/no-results.png" alt="" /><@spring.message "button.insert" />
-                            </button><br/>
-                            ${messageInsertProduct}
-                        </form>
-                    </div>
+                                        </p><br/><br/><br/><br/><br/><br/><br/>
+                                                                    <button class="uui-button blue small left-icon">
+                                                                        <img src="/resources/images/icons/no-results.png" alt="" /><@spring.message "button.insert" />
+                                        </button><br/>
+                                                                    ${messageInsertProduct}
+                                        </form>
+                                        </div>
 
                     <div class="blockAdvice">
                         <#include "calculator/calculator_calories.ftl"/><br/>
