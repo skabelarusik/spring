@@ -275,3 +275,7 @@ d
 4src/main/webapp/WEB-INF/views/static/footer_main.ftl,e\1\e1dbadf5c712a2b681db6dd3e2b4647e927cb277
 p
 @src/main/webapp/WEB-INF/views/calculator/calculator_calories.ftl,5\f\5feb852e6221e074d9731358a6cb914f9e8e2e0c
+x
+Hsrc/main/java/by/epam/crackertracker/controller/ExceptionController.java,6\3\63fd82f657499a11d56aa122f56069861c93fdd5
+n
+>src/test/java/by/epam/crackertracker/utils/TestParametres.java,d\4\d4267c511e3fd4cfecb34d7b4d754904391c0eeb

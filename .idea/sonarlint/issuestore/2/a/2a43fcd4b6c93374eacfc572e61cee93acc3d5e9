@@ -1,7 +1,7 @@
 
-ssquid:S00116"ORename this field "USER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±æ»ûÿÿÿÿ8ş±‰®Û-
-psquid:S00116"QRename this field "DRIVER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¼ß»8ş±‰®Û-
 msquid:S00116"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù˜‡°8ş±‰®Û-
 rsquid:S00116"SRename this field "PASSWORD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ±é–8ş±‰®Û-
+psquid:S00116"QRename this field "DRIVER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¼ß»8ş±‰®Û-
 esquid:UselessImportCheck"5Remove this unused import 'java.util.ResourceBundle'.(ıÆ£¯øÿÿÿÿ8ş±‰®Û-
+ssquid:S00116"ORename this field "USER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±æ»ûÿÿÿÿ8ş±‰®Û-
 \squid:UselessImportCheck"1Remove this unused import 'java.util.Properties'.(¬µ²8ş±‰®Û-

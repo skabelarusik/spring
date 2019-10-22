@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.awt.*;
-
 @Controller
 @RequestMapping(PageConstant.PATH_MESSAGE)
 public class MessageController {
@@ -36,6 +35,7 @@ public class MessageController {
 
     @GetMapping(PageConstant.URI_OUTPUT_MESSAGE)
     public String checkOutputMessage(@SessionAttribute User user, Model model) throws TrackerServiceException {
+
         model.addAttribute(ParameterConstant.MESSAGES, service.checkOutputMessage(user.getLogin(), 1));
         return PageConstant.PATH_PAGE_MESSAGE;
     }
@@ -48,6 +48,7 @@ public class MessageController {
 
     @PostMapping(PageConstant.URI_SEND_MESS)
     public String sendMessage(@RequestParam String recipient, Model model){
+
         model.addAttribute(ParameterConstant.PARAM_RECIPIENT, recipient);
         return PageConstant.PATH_SEND_MESSAGE;
     }

@@ -1,7 +1,8 @@
 
-ksquid:UselessImportCheck"ARemove this unused import 'by.epam.crackertracker.entity.Advice'.(ùÓİ 8ÂÈÄğİ-
-psquid:UselessImportCheck"@Remove this unused import 'org.springframework.http.HttpStatus'.(íŸ¤Šúÿÿÿÿ8ŠÇ²íŞ-
-”squid:UselessImportCheck"dRemove this unused import 'org.springframework.security.core.userdetails.UsernameNotFoundException'.(Í£Ö¶ùÿÿÿÿ8ÂÈÄğİ-
-]squid:S3752Õ">Add a "method" parameter to this "@RequestMapping" annotation.(ë²Â¹8ŠÇ²íŞ-
-asquid:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(·éÇ¾øÿÿÿÿ8ÂÈÄğİ-
 ‡squid:UselessImportCheck"WRemove this unused import 'by.epam.crackertracker.exception.ResourceNotFoundException'.(î®†âşÿÿÿÿ8ŠÇ²íŞ-
+bsquid:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(·éÇ¾øÿÿÿÿ8ÂÈÄğİ-
+”squid:UselessImportCheck"dRemove this unused import 'org.springframework.security.core.userdetails.UsernameNotFoundException'.(Í£Ö¶ùÿÿÿÿ8ÂÈÄğİ-
+msquid:S1192\"JDefine a constant instead of duplicating this literal "redirect:" 5 times.(Õ½æÏûÿÿÿÿ8‹ÿª—ß-
+psquid:UselessImportCheck"@Remove this unused import 'org.springframework.http.HttpStatus'.(íŸ¤Šúÿÿÿÿ8ŠÇ²íŞ-
+]squid:S3752×">Add a "method" parameter to this "@RequestMapping" annotation.(ë²Â¹8ŠÇ²íŞ-
+ksquid:UselessImportCheck"ARemove this unused import 'by.epam.crackertracker.entity.Advice'.(ùÓİ 8ÂÈÄğİ-

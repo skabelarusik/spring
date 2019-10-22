@@ -21,7 +21,8 @@ public class AdviceController {
 
    @GetMapping(PageConstant.URI_SELECT)
    public String selectAdvice(Model model){
-       model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, adviceService.selectAllAdvices());
+       model.addAttribute("TEST", "TESTTEST");
+     //  model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, adviceService.selectAllAdvices());
        return PageConstant.PATH_RESULT_ADVICE;
     }
 
@@ -32,8 +33,9 @@ public class AdviceController {
            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_CONGRAT);
        } catch (TrackerServiceException e) {
            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_ERROR_REGIST);
+           return currentPage;
        }
-       return currentPage;
+       return "redirect:/" + currentPage;
    }
 
    @PostMapping(PageConstant.URI_DELETE)

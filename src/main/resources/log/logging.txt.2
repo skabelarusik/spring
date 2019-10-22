@@ -1,906 +1,273 @@
-2019-09-23 18:07:06 main ERROR root:66 - Wrong initialize connection pool
-by.epam.crackertracker.exception.TrackerConnectionPoolException: Wrong create connection
-	at by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc.newConnection(ConnectionCreatorTrackerJdbc.java:32)
-	at by.epam.crackertracker.pool.ConnectionPool.init(ConnectionPool.java:62)
-	at by.epam.crackertracker.pool.ConnectionPool.<init>(ConnectionPool.java:49)
-	at by.epam.crackertracker.pool.ConnectionPool.getInstance(ConnectionPool.java:90)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcImpl.insert(AdviceDaoJdbcImpl.java:35)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcTest.testInsert(AdviceDaoJdbcTest.java:44)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.postgresql.util.PSQLException: Connection refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:138)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
-	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
-	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
-	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
-	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:32)
-	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
-	at org.postgresql.Driver.makeConnection(Driver.java:393)
-	at org.postgresql.Driver.connect(Driver.java:267)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
-	at by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc.newConnection(ConnectionCreatorTrackerJdbc.java:28)
-	... 29 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
-	at java.base/java.net.Socket.connect(Socket.java:591)
-	at java.base/java.net.Socket.connect(Socket.java:540)
-	at java.base/java.net.Socket.<init>(Socket.java:436)
-	at java.base/java.net.Socket.<init>(Socket.java:213)
-	at org.postgresql.core.PGStream.<init>(PGStream.java:62)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:76)
-	... 40 more
-2019-09-23 18:07:06 main FATAL root:51 - by.epam.crackertracker.exception.TrackerConnectionPoolException: Wrong initialize connection pool
-2019-09-23 18:07:52 main ERROR root:31 - Wrong create connection
-org.postgresql.util.PSQLException: Connection refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:138)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
-	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
-	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
-	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
-	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:32)
-	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
-	at org.postgresql.Driver.makeConnection(Driver.java:393)
-	at org.postgresql.Driver.connect(Driver.java:267)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
-	at by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc.newConnection(ConnectionCreatorTrackerJdbc.java:28)
-	at by.epam.crackertracker.pool.ConnectionPool.init(ConnectionPool.java:62)
-	at by.epam.crackertracker.pool.ConnectionPool.<init>(ConnectionPool.java:49)
-	at by.epam.crackertracker.pool.ConnectionPool.getInstance(ConnectionPool.java:90)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcImpl.insert(AdviceDaoJdbcImpl.java:35)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcTest.testInsert(AdviceDaoJdbcTest.java:45)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
-	at java.base/java.net.Socket.connect(Socket.java:591)
-	at java.base/java.net.Socket.connect(Socket.java:540)
-	at java.base/java.net.Socket.<init>(Socket.java:436)
-	at java.base/java.net.Socket.<init>(Socket.java:213)
-	at org.postgresql.core.PGStream.<init>(PGStream.java:62)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:76)
-	... 40 more
-2019-09-23 18:07:52 main ERROR root:66 - Wrong initialize connection pool
-by.epam.crackertracker.exception.TrackerConnectionPoolException: Wrong create connection
-	at by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc.newConnection(ConnectionCreatorTrackerJdbc.java:32)
-	at by.epam.crackertracker.pool.ConnectionPool.init(ConnectionPool.java:62)
-	at by.epam.crackertracker.pool.ConnectionPool.<init>(ConnectionPool.java:49)
-	at by.epam.crackertracker.pool.ConnectionPool.getInstance(ConnectionPool.java:90)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcImpl.insert(AdviceDaoJdbcImpl.java:35)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcTest.testInsert(AdviceDaoJdbcTest.java:45)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.postgresql.util.PSQLException: Connection refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:138)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
-	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
-	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
-	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
-	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:32)
-	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
-	at org.postgresql.Driver.makeConnection(Driver.java:393)
-	at org.postgresql.Driver.connect(Driver.java:267)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
-	at by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc.newConnection(ConnectionCreatorTrackerJdbc.java:28)
-	... 29 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
-	at java.base/java.net.Socket.connect(Socket.java:591)
-	at java.base/java.net.Socket.connect(Socket.java:540)
-	at java.base/java.net.Socket.<init>(Socket.java:436)
-	at java.base/java.net.Socket.<init>(Socket.java:213)
-	at org.postgresql.core.PGStream.<init>(PGStream.java:62)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:76)
-	... 40 more
-2019-09-23 18:07:52 main FATAL root:51 - by.epam.crackertracker.exception.TrackerConnectionPoolException: Wrong initialize connection pool
-2019-09-23 18:08:14 main ERROR root:31 - Wrong create connection
-org.postgresql.util.PSQLException: Connection refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:138)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
-	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
-	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
-	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
-	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:32)
-	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
-	at org.postgresql.Driver.makeConnection(Driver.java:393)
-	at org.postgresql.Driver.connect(Driver.java:267)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
-	at by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc.newConnection(ConnectionCreatorTrackerJdbc.java:28)
-	at by.epam.crackertracker.pool.ConnectionPool.init(ConnectionPool.java:62)
-	at by.epam.crackertracker.pool.ConnectionPool.<init>(ConnectionPool.java:49)
-	at by.epam.crackertracker.pool.ConnectionPool.getInstance(ConnectionPool.java:90)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcImpl.insert(AdviceDaoJdbcImpl.java:35)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcTest.testInsert(AdviceDaoJdbcTest.java:45)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
-	at java.base/java.net.Socket.connect(Socket.java:591)
-	at java.base/java.net.Socket.connect(Socket.java:540)
-	at java.base/java.net.Socket.<init>(Socket.java:436)
-	at java.base/java.net.Socket.<init>(Socket.java:213)
-	at org.postgresql.core.PGStream.<init>(PGStream.java:62)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:76)
-	... 40 more
-2019-09-23 18:08:14 main ERROR root:66 - Wrong initialize connection pool
-by.epam.crackertracker.exception.TrackerConnectionPoolException: Wrong create connection
-	at by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc.newConnection(ConnectionCreatorTrackerJdbc.java:32)
-	at by.epam.crackertracker.pool.ConnectionPool.init(ConnectionPool.java:62)
-	at by.epam.crackertracker.pool.ConnectionPool.<init>(ConnectionPool.java:49)
-	at by.epam.crackertracker.pool.ConnectionPool.getInstance(ConnectionPool.java:90)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcImpl.insert(AdviceDaoJdbcImpl.java:35)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcTest.testInsert(AdviceDaoJdbcTest.java:45)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.postgresql.util.PSQLException: Connection refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:138)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
-	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
-	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
-	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
-	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:32)
-	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
-	at org.postgresql.Driver.makeConnection(Driver.java:393)
-	at org.postgresql.Driver.connect(Driver.java:267)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
-	at by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc.newConnection(ConnectionCreatorTrackerJdbc.java:28)
-	... 29 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
-	at java.base/java.net.Socket.connect(Socket.java:591)
-	at java.base/java.net.Socket.connect(Socket.java:540)
-	at java.base/java.net.Socket.<init>(Socket.java:436)
-	at java.base/java.net.Socket.<init>(Socket.java:213)
-	at org.postgresql.core.PGStream.<init>(PGStream.java:62)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:76)
-	... 40 more
-2019-09-23 18:08:14 main FATAL root:51 - by.epam.crackertracker.exception.TrackerConnectionPoolException: Wrong initialize connection pool
-2019-09-23 18:09:35 main ERROR root:31 - Wrong create connection
-org.postgresql.util.PSQLException: Connection refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:138)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
-	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
-	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
-	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
-	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:32)
-	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
-	at org.postgresql.Driver.makeConnection(Driver.java:393)
-	at org.postgresql.Driver.connect(Driver.java:267)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
-	at by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc.newConnection(ConnectionCreatorTrackerJdbc.java:28)
-	at by.epam.crackertracker.pool.ConnectionPool.init(ConnectionPool.java:62)
-	at by.epam.crackertracker.pool.ConnectionPool.<init>(ConnectionPool.java:49)
-	at by.epam.crackertracker.pool.ConnectionPool.getInstance(ConnectionPool.java:90)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcImpl.insert(AdviceDaoJdbcImpl.java:35)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcTest.testInsert(AdviceDaoJdbcTest.java:45)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
-	at java.base/java.net.Socket.connect(Socket.java:591)
-	at java.base/java.net.Socket.connect(Socket.java:540)
-	at java.base/java.net.Socket.<init>(Socket.java:436)
-	at java.base/java.net.Socket.<init>(Socket.java:213)
-	at org.postgresql.core.PGStream.<init>(PGStream.java:62)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:76)
-	... 40 more
-2019-09-23 18:09:35 main ERROR root:66 - Wrong initialize connection pool
-by.epam.crackertracker.exception.TrackerConnectionPoolException: Wrong create connection
-	at by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc.newConnection(ConnectionCreatorTrackerJdbc.java:32)
-	at by.epam.crackertracker.pool.ConnectionPool.init(ConnectionPool.java:62)
-	at by.epam.crackertracker.pool.ConnectionPool.<init>(ConnectionPool.java:49)
-	at by.epam.crackertracker.pool.ConnectionPool.getInstance(ConnectionPool.java:90)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcImpl.insert(AdviceDaoJdbcImpl.java:35)
-	at by.epam.crackertracker.dao.AdviceDaoJdbcTest.testInsert(AdviceDaoJdbcTest.java:45)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
-	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.postgresql.util.PSQLException: Connection refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:138)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
-	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
-	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
-	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
-	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:32)
-	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
-	at org.postgresql.Driver.makeConnection(Driver.java:393)
-	at org.postgresql.Driver.connect(Driver.java:267)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
-	at by.epam.crackertracker.creator.ConnectionCreatorTrackerJdbc.newConnection(ConnectionCreatorTrackerJdbc.java:28)
-	... 29 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
-	at java.base/java.net.Socket.connect(Socket.java:591)
-	at java.base/java.net.Socket.connect(Socket.java:540)
-	at java.base/java.net.Socket.<init>(Socket.java:436)
-	at java.base/java.net.Socket.<init>(Socket.java:213)
-	at org.postgresql.core.PGStream.<init>(PGStream.java:62)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:76)
-	... 40 more
-2019-09-23 18:09:35 main FATAL root:51 - by.epam.crackertracker.exception.TrackerConnectionPoolException: Wrong initialize connection pool
-2019-09-24 10:44:24 main INFO  root:29 - connection created
-2019-09-24 10:44:24 main INFO  root:29 - connection created
-2019-09-24 10:44:24 main INFO  root:29 - connection created
-2019-09-24 10:44:24 main INFO  root:29 - connection created
-2019-09-24 10:44:24 main INFO  root:29 - connection created
-2019-09-24 10:44:24 main INFO  root:29 - connection created
-2019-09-24 10:44:24 main INFO  root:29 - connection created
-2019-09-24 10:44:24 main INFO  root:29 - connection created
-2019-09-24 10:44:24 main INFO  root:29 - connection created
-2019-09-24 10:44:24 main INFO  root:29 - connection created
-2019-09-24 10:44:24 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 10:44:24 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 10:44:24 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "advices_pkey"
-  Detail: Key (idadvices)=(1) already exists.
-2019-09-24 10:45:04 main INFO  root:29 - connection created
-2019-09-24 10:45:04 main INFO  root:29 - connection created
-2019-09-24 10:45:04 main INFO  root:29 - connection created
-2019-09-24 10:45:04 main INFO  root:29 - connection created
-2019-09-24 10:45:04 main INFO  root:29 - connection created
-2019-09-24 10:45:04 main INFO  root:29 - connection created
-2019-09-24 10:45:04 main INFO  root:29 - connection created
-2019-09-24 10:45:04 main INFO  root:29 - connection created
-2019-09-24 10:45:04 main INFO  root:29 - connection created
-2019-09-24 10:45:04 main INFO  root:29 - connection created
-2019-09-24 10:45:04 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 10:45:04 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 10:45:04 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "advices_pkey"
-  Detail: Key (idadvices)=(1) already exists.
-2019-09-24 10:45:54 main INFO  root:29 - connection created
-2019-09-24 10:45:54 main INFO  root:29 - connection created
-2019-09-24 10:45:54 main INFO  root:29 - connection created
-2019-09-24 10:45:54 main INFO  root:29 - connection created
-2019-09-24 10:45:54 main INFO  root:29 - connection created
-2019-09-24 10:45:54 main INFO  root:29 - connection created
-2019-09-24 10:45:54 main INFO  root:29 - connection created
-2019-09-24 10:45:54 main INFO  root:29 - connection created
-2019-09-24 10:45:54 main INFO  root:29 - connection created
-2019-09-24 10:45:54 main INFO  root:29 - connection created
-2019-09-24 10:45:54 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 10:45:54 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 10:45:54 main DEBUG root:67 - 1 advice deleted
-2019-09-24 10:46:18 main INFO  root:29 - connection created
-2019-09-24 10:46:18 main INFO  root:29 - connection created
-2019-09-24 10:46:18 main INFO  root:29 - connection created
-2019-09-24 10:46:18 main INFO  root:29 - connection created
-2019-09-24 10:46:18 main INFO  root:29 - connection created
-2019-09-24 10:46:19 main INFO  root:29 - connection created
-2019-09-24 10:46:19 main INFO  root:29 - connection created
-2019-09-24 10:46:19 main INFO  root:29 - connection created
-2019-09-24 10:46:19 main INFO  root:29 - connection created
-2019-09-24 10:46:19 main INFO  root:29 - connection created
-2019-09-24 10:46:19 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 10:46:19 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 10:46:38 main INFO  root:29 - connection created
-2019-09-24 10:46:38 main INFO  root:29 - connection created
-2019-09-24 10:46:38 main INFO  root:29 - connection created
-2019-09-24 10:46:38 main INFO  root:29 - connection created
-2019-09-24 10:46:38 main INFO  root:29 - connection created
-2019-09-24 10:46:38 main INFO  root:29 - connection created
-2019-09-24 10:46:38 main INFO  root:29 - connection created
-2019-09-24 10:46:38 main INFO  root:29 - connection created
-2019-09-24 10:46:38 main INFO  root:29 - connection created
-2019-09-24 10:46:38 main INFO  root:29 - connection created
-2019-09-24 10:46:38 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 10:46:38 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 10:47:32 main INFO  root:29 - connection created
-2019-09-24 10:47:32 main INFO  root:29 - connection created
-2019-09-24 10:47:32 main INFO  root:29 - connection created
-2019-09-24 10:47:32 main INFO  root:29 - connection created
-2019-09-24 10:47:32 main INFO  root:29 - connection created
-2019-09-24 10:47:33 main INFO  root:29 - connection created
-2019-09-24 10:47:33 main INFO  root:29 - connection created
-2019-09-24 10:47:33 main INFO  root:29 - connection created
-2019-09-24 10:47:33 main INFO  root:29 - connection created
-2019-09-24 10:47:33 main INFO  root:29 - connection created
-2019-09-24 10:47:33 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 10:47:33 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 10:47:33 main DEBUG root:67 - 2 advice deleted
-2019-09-24 10:47:50 main INFO  root:29 - connection created
-2019-09-24 10:47:50 main INFO  root:29 - connection created
-2019-09-24 10:47:50 main INFO  root:29 - connection created
-2019-09-24 10:47:50 main INFO  root:29 - connection created
-2019-09-24 10:47:51 main INFO  root:29 - connection created
-2019-09-24 10:47:51 main INFO  root:29 - connection created
-2019-09-24 10:47:51 main INFO  root:29 - connection created
-2019-09-24 10:47:51 main INFO  root:29 - connection created
-2019-09-24 10:47:51 main INFO  root:29 - connection created
-2019-09-24 10:47:51 main INFO  root:29 - connection created
-2019-09-24 10:47:51 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 10:47:51 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 10:58:26 main INFO  root:29 - connection created
-2019-09-24 10:58:26 main INFO  root:29 - connection created
-2019-09-24 10:58:26 main INFO  root:29 - connection created
-2019-09-24 10:58:26 main INFO  root:29 - connection created
-2019-09-24 10:58:26 main INFO  root:29 - connection created
-2019-09-24 10:58:27 main INFO  root:29 - connection created
-2019-09-24 10:58:27 main INFO  root:29 - connection created
-2019-09-24 10:58:27 main INFO  root:29 - connection created
-2019-09-24 10:58:27 main INFO  root:29 - connection created
-2019-09-24 10:58:27 main INFO  root:29 - connection created
-2019-09-24 10:58:27 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 10:58:27 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 10:58:27 main DEBUG root:67 - 2 advice deleted
-2019-09-24 11:05:19 main INFO  root:29 - connection created
-2019-09-24 11:05:19 main INFO  root:29 - connection created
-2019-09-24 11:05:19 main INFO  root:29 - connection created
-2019-09-24 11:05:19 main INFO  root:29 - connection created
-2019-09-24 11:05:19 main INFO  root:29 - connection created
-2019-09-24 11:05:19 main INFO  root:29 - connection created
-2019-09-24 11:05:19 main INFO  root:29 - connection created
-2019-09-24 11:05:19 main INFO  root:29 - connection created
-2019-09-24 11:05:19 main INFO  root:29 - connection created
-2019-09-24 11:05:20 main INFO  root:29 - connection created
-2019-09-24 11:05:20 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 11:05:20 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 11:05:20 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "advices_pkey"
-  Detail: Key (idadvices)=(1) already exists.
-2019-09-24 11:12:18 main INFO  root:29 - connection created
-2019-09-24 11:12:18 main INFO  root:29 - connection created
-2019-09-24 11:12:18 main INFO  root:29 - connection created
-2019-09-24 11:12:18 main INFO  root:29 - connection created
-2019-09-24 11:12:18 main INFO  root:29 - connection created
-2019-09-24 11:12:18 main INFO  root:29 - connection created
-2019-09-24 11:12:18 main INFO  root:29 - connection created
-2019-09-24 11:12:18 main INFO  root:29 - connection created
-2019-09-24 11:12:18 main INFO  root:29 - connection created
-2019-09-24 11:12:18 main INFO  root:29 - connection created
-2019-09-24 11:12:18 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 11:12:18 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 11:12:18 main DEBUG root:41 - test test 1234 - advice inserted
-2019-09-24 11:12:18 main ERROR root:43 - asdsadsadasdsadsadsda
-2019-09-24 12:03:15 main INFO  root:29 - connection created
-2019-09-24 12:03:15 main INFO  root:29 - connection created
-2019-09-24 12:03:15 main INFO  root:29 - connection created
-2019-09-24 12:03:15 main INFO  root:29 - connection created
-2019-09-24 12:03:15 main INFO  root:29 - connection created
-2019-09-24 12:03:15 main INFO  root:29 - connection created
-2019-09-24 12:03:15 main INFO  root:29 - connection created
-2019-09-24 12:03:15 main INFO  root:29 - connection created
-2019-09-24 12:03:15 main INFO  root:29 - connection created
-2019-09-24 12:03:15 main INFO  root:29 - connection created
-2019-09-24 12:03:15 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:03:15 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:03:15 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
-2019-09-24 12:03:15 main DEBUG root:41 - Р‘РЈР“РђР“Рђ - advice inserted
-2019-09-24 12:03:15 main ERROR root:43 - asdsadsadasdsadsadsda
-2019-09-24 12:03:15 main DEBUG root:67 - 3 advice deleted
-2019-09-24 12:03:15 main DEBUG root:67 - 2 advice deleted
-2019-09-24 12:03:49 main INFO  root:29 - connection created
-2019-09-24 12:03:49 main INFO  root:29 - connection created
-2019-09-24 12:03:49 main INFO  root:29 - connection created
-2019-09-24 12:03:49 main INFO  root:29 - connection created
-2019-09-24 12:03:49 main INFO  root:29 - connection created
-2019-09-24 12:03:49 main INFO  root:29 - connection created
-2019-09-24 12:03:49 main INFO  root:29 - connection created
-2019-09-24 12:03:49 main INFO  root:29 - connection created
-2019-09-24 12:03:49 main INFO  root:29 - connection created
-2019-09-24 12:03:49 main INFO  root:29 - connection created
-2019-09-24 12:03:49 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:03:49 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:04:25 main INFO  root:29 - connection created
-2019-09-24 12:04:25 main INFO  root:29 - connection created
-2019-09-24 12:04:25 main INFO  root:29 - connection created
-2019-09-24 12:04:25 main INFO  root:29 - connection created
-2019-09-24 12:04:25 main INFO  root:29 - connection created
-2019-09-24 12:04:25 main INFO  root:29 - connection created
-2019-09-24 12:04:25 main INFO  root:29 - connection created
-2019-09-24 12:04:25 main INFO  root:29 - connection created
-2019-09-24 12:04:25 main INFO  root:29 - connection created
-2019-09-24 12:04:25 main INFO  root:29 - connection created
-2019-09-24 12:04:25 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:04:25 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:05:15 main INFO  root:29 - connection created
-2019-09-24 12:05:15 main INFO  root:29 - connection created
-2019-09-24 12:05:15 main INFO  root:29 - connection created
-2019-09-24 12:05:15 main INFO  root:29 - connection created
-2019-09-24 12:05:15 main INFO  root:29 - connection created
-2019-09-24 12:05:15 main INFO  root:29 - connection created
-2019-09-24 12:05:15 main INFO  root:29 - connection created
-2019-09-24 12:05:15 main INFO  root:29 - connection created
-2019-09-24 12:05:15 main INFO  root:29 - connection created
-2019-09-24 12:05:15 main INFO  root:29 - connection created
-2019-09-24 12:05:15 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:05:15 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:05:31 main INFO  root:29 - connection created
-2019-09-24 12:05:31 main INFO  root:29 - connection created
-2019-09-24 12:05:31 main INFO  root:29 - connection created
-2019-09-24 12:05:31 main INFO  root:29 - connection created
-2019-09-24 12:05:31 main INFO  root:29 - connection created
-2019-09-24 12:05:31 main INFO  root:29 - connection created
-2019-09-24 12:05:31 main INFO  root:29 - connection created
-2019-09-24 12:05:32 main INFO  root:29 - connection created
-2019-09-24 12:05:32 main INFO  root:29 - connection created
-2019-09-24 12:05:32 main INFO  root:29 - connection created
-2019-09-24 12:05:32 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:05:32 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:06:08 main INFO  root:29 - connection created
-2019-09-24 12:06:09 main INFO  root:29 - connection created
-2019-09-24 12:06:09 main INFO  root:29 - connection created
-2019-09-24 12:06:09 main INFO  root:29 - connection created
-2019-09-24 12:06:09 main INFO  root:29 - connection created
-2019-09-24 12:06:09 main INFO  root:29 - connection created
-2019-09-24 12:06:09 main INFO  root:29 - connection created
-2019-09-24 12:06:09 main INFO  root:29 - connection created
-2019-09-24 12:06:09 main INFO  root:29 - connection created
-2019-09-24 12:06:09 main INFO  root:29 - connection created
-2019-09-24 12:06:09 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:06:09 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:06:41 main INFO  root:29 - connection created
-2019-09-24 12:06:41 main INFO  root:29 - connection created
-2019-09-24 12:06:41 main INFO  root:29 - connection created
-2019-09-24 12:06:41 main INFO  root:29 - connection created
-2019-09-24 12:06:41 main INFO  root:29 - connection created
-2019-09-24 12:06:42 main INFO  root:29 - connection created
-2019-09-24 12:06:42 main INFO  root:29 - connection created
-2019-09-24 12:06:42 main INFO  root:29 - connection created
-2019-09-24 12:06:42 main INFO  root:29 - connection created
-2019-09-24 12:06:42 main INFO  root:29 - connection created
-2019-09-24 12:06:42 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:06:42 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:07:10 main INFO  root:29 - connection created
-2019-09-24 12:07:10 main INFO  root:29 - connection created
-2019-09-24 12:07:10 main INFO  root:29 - connection created
-2019-09-24 12:07:10 main INFO  root:29 - connection created
-2019-09-24 12:07:11 main INFO  root:29 - connection created
-2019-09-24 12:07:11 main INFO  root:29 - connection created
-2019-09-24 12:07:11 main INFO  root:29 - connection created
-2019-09-24 12:07:11 main INFO  root:29 - connection created
-2019-09-24 12:07:11 main INFO  root:29 - connection created
-2019-09-24 12:07:11 main INFO  root:29 - connection created
-2019-09-24 12:07:11 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:07:11 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:07:33 main INFO  root:29 - connection created
-2019-09-24 12:07:33 main INFO  root:29 - connection created
-2019-09-24 12:07:33 main INFO  root:29 - connection created
-2019-09-24 12:07:33 main INFO  root:29 - connection created
-2019-09-24 12:07:33 main INFO  root:29 - connection created
-2019-09-24 12:07:33 main INFO  root:29 - connection created
-2019-09-24 12:07:33 main INFO  root:29 - connection created
-2019-09-24 12:07:33 main INFO  root:29 - connection created
-2019-09-24 12:07:33 main INFO  root:29 - connection created
-2019-09-24 12:07:33 main INFO  root:29 - connection created
-2019-09-24 12:07:33 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:07:33 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:07:33 main DEBUG root:67 - 2 advice deleted
-2019-09-24 12:08:15 main INFO  root:29 - connection created
-2019-09-24 12:08:15 main INFO  root:29 - connection created
-2019-09-24 12:08:15 main INFO  root:29 - connection created
-2019-09-24 12:08:15 main INFO  root:29 - connection created
-2019-09-24 12:08:15 main INFO  root:29 - connection created
-2019-09-24 12:08:15 main INFO  root:29 - connection created
-2019-09-24 12:08:15 main INFO  root:29 - connection created
-2019-09-24 12:08:16 main INFO  root:29 - connection created
-2019-09-24 12:08:16 main INFO  root:29 - connection created
-2019-09-24 12:08:16 main INFO  root:29 - connection created
-2019-09-24 12:08:16 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:08:16 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:08:16 main DEBUG root:67 - 2 advice deleted
-2019-09-24 12:08:31 main INFO  root:29 - connection created
-2019-09-24 12:08:31 main INFO  root:29 - connection created
-2019-09-24 12:08:31 main INFO  root:29 - connection created
-2019-09-24 12:08:31 main INFO  root:29 - connection created
-2019-09-24 12:08:31 main INFO  root:29 - connection created
-2019-09-24 12:08:31 main INFO  root:29 - connection created
-2019-09-24 12:08:31 main INFO  root:29 - connection created
-2019-09-24 12:08:31 main INFO  root:29 - connection created
-2019-09-24 12:08:31 main INFO  root:29 - connection created
-2019-09-24 12:08:31 main INFO  root:29 - connection created
-2019-09-24 12:08:31 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:08:31 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:08:55 main INFO  root:29 - connection created
-2019-09-24 12:08:55 main INFO  root:29 - connection created
-2019-09-24 12:08:55 main INFO  root:29 - connection created
-2019-09-24 12:08:55 main INFO  root:29 - connection created
-2019-09-24 12:08:55 main INFO  root:29 - connection created
-2019-09-24 12:08:55 main INFO  root:29 - connection created
-2019-09-24 12:08:55 main INFO  root:29 - connection created
-2019-09-24 12:08:55 main INFO  root:29 - connection created
-2019-09-24 12:08:55 main INFO  root:29 - connection created
-2019-09-24 12:08:55 main INFO  root:29 - connection created
-2019-09-24 12:08:55 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:08:55 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:08:55 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(100)
-2019-09-24 12:09:31 main INFO  root:29 - connection created
-2019-09-24 12:09:31 main INFO  root:29 - connection created
-2019-09-24 12:09:31 main INFO  root:29 - connection created
-2019-09-24 12:09:31 main INFO  root:29 - connection created
-2019-09-24 12:09:31 main INFO  root:29 - connection created
-2019-09-24 12:09:31 main INFO  root:29 - connection created
-2019-09-24 12:09:31 main INFO  root:29 - connection created
-2019-09-24 12:09:31 main INFO  root:29 - connection created
-2019-09-24 12:09:31 main INFO  root:29 - connection created
-2019-09-24 12:09:31 main INFO  root:29 - connection created
-2019-09-24 12:09:31 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:09:31 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:09:31 main DEBUG root:41 - Р‘РЈР“РђР“Рђ - advice inserted
-2019-09-24 12:09:31 main ERROR root:43 - asdsadsadasdsadsadsda
-2019-09-24 12:10:06 main INFO  root:29 - connection created
-2019-09-24 12:10:07 main INFO  root:29 - connection created
-2019-09-24 12:10:07 main INFO  root:29 - connection created
-2019-09-24 12:10:07 main INFO  root:29 - connection created
-2019-09-24 12:10:07 main INFO  root:29 - connection created
-2019-09-24 12:10:07 main INFO  root:29 - connection created
-2019-09-24 12:10:07 main INFO  root:29 - connection created
-2019-09-24 12:10:07 main INFO  root:29 - connection created
-2019-09-24 12:10:07 main INFO  root:29 - connection created
-2019-09-24 12:10:07 main INFO  root:29 - connection created
-2019-09-24 12:10:07 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:10:07 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:10:07 main DEBUG root:41 - Р‘РЈР“РђР“Рђ - advice inserted
-2019-09-24 12:10:07 main ERROR root:43 - asdsadsadasdsadsadsda
-2019-09-24 12:10:39 main INFO  root:29 - connection created
-2019-09-24 12:10:39 main INFO  root:29 - connection created
-2019-09-24 12:10:39 main INFO  root:29 - connection created
-2019-09-24 12:10:39 main INFO  root:29 - connection created
-2019-09-24 12:10:39 main INFO  root:29 - connection created
-2019-09-24 12:10:39 main INFO  root:29 - connection created
-2019-09-24 12:10:39 main INFO  root:29 - connection created
-2019-09-24 12:10:39 main INFO  root:29 - connection created
-2019-09-24 12:10:39 main INFO  root:29 - connection created
-2019-09-24 12:10:39 main INFO  root:29 - connection created
-2019-09-24 12:10:39 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:10:39 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:10:39 main DEBUG root:41 - Р‘РЈР“РђР“Рђ - advice inserted
-2019-09-24 12:10:39 main ERROR root:43 - asdsadsadasdsadsadsda
-2019-09-24 12:12:57 main INFO  root:29 - connection created
-2019-09-24 12:12:57 main INFO  root:29 - connection created
-2019-09-24 12:12:57 main INFO  root:29 - connection created
-2019-09-24 12:12:57 main INFO  root:29 - connection created
-2019-09-24 12:12:57 main INFO  root:29 - connection created
-2019-09-24 12:12:57 main INFO  root:29 - connection created
-2019-09-24 12:12:57 main INFO  root:29 - connection created
-2019-09-24 12:12:57 main INFO  root:29 - connection created
-2019-09-24 12:12:57 main INFO  root:29 - connection created
-2019-09-24 12:12:57 main INFO  root:29 - connection created
-2019-09-24 12:12:57 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:12:57 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:13:23 main INFO  root:29 - connection created
-2019-09-24 12:13:23 main INFO  root:29 - connection created
-2019-09-24 12:13:23 main INFO  root:29 - connection created
-2019-09-24 12:13:23 main INFO  root:29 - connection created
-2019-09-24 12:13:23 main INFO  root:29 - connection created
-2019-09-24 12:13:23 main INFO  root:29 - connection created
-2019-09-24 12:13:23 main INFO  root:29 - connection created
-2019-09-24 12:13:23 main INFO  root:29 - connection created
-2019-09-24 12:13:23 main INFO  root:29 - connection created
-2019-09-24 12:13:23 main INFO  root:29 - connection created
-2019-09-24 12:13:23 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:13:23 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:15:56 main INFO  root:29 - connection created
-2019-09-24 12:15:56 main INFO  root:29 - connection created
-2019-09-24 12:15:56 main INFO  root:29 - connection created
-2019-09-24 12:15:57 main INFO  root:29 - connection created
-2019-09-24 12:15:57 main INFO  root:29 - connection created
-2019-09-24 12:15:57 main INFO  root:29 - connection created
-2019-09-24 12:15:57 main INFO  root:29 - connection created
-2019-09-24 12:15:57 main INFO  root:29 - connection created
-2019-09-24 12:15:57 main INFO  root:29 - connection created
-2019-09-24 12:15:57 main INFO  root:29 - connection created
-2019-09-24 12:15:57 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:15:57 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:15:57 main DEBUG root:41 - Р‘РЈР“РђР“Рђ - advice inserted
-2019-09-24 12:15:57 main ERROR root:43 - asdsadsadasdsadsadsda
-2019-09-24 12:16:18 main INFO  root:29 - connection created
-2019-09-24 12:16:18 main INFO  root:29 - connection created
-2019-09-24 12:16:18 main INFO  root:29 - connection created
-2019-09-24 12:16:18 main INFO  root:29 - connection created
-2019-09-24 12:16:18 main INFO  root:29 - connection created
-2019-09-24 12:16:18 main INFO  root:29 - connection created
-2019-09-24 12:16:18 main INFO  root:29 - connection created
-2019-09-24 12:16:18 main INFO  root:29 - connection created
-2019-09-24 12:16:18 main INFO  root:29 - connection created
-2019-09-24 12:16:18 main INFO  root:29 - connection created
-2019-09-24 12:16:18 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:16:18 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:16:18 main DEBUG root:41 - Р‘РЈР“РђР“Рђ - advice inserted
-2019-09-24 12:16:18 main ERROR root:43 - asdsadsadasdsadsadsda
-2019-09-24 12:19:15 main INFO  root:29 - connection created
-2019-09-24 12:19:15 main INFO  root:29 - connection created
-2019-09-24 12:19:15 main INFO  root:29 - connection created
-2019-09-24 12:19:15 main INFO  root:29 - connection created
-2019-09-24 12:19:15 main INFO  root:29 - connection created
-2019-09-24 12:19:15 main INFO  root:29 - connection created
-2019-09-24 12:19:15 main INFO  root:29 - connection created
-2019-09-24 12:19:15 main INFO  root:29 - connection created
-2019-09-24 12:19:15 main INFO  root:29 - connection created
-2019-09-24 12:19:15 main INFO  root:29 - connection created
-2019-09-24 12:19:15 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:19:15 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:21:14 main INFO  root:29 - connection created
-2019-09-24 12:21:14 main INFO  root:29 - connection created
-2019-09-24 12:21:14 main INFO  root:29 - connection created
-2019-09-24 12:21:14 main INFO  root:29 - connection created
-2019-09-24 12:21:14 main INFO  root:29 - connection created
-2019-09-24 12:21:15 main INFO  root:29 - connection created
-2019-09-24 12:21:15 main INFO  root:29 - connection created
-2019-09-24 12:21:15 main INFO  root:29 - connection created
-2019-09-24 12:21:15 main INFO  root:29 - connection created
-2019-09-24 12:21:15 main INFO  root:29 - connection created
-2019-09-24 12:21:15 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:21:15 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:21:15 main ERROR root:46 - org.postgresql.util.PSQLException: ERROR: null value in column "message" violates not-null constraint
-  Detail: Failing row contains (3, null).
-2019-09-24 12:22:23 main INFO  root:29 - connection created
-2019-09-24 12:22:23 main INFO  root:29 - connection created
-2019-09-24 12:22:23 main INFO  root:29 - connection created
-2019-09-24 12:22:23 main INFO  root:29 - connection created
-2019-09-24 12:22:23 main INFO  root:29 - connection created
-2019-09-24 12:22:23 main INFO  root:29 - connection created
-2019-09-24 12:22:23 main INFO  root:29 - connection created
-2019-09-24 12:22:23 main INFO  root:29 - connection created
-2019-09-24 12:22:23 main INFO  root:29 - connection created
-2019-09-24 12:22:23 main INFO  root:29 - connection created
-2019-09-24 12:22:23 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:22:23 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:24:47 main INFO  root:29 - connection created
-2019-09-24 12:24:47 main INFO  root:29 - connection created
-2019-09-24 12:24:47 main INFO  root:29 - connection created
-2019-09-24 12:24:48 main INFO  root:29 - connection created
-2019-09-24 12:24:48 main INFO  root:29 - connection created
-2019-09-24 12:24:48 main INFO  root:29 - connection created
-2019-09-24 12:24:48 main INFO  root:29 - connection created
-2019-09-24 12:24:48 main INFO  root:29 - connection created
-2019-09-24 12:24:48 main INFO  root:29 - connection created
-2019-09-24 12:24:48 main INFO  root:29 - connection created
-2019-09-24 12:24:48 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:24:48 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 12:25:41 main INFO  root:29 - connection created
-2019-09-24 12:25:41 main INFO  root:29 - connection created
-2019-09-24 12:25:41 main INFO  root:29 - connection created
-2019-09-24 12:25:41 main INFO  root:29 - connection created
-2019-09-24 12:25:41 main INFO  root:29 - connection created
-2019-09-24 12:25:41 main INFO  root:29 - connection created
-2019-09-24 12:25:41 main INFO  root:29 - connection created
-2019-09-24 12:25:41 main INFO  root:29 - connection created
-2019-09-24 12:25:41 main INFO  root:29 - connection created
-2019-09-24 12:25:41 main INFO  root:29 - connection created
-2019-09-24 12:25:41 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 12:25:41 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 13:32:30 main INFO  root:29 - connection created
-2019-09-24 13:32:30 main INFO  root:29 - connection created
-2019-09-24 13:32:30 main INFO  root:29 - connection created
-2019-09-24 13:32:30 main INFO  root:29 - connection created
-2019-09-24 13:32:30 main INFO  root:29 - connection created
-2019-09-24 13:32:30 main INFO  root:29 - connection created
-2019-09-24 13:32:30 main INFO  root:29 - connection created
-2019-09-24 13:32:31 main INFO  root:29 - connection created
-2019-09-24 13:32:31 main INFO  root:29 - connection created
-2019-09-24 13:32:31 main INFO  root:29 - connection created
-2019-09-24 13:32:31 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 13:32:31 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 13:32:31 main ERROR root:55 - org.postgresql.util.PSQLException: ERROR: operator does not exist: boolean = integer
-  Hint: No operator matches the given name and argument type(s). You might need to add explicit type casts.
-  Position: 128
-2019-09-24 13:34:05 main INFO  root:29 - connection created
-2019-09-24 13:34:05 main INFO  root:29 - connection created
-2019-09-24 13:34:05 main INFO  root:29 - connection created
-2019-09-24 13:34:05 main INFO  root:29 - connection created
-2019-09-24 13:34:05 main INFO  root:29 - connection created
-2019-09-24 13:34:05 main INFO  root:29 - connection created
-2019-09-24 13:34:05 main INFO  root:29 - connection created
-2019-09-24 13:34:05 main INFO  root:29 - connection created
-2019-09-24 13:34:05 main INFO  root:29 - connection created
-2019-09-24 13:34:05 main INFO  root:29 - connection created
-2019-09-24 13:34:05 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 13:34:05 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 13:34:05 main ERROR root:55 - org.postgresql.util.PSQLException: ERROR: operator does not exist: boolean = integer
-  Hint: No operator matches the given name and argument type(s). You might need to add explicit type casts.
-  Position: 128
-2019-09-24 13:35:01 main INFO  root:29 - connection created
-2019-09-24 13:35:01 main INFO  root:29 - connection created
-2019-09-24 13:35:01 main INFO  root:29 - connection created
-2019-09-24 13:35:01 main INFO  root:29 - connection created
-2019-09-24 13:35:01 main INFO  root:29 - connection created
-2019-09-24 13:35:01 main INFO  root:29 - connection created
-2019-09-24 13:35:01 main INFO  root:29 - connection created
-2019-09-24 13:35:02 main INFO  root:29 - connection created
-2019-09-24 13:35:02 main INFO  root:29 - connection created
-2019-09-24 13:35:02 main INFO  root:29 - connection created
-2019-09-24 13:35:02 main INFO  root:70 - Connection pool with 10 connections was created
-2019-09-24 13:35:02 main DEBUG root:92 - Connaction Pool was created
-2019-09-24 13:35:02 main ERROR root:55 - org.postgresql.util.PSQLException: ERROR: operator does not exist: boolean = integer
-  Hint: No operator matches the given name and argument type(s). You might need to add explicit type casts.
-  Position: 128
-2019-09-24 13:35:25 main INFO  root:29 - connection created
-2019-09-24 13:35:25 main INFO  root:29 - connection created
-2019-09-24 13:35:25 main INFO  root:29 - connection created
-2019-09-24 13:35:25 main INFO  root:29 - connection created
-2019-09-24 13:35:25 main INFO  root:29 - connection created
-2019-09-24 13:35:25 main INFO  root:29 - connection created
-2019-09-24 13:35:25 main INFO  root:29 - connection created
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'timeValidator': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'typeSortedValidator': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'weightHeightValidator': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'org.springframework.aop.config.internalAutoProxyCreator': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'getJdbcTemplate': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'getDataSource': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'requestMappingHandlerMapping': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'mvcPathMatcher': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'mvcUrlPathHelper': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'mvcContentNegotiationManager': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'viewControllerHandlerMapping': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'beanNameHandlerMapping': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'resourceHandlerMapping': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'mvcResourceUrlProvider': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'defaultServletHandlerMapping': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'requestMappingHandlerAdapter': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'mvcConversionService': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'mvcValidator': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'mvcUriComponentsContributor': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'httpRequestHandlerAdapter': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'simpleControllerHandlerAdapter': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'handlerExceptionResolver': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'mvcViewResolver': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'getViewResolver': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'getFreeMarkerConfigurer': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'messageSource': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'localeResolver': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'objectPostProcessor': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'authenticationManagerBuilder': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'enableGlobalAuthenticationAutowiredConfigurer': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'initializeUserDetailsBeanManagerConfigurer': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'initializeAuthenticationProviderBeanManagerConfigurer': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'delegatingApplicationListener': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'webSecurityExpressionHandler': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'springSecurityFilterChain': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'privilegeEvaluator': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'autowiredWebSecurityConfigurersIgnoreParents': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'requestDataValueProcessor': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'authProvider': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'environment': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'systemProperties': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'systemEnvironment': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'servletContext': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'contextParameters': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'contextAttributes': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry': no URL paths identified
+2019-10-22 17:53:24 main DEBUG BeanNameUrlHandlerMapping:86 - Rejected bean name 'applicationEventMulticaster': no URL paths identified
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'resourceHandlerMapping'
+2019-10-22 17:53:24 main INFO  SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'defaultServletHandlerMapping'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'requestMappingHandlerAdapter'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'mvcValidator'
+2019-10-22 17:53:24 main INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@60db1c0e: startup date [Tue Oct 22 17:53:22 MSK 2019]; root of context hierarchy
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'mvcUriComponentsContributor'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'httpRequestHandlerAdapter'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'simpleControllerHandlerAdapter'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'handlerExceptionResolver'
+2019-10-22 17:53:24 main DEBUG ExceptionHandlerExceptionResolver:262 - Looking for exception mappings: org.springframework.web.context.support.GenericWebApplicationContext@60db1c0e: startup date [Tue Oct 22 17:53:22 MSK 2019]; root of context hierarchy
+2019-10-22 17:53:24 main INFO  ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in exceptionController
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'mvcViewResolver'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'getViewResolver'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'getFreeMarkerConfigurer'
+2019-10-22 17:53:24 main DEBUG FreeMarkerConfigurer:340 - Template loader path [ServletContext resource [/]] resolved to file path [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\webapp]
+2019-10-22 17:53:24 main DEBUG FreeMarkerConfigurer:340 - Template loader path [ServletContext resource [/WEB-INF/views/]] resolved to file path [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\webapp\WEB-INF\views]
+2019-10-22 17:53:24 main INFO  FreeMarkerConfigurer:127 - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'authenticationManagerBuilder'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:777 - Autowiring by type from bean name 'authenticationManagerBuilder' via factory method to bean named 'objectPostProcessor'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'autowiredWebSecurityConfigurersIgnoreParents'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:777 - Autowiring by type from bean name 'autowiredWebSecurityConfigurersIgnoreParents' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@f107c50'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'delegatingApplicationListener'
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'springSecurityFilterChain'
+2019-10-22 17:53:24 main DEBUG AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer:170 - Eagerly initializing {securityConfig=by.epam.crackertracker.config.SecurityConfig$$EnhancerBySpringCGLIB$$86cccf83@750ff7d3}
+2019-10-22 17:53:24 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'authProvider'
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login?error']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for Ant [pattern='/logout']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/logout-success']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for Ant [pattern='/']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for Ant [pattern='/review/show']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for Ant [pattern='/user/registration']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for Ant [pattern='/lang']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for Ant [pattern='/picture/**']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for Ant [pattern='/uui/**']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'permitAll', for Ant [pattern='/about']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'hasRole('ROLE_ADMIN')', for Ant [pattern='/user/update_role']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'hasRole('ROLE_ADMIN')', for Ant [pattern='/review/delete_by_id']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'hasAnyRole('ROLE_ADMIN','ROLE_CURATOR')', for Ant [pattern='/advice/add']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'hasAnyRole('ROLE_ADMIN','ROLE_CURATOR')', for Ant [pattern='/advice/delete']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'hasAnyRole('ROLE_ADMIN','ROLE_CURATOR')', for Ant [pattern='/product/add']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'hasAnyRole('ROLE_ADMIN','ROLE_CURATOR')', for Ant [pattern='/product/delete']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'hasAnyRole('ROLE_ADMIN','ROLE_CURATOR')', for Ant [pattern='/product/update']
+2019-10-22 17:53:25 main DEBUG ExpressionBasedFilterInvocationSecurityMetadataSource:74 - Adding web access control expression 'authenticated', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2019-10-22 17:53:25 main DEBUG FilterSecurityInterceptor:180 - Validated configuration attributes
+2019-10-22 17:53:25 main DEBUG FilterSecurityInterceptor:180 - Validated configuration attributes
+2019-10-22 17:53:25 main INFO  DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e4e1ef5, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a37a501, org.springframework.security.web.header.HeaderWriterFilter@3aa41da1, org.springframework.security.web.authentication.logout.LogoutFilter@63884e4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7d3c09ec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17143b3b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ba46e63, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d11ceef, org.springframework.security.web.session.SessionManagementFilter@3c83468e, org.springframework.security.web.access.ExceptionTranslationFilter@1352434e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@663bb8ef]
+2019-10-22 17:53:25 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'webSecurityExpressionHandler'
+2019-10-22 17:53:25 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'privilegeEvaluator'
+2019-10-22 17:53:25 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'requestDataValueProcessor'
+2019-10-22 17:53:25 main DEBUG GenericWebApplicationContext:785 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@54db056b]
+2019-10-22 17:53:25 main DEBUG ResourceUrlProvider:149 - Looking for resource handler mappings
+2019-10-22 17:53:25 main DEBUG ResourceUrlProvider:161 - Found resource handler mapping: URL pattern="/**", locations=[ServletContext resource [/picture], ServletContext resource [/uui]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@f5b6e78]
+2019-10-22 17:53:25 main DEBUG DefaultCacheAwareContextLoaderDelegate:119 - Storing ApplicationContext in cache under key [[WebMergedContextConfiguration@1807f5a7 testClass = AdviceControllerTest, locations = '{}', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
+2019-10-22 17:53:25 main DEBUG cache:290 - Spring test ApplicationContext cache statistics: [DefaultContextCache@3c3820bb size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1]
+2019-10-22 17:53:25 main DEBUG ServletTestExecutionListener:200 - Setting up MockHttpServletRequest, MockHttpServletResponse, ServletWebRequest, and RequestContextHolder for test context [DefaultTestContext@71687585 testClass = AdviceControllerTest, testInstance = by.epam.crackertracker.controller.AdviceControllerTest@3fba233d, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1807f5a7 testClass = AdviceControllerTest, locations = '{}', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]].
+2019-10-22 17:53:25 main DEBUG DependencyInjectionTestExecutionListener:81 - Performing dependency injection for test context [[DefaultTestContext@71687585 testClass = AdviceControllerTest, testInstance = by.epam.crackertracker.controller.AdviceControllerTest@3fba233d, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1807f5a7 testClass = AdviceControllerTest, locations = '{}', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]].
+2019-10-22 17:53:25 main DEBUG DefaultCacheAwareContextLoaderDelegate:130 - Retrieved ApplicationContext from cache with key [[WebMergedContextConfiguration@1807f5a7 testClass = AdviceControllerTest, locations = '{}', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
+2019-10-22 17:53:25 main DEBUG cache:290 - Spring test ApplicationContext cache statistics: [DefaultContextCache@3c3820bb size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1]
+2019-10-22 17:53:25 main DEBUG AbstractDirtiesContextTestExecutionListener:107 - Before test method: context [DefaultTestContext@71687585 testClass = AdviceControllerTest, testInstance = by.epam.crackertracker.controller.AdviceControllerTest@3fba233d, testMethod = testSelectAdvice@AdviceControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1807f5a7 testClass = AdviceControllerTest, locations = '{}', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+2019-10-22 17:53:25 main DEBUG RequestMappingHandlerMapping:195 - Looking for request mappings in application context: org.springframework.test.web.servlet.setup.StubWebApplicationContext@5d4e13e1
+2019-10-22 17:53:25 main DEBUG RequestMappingHandlerMapping:245 - 3 request handler methods found on class by.epam.crackertracker.controller.AdviceController: {public java.lang.String by.epam.crackertracker.controller.AdviceController.addAdvice(java.lang.String,java.lang.String,org.springframework.ui.Model)={[/advice/add],methods=[POST]}, public java.lang.String by.epam.crackertracker.controller.AdviceController.selectAdvice(org.springframework.ui.Model)={[/advice/select],methods=[GET]}, public java.lang.String by.epam.crackertracker.controller.AdviceController.delete(java.lang.String,java.lang.String,org.springframework.ui.Model)={[/advice/delete],methods=[POST]}}
+2019-10-22 17:53:25 main INFO  RequestMappingHandlerMapping:543 - Mapped "{[/advice/add],methods=[POST]}" onto public java.lang.String by.epam.crackertracker.controller.AdviceController.addAdvice(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2019-10-22 17:53:25 main INFO  RequestMappingHandlerMapping:543 - Mapped "{[/advice/select],methods=[GET]}" onto public java.lang.String by.epam.crackertracker.controller.AdviceController.selectAdvice(org.springframework.ui.Model)
+2019-10-22 17:53:25 main INFO  RequestMappingHandlerMapping:543 - Mapped "{[/advice/delete],methods=[POST]}" onto public java.lang.String by.epam.crackertracker.controller.AdviceController.delete(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2019-10-22 17:53:25 main INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@5d4e13e1
+2019-10-22 17:53:25 main DEBUG ExceptionHandlerExceptionResolver:262 - Looking for exception mappings: org.springframework.test.web.servlet.setup.StubWebApplicationContext@5d4e13e1
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:149 - Initializing servlet ''
+2019-10-22 17:53:25 main INFO  MockServletContext:438 - Initializing Spring FrameworkServlet ''
+2019-10-22 17:53:25 main INFO  TestDispatcherServlet:489 - FrameworkServlet '': initialization started
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:515 - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:530 - Using LocaleResolver [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@1a47a1e8]
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:552 - Using ThemeResolver [org.springframework.web.servlet.theme.FixedThemeResolver@6d2a2560]
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:689 - Using RequestToViewNameTranslator [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@62d1dc3c]
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:750 - Using FlashMapManager [org.springframework.web.servlet.support.SessionFlashMapManager@3811510]
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:568 - Published WebApplicationContext of servlet '' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.]
+2019-10-22 17:53:25 main INFO  TestDispatcherServlet:508 - FrameworkServlet '': initialization completed in 2 ms
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:174 - Servlet '' configured successfully
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:869 - DispatcherServlet with name '' processing GET request for [/advice/select]
+2019-10-22 17:53:25 main DEBUG RequestMappingHandlerMapping:310 - Looking up handler method for path /advice/select
+2019-10-22 17:53:25 main DEBUG RequestMappingHandlerMapping:317 - Returning handler method [public java.lang.String by.epam.crackertracker.controller.AdviceController.selectAdvice(org.springframework.ui.Model)]
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:955 - Last-Modified value for [/advice/select] is: -1
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:1280 - Rendering view [org.springframework.web.servlet.view.InternalResourceView: unnamed; URL [resultAdvice]] in DispatcherServlet with name ''
+2019-10-22 17:53:25 main DEBUG InternalResourceView:166 - Forwarding to resource [resultAdvice] in InternalResourceView 'null'
+2019-10-22 17:53:25 main DEBUG MockRequestDispatcher:62 - MockRequestDispatcher: forwarding to [resultAdvice]
+2019-10-22 17:53:25 main DEBUG TestDispatcherServlet:1000 - Successfully completed request
+2019-10-22 17:53:25 main DEBUG AbstractDirtiesContextTestExecutionListener:107 - After test method: context [DefaultTestContext@71687585 testClass = AdviceControllerTest, testInstance = by.epam.crackertracker.controller.AdviceControllerTest@3fba233d, testMethod = testSelectAdvice@AdviceControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1807f5a7 testClass = AdviceControllerTest, locations = '{}', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+2019-10-22 17:53:25 main DEBUG ServletTestExecutionListener:166 - Resetting RequestContextHolder for test context [DefaultTestContext@71687585 testClass = AdviceControllerTest, testInstance = by.epam.crackertracker.controller.AdviceControllerTest@3fba233d, testMethod = testSelectAdvice@AdviceControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1807f5a7 testClass = AdviceControllerTest, locations = '{}', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]].
+2019-10-22 17:53:25 main DEBUG AbstractDirtiesContextTestExecutionListener:142 - After test class: context [DefaultTestContext@71687585 testClass = AdviceControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1807f5a7 testClass = AdviceControllerTest, locations = '{}', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map['org.springframework.test.context.support.DependencyInjectionTestExecutionListener.reinjectDependencies' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+2019-10-22 17:53:25 Thread-0 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@60db1c0e: startup date [Tue Oct 22 17:53:22 MSK 2019]; root of context hierarchy
+2019-10-22 17:54:21 main DEBUG BootstrapUtils:97 - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+2019-10-22 17:54:21 main DEBUG BootstrapUtils:80 - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+2019-10-22 17:54:21 main DEBUG BootstrapUtils:133 - Instantiating TestContextBootstrapper for test class [by.epam.crackertracker.controller.AdviceControllerTest] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
+2019-10-22 17:54:21 main DEBUG AbstractDelegatingSmartContextLoader:95 - Delegating to AnnotationConfigWebContextLoader to process context configuration [ContextConfigurationAttributes@6c284af declaringClass = 'by.epam.crackertracker.controller.AdviceControllerTest', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+2019-10-22 17:54:21 main DEBUG ActiveProfilesUtils:79 - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [by.epam.crackertracker.controller.AdviceControllerTest]
+2019-10-22 17:54:21 main DEBUG WebTestContextBootstrapper:125 - @TestExecutionListeners is not present for class [by.epam.crackertracker.controller.AdviceControllerTest]: using defaults.
+2019-10-22 17:54:21 main INFO  WebTestContextBootstrapper:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-10-22 17:54:21 main INFO  WebTestContextBootstrapper:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7139992f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@69504ae9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@387a8303, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28cda624, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1500b2f3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7eecb5b8]
+2019-10-22 17:54:21 main DEBUG AbstractDirtiesContextTestExecutionListener:142 - Before test class: context [DefaultTestContext@71687585 testClass = AdviceControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1807f5a7 testClass = AdviceControllerTest, locations = '{}', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+2019-10-22 17:54:21 main DEBUG AbstractDelegatingSmartContextLoader:105 - Delegating to AnnotationConfigWebContextLoader to load context from [WebMergedContextConfiguration@1807f5a7 testClass = AdviceControllerTest, locations = '{}', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]].
+2019-10-22 17:54:21 main DEBUG AbstractGenericWebContextLoader:111 - Loading WebApplicationContext for merged context configuration [WebMergedContextConfiguration@1807f5a7 testClass = AdviceControllerTest, locations = '{}', classes = '{class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]].
+2019-10-22 17:54:21 main DEBUG StandardServletEnvironment:252 - Activating profiles []
+2019-10-22 17:54:21 main DEBUG AnnotationConfigWebContextLoader:162 - Registering annotated classes: {class by.epam.crackertracker.config.SpringConfig, class by.epam.crackertracker.config.WebConfig, class by.epam.crackertracker.config.SecurityConfig}
+2019-10-22 17:54:21 main INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@60db1c0e: startup date [Tue Oct 22 17:54:21 MSK 2019]; root of context hierarchy
+2019-10-22 17:54:21 main DEBUG GenericWebApplicationContext:617 - Bean factory for org.springframework.web.context.support.GenericWebApplicationContext@60db1c0e: org.springframework.beans.factory.support.DefaultListableBeanFactory@f107c50: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,springConfig,webConfig,securityConfig]; root of factory hierarchy
+2019-10-22 17:54:21 main DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\aspect\CrackerLogAspect.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\config\MyUserDetailsService.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\config\SecurityConfig.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\config\WebConfig.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\AdviceController.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\BucketController.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\CommonController.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\ExceptionController.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\MessageController.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\ProductController.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\ProgramNameController.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\ReviewController.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\SubscriptionController.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\UserController.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\AdviceDaoJdbcImpl.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\BucketDaoJdbcImpl.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\MessageDaoJdbcImpl.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\ProductDaoJdbc.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\ProgramDaoJdbcImpl.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\ProgramsNameDaoJdbc.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\ReviewDaoJdbc.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\TrackerSubscriptionDaoJdbcImpl.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\UserDaoJdbcImpl.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\AdviceMapper.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\BucketMapper.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\MessageMapper.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\ProductMapper.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\ProgramNameMapper.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\ReviewMapper.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\SubscriptionMapper.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\UserMapper.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\AdviceService.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\BucketService.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\CalculatorService.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\MessageService.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\ProductService.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\ProgramService.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\ProgramsNameService.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\ReviewService.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\SubscriptionService.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\UserService.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\util\LanguageSelector.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\AdviceLengthValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\AgeValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\BirthdayValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\CostValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\DayValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\DepositValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\DoubleValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\DurationValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\EmailValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\GenderValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\IdValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\LoginValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\MessageValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\MinMaxCaloriesValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\NameSurnameValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\PasswordValidator.class]
+2019-10-22 17:54:21 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\PathAvatarValidator.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\PortionsValidator.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\PositiveIntValidator.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\ProductNameValidator.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\ProgramNameValidator.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\ReviewLengthValidator.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\RoleValidator.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\TimeValidator.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\TypeSortedValidator.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\WeightHeightValidator.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\aspect\CrackerLogAspect.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\config\MyUserDetailsService.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\config\SecurityConfig.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\config\SpringConfig.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\AdviceController.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\BucketController.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\CommonController.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\ExceptionController.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\MessageController.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\ProductController.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\ProgramNameController.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\ReviewController.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\SubscriptionController.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\controller\UserController.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\AdviceDaoJdbcImpl.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\BucketDaoJdbcImpl.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\MessageDaoJdbcImpl.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\ProductDaoJdbc.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\ProgramDaoJdbcImpl.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\ProgramsNameDaoJdbc.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\ReviewDaoJdbc.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\TrackerSubscriptionDaoJdbcImpl.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\dao\UserDaoJdbcImpl.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\AdviceMapper.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\BucketMapper.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\MessageMapper.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\ProductMapper.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\ProgramNameMapper.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\ReviewMapper.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\SubscriptionMapper.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\mapper\UserMapper.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\AdviceService.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\BucketService.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\CalculatorService.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\MessageService.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\ProductService.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\ProgramService.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\ProgramsNameService.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\ReviewService.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\SubscriptionService.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\service\UserService.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\util\LanguageSelector.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\AdviceLengthValidator.class]
+2019-10-22 17:54:22 main DEBUG ClassPathBeanDefinitionScanner:294 - Identified candidate component class: file [C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\target\classes\by\epam\crackertracker\validator\AgeValidator.class]

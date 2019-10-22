@@ -1,15 +1,15 @@
 
+msquid:S00100k"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³æÄ«8¡ÙÅğİ-
+asquid:S3752>">Add a "method" parameter to this "@RequestMapping" annotation.(»‰Âñıÿÿÿÿ8¡ÙÅğİ-
 \squid:S3752'">Add a "method" parameter to this "@RequestMapping" annotation.(ëãûæ8¡ÙÅğİ-
 \squid:S37528">Add a "method" parameter to this "@RequestMapping" annotation.(ù…ÿ²8Ü“ÈîŞ-
-\squid:S3752J">Add a "method" parameter to this "@RequestMapping" annotation.(êÉûÖ8¡ÙÅğİ-
-zsquid:UselessImportCheck"ORemove this unused import 'org.springframework.security.core.userdetails.User'.(–Ä€8¡ÙÅğİ-
-osquid:UselessImportCheck"?Remove this unused import 'by.epam.crackertracker.entity.Role'.(ÉÍ¢€úÿÿÿÿ8¡ÙÅğİ-
-\squid:S3752Z">Add a "method" parameter to this "@RequestMapping" annotation.(¨ç»ó8Ü“ÈîŞ-
-rsquid:UselessImportCheck"BRemove this unused import 'by.epam.crackertracker.entity.Message'.(à¢¥¶ùÿÿÿÿ8¡ÙÅğİ-
 usquid:UselessImportCheck
 "ERemove this unused import 'by.epam.crackertracker.util.PageSelector'.(ğÁ¦¬şÿÿÿÿ8¡ÙÅğİ-
-\squid:S3752D">Add a "method" parameter to this "@RequestMapping" annotation.(ÔÉé‹8¡ÙÅğİ-
+rsquid:UselessImportCheck"BRemove this unused import 'by.epam.crackertracker.entity.Message'.(à¢¥¶ùÿÿÿÿ8¡ÙÅğİ-
+\squid:S3752J">Add a "method" parameter to this "@RequestMapping" annotation.(êÉûÖ8¡ÙÅğİ-
+zsquid:UselessImportCheck"ORemove this unused import 'org.springframework.security.core.userdetails.User'.(–Ä€8¡ÙÅğİ-
 asquid:S3752U">Add a "method" parameter to this "@RequestMapping" annotation.(·éÇ¾øÿÿÿÿ8Ü“ÈîŞ-
-msquid:S00100k"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³æÄ«8¡ÙÅğİ-
+osquid:UselessImportCheck"?Remove this unused import 'by.epam.crackertracker.entity.Role'.(ÉÍ¢€úÿÿÿÿ8¡ÙÅğİ-
+\squid:S3752Z">Add a "method" parameter to this "@RequestMapping" annotation.(¨ç»ó8Ü“ÈîŞ-
+\squid:S3752D">Add a "method" parameter to this "@RequestMapping" annotation.(ÔÉé‹8¡ÙÅğİ-
 \squid:S3752P">Add a "method" parameter to this "@RequestMapping" annotation.(îæŠÔ8¡ÙÅğİ-
-asquid:S3752>">Add a "method" parameter to this "@RequestMapping" annotation.(»‰Âñıÿÿÿÿ8¡ÙÅğİ-

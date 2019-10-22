@@ -918,6 +918,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/utils/TestParametres.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/NameSurnameValidatorTest.java">
           <value>
             <set />

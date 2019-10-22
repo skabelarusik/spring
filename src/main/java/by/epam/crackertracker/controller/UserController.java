@@ -87,8 +87,9 @@ public class UserController {
             model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_ERROR_REGIST);
+            return PageConstant.PATH_PAGE_EDIT_USER;
         }
-        return PageConstant.PATH_PAGE_EDIT_USER;
+        return "redirect:" + PageConstant.PATH_PAGE_EDIT_USER;
     }
 
     @GetMapping(PageConstant.URI_UPDATE_USER)
@@ -106,9 +107,9 @@ public class UserController {
             model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
            model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
-
+            return PageConstant.PATH_PAGE_EDIT_USER;
         }
-        return PageConstant.PATH_PAGE_EDIT_USER;
+        return "redirect:" + PageConstant.PATH_PAGE_EDIT_USER;
     }
 
     @PostMapping(PageConstant.URI_UPDATE_USER_ROLE)
@@ -119,8 +120,9 @@ public class UserController {
             model.addAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
            model.addAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.WRONG_DATA);
+           return startPage;
         }
-        return startPage;
+        return "redirect:" + startPage;
     }
 
 
@@ -146,7 +148,7 @@ public class UserController {
             page = PageConstant.PATH_PAGE_MAIN_INDEX;
         }
         request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
-        return page;
+        return  page;
     }
 
 
@@ -173,9 +175,10 @@ public class UserController {
         } catch (TrackerServiceException e) {
             page = PageConstant.PATH_PAGE_REGISTER;
             request.setAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
+            return page;
         }
         request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
-        return page;
+        return  "redirect:" + page;
     }
 
     @GetMapping(PageConstant.URI_REGISTER)
@@ -200,7 +203,7 @@ public class UserController {
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.MESSAGE_DEPOSIT, ParameterConstant.MESSAGE_ERROR_REGIST);
         }
-        return PageConstant.PATH_DEPOSIT;
+        return "redirect:" + PageConstant.PATH_DEPOSIT;
     }
 
     @GetMapping(PageConstant.URI_REQUEST)
@@ -208,7 +211,6 @@ public class UserController {
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectAllAdmins());
         return PageConstant.PATH_RESULT_USER;
     }
-
 
     @RequestMapping(PageConstant.URI_MAIN)
     public String main(@AuthenticationPrincipal UserPrincipal user, Model model, HttpServletRequest request) {

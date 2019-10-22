@@ -5,6 +5,8 @@
 
 package by.epam.crackertracker.util;
 
+import java.net.URI;
+
 public class PageConstant {
 
 
@@ -106,6 +108,7 @@ public class PageConstant {
     public static final String SECUR_PATH_REVIEW_DELETE = "/review/delete_by_id";
     public static final String SECUR_PATH_ADVICE_ADD = "/advice/add";
     public static final String SECUR_PATH_ADVICE_DELETE = "/advice/delete";
+    public static final String SECUR_PATH_ADVICE_SELECT = "/advice/select";
     public static final String SECUR_PATH_PRODUCT_UPDATE = "/product/update";
     public static final String SECUR_PATH_PRODUCT_DELETE = "/product/delete";
     public static final String SECUR_PATH_PRODUCT_ADD = "/product/add";
