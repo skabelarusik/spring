@@ -33,5 +33,4 @@
 <script src="../uui/js/lib/components/bootstrap-timepicker.js"></script>
 <script src="../uui/js/uui-timepicker.min.js"></script>
 
-
 <#setting classic_compatible=true>

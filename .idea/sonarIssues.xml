@@ -753,6 +753,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/static/template.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/superuser.ftl">
           <value>
             <set />
@@ -839,6 +844,31 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/AdviceControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/BucketController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/BucketControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/MessageControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/ProductControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/ReviewControllerTest.java">
           <value>
             <set />
           </value>

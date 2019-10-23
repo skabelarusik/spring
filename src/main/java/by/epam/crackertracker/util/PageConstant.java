@@ -106,12 +106,25 @@ public class PageConstant {
 
     public static final String SECUR_PATH_UPDATE_ROLE = "/user/update_role";
     public static final String SECUR_PATH_REVIEW_DELETE = "/review/delete_by_id";
+    public static final String SECUR_PATH_REVIEW_DEL = "/review/delete";
+
     public static final String SECUR_PATH_ADVICE_ADD = "/advice/add";
     public static final String SECUR_PATH_ADVICE_DELETE = "/advice/delete";
     public static final String SECUR_PATH_ADVICE_SELECT = "/advice/select";
     public static final String SECUR_PATH_PRODUCT_UPDATE = "/product/update";
     public static final String SECUR_PATH_PRODUCT_DELETE = "/product/delete";
     public static final String SECUR_PATH_PRODUCT_ADD = "/product/add";
+    public static final String SECUR_PATH_PRODUCT_SELECT = "/product/select";
+    public static final String SECUR_PATH_PRODUCT_SEARCH = "/product/search";
+    public static final String PATH_REVIEW_SHOW = "/review/show";
+    public static final String PATH_REVIEW_SHOW_DEL = "/review/show_del";
+    public static final String SECUR_PATH_REVIEW_SEND = "/review/send";
+    public static final String URI_INPUT_MESSAGE_FULL = "/message/input";
+    public static final String URI_OUTPUT_MESSAGE_FULL = "/message/output";
+    public static final String URI_OUTPUT_MESSAGE_SEND = "/message/send";
+    public static final String URI_MESSAGE_SEND_FORM = "/message/send_mes";
+    public static final String PATH_BUCKET_ADD = "/bucket/add";
+
 
 
 

@@ -21,8 +21,7 @@ public class AdviceController {
 
    @GetMapping(PageConstant.URI_SELECT)
    public String selectAdvice(Model model){
-       model.addAttribute("TEST", "TESTTEST");
-     //  model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, adviceService.selectAllAdvices());
+       model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, adviceService.selectAllAdvices());
        return PageConstant.PATH_RESULT_ADVICE;
     }
 

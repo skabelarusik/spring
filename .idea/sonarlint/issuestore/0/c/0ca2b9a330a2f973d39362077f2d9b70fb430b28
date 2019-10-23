@@ -1,7 +1,7 @@
 
 nsquid:UselessImportCheck
 "CRemove this unused import 'org.springframework.stereotype.Service'.(¼º¡Ú8ò µÚ-
+msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8ÙÅŠşÚ-
 qsquid:UselessImportCheck"ARemove this unused import 'by.epam.crackertracker.entity.Review'.( ŒÙÿÿÿÿÿ8úÓµÚ-
 [squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8úÓµÚ-
-msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8ÙÅŠşÚ-
 rsquid:S001009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÜÙÓÿÿÿÿÿ8Ú— ôÜ-

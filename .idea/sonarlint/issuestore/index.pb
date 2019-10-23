@@ -251,8 +251,6 @@ t
 Dsrc/main/java/by/epam/crackertracker/config/SecurityInitializer.java,3\8\38746e5f04534a887b64c6d0145f3525c8f484a8
 o
 ?src/main/java/by/epam/crackertracker/config/SecurityConfig.java,1\a\1ac7c202e9dbb4cc810f88b067946335a63df064
-k
-;src/test/java/by/epam/crackertracker/config/TestConfig.java,1\f\1f29e838b2986cad9c6121f466c316a471c31be0
 y
 Isrc/test/java/by/epam/crackertracker/controller/AdviceControllerTest.java,9\f\9fe7db0792f7f28ce308a69058e798e38769a29c
 u
@@ -279,3 +277,13 @@ x
 Hsrc/main/java/by/epam/crackertracker/controller/ExceptionController.java,6\3\63fd82f657499a11d56aa122f56069861c93fdd5
 n
 >src/test/java/by/epam/crackertracker/utils/TestParametres.java,d\4\d4267c511e3fd4cfecb34d7b4d754904391c0eeb
+y
+Isrc/test/java/by/epam/crackertracker/controller/BucketControllerTest.java,0\a\0a1e202a339d79f807134515b21b61229e934310
+z
+Jsrc/test/java/by/epam/crackertracker/controller/ProductControllerTest.java,d\6\d6e291b54f94e36943cb18e8fd43d5759221d9d5
+y
+Isrc/test/java/by/epam/crackertracker/controller/ReviewControllerTest.java,0\0\00dd605a1a932ac6731c918e1a8525d48bf67e26
+a
+1src/main/webapp/WEB-INF/views/static/template.ftl,e\2\e2c869ebdfac06c6bc110b9a6f1c42e79d796acc
+z
+Jsrc/test/java/by/epam/crackertracker/controller/MessageControllerTest.java,d\5\d51a9f0d112b0f1b36b7f9eec3a64f4e16bfbe3b

@@ -1,19 +1,18 @@
 package by.epam.crackertracker.controller;
 
 import by.epam.crackertracker.config.*;
-import by.epam.crackertracker.service.UserService;
+import by.epam.crackertracker.entity.Advice;
+import by.epam.crackertracker.exception.TrackerServiceException;
+import by.epam.crackertracker.service.AdviceService;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
-import by.epam.crackertracker.utils.TestParametres;
-import by.epam.crackertracker.validator.AdviceLengthValidator;
-import org.junit.Assert;
+import static by.epam.crackertracker.utils.TestParametres.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -24,8 +23,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import java.util.*;
+
 import static org.mockito.Mockito.*;
 
 
@@ -35,236 +34,88 @@ import static org.mockito.Mockito.*;
 @WebAppConfiguration
 public class AdviceControllerTest {
 
-
     private MockMvc mvc;
 
     @Mock
-    private UserPrincipal userPrincipal;
+    private AdviceService service;
 
     @InjectMocks
     private AdviceController adviceController;
 
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         MockitoAnnotations.initMocks(this);
         this.mvc = MockMvcBuilders.standaloneSetup(adviceController).build();
     }
 
     @Test
     public void testSelectAdvice() throws Exception {
-    //    when(userService.selectAllUsers(null, null)..thenReturn(true));
+        List<Advice> list = new ArrayList<>();
+        list.add(new Advice("Advice1"));
+        list.add(new Advice("Advice2"));
+        when(service.selectAllAdvices()).thenReturn(list);
         mvc.perform(get(PageConstant.SECUR_PATH_ADVICE_SELECT))
                 .andDo(print())
+                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, list))
                 .andExpect(view().name(PageConstant.PATH_RESULT_ADVICE));
     }
 
     @Test
     public void testAddAdviceShouldBeRedirect() throws Exception {
-        mvc.perform(post(PageConstant.SECUR_PATH_ADVICE_ADD).param(ParameterConstant.ATTRIBUTE_CURRENT_PAGE,ParameterConstant.ROLE_ADMIN.toLowerCase())
-                        .param(ParameterConstant.PARAM_ADVICE, TestParametres.VALIDE_TEXT)).andDo(print())
-                        .andExpect(status().is3xxRedirection())
-                        .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_CONGRAT))
-                        .andExpect(view().name("redirect:/admin"));
+        mvc.perform(post(PageConstant.SECUR_PATH_ADVICE_ADD).param(ParameterConstant.ATTRIBUTE_CURRENT_PAGE, ADMIN)
+                .param(ParameterConstant.PARAM_ADVICE, VALIDE_TEXT)).andDo(print())
+                .andExpect(status().is3xxRedirection())
+                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_CONGRAT))
+                .andExpect(view().name(REDIRECT_ADMIN));
     }
 
     @Test
-    public void testAddNullAdviceShouldBeWrongMessage() throws Exception {
-        mvc.perform(post(PageConstant.SECUR_PATH_ADVICE_ADD).param(ParameterConstant.ATTRIBUTE_CURRENT_PAGE,ParameterConstant.ROLE_ADMIN.toLowerCase())
-                .param(ParameterConstant.PARAM_ADVICE, longer))
-                 .andDo(print())
-                .andExpect(model().attribute("addmessage", "congratulations!"))
-                .andExpect(view().name("redirect:/admin"));
+    public void testAddLongAdviceShouldBeWrongMessage() throws Exception {
+        doThrow(TrackerServiceException.class).when(service).addAdvice(LONGER);
+        mvc.perform(post(PageConstant.SECUR_PATH_ADVICE_ADD).param(ParameterConstant.ATTRIBUTE_CURRENT_PAGE, ADMIN)
+                .param(ParameterConstant.PARAM_ADVICE, LONGER))
+                .andDo(print())
+                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_ERROR_REGIST))
+                .andExpect(view().name(ADMIN));
     }
 
+    @Test
+    public void testAddEmptyAdviceShouldBeWrongMessage() throws Exception {
+        doThrow(TrackerServiceException.class).when(service).addAdvice(EMPTY);
+        mvc.perform(post(PageConstant.SECUR_PATH_ADVICE_ADD).param(ParameterConstant.ATTRIBUTE_CURRENT_PAGE, ADMIN)
+                .param(ParameterConstant.PARAM_ADVICE, EMPTY))
+                .andDo(print())
+                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_ERROR_REGIST))
+                .andExpect(view().name(ADMIN));
+    }
 
-    String longer = "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-    "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-            "       asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc" +
-    "asdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxcccccccccccccccasdsadddddddddddddddddddddassssssssssszxccccccccccccccc";
+    @Test
+    public void testDeleteAdvice() throws Exception {
+        List<Advice> list = new ArrayList<>();
+        list.add(new Advice("Advice1"));
+        list.add(new Advice("Advice2"));
+        when(service.selectAllAdvices()).thenReturn(list);
+        mvc.perform(post(PageConstant.SECUR_PATH_ADVICE_DELETE).param(ParameterConstant.ATTRIBUTE_CURRENT_PAGE, ADMIN).
+                param(ParameterConstant.PARAM_ID, GOOD_ID))
+                .andDo(print())
+                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_ADD_DELETE_MESS, ParameterConstant.MESSAGE_CONGRAT))
+                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, list))
+                .andExpect(view().name(ADMIN));
+    }
 
-
-
-
-    //    @PostMapping(PageConstant.URI_ADD)
-//    public String addAdvice(@RequestParam String currentPage, @RequestParam String advice, Model model){
-//        try {
-//            adviceService.addAdvice(advice);
-//            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_CONGRAT);
-//        } catch (TrackerServiceException e) {
-//            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_ERROR_REGIST);
-//            return currentPage;
-//        }
-//        return "redirect:/" + currentPage;
-//    }
-
+    @Test
+    public void testDeleteAdviceWrongId() throws Exception {
+        List<Advice> list = new ArrayList<>();
+        list.add(new Advice("Advice1"));
+        list.add(new Advice("Advice2"));
+        when(service.selectAllAdvices()).thenReturn(list);
+        doThrow(TrackerServiceException.class).when(service).deleteAdviceById(WRONG_ID);
+        mvc.perform(post(PageConstant.SECUR_PATH_ADVICE_DELETE).param(ParameterConstant.ATTRIBUTE_CURRENT_PAGE, ADMIN).
+                param(ParameterConstant.PARAM_ID, WRONG_ID))
+                .andDo(print())
+                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_ADD_DELETE_MESS, ParameterConstant.MESSAGE_ERROR_REGIST))
+                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, list))
+                .andExpect(view().name(ADMIN));
+    }
 }
-//
-//@Controller
-//@RequestMapping(PageConstant.PATH_ADVICE)
-//public class AdviceController {
-//
-//    @Autowired
-//    private AdviceService adviceService;
-//
-//    @GetMapping(PageConstant.URI_SELECT)
-//    public String selectAdvice(Model model){
-//        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, adviceService.selectAllAdvices());
-//        return PageConstant.PATH_RESULT_ADVICE;
-//    }
-//
-
-//
-//    @PostMapping(PageConstant.URI_DELETE)
-//    public String delete(@RequestParam String currentPage, @RequestParam String id, Model model){
-//        try {
-//            adviceService.deleteAdviceById(id);
-//            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, adviceService.selectAllAdvices());
-//            model.addAttribute(ParameterConstant.ATTRIBUTE_ADD_DELETE_MESS, ParameterConstant.MESSAGE_CONGRAT);
-//        } catch (TrackerServiceException e) {
-//            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, adviceService.selectAllAdvices());
-//            model.addAttribute(ParameterConstant.ATTRIBUTE_ADD_DELETE_MESS, ParameterConstant.MESSAGE_ERROR_REGIST);
-//        }
-//        return currentPage;
-//    }
-//}
-//

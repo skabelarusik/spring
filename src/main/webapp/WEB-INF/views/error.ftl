@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>ERROR</title>
+        <title>ERROR PAGE</title>
     </head>
     <body><h1>ERROR</h1></body>
 </html>

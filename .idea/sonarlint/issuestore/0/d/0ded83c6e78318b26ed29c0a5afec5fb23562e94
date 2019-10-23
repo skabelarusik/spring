@@ -1,7 +1,7 @@
 
 rsquid:UselessImportCheck"BRemove this unused import 'by.epam.crackertracker.entity.Message'.(à¢¥¶ùÿÿÿÿ8ø—ñ´Ú-
-lsquid:UselessImportCheck"<Remove this unused import 'org.springframework.ui.ModelMap'.(ÊÁâºùÿÿÿÿ8¼‹´Ú-
 Ysquid:UselessImportCheck
 "/Remove this unused import 'jdk.jfr.StackTrace'.(ÞÞçS8 ÐâÚ-
 Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ð‹Ò³Ú-
+lsquid:UselessImportCheck"<Remove this unused import 'org.springframework.ui.ModelMap'.(ÊÁâºùÿÿÿÿ8¼‹´Ú-
 msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8ý«žõÜ-

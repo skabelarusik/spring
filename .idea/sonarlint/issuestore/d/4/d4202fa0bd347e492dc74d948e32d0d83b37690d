@@ -1,9 +1,9 @@
 
-qsquid:S3776“"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(êĞ´š8á‹ÔÛÛ-
-rsquid:UselessImportCheck	"GRemove this unused import 'by.epam.crackertracker.dao.UserDaoJdbcImpl'.(‚ŞèÇ8Œ¥ÖóŞ-
-vsquid:S3776ƒ"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¿òƒêşÿÿÿÿ8ëŒ‰×Ú-
 psquid:UselessImportCheck"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ
+zsquid:S1192{"\Define a constant instead of duplicating this literal "Wrong service register user" 3 times.(Ä¤ş8ßĞ•úÜ-
+rsquid:UselessImportCheck	"GRemove this unused import 'by.epam.crackertracker.dao.UserDaoJdbcImpl'.(‚ŞèÇ8Œ¥ÖóŞ-
 msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8ï†‡×Ú-
 „squid:S1192Ù"fDefine a constant instead of duplicating this literal "Wrong service deposit to account user" 4 times.(óãs8„¬ÒÜ-
 ƒsquid:S1192Ş"_Define a constant instead of duplicating this literal "Wrong service send avatar user" 4 times.(ô‡¬¼şÿÿÿÿ8‚×óŞ-
-zsquid:S1192{"\Define a constant instead of duplicating this literal "Wrong service register user" 3 times.(Ä¤ş8ßĞ•úÜ-
+vsquid:S3776ƒ"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¿òƒêşÿÿÿÿ8ëŒ‰×Ú-
+qsquid:S3776“"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(êĞ´š8á‹ÔÛÛ-

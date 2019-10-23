@@ -25,6 +25,7 @@ public class ProductController {
             model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS, service.searchProducts(text));
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.WRONG_SEARCH, ParameterConstant.WRONG_DATA);
+            return startPage;
         }
         return PageConstant.PATH_PAGE_PRODUCT;
     }
@@ -81,8 +82,7 @@ public class ProductController {
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.MESSAGE_DELETE_PRODUCT, ParameterConstant.MESSAGE_ERROR_REGIST);
         }
-
-        return currentPage;
+        return "redirect:/" + currentPage;
     }
 
     @PostMapping(PageConstant.URI_ADD)
@@ -91,9 +91,9 @@ public class ProductController {
                       @RequestParam String fatsProduct, @RequestParam String carbsProduct){
         try {
             service.addProduct(nameProduct, caloriesProduct, fatsProduct, carbsProduct, proteinsProduct);
-            model.addAttribute("messageInsertProduct", ParameterConstant.MESSAGE_CONGRAT);
+            model.addAttribute(ParameterConstant.MESSAGE_INSERT_PRODUCT, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
-            model.addAttribute("messageInsertProduct", ParameterConstant.MESSAGE_ERROR_REGIST);
+            model.addAttribute(ParameterConstant.MESSAGE_INSERT_PRODUCT, ParameterConstant.MESSAGE_ERROR_REGIST);
         }
         return currentPage;
     }

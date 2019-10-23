@@ -66,8 +66,9 @@ public class MessageController {
             model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
+            return PageConstant.PATH_SEND_MESSAGE;
         }
-        return PageConstant.PATH_SEND_MESSAGE;
+        return "redirect:/" + PageConstant.PATH_SEND_MESSAGE;
     }
 
     @PostMapping(PageConstant.URI_DELETE)

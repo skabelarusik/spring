@@ -62,7 +62,7 @@ public class ReviewController {
             model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_ERROR_REGIST);
             return currentPage;
         }
-        return "redirect:" + currentPage;
+        return "redirect:/" + currentPage;
     }
 
     @PostMapping(PageConstant.URI_SEND_REVIEW)
@@ -74,7 +74,7 @@ public class ReviewController {
             model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.WRONG_DATA);
             return PageConstant.PATH_PAGE_SEND_REVIEW;
         }
-        return "redirect:" + PageConstant.PATH_PAGE_SEND_REVIEW;
+        return "redirect:/" + PageConstant.PATH_PAGE_SEND_REVIEW;
     }
 
     @GetMapping(PageConstant.URI_SEND_REVIEW)
