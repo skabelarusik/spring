@@ -1,10 +1,13 @@
 package by.epam.crackertracker.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -14,6 +17,8 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
+import javax.sql.DataSource;
+import javax.xml.crypto.Data;
 import java.util.Locale;
 
 @Configuration
@@ -27,12 +32,14 @@ public class WebConfig extends WebMvcConfigurerAdapter{
     public static final String INDEX_PATH = "/";
     public static final String JSP_PATH = "/WEB-INF/views/";
     public static final String DEFAULT_ENCODING = "UTF-8";
-    public static final String ENCODING = "text/html; charset=utf-8";
+    public static final String ENCODING = "text/html;charset=utf-8";
     public static final String RESOURCE_BUNDLE = "message";
     public static final String RESOURCE_PATH = "/**";
     public static final String PICTURE_PATH = "/picture";
     public static final String UUI_PATH = "/uui";
 
+//    @Autowired
+//    private DataSource dataSource;
 
     @Bean
     public ViewResolver getViewResolver() {
@@ -72,6 +79,14 @@ public class WebConfig extends WebMvcConfigurerAdapter{
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler(RESOURCE_PATH).addResourceLocations(PICTURE_PATH, UUI_PATH);
     }
+
+//    @Bean
+//    public PlatformTransactionManager txManager() {
+//        return new DataSourceTransactionManager(dataSource);
+//    }
+
+
+
 
 
 }

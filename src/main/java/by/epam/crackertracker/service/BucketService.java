@@ -72,22 +72,31 @@ public class BucketService {
 
     public List<Bucket> removeId(String id, String login) throws TrackerServiceException {
         List<Bucket> list = new ArrayList<>();
-        boolean status = false;
         if(idValidator.isValidate(id) && loginValidator.isValidate(login)){
             dao = new BucketDaoJdbcImpl();
             int idProd = Integer.parseInt(id);
             try {
                 dao.deleteById(idProd);
+                list = dao.selectAll(login);
             } catch (TrackerDBException e) {
                 throw new TrackerServiceException("Wrong service delete product from bucket id:" + id);
             }
-            if(status){
-                try {
-                    list = dao.selectAll(login);
-                } catch (TrackerDBException e) {
-                    throw new TrackerServiceException("Wrong service delete product from bucket id:" + id);
-                }
+        } else {
+            throw new TrackerServiceException("Wrong service delete product from bucket id:" + id);
+        }
+        return list;
+    }
+
+    public int calculate(String login) throws TrackerServiceException {
+        int result = 0;
+        try {
+            List<Bucket> list = dao.selectAll(login);
+            for(int i = 0; i < list.size(); i++){
+                result += (list.get(i).getCalories() * list.get(i).getPortions());
             }
-        } return list;
+        } catch (TrackerDBException e) {
+            throw new TrackerServiceException("Wrong select bucket");
+        }
+        return result;
     }
 }

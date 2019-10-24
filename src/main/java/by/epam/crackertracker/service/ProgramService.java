@@ -41,10 +41,9 @@ public class ProgramService {
     @Autowired
     private IdValidator idValidator;
 
-/*
-    public boolean insert(String day, String time, String product, String nameProgram,
+
+    public void insert(String day, String time, String product, String nameProgram,
             String portions) throws TrackerServiceException {
-        boolean status = false;
         if(dayValidator.isValidate(day) && timeValidator.isValidate(time) &&  portionsValidator.isValidate(portions) &&
             programNameValidator.isValidate(nameProgram) && productNameValidator.isValidate(product)){
             dao = new ProgramDaoJdbcImpl();
@@ -52,14 +51,13 @@ public class ProgramService {
             MealDay mealDay = MealDay.valueOf(day.toUpperCase());
             double port = Double.parseDouble(portions);
             Program program = new Program(nameProgram, product, port, mealDay, mealTime);
-            try {
-                status = dao.insert(program);
-            } catch (TrackerDBException e) {
-                LOGGER.error("Wrong service insert product to program",e);
-                throw new TrackerServiceException("Wrong service insert product to program",e);
-            }
+//            try {
+                dao.insert(program);
+//            } catch (TrackerDBException e) {
+//                LOGGER.error("Wrong service insert product to program",e);
+//                throw new TrackerServiceException("Wrong service insert product to program",e);
+//            }
         }
-        return status;
     }
 
 
@@ -76,19 +74,17 @@ public class ProgramService {
         return listComponent;
     }
 
-    public boolean deleteById(String id, String login) throws TrackerServiceException {
-        boolean status = false;
+    public void deleteById(String id, String login) throws TrackerServiceException {
         if(idValidator.isValidate(id) && loginValidator.isValidate(login)){
             dao = new ProgramDaoJdbcImpl();
             int idProgram = Integer.parseInt(id);
             try {
-                status = dao.deleteById(idProgram);
+                dao.deleteById(idProgram);
             } catch (TrackerDBException e) {
                 LOGGER.error("Wrong service delete by id product from program",e);
                 throw new TrackerServiceException("Wrong service delete by id product from program",e);
             }
         }
-        return status;
     }
 
     public List<Program> selectSuperuserProducts(String loginValue) throws TrackerServiceException {
@@ -107,5 +103,6 @@ public class ProgramService {
         return list;
     }
 
- */
+
+
 }

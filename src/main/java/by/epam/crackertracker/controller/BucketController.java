@@ -1,6 +1,7 @@
 package by.epam.crackertracker.controller;
 
 import by.epam.crackertracker.config.UserPrincipal;
+import by.epam.crackertracker.entity.Bucket;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.BucketService;
 import by.epam.crackertracker.util.PageConstant;
@@ -10,6 +11,8 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.*;
 
 @Controller
 @RequestMapping(PageConstant.PATH_BUCKET)
@@ -44,12 +47,24 @@ public class BucketController {
     }
 
     @PostMapping(PageConstant.URI_DELETE)
-    public String delete_by_id(@SessionAttribute String startPage){
+    public String delete_by_id(@SessionAttribute String startPage, @RequestParam String id,
+                               @SessionAttribute String login, Model model){
+        try {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS_BUCKET, service.removeId(id, login));
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RESULT, ParameterConstant.MESSAGE_CONGRAT);
+        } catch (TrackerServiceException e) {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RESULT, ParameterConstant.MESSAGE_ERROR_REGIST);
+        }
         return startPage;
     }
 
     @PostMapping(PageConstant.CALCULATE)
-    public String calculate(@SessionAttribute String startPage){
+    public String calculate(@SessionAttribute String startPage, @SessionAttribute String login, Model model){
+        try {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RESULT, service.calculate(login));
+        } catch (TrackerServiceException e) {
+            return PageConstant.PATH_PAGE_ERROR;
+        }
         return startPage;
     }
 }

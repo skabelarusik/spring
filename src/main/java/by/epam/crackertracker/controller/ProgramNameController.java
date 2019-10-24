@@ -73,6 +73,7 @@ public class ProgramNameController {
             model.addAttribute(ParameterConstant.MESSAGE_PROGRAM_NAME, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e){
             model.addAttribute(ParameterConstant.MESSAGE_PROGRAM_NAME, ParameterConstant.WRONG_DATA);
+            return startPage;
         }
         return startPage;
     }
@@ -91,9 +92,35 @@ public class ProgramNameController {
             model.addAttribute(ParameterConstant.MESSAGE_SEND_PROGRAM, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e){
                 model.addAttribute(ParameterConstant.MESSAGE_SEND_PROGRAM, ParameterConstant.MESSAGE_ERROR_REGIST);
+                return PageConstant.PATH_RESULT_PROGRAM_NAME;
+
         }
         return PageConstant.PATH_RESULT_PROGRAM_NAME;
 
+    }
+
+    @GetMapping(PageConstant.URI_UPDATE_USER)
+    public String editProgram(@RequestParam String cost, @RequestParam String name, @RequestParam String duration,
+                              @RequestParam String id,  Model model){
+        model.addAttribute(ParameterConstant.PARAM_COST, cost);
+        model.addAttribute(ParameterConstant.PARAM_DURATION, duration);
+        model.addAttribute(ParameterConstant.PARAM_NAME_PROGR, name);
+        model.addAttribute(ParameterConstant.PARAM_ID, id);
+        return PageConstant.PATH_PAGE_EDIT_PROGRAM;
+    }
+
+    @PostMapping(PageConstant.URI_UPDATE_USER)
+    public String editProg(@RequestParam String cost, @RequestParam String name, @RequestParam String duration,
+                           @RequestParam String id, @SessionAttribute String login,  Model model){
+        try {
+            service.update(name, id, duration, cost, login);
+            model.addAttribute(ParameterConstant.WRONG_DATA, service.selectCuratorProgramsName(login,
+                    ParameterConstant.STARTING_PAGE, ParameterConstant.SHOW));
+        } catch (TrackerServiceException e) {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_NAME_PROGRAM_NAME, ParameterConstant.MESSAGE_ERROR_REGIST);
+            return PageConstant.PATH_PAGE_EDIT_PROGRAM;
+        }
+        return PageConstant.PATH_RESULT_PROGRAM_NAME;
     }
 
 

@@ -52,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
                 .and()
-                .authorizeRequests().antMatchers(PageConstant.PATH_PAGE_INDEX, PageConstant.PATH_REVIEW + PageConstant.URI_SHOW,
+                .authorizeRequests().antMatchers(PageConstant.PATH_PAGE_INDEX, PageConstant.PATH_REVIEW + PageConstant.URI_SHOW_MAIN,
                 PageConstant.REQUEST_USER + PageConstant.URI_REGISTER, PageConstant.URI_LANG, PageConstant.PATH_PICTURE,
                 PageConstant.URI_RESOURCES, PageConstant.URI_ABOUT).permitAll()
 

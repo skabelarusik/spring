@@ -28,7 +28,6 @@ import java.util.*;
 import static org.mockito.Mockito.*;
 
 
-
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {SpringConfig.class, WebConfig.class, SecurityConfig.class})
 @WebAppConfiguration

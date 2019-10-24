@@ -25,8 +25,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import java.util.*;
 import java.util.ArrayList;
 
-import static by.epam.crackertracker.utils.TestParametres.ADMIN;
-import static by.epam.crackertracker.utils.TestParametres.GOOD_ID;
+import static by.epam.crackertracker.utils.TestParametres.*;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 import static  org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static  org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -58,27 +58,13 @@ public class BucketControllerTest {
     }
 
     @Test
-    public void testAddProductToBucket() throws Exception {
-        List<Bucket> list = new ArrayList();
-        list.add(new Bucket("test", "test", 3, 2.));
-//        when(userPrincipal.getUsername()).thenReturn("andrey");
-//        when(service.addProduct("andrey","COLA", "5")).thenReturn(list);
-
-        mvc.perform(post(PageConstant.PATH_BUCKET_ADD).param(ParameterConstant.START_PAGE, ADMIN))
-   //             .param(ParameterConstant.PARAM_NAME_PRODUCT, "COLA").param(ParameterConstant.PARAM_PORTIONS, GOOD_ID))
+    public void testCalculateProductToBucket() throws Exception {
+        when(service.calculate(LOGIN_FIRST)).thenReturn(200);
+        mvc.perform(post(PageConstant.BUCKET_CALCULATE).sessionAttr(ParameterConstant.START_PAGE, ADMIN)
+                .sessionAttr(ParameterConstant.LOGIN, LOGIN_FIRST))
                 .andDo(print())
-//                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS_BUCKET, list))
+                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_RESULT, 200))
                 .andExpect(view().name(ADMIN));
     }
-
-//    @Test
-//    public void testAddLongAdviceShouldBeWrongMessage() throws Exception {
-//        doThrow(TrackerServiceException.class).when(service).addAdvice(LONGER);
-//        mvc.perform(post(PageConstant.SECUR_PATH_ADVICE_ADD).param(ParameterConstant.ATTRIBUTE_CURRENT_PAGE, ADMIN)
-//                .param(ParameterConstant.PARAM_ADVICE, LONGER))
-//                .andDo(print())
-//                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_ERROR_REGIST))
-//                .andExpect(view().name(ADMIN));
-//    }
 
 }

@@ -8,32 +8,94 @@
   <component name="ChangeListManager">
     <list default="true" id="8dd54e56-7913-4e54-9d46-8e48b33bb191" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f29e838b2986cad9c6121f466c316a471c31be0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0ded83c6e78318b26ed29c0a5afec5fb23562e94" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0ded83c6e78318b26ed29c0a5afec5fb23562e94" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1ac7c202e9dbb4cc810f88b067946335a63df064" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1ac7c202e9dbb4cc810f88b067946335a63df064" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/21c8332b0f0fb8992fce96f01ad310ebe7b3f6c3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/21c8332b0f0fb8992fce96f01ad310ebe7b3f6c3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/270813e5a32aacde59e029085c7e9e6dc0d3f8ac" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/270813e5a32aacde59e029085c7e9e6dc0d3f8ac" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a43fcd4b6c93374eacfc572e61cee93acc3d5e9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a43fcd4b6c93374eacfc572e61cee93acc3d5e9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c933475dcad1a119471424c0ea44074d36961da" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c933475dcad1a119471424c0ea44074d36961da" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41d7acf944141743e36061efc4369c72152c71dc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41d7acf944141743e36061efc4369c72152c71dc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/549402a00c7ccb890ff7467444428938c2876a56" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/549402a00c7ccb890ff7467444428938c2876a56" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/60f90d00ab9c06b747c29c230c3a902a18cf3a18" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/60f90d00ab9c06b747c29c230c3a902a18cf3a18" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aadeb3c06fdbc9ae91dbab67fb4052e60a47a300" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aadeb3c06fdbc9ae91dbab67fb4052e60a47a300" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b93cc30788b4ad095f1c90ea47a8980ab50eeef4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b93cc30788b4ad095f1c90ea47a8980ab50eeef4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7bbf0f8c722e8d70fcc140de6198097f3c0f825" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7bbf0f8c722e8d70fcc140de6198097f3c0f825" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/5/d51a9f0d112b0f1b36b7f9eec3a64f4e16bfbe3b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/5/d51a9f0d112b0f1b36b7f9eec3a64f4e16bfbe3b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe0dc5e0d607d9139dc1437447acfa21a49dd236" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe0dc5e0d607d9139dc1437447acfa21a49dd236" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlscripts/script table.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sqlscripts/script table.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/AdviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/AdviceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/BucketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/BucketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/CommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ExceptionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/MessageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ProgramNameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ProgramNameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/SubscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/BucketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/BucketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramsNameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/ProgramsNameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/SubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/util/PageConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log/logging.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log/logging.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log/logging.txt.1" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log/logging.txt.1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log/logging.txt.2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log/logging.txt.2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log/logging.txt.3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log/logging.txt.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/static/template.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/static/template.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/calculator/calculator_calories.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/calculator/calculator_calories.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error1.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error1.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error2.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error2.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/news.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/news.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultAdvice.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultAdvice.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultProgramName.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultProgramName.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultReview.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultReview.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultSubscription.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultSubscription.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/static/footer_main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/static/footer_main.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/static/header_main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/static/header_main.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/superuser.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/superuser.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/AdviceControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/AdviceControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/BucketControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/BucketControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/MessageControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/MessageControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/ProductControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/ReviewControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/ReviewControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/utils/TestParametres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/utils/TestParametres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/config/WebConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/AdviceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/AdviceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/BucketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/BucketController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ExceptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ExceptionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/MessageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ProgramNameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ProgramNameController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/ReviewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/SubscriptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/SubscriptionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProgramDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/ProgramsNameDaoJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/dao/TrackerSubscriptionDaoJdbcImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/BucketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/BucketService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/ProgramService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/ProgramService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/ProgramsNameService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/ProgramsNameService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/SubscriptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/SubscriptionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/util/PageConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epam/crackertracker/util/PageConstant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/log/logging.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log/logging.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/log/logging.txt.1" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log/logging.txt.1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/log/logging.txt.2" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log/logging.txt.2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/log/logging.txt.3" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log/logging.txt.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/cracker.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/by/epam/crackertracker/controller/AdviceControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/by/epam/crackertracker/controller/AdviceControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/by/epam/crackertracker/controller/BucketControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/by/epam/crackertracker/controller/BucketControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/by/epam/crackertracker/controller/MessageControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/by/epam/crackertracker/controller/MessageControllerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/by/epam/crackertracker/utils/TestParametres.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/by/epam/crackertracker/utils/TestParametres.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -164,7 +226,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MessageControllerTest.testSendMessageShouldRedirect">
+  <component name="RunManager" selected="JUnit.BucketControllerTest.testCalculateProductToBucket">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.42" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -238,7 +300,7 @@
         </option>
       </method>
     </configuration>
-    <configuration name="MessageControllerTest.testCheckInputMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BucketControllerTest.testCalculateProductToBucket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cracker" />
       <extension name="coverage">
         <pattern>
@@ -247,14 +309,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="by.epam.crackertracker.controller" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.controller.MessageControllerTest" />
-      <option name="METHOD_NAME" value="testCheckInputMessage" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.controller.BucketControllerTest" />
+      <option name="METHOD_NAME" value="testCalculateProductToBucket" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageControllerTest.testCheckOutputMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BucketControllerTest.testDeleteProductToBucket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cracker" />
       <extension name="coverage">
         <pattern>
@@ -263,14 +325,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="by.epam.crackertracker.controller" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.controller.MessageControllerTest" />
-      <option name="METHOD_NAME" value="testCheckOutputMessage" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.controller.BucketControllerTest" />
+      <option name="METHOD_NAME" value="testDeleteProductToBucket" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageControllerTest.testSendMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.testRegistr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cracker" />
       <extension name="coverage">
         <pattern>
@@ -279,14 +341,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="by.epam.crackertracker.controller" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.controller.MessageControllerTest" />
-      <option name="METHOD_NAME" value="testSendMessage" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="testRegistr" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageControllerTest.testSendMessageShouldRedirect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.testSelectAllAdmins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cracker" />
       <extension name="coverage">
         <pattern>
@@ -295,14 +357,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="by.epam.crackertracker.controller" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.controller.MessageControllerTest" />
-      <option name="METHOD_NAME" value="testSendMessageShouldRedirect" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="testSelectAllAdmins" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageControllerTest.testWriteMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.testUpdateUserRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cracker" />
       <extension name="coverage">
         <pattern>
@@ -311,8 +373,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="by.epam.crackertracker.controller" />
-      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.controller.MessageControllerTest" />
-      <option name="METHOD_NAME" value="testWriteMessage" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.crackertracker.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="testUpdateUserRole" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -455,19 +517,19 @@
       <item itemvalue="JUnit.by.epam.crackertracker.validator in cracker" />
       <item itemvalue="JUnit.by.epam.crackertracker.controller in cracker" />
       <item itemvalue="Maven.cracker [tomcat7:run]" />
-      <item itemvalue="JUnit.MessageControllerTest.testCheckInputMessage" />
-      <item itemvalue="JUnit.MessageControllerTest.testCheckOutputMessage" />
-      <item itemvalue="JUnit.MessageControllerTest.testWriteMessage" />
-      <item itemvalue="JUnit.MessageControllerTest.testSendMessage" />
-      <item itemvalue="JUnit.MessageControllerTest.testSendMessageShouldRedirect" />
+      <item itemvalue="JUnit.UserControllerTest.testUpdateUserRole" />
+      <item itemvalue="JUnit.UserControllerTest.testRegistr" />
+      <item itemvalue="JUnit.UserControllerTest.testSelectAllAdmins" />
+      <item itemvalue="JUnit.BucketControllerTest.testDeleteProductToBucket" />
+      <item itemvalue="JUnit.BucketControllerTest.testCalculateProductToBucket" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MessageControllerTest.testSendMessageShouldRedirect" />
-        <item itemvalue="JUnit.MessageControllerTest.testSendMessage" />
-        <item itemvalue="JUnit.MessageControllerTest.testWriteMessage" />
-        <item itemvalue="JUnit.MessageControllerTest.testCheckOutputMessage" />
-        <item itemvalue="JUnit.MessageControllerTest.testCheckInputMessage" />
+        <item itemvalue="JUnit.BucketControllerTest.testCalculateProductToBucket" />
+        <item itemvalue="JUnit.BucketControllerTest.testDeleteProductToBucket" />
+        <item itemvalue="JUnit.UserControllerTest.testSelectAllAdmins" />
+        <item itemvalue="JUnit.UserControllerTest.testRegistr" />
+        <item itemvalue="JUnit.UserControllerTest.testUpdateUserRole" />
       </list>
     </recent_temporary>
   </component>
@@ -725,11 +787,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/by/epam/crackertracker/validator/DurationValidatorTest.java</url>
           <line>6</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/BucketControllerTest.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

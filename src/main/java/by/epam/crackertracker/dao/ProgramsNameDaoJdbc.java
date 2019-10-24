@@ -95,7 +95,6 @@ public class ProgramsNameDaoJdbc implements ProgramsNameDao {
         try{
             template.update(UPDATE_PROGRAM_NAME, programsName.getName(), programsName.getDuration(), programsName.getCost(),
                     programsName.getId());
-
             LOGGER.warn("Programs name: " + programsName.getName() + " was update");
         } catch (Exception e){
             LOGGER.error(e);

@@ -6,6 +6,7 @@ import by.epam.crackertracker.service.ReviewService;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -22,9 +23,16 @@ public class ReviewController {
     private ReviewService service;
 
     @GetMapping(PageConstant.URI_SHOW)
-    public String show(Model model){
+    public String show(@SessionAttribute String role, Model model){
+
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW, service.selectAllReview(ParameterConstant.SHOW));
         model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
+        return PageConstant.PATH_RESULT_REVIEW;
+    }
+
+    @GetMapping(PageConstant.URI_SHOW_MAIN)
+    public String showDel( Model model){
+        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW, service.selectAllReview(ParameterConstant.SHOW));
         return PageConstant.PATH_RESULT_REVIEW;
     }
 
@@ -62,7 +70,7 @@ public class ReviewController {
             model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_ERROR_REGIST);
             return currentPage;
         }
-        return "redirect:/" + currentPage;
+        return currentPage;
     }
 
     @PostMapping(PageConstant.URI_SEND_REVIEW)
@@ -74,7 +82,7 @@ public class ReviewController {
             model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.WRONG_DATA);
             return PageConstant.PATH_PAGE_SEND_REVIEW;
         }
-        return "redirect:/" + PageConstant.PATH_PAGE_SEND_REVIEW;
+        return PageConstant.PATH_PAGE_SEND_REVIEW;
     }
 
     @GetMapping(PageConstant.URI_SEND_REVIEW)

@@ -1,5 +1,9 @@
 
-dsquid:UnusedPrivateMethodê"7Remove this unused private "fillingListHistory" method.(¨ÄÀ≤8≤ã“Ìﬁ-
-jsquid:CommentedOutCodeLineß"<This block of commented-out lines of code should be removed.(º˙Œ†8≤ã“Ìﬁ-
-nsquid:CommentedOutCodeLinee"<This block of commented-out lines of code should be removed.(”¨Ë∆˝ˇˇˇˇ8°¯—Ìﬁ-
-bsquid:UnusedPrivateMethod|"6Remove this unused private "fillingListSubscr" method.(‹»¥ä8≤ã“Ìﬁ-
+Üsquid:UselessImportCheck	"\Remove this unused import 'by.epam.crackertracker.exception.TrackerConnectionPoolException'.(¬∏‹k8ùƒÄÒﬂ-
+¶%squid:RedundantThrowsDeclarationCheckq"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(ø≤œø8Øñ§Úﬂ-
+Nsquid:S1172q"0Remove this unused method parameter "idProgram".(ø≤œø8∏…≠Úﬂ-
+Osquid:S1481t",Remove this unused "endDate" local variable.(±¬Òñ˘ˇˇˇˇ8∏…≠Úﬂ-
+Rsquid:S1481r"/Remove this unused "balanceAcc" local variable.(‘Ï…Ã˚ˇˇˇˇ8¬¥úÚﬂ-
+≈%squid:RedundantThrowsDeclarationCheckq"åRemove the declaration of thrown exception 'by.epam.crackertracker.exception.TrackerDBException', as it cannot be thrown from method's body.(ø≤œø8ÖÚ≠Úﬂ-
+nsquid:CommentedOutCodeLinev"<This block of commented-out lines of code should be removed.(ÒÚ°Ä¸ˇˇˇˇ8∏…≠Úﬂ-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(˜âÓÉ8œÁ≤Èﬂ-

@@ -104,7 +104,7 @@ public class MessageControllerTest {
     @Test
     public void testSendMessageShouldRedirect() throws Exception {
         doNothing().when(service).sendMessage(LOGIN_FIRST, LOGIN_SECOND, TOPIC, MESSAGE);
-        mock.perform(post(PageConstant.URI_MESSAGE_SEND_FORM).param(ParameterConstant.LOGIN, LOGIN_FIRST)
+        mock.perform(post(PageConstant.URI_OUTPUT_MESSAGE_SEND).sessionAttr(ParameterConstant.LOGIN, LOGIN_FIRST)
             .param(ParameterConstant.PARAM_RECIPIENT, LOGIN_SECOND)
             .param(ParameterConstant.PARAM_TOPIC, TOPIC)
             .param(ParameterConstant.TEXT, MESSAGE))
@@ -112,39 +112,52 @@ public class MessageControllerTest {
             .andExpect(model().attribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_CONGRAT))
             .andExpect(view().name(REDIRECT + PageConstant.PATH_SEND_MESSAGE));
     }
-//
-//    @PostMapping(PageConstant.URI_SEND_REVIEW)
-//    public String sendMessage(@SessionAttribute String login, @RequestParam String recipient, @RequestParam String topic,
-//                              @RequestParam String text, Model model){
-//        try {
-//            service.sendMessage(login, recipient, topic, text);
-//            model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_CONGRAT);
-//        } catch (TrackerServiceException e) {
-//            model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
-//        }
-//        return PageConstant.PATH_SEND_MESSAGE;
-//    }
-//
-//    @PostMapping(PageConstant.URI_DELETE)
-//    public String delete(@RequestParam String id, Model model, @SessionAttribute String login, @RequestParam String sender){
-//        try {
-//            String type;
-//            if(login.equals(sender)){
-//                type = ParameterConstant.OUTPUT_MESSAGE;
-//            } else {
-//                type = ParameterConstant.INPUT_MESSAGE;
-//            }
-//            service.deleteMessage(id, type);
-//            model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_CONGRAT);
-//            if(type.equals(ParameterConstant.INPUT_MESSAGE)){
-//                model.addAttribute(ParameterConstant.MESSAGES, service.checkInputMessage(login, 1));
-//            } else {
-//                model.addAttribute(ParameterConstant.MESSAGES, service.checkOutputMessage(login, 1));
-//            }
-//        } catch (TrackerServiceException e){
-//            model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_ERROR_REGIST);
-//        }
-//        return PageConstant.PATH_PAGE_MESSAGE;
-//    }
+
+    @Test
+    public void testSendMessageWrong() throws Exception {
+        doThrow(TrackerServiceException.class).when(service).sendMessage(LOGIN_FIRST, LOGIN_SECOND, TOPIC, MESSAGE);
+        mock.perform(post(PageConstant.URI_OUTPUT_MESSAGE_SEND).sessionAttr(ParameterConstant.LOGIN, LOGIN_FIRST)
+                .param(ParameterConstant.PARAM_RECIPIENT, LOGIN_SECOND)
+                .param(ParameterConstant.PARAM_TOPIC, TOPIC)
+                .param(ParameterConstant.TEXT, MESSAGE))
+                .andDo(print())
+                .andExpect(model().attribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST))
+                .andExpect(forwardedUrl(PageConstant.PATH_SEND_MESSAGE));
+    }
+
+    @Test
+    public void testDeleteMessageInput() throws Exception {
+        doNothing().when(service).deleteMessage(GOOD_ID, ParameterConstant.INPUT_MESSAGE);
+        when(service.checkInputMessage(LOGIN_FIRST, START_PAGE)).thenReturn(messageList);
+        mock.perform(post(PageConstant.URI_MESSAGE_DELETE).param(ParameterConstant.PARAM_ID, GOOD_ID)
+            .param(ParameterConstant.PARAM_SENDER, LOGIN_SECOND)
+            .sessionAttr(ParameterConstant.LOGIN, LOGIN_FIRST))
+            .andDo(print())
+            .andExpect(model().attribute(ParameterConstant.MESSAGES, messageList))
+            .andExpect(forwardedUrl(PageConstant.PATH_PAGE_MESSAGE));
+    }
+
+    @Test
+    public void testDeleteMessageOutput() throws Exception {
+        doNothing().when(service).deleteMessage(GOOD_ID, ParameterConstant.OUTPUT_MESSAGE);
+        when(service.checkOutputMessage(LOGIN_FIRST, START_PAGE)).thenReturn(messageList);
+        mock.perform(post(PageConstant.URI_MESSAGE_DELETE).param(ParameterConstant.PARAM_ID, GOOD_ID)
+                .param(ParameterConstant.PARAM_SENDER, LOGIN_FIRST)
+                .sessionAttr(ParameterConstant.LOGIN, LOGIN_FIRST))
+                .andDo(print())
+                .andExpect(model().attribute(ParameterConstant.MESSAGES, messageList))
+                .andExpect(forwardedUrl(PageConstant.PATH_PAGE_MESSAGE));
+    }
+
+    @Test
+    public void testDeleteMessageWrong() throws Exception {
+        doThrow(TrackerServiceException.class).when(service).deleteMessage(WRONG_ID, ParameterConstant.OUTPUT_MESSAGE);
+        mock.perform(post(PageConstant.URI_MESSAGE_DELETE).param(ParameterConstant.PARAM_ID, WRONG_ID)
+                .param(ParameterConstant.PARAM_SENDER, LOGIN_FIRST)
+                .sessionAttr(ParameterConstant.LOGIN, LOGIN_FIRST))
+                .andDo(print())
+                .andExpect(model().attribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_ERROR_REGIST))
+                .andExpect(forwardedUrl(PageConstant.PATH_PAGE_MESSAGE));
+    }
 
 }

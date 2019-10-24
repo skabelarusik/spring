@@ -1,4 +1,5 @@
 
 isquid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(›£¹‰8«²ÇÓÛ-
+squid:S1192j"cDefine a constant instead of duplicating this literal "Wrong service insert program name " 3 times.(œ¥ñ8É„ÔÛ-
 fsquid:UselessImportCheck";Remove this unused import 'org.apache.commons.logging.Log'.(Å¼î²8É®²ÓÛ-
-squid:S1192n"cDefine a constant instead of duplicating this literal "Wrong service insert program name " 3 times.(œ¥ñ8É„ÔÛ-
+{squid:UselessImportCheck	"KRemove this unused import 'by.epam.crackertracker.dao.ProgramsNameDaoJdbc'.(šù¾áýÿÿÿÿ8Ç€Èðß-

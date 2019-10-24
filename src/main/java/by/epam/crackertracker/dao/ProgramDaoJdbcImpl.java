@@ -35,43 +35,17 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
     @Autowired
     private JdbcTemplate template;
 
-    /*
-    public boolean insert(Program program) throws TrackerDBException {
-        boolean status = false;
-        Connection connection = null;
-        PreparedStatement statement = null;
-        try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            if(checkProductId(connection, program.getProduct()) && checkProgramId(connection, program.getProgramName())){
-            statement = connection.prepareStatement(INSERT_PRODUCT_TO_PROGRAM);
-            statement.setString(1,program.getProgramName());
-            statement.setString(2, program.getProduct());
-            statement.setDouble(3, program.getPortions());
-            statement.setString(4, program.getTime().name());
-            statement.setString(5, program.getDay().name());
-            statement.execute();
-            status = true;
-            LOGGER.warn("Program: " + program.getProgramName() + " inserted");
-            }
-        } catch (SQLException | TrackerConnectionPoolException e){
-            LOGGER.error(e);
-            throw new TrackerDBException("Wrong insert product to program", e);
-        } finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
-        }
-        return status;
+    public void insert(Program program) {
+        template.update(INSERT_PRODUCT_TO_PROGRAM, program.getProgramName(), program.getProduct(),
+                program.getPortions(), program.getTime().name(), program.getDay().name());
+        LOGGER.warn("Program: " + program.getProgramName() + " inserted");
     }
 
-
     public List<Program> selectAll(String name, String login) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-        List<Program> list;
+
+        List<Program> list = null;
+        /*
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            if(hasCuratorProgram(connection, name, login)){
                 statement = connection.prepareStatement(SELECT_ALL);
                 statement.setString(1, name);
                 resultSet = statement.executeQuery();
@@ -87,6 +61,8 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
             this.closeQuietly(statement);
             this.closeQuietly(connection);
         }
+
+        */
         return list;
     }
 
@@ -181,18 +157,18 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
 
     public boolean deleteById(int idProgram) throws TrackerDBException {
         Connection connection = null;
-        PreparedStatement statement = null;
-        try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(DELETE_BY_ID);
-            statement.setInt(1, idProgram);
-            statement.execute();
-        } catch (SQLException | TrackerConnectionPoolException e){
-            throw new TrackerDBException("Wrong delete by id",e);
-        } finally {
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
-        }
+//        PreparedStatement statement = null;
+//        try{
+//         //   connection = ConnectionPool.getInstance().takeConnection();
+//         //   statement = connection.prepareStatement(DELETE_BY_ID);
+//        //    statement.setInt(1, idProgram);
+//        //    statement.execute();
+//     //   } catch (SQLException ){
+//            throw new TrackerDBException("Wrong delete by id",e);
+//        } finally {
+//            this.closeQuietly(statement);
+//            this.closeQuietly(connection);
+//        }
         return true;
     }
 
@@ -212,32 +188,32 @@ public class ProgramDaoJdbcImpl implements ProgramDao {
 
     public List<Program> selectSuperuserPrograms(String loginValue) throws TrackerDBException {
         Connection connection = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
+//        PreparedStatement statement = null;
+//        ResultSet resultSet = null;
         List<Program> programList = new ArrayList<>();
-        LocalDate date = LocalDate.now();
-        String day = date.getDayOfWeek().toString();
-        try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(SELECT_ALL_SUPERUSER);
-            statement.setString(1, day.toLowerCase());
-            statement.setString(2, loginValue);
-            statement.setDate(3, Date.valueOf(date.toString()));
-            statement.setDate(4, Date.valueOf(date.toString()));
-            resultSet = statement.executeQuery();
-            programList = fillingList(resultSet);
-        } catch (SQLException | TrackerConnectionPoolException e){
-            throw new TrackerDBException("Wrong select superuser list products");
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
-        }
+//        LocalDate date = LocalDate.now();
+//        String day = date.getDayOfWeek().toString();
+//        try{
+//            connection = ConnectionPool.getInstance().takeConnection();
+//            statement = connection.prepareStatement(SELECT_ALL_SUPERUSER);
+//            statement.setString(1, day.toLowerCase());
+//            statement.setString(2, loginValue);
+//            statement.setDate(3, Date.valueOf(date.toString()));
+//            statement.setDate(4, Date.valueOf(date.toString()));
+//            resultSet = statement.executeQuery();
+//            programList = fillingList(resultSet);
+//        } catch (SQLException | TrackerConnectionPoolException e){
+//            throw new TrackerDBException("Wrong select superuser list products");
+//        } finally {
+//            this.closeQuietly(resultSet);
+//            this.closeQuietly(statement);
+//            this.closeQuietly(connection);
+//        }
         return programList;
 
     }
 
 
-     */
+
 
 }

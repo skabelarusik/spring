@@ -29,12 +29,12 @@ public class AdviceController {
    public String addAdvice(@RequestParam String currentPage, @RequestParam String advice, Model model){
        try {
            adviceService.addAdvice(advice);
-           model.addAttribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_CONGRAT);
+          // model.addAttribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_CONGRAT);
        } catch (TrackerServiceException e) {
            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_ERROR_REGIST);
            return currentPage;
        }
-       return "redirect:/" + currentPage;
+       return currentPage;
    }
 
    @PostMapping(PageConstant.URI_DELETE)

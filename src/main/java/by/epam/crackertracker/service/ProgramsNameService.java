@@ -119,7 +119,6 @@ public class ProgramsNameService {
             BigDecimal costPr = BigDecimal.valueOf(Double.parseDouble(cost));
             ProgramsName programsName = new ProgramsName(name, login, costPr, dur);
             programsName.setId(idPr);
-            dao = new ProgramsNameDaoJdbc();
             try {
                 dao.updateProgramsName(programsName);
             } catch (TrackerDBException e) {

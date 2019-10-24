@@ -114,7 +114,7 @@ public class CommonController {
 
     @GetMapping("/news")
     public String news(){
-        return "news";
+        return PageConstant.PAGE_NEWS;
     }
 
 

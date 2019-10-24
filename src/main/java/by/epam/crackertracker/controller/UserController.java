@@ -89,11 +89,11 @@ public class UserController {
             model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_ERROR_REGIST);
             return PageConstant.PATH_PAGE_EDIT_USER;
         }
-        return "redirect:" + PageConstant.PATH_PAGE_EDIT_USER;
+        return PageConstant.PATH_PAGE_EDIT_USER;
     }
 
     @GetMapping(PageConstant.URI_UPDATE_USER)
-    public String moveUpdateUser(@AuthenticationPrincipal UserPrincipal user, Model model) {
+    public String moveUpdateUser() {
         return PageConstant.PATH_PAGE_EDIT_USER;
     }
 
@@ -109,7 +109,7 @@ public class UserController {
            model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
             return PageConstant.PATH_PAGE_EDIT_USER;
         }
-        return "redirect:" + PageConstant.PATH_PAGE_EDIT_USER;
+        return PageConstant.PATH_PAGE_EDIT_USER;
     }
 
     @PostMapping(PageConstant.URI_UPDATE_USER_ROLE)
@@ -120,9 +120,8 @@ public class UserController {
             model.addAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
            model.addAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.WRONG_DATA);
-           return startPage;
         }
-        return "redirect:" + startPage;
+        return startPage;
     }
 
 
@@ -178,7 +177,7 @@ public class UserController {
             return page;
         }
         request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
-        return  "redirect:" + page;
+        return  page;
     }
 
     @GetMapping(PageConstant.URI_REGISTER)
@@ -203,7 +202,7 @@ public class UserController {
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.MESSAGE_DEPOSIT, ParameterConstant.MESSAGE_ERROR_REGIST);
         }
-        return "redirect:" + PageConstant.PATH_DEPOSIT;
+        return PageConstant.PATH_DEPOSIT;
     }
 
     @GetMapping(PageConstant.URI_REQUEST)

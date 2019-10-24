@@ -17,6 +17,11 @@ public class TestParametres {
     public static final String ADMIN = "admin";
     public static final String REDIRECT = "redirect:/";
 
+    //for program name controller test
+    public static final String PROGRAM_NAME = "program1";
+    public static final String DURATION = "3";
+    public static final String COST = "12";
+
     //for message controller test
     public static final String MESSAGE = "How are you?";
     public static final String TOPIC = "Hello!?";

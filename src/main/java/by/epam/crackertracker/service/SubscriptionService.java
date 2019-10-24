@@ -14,6 +14,7 @@ import by.epam.crackertracker.validator.*;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
@@ -71,10 +72,10 @@ public class SubscriptionService {
         return list;
     }
 
-    /*
+ //   @Transactional(rollbackFor = Exception.class)
     public boolean buySubscribe(String id, String cost, String duration, String login, BigDecimal balance,
              String role) throws TrackerServiceException {
-        boolean status = false;
+        boolean status;
         try{
             if(idValidator.isValidate(id) && costValidator.isValidate(cost) && loginValidator.isValidate(login)
                     && durationValidator.isValidate(duration) && roleValidator.isValidate(role) &&
@@ -83,16 +84,24 @@ public class SubscriptionService {
                 int idProg = Integer.parseInt(id);
                 int durationProg = Integer.parseInt(duration);
                 if(costProg.doubleValue() <= balance.doubleValue()){
-                    dao = new TrackerSubscriptionDaoJdbcImpl();
-                    status = dao.insert(idProg, costProg, durationProg, login, balance);
+                    dao.insert(idProg, costProg, durationProg, login, balance);
+                } else {
+                    throw new TrackerServiceException();
                 }
+                status = true;
+            } else {
+                status = false;
+                //throw new TrackerServiceException("Wrong buy subscribe");
             }
         } catch (TrackerDBException | SQLException e){
             LOGGER.error("Wrong buy subscribe");
-            throw new TrackerServiceException("Wrong buy subscribe", e);
+            status = false;
+            //throw new TrackerServiceException("Wrong buy subscribe", e);
         }
         return status;
     }
+
+
 
     public boolean checkSubscription(String loginValue) throws TrackerServiceException {
         boolean status = false;
@@ -109,19 +118,20 @@ public class SubscriptionService {
 
 
 
-    public List<TrackerSubscription> selectHistorySubs(int id, String login) throws TrackerServiceException {
+    public List<TrackerSubscription> selectHistorySubs(String login) throws TrackerServiceException {
         List<TrackerSubscription> list = new ArrayList<>();
         try {
-            if (idValidator.isValidate(String.valueOf(id)) && loginValidator.isValidate(login)) {
-                dao = new TrackerSubscriptionDaoJdbcImpl();
-                list = dao.historySubscr(id, login);
+            if (loginValidator.isValidate(login)) {
+                list = dao.historySubscr(login);
+            } else{
+                throw new TrackerServiceException("Wrong id users in selecting history subscribes login users: " + login);
             }
         } catch (TrackerDBException e) {
-            throw new TrackerServiceException("Wrong id users in selecting history subscribes id users: " + id);
+            throw new TrackerServiceException("Wrong id users in selecting history subscribes login users: " + login);
         }
         return list;
     }
 
 
-     */
+
 }

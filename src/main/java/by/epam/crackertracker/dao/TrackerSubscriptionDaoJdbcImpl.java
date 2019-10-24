@@ -31,8 +31,9 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
     public static final String SELECT_ALL_BY_CURATOR = "select s.idsubscriptions, u.name, u1.login, s.start_date, \n" +
             "s.finish_date from subscriptions s inner join programs_name u on s.program = u.id \n" +
             "inner join users u1 on s.subscriber = u1.id where u.curator = (SELECT id from users where login = ?) ORDER BY s.finish_date desc";
-    public static final String SELECT_HISTORY_BY_ID = "SELECT s.idsubscriptions, p.name, s.start_date, s.finish_date from " +
-            "subscriptions s inner join programs_name p on s.program = p.id where s.subscriber = ? order by s.finish_date desc";
+    public static final String SELECT_HISTORY_BY_ID = "SELECT s.idsubscriptions, p.name, u1.login,  s.start_date, s.finish_date from " +
+            "subscriptions s inner join programs_name p on s.program = p.id inner join users u1 on s.subscriber = u1.id " +
+            "where s.subscriber = (Select id from users where login = ?) order by s.finish_date desc";
     public static final String INSERT_SUBSCRIPTION = "INSERT INTO subscriptions (program, subscriber, start_date, finish_date)" +
             "  values (?,(SELECT id from USERS where login = ?),?::date,?::date)";
     public static final String UPDATE_BALANCE = "UPDATE users set money = ? where login = ?";
@@ -41,6 +42,8 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
             "where id = ?)";
     public static final String UPDATE_ROLE_SUPERUSER = "UPDATE users SET status = (SELECT id from role " +
             "where name = 'superuser') WHERE login = ?";
+    public static final String CHECK_BALANCE_CUR = "SELECT money from users where id = (SELECT curator from programs_name where id = ?)";
+
 
     private static final Logger LOGGER = LogManager.getRootLogger();
 
@@ -85,152 +88,40 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
         }
     }
 
-
     public boolean checkSubscription(String loginValue) throws TrackerDBException {
         LocalDate localDate = LocalDate.now();
         boolean status = true;
         try{
-        template.update(CHECK_SUPERUSER_STATUS, loginValue, localDate, localDate);
+            template.update(CHECK_SUPERUSER_STATUS, loginValue, localDate, localDate);
         } catch (Exception e){
             LOGGER.error(e);
             throw new TrackerDBException("Wrong check superuser subscrib");
         }
         return status;
     }
-/*
-    public List<TrackerSubscription> historySubscr(int id, String login) throws TrackerDBException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
+
+    public List<TrackerSubscription> historySubscr(String login) throws TrackerDBException {
         List<TrackerSubscription> list;
         try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            statement = connection.prepareStatement(SELECT_HISTORY_BY_ID);
-            statement.setInt(1, id);
-            resultSet = statement.executeQuery();
-            list = fillingListHistory(resultSet, login);
-        } catch (TrackerConnectionPoolException | SQLException e) {
-            throw new TrackerDBException("Wrong select history subscriptions , user id: " + id, e);
-        } finally {
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statement);
-            this.closeQuietly(connection);
+            list = template.query(SELECT_HISTORY_BY_ID, mapper, login);
+        } catch (Exception e) {
+            throw new TrackerDBException("Wrong select history subscriptions , user login: " + login, e);
         }
         return list;
     }
 
- */
-
-    private List<TrackerSubscription> fillingListSubscr(ResultSet resultSet) throws TrackerDBException {
-        List<TrackerSubscription> list = new ArrayList<>();
-        try{
-            while (resultSet.next()){
-                int id = resultSet.getInt(1);
-                String nameProg = resultSet.getString(2);
-                String subscriber = resultSet.getString(3);
-                LocalDate start = LocalDate.parse(resultSet.getString(4));
-                LocalDate finish = LocalDate.parse(resultSet.getString(5));
-                TrackerSubscription subscription = new TrackerSubscription(subscriber, nameProg, start, finish);
-                subscription.setId(id);
-                list.add(subscription);
-            }
-        } catch (SQLException e){
-            LOGGER.error(e);
-            throw new TrackerDBException("Wrong filling list subscrib");
-        }
-        return list;
-    }
-
-    private List<TrackerSubscription> fillingListHistory(ResultSet resultSet, String login) throws TrackerDBException {
-        List<TrackerSubscription> list = new ArrayList<>();
-        try{
-            while (resultSet.next()){
-                int id = resultSet.getInt(1);
-                String nameProg = resultSet.getString(2);
-                LocalDate start = LocalDate.parse(resultSet.getString(3));
-                LocalDate finish = LocalDate.parse(resultSet.getString(4));
-                TrackerSubscription subscription = new TrackerSubscription(login, nameProg, start, finish);
-                subscription.setId(id);
-                list.add(subscription);
-            }
-        } catch (SQLException e){
-            LOGGER.error(e);
-            throw new TrackerDBException("Wrong filling list subscrib");
-        }
-        return list;
-    }
-
-    public static final String CHECK_BALANCE_CUR = "SELECT money from users where id = (SELECT curator from programs_name where id = ?)";
-
-    /*
-
-    public boolean insert(int idProgram, BigDecimal cost, int duration, String login, BigDecimal balance) throws TrackerDBException, SQLException {
-        Connection connection = null;
-        PreparedStatement statementUser = null;
-        PreparedStatement statementSubs = null;
-        PreparedStatement statementUpdRole = null;
-        PreparedStatement statementUpdBalCur = null;
-        PreparedStatement statementCheckBalCur = null;
+    public void insert(int idProgram, BigDecimal cost, int duration, String login, BigDecimal balance) throws TrackerDBException, SQLException {
         BigDecimal balanceAcc = balance.subtract(cost);
         LocalDate date = LocalDate.now();
         LocalDate endDate = date.plusDays(duration);
-        ResultSet resultSet = null;
-        boolean status = false;
-        try{
-            connection = ConnectionPool.getInstance().takeConnection();
-            connection.setAutoCommit(false);
-            statementUser = connection.prepareStatement(INSERT_SUBSCRIPTION);
-            statementUser.setInt(1, idProgram);
-            statementUser.setString(2, login);
-            statementUser.setString(3, date.toString());
-            statementUser.setString(4, endDate.toString());
-            statementUser.executeUpdate();
-            statementSubs = connection.prepareStatement(UPDATE_BALANCE);
-            statementSubs.setBigDecimal(1, balanceAcc);
-            statementSubs.setString(2,login);
-            statementSubs.executeUpdate();
-            statementUpdRole = connection.prepareStatement(UPDATE_ROLE_SUPERUSER);
-            statementUpdRole.setString(1, login);
-            statementUpdRole.executeUpdate();
-
-            statementCheckBalCur = connection.prepareStatement(CHECK_BALANCE_CUR);
-            statementCheckBalCur.setInt(1, idProgram);
-            resultSet = statementCheckBalCur.executeQuery();
-            BigDecimal balanceCur = new BigDecimal(0);
-            while (resultSet.next()){
-                balanceCur = resultSet.getBigDecimal(1);
-            }
-            BigDecimal newCurBalance = balanceCur.add(BigDecimal.valueOf(cost.doubleValue()/2));
-            statementUpdBalCur = connection.prepareStatement(UPDATE_BALANCE_CUR);
-            statementUpdBalCur.setBigDecimal(1, newCurBalance);
-            statementUpdBalCur.setInt(2, idProgram);
-            statementUpdBalCur.executeUpdate();
-            connection.commit();
-            status = true;
-        } catch (SQLException | TrackerConnectionPoolException e){
-            try {
-                if(connection != null){
-                    connection.rollback();
-                }
-            } catch (SQLException ex) {
-                throw new TrackerDBException("Wrong rollback at insert subscription");
-            }
-        } finally {
-            if(connection != null){
-                connection.setAutoCommit(true);
-            }
-            this.closeQuietly(resultSet);
-            this.closeQuietly(statementCheckBalCur);
-            this.closeQuietly(statementUpdBalCur);
-            this.closeQuietly(statementUpdRole);
-            this.closeQuietly(statementSubs);
-            this.closeQuietly(statementUser);
-            this.closeQuietly(connection);
-        }
-        return status;
+        template.update(UPDATE_ROLE_SUPERUSER, login);
+     //   int i = template.update(INSERT_SUBSCRIPTION, idProgram, login, date.toString(), endDate.toString());
+//        if(i == 1){
+//            throw new TrackerDBException("");
+//        }
+//        template.update(UPDATE_BALANCE, balanceAcc, login);
+//        template.update(UPDATE_ROLE_SUPERUSER, login);
     }
-
-     */
 
 
 }

@@ -22,7 +22,7 @@ public class ExceptionController {
 
         System.out.println("A unknow Exception Ocurred: " + e);
 
-        return "error";
+        return "error1";
     }
 
 
@@ -30,6 +30,6 @@ public class ExceptionController {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public String handleResourceNotFoundException() {
 
-        return "error1";
+        return "error";
     }
 }
