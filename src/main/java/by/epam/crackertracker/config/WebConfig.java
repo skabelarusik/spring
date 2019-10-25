@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
@@ -20,6 +21,7 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 import javax.sql.DataSource;
 import javax.xml.crypto.Data;
 import java.util.Locale;
+import java.util.Properties;
 
 @Configuration
 @EnableWebMvc
@@ -86,7 +88,23 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 //    }
 
 
+    @Bean(name="simpleMappingExceptionResolver")
+    public SimpleMappingExceptionResolver
+    createSimpleMappingExceptionResolver() {
+        SimpleMappingExceptionResolver resolver =
+                new SimpleMappingExceptionResolver();
 
+        Properties mappings = new Properties();
+        mappings.setProperty("DatabaseException", "databaseError");
+        mappings.setProperty("InvalidCreditCardException", "creditCardError");
+        mappings.put("org.springframework.web.servlet.PageNotFound", "404");
+
+        resolver.setExceptionMappings(mappings);  // None by default
+        resolver.setDefaultErrorView("error");    // No default
+        resolver.setExceptionAttribute("ex");     // Default is "exception"
+        resolver.setWarnLogCategory("example.MvcLogger");     // No default
+        return resolver;
+    }
 
 
 }

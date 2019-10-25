@@ -24,18 +24,13 @@ public class MessageController {
     MessageService service;
 
     @GetMapping(PageConstant.URI_INPUT_MESSAGE)
-    public String checkInputMessage(@SessionAttribute User user, Model model){
-        try {
-           model.addAttribute(ParameterConstant.MESSAGES, service.checkInputMessage(user.getLogin(), 1));
-        } catch (TrackerServiceException e) {
-            e.printStackTrace();
-        }
+    public String checkInputMessage(@SessionAttribute User user, Model model) throws TrackerServiceException {
+        model.addAttribute(ParameterConstant.MESSAGES, service.checkInputMessage(user.getLogin(), 1));
         return PageConstant.PATH_PAGE_MESSAGE;
     }
 
     @GetMapping(PageConstant.URI_OUTPUT_MESSAGE)
     public String checkOutputMessage(@SessionAttribute User user, Model model) throws TrackerServiceException {
-
         model.addAttribute(ParameterConstant.MESSAGES, service.checkOutputMessage(user.getLogin(), 1));
         return PageConstant.PATH_PAGE_MESSAGE;
     }
@@ -46,9 +41,9 @@ public class MessageController {
         return PageConstant.PATH_SEND_MESSAGE;
     }
 
+    @ExceptionHandler(Exception.class)
     @PostMapping(PageConstant.URI_SEND_MESS)
     public String sendMessage(@RequestParam String recipient, Model model){
-
         model.addAttribute(ParameterConstant.PARAM_RECIPIENT, recipient);
         return PageConstant.PATH_SEND_MESSAGE;
     }
@@ -70,25 +65,23 @@ public class MessageController {
         return PageConstant.PATH_SEND_MESSAGE;
     }
 
+    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_DELETE)
-    public String delete(@RequestParam String id, Model model, @SessionAttribute String login, @RequestParam String sender){
-        try {
-            String type;
-            if(login.equals(sender)){
-                type = ParameterConstant.OUTPUT_MESSAGE;
-            } else {
-                type = ParameterConstant.INPUT_MESSAGE;
-            }
-            service.deleteMessage(id, type);
-            model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_CONGRAT);
-            if(type.equals(ParameterConstant.INPUT_MESSAGE)){
-                model.addAttribute(ParameterConstant.MESSAGES, service.checkInputMessage(login, 1));
-            } else {
-                model.addAttribute(ParameterConstant.MESSAGES, service.checkOutputMessage(login, 1));
-            }
-        } catch (TrackerServiceException e){
-            model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_ERROR_REGIST);
+    public String delete(@RequestParam String id, Model model, @SessionAttribute String login, @RequestParam String sender) throws TrackerServiceException {
+        String type;
+        if(login.equals(sender)){
+            type = ParameterConstant.OUTPUT_MESSAGE;
+        } else {
+            type = ParameterConstant.INPUT_MESSAGE;
         }
+        service.deleteMessage(id, type);
+        model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_CONGRAT);
+        if(type.equals(ParameterConstant.INPUT_MESSAGE)){
+            model.addAttribute(ParameterConstant.MESSAGES, service.checkInputMessage(login, 1));
+        } else {
+            model.addAttribute(ParameterConstant.MESSAGES, service.checkOutputMessage(login, 1));
+        }
+
         return PageConstant.PATH_PAGE_MESSAGE;
     }
 

@@ -38,15 +38,8 @@
             <div class="iconMain">
                 <img src="${user.path}" class="icon1"/>
             </div>
-            <h6 class="styleMessageTitle"><@spring.message "label.avatar"/></h6>
             <div class="uploadFile">
-                <form method="post" class="invisibleForm" action="/UploadServlet" enctype="multipart/form-data">
-                    <label for="changeAva" class="uploadButton"><@spring.message "button.selectfile"/></label>
-                    <input style="opacity: 0; z-index: -1;" type="file" id="changeAva" name="file" />
-                    <input type="submit" value="<@spring.message "button.upload"/>"
-                           size="10" class="login-button" /><br/>
-                    ${errorDownload}
-                </form>
+
             </div>
             <div class="messageMain">
                 <h6 class="styleMessage"><a href="/user/update"><@spring.message "button.edit"/></a></h6>
@@ -188,8 +181,6 @@
                 <h4>Информация аккаунта</h4>
                 <h6 class="styleMessage">Статус : ${user.role}</h6>
                 <h6 class="styleMessage">Баланс : ${user.balance} $</h6>
-                <h4><@spring.message "label.topcurator" /></h4>
-                <h3>TEMP</h3>
                 <br/>
                 <h4><@spring.message "label.oursponsors" /></h4>
                 <div class="iconMain">

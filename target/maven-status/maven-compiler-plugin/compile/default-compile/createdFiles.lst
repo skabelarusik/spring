@@ -1,4 +1,3 @@
-by\epam\crackertracker\tag\CuratorMap.class
 by\epam\crackertracker\config\WebAppInitializer.class
 by\epam\crackertracker\validator\PathAvatarValidator.class
 by\epam\crackertracker\dao\TrackerDao.class
@@ -19,12 +18,10 @@ by\epam\crackertracker\validator\IdValidator.class
 by\epam\crackertracker\dao\ReviewDaoJdbc.class
 by\epam\crackertracker\validator\WeightHeightValidator.class
 by\epam\crackertracker\exception\TrackerServiceException.class
-by\epam\crackertracker\filter\XssFilter.class
 by\epam\crackertracker\dao\BucketDao.class
 by\epam\crackertracker\controller\CommonController.class
 by\epam\crackertracker\dao\ReviewDao.class
 by\epam\crackertracker\entity\Payment.class
-by\epam\crackertracker\controller\ExceptionController.class
 by\epam\crackertracker\controller\ReviewController.class
 by\epam\crackertracker\controller\MessageController.class
 by\epam\crackertracker\dao\AdviceDao.class
@@ -41,18 +38,15 @@ by\epam\crackertracker\mapper\SubscriptionMapper.class
 by\epam\crackertracker\entity\Program.class
 by\epam\crackertracker\controller\ProgramNameController.class
 by\epam\crackertracker\exception\TrackerDBException.class
-by\epam\crackertracker\filter\EncodingFilter.class
 by\epam\crackertracker\validator\LoginValidator.class
 by\epam\crackertracker\controller\AdviceController.class
 by\epam\crackertracker\dao\ProgramDaoJdbcImpl.class
 by\epam\crackertracker\util\LanguageSelector.class
-by\epam\crackertracker\filter\StaticFilter.class
 by\epam\crackertracker\entity\TrackerSubscription.class
 by\epam\crackertracker\controller\BucketController.class
 by\epam\crackertracker\util\PageConstant.class
 by\epam\crackertracker\mapper\ReviewMapper.class
 by\epam\crackertracker\validator\ReviewLengthValidator.class
-by\epam\crackertracker\exception\ResourceNotFoundException.class
 by\epam\crackertracker\service\ProgramsNameService.class
 by\epam\crackertracker\dao\ProductDao.class
 by\epam\crackertracker\validator\EmailValidator.class
@@ -66,7 +60,6 @@ by\epam\crackertracker\validator\DayValidator.class
 by\epam\crackertracker\config\UserPrincipal.class
 by\epam\crackertracker\dao\AdviceDaoJdbcImpl.class
 by\epam\crackertracker\entity\Message.class
-by\epam\crackertracker\controller\UploadServlet.class
 by\epam\crackertracker\mapper\ProgramNameMapper.class
 by\epam\crackertracker\dao\ProgramDao.class
 by\epam\crackertracker\dao\UserDao.class
@@ -99,7 +92,6 @@ by\epam\crackertracker\service\BucketService.class
 by\epam\crackertracker\config\MyUserDetailsService.class
 by\epam\crackertracker\service\ProductService.class
 by\epam\crackertracker\service\ProgramService.class
-by\epam\crackertracker\util\AttributeSessionCleaner.class
 by\epam\crackertracker\mapper\BucketMapper.class
 by\epam\crackertracker\entity\Gender.class
 by\epam\crackertracker\service\UserService.class

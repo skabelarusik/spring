@@ -1,11 +1,9 @@
 package by.epam.crackertracker.controller;
 
 import by.epam.crackertracker.config.UserPrincipal;
-import by.epam.crackertracker.entity.Advice;
 import by.epam.crackertracker.entity.Gender;
 import by.epam.crackertracker.entity.Role;
 import by.epam.crackertracker.entity.User;
-import by.epam.crackertracker.exception.ResourceNotFoundException;
 import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.AdviceService;
 import by.epam.crackertracker.service.BucketService;
@@ -14,16 +12,13 @@ import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.PageSelector;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.awt.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Map;
@@ -42,46 +37,33 @@ public class UserController {
     @Autowired
     private BucketService bucketService;
 
+    @ExceptionHandler(TrackerServiceException.class)
     @GetMapping(PageConstant.URI_SELECT)
-    public String selectAllUsers(@RequestParam Map<String,String> allRequestParams, ModelMap model) {
-        String page;
-        try {
-            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectAllUsers(allRequestParams, model));
-            page = PageConstant.PATH_RESULT_USER;
-        } catch (TrackerServiceException e) {
-            page = PageConstant.PATH_PAGE_ERROR;
-        }
+    public String selectAllUsers(@RequestParam Map<String,String> allRequestParams, ModelMap model) throws TrackerServiceException {
+        String page = PageConstant.PATH_RESULT_USER;
+        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectAllUsers(allRequestParams, model));
         return page;
     }
 
+    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_SELECT_USER_BY_STATUS)
-    public String selectAllUsersByStatus(@RequestParam Map<String,String> allRequestParams, ModelMap model) {
-        String page;
-        try {
-            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByRole(allRequestParams, model));
-            page = PageConstant.PATH_RESULT_USER;
-        } catch (TrackerServiceException e) {
-            page = PageConstant.PATH_PAGE_ERROR;
-        }
-            return page;
+    public String selectAllUsersByStatus(@RequestParam Map<String,String> allRequestParams, ModelMap model) throws TrackerServiceException {
+        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByRole(allRequestParams, model));
+        String  page = PageConstant.PATH_RESULT_USER;
+        return page;
     }
 
+    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_SELECT_USER_BY_GENDER)
-    public String selectAllUsersByGender(@RequestParam Map<String, String> allRequestParam, Model model) {
-        String page;
-        try {
-            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByGender(allRequestParam, model));
-            page = PageConstant.PATH_RESULT_USER;
-        } catch (TrackerServiceException e) {
-            page = PageConstant.PATH_PAGE_ERROR;
-        }
+    public String selectAllUsersByGender(@RequestParam Map<String, String> allRequestParam, Model model) throws TrackerServiceException {
+        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByGender(allRequestParam, model));
+        String page = PageConstant.PATH_RESULT_USER;
         return page;
     }
 
     @PostMapping(PageConstant.URI_UPDATE_USER)
     public String updateUser(@RequestParam String  username, @RequestParam String usersurname, @RequestParam String email,
                              @RequestParam String birthday, Model model, @SessionAttribute String login) {
-
         try {
             userService.updateDataUser(login, username, usersurname, email, birthday);
             model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_CONGRAT);
@@ -106,7 +88,7 @@ public class UserController {
             userService.updatePasswordUser(login, oldpassword, password, newpassword, newpasswordCheck);
             model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
-           model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
+            model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
             return PageConstant.PATH_PAGE_EDIT_USER;
         }
         return PageConstant.PATH_PAGE_EDIT_USER;
@@ -119,7 +101,7 @@ public class UserController {
             userService.updateRole(id, paramRole);
             model.addAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
-           model.addAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.WRONG_DATA);
+            model.addAttribute(ParameterConstant.UPDATE_MESSAGE, ParameterConstant.WRONG_DATA);
         }
         return startPage;
     }
@@ -144,7 +126,7 @@ public class UserController {
             page = PageSelector.selectHomePage(user.getRole().name());
         } catch (TrackerServiceException e) {
             request.setAttribute(ParameterConstant.MESAGE_WRONG_AUTH, "WRONG PASSWORD OR LOGIN");
-            page = PageConstant.PATH_PAGE_MAIN_INDEX;
+            page = PageConstant.PATH_PAGE_LOGIN;
         }
         request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
         return  page;
@@ -155,9 +137,9 @@ public class UserController {
     public String registration(@RequestParam String login, @RequestParam String password, @RequestParam String username,
                                @RequestParam String usersurname, @RequestParam String email,
                                @RequestParam String birthday, @RequestParam String gender, HttpServletRequest request){
-       String page =  PageConstant.PATH_PAGE_MAIN_USER;
+        String page =  PageConstant.PATH_PAGE_MAIN_USER;
         try {
-           userService.registerUser(login, password, username, usersurname, Gender.valueOf(gender.toUpperCase().trim()), email, birthday);
+            userService.registerUser(login, password, username, usersurname, Gender.valueOf(gender.toUpperCase().trim()), email, birthday);
             User user = new User(login, password);
             user.setRole(Role.USER);
             user.setBalance(new BigDecimal(0));
@@ -211,20 +193,17 @@ public class UserController {
         return PageConstant.PATH_RESULT_USER;
     }
 
+    @ExceptionHandler(TrackerServiceException.class)
     @RequestMapping(PageConstant.URI_MAIN)
-    public String main(@AuthenticationPrincipal UserPrincipal user, Model model, HttpServletRequest request) {
+    public String main(@AuthenticationPrincipal UserPrincipal user, Model model, HttpServletRequest request) throws TrackerServiceException {
         String page = PageSelector.selectHomePage(user.getRole());
         request.getSession(true).setAttribute(ParameterConstant.LOGIN, user.getUsername());
         request.getSession().setAttribute(ParameterConstant.USER, user.getUser());
         request.getSession().setAttribute(ParameterConstant.START_PAGE, page);
         request.getSession().setAttribute(ParameterConstant.ATTRIBUTE_ROLE, user.getRole());
         request.getSession().setAttribute(ParameterConstant.PARAM_BALANCE, user.getBalance());
-        try {
-            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS_BUCKET ,
-                    bucketService.selectAll(user.getUsername()));
-        } catch (TrackerServiceException e) {
-            return PageConstant.PATH_PAGE_ERROR;
-        }
+        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS_BUCKET ,
+                bucketService.selectAll(user.getUsername()));
         return page;
     }
 

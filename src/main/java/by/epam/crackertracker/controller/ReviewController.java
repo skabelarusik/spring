@@ -22,42 +22,41 @@ public class ReviewController {
     @Autowired
     private ReviewService service;
 
+    @ExceptionHandler(Exception.class)
     @GetMapping(PageConstant.URI_SHOW)
-    public String show(@SessionAttribute String role, Model model){
-
+    public String show(Model model){
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW, service.selectAllReview(ParameterConstant.SHOW));
         model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
         return PageConstant.PATH_RESULT_REVIEW;
     }
 
+    @ExceptionHandler(Exception.class)
     @GetMapping(PageConstant.URI_SHOW_MAIN)
     public String showDel( Model model){
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW, service.selectAllReview(ParameterConstant.SHOW));
         return PageConstant.PATH_RESULT_REVIEW;
     }
 
+    @ExceptionHandler(Exception.class)
     @GetMapping(PageConstant.URI_SHOW_DEL)
     public String showDeleted(Model model){
-       model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW,service.selectAllReview(ParameterConstant.SHOW_DELETED));
+        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW,service.selectAllReview(ParameterConstant.SHOW_DELETED));
         model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_RESTORE_TYPE);
         return PageConstant.PATH_RESULT_REVIEW;
     }
 
+    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_DELETE)
-    public String delete(@RequestParam String id, @RequestParam String buttonName, Model model){
-        try {
-            service.deleteById(id ,buttonName);
-            if(buttonName.equals(ParameterConstant.ATTRIBUTE_DELETE_TYPE)){
-                model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW, service.selectAllReview(ParameterConstant.SHOW));
-                model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
-            } else {
-                model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW,service.selectAllReview(ParameterConstant.SHOW_DELETED));
-                model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_RESTORE_TYPE);
-            }
-            model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_CONGRAT);
-        } catch (TrackerServiceException e) {
-            model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_ERROR_REGIST);
+    public String delete(@RequestParam String id, @RequestParam String buttonName, Model model) throws TrackerServiceException {
+        service.deleteById(id ,buttonName);
+        if(buttonName.equals(ParameterConstant.ATTRIBUTE_DELETE_TYPE)){
+            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW, service.selectAllReview(ParameterConstant.SHOW));
+            model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
+        } else {
+            model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW,service.selectAllReview(ParameterConstant.SHOW_DELETED));
+            model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_RESTORE_TYPE);
         }
+        model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_CONGRAT);
         return PageConstant.PATH_RESULT_REVIEW;
     }
 
@@ -80,7 +79,6 @@ public class ReviewController {
             model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.WRONG_DATA);
-            return PageConstant.PATH_PAGE_SEND_REVIEW;
         }
         return PageConstant.PATH_PAGE_SEND_REVIEW;
     }

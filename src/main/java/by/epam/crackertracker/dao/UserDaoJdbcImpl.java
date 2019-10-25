@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
@@ -146,7 +147,8 @@ public class UserDaoJdbcImpl implements UserDao {
         try{
             user = jdbcTemplate.queryForObject(SELECT_USER_BY_LOGIN_PASS, userMapper, login);
             if(!BCrypt.checkpw(pass, user.getPassword())){
-                throw new TrackerDBException("Wrong data");
+                LOGGER.info("Wrang password");
+                throw new BadCredentialsException("Wrong data");
             }
         } catch (Exception e){
             throw new TrackerDBException("Wrong data");

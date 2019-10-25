@@ -30,6 +30,7 @@ public class ProductController {
         return PageConstant.PATH_PAGE_PRODUCT;
     }
 
+    @ExceptionHandler(TrackerServiceException.class)
     @GetMapping(PageConstant.URI_SELECT)
     public String selectAll( Model model) throws TrackerServiceException {
         int pageNum = 1;
@@ -38,6 +39,7 @@ public class ProductController {
         return PageConstant.PATH_PAGE_PRODUCT;
     }
 
+    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_SELECT)
     public String selectAll(@RequestParam Map<String,String> allRequestParams, Model model) throws TrackerServiceException {
         int page = Integer.parseInt(allRequestParams.get(ParameterConstant.ATTRIBUTE_CURRENT_PAGE));
@@ -55,8 +57,8 @@ public class ProductController {
         try {
             model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS, service.selectProduct(min, max, page,type, model));
         } catch (TrackerServiceException e) {
-           model.addAttribute(ParameterConstant.MESSAGE_WRONG_PRODUCTS, allRequestParams.get(ParameterConstant.MESSAGE_ERROR_REGIST));
-           return allRequestParams.get(ParameterConstant.ATTRIBUTE_CURRENT_PAGE);
+            model.addAttribute(ParameterConstant.MESSAGE_WRONG_PRODUCTS, allRequestParams.get(ParameterConstant.MESSAGE_ERROR_REGIST));
+            return allRequestParams.get(ParameterConstant.ATTRIBUTE_CURRENT_PAGE);
         }
         return PageConstant.PATH_PAGE_PRODUCT;
     }
@@ -91,15 +93,9 @@ public class ProductController {
                       @RequestParam String fatsProduct, @RequestParam String carbsProduct){
         try {
             service.addProduct(nameProduct, caloriesProduct, fatsProduct, carbsProduct, proteinsProduct);
-            model.addAttribute(ParameterConstant.MESSAGE_INSERT_PRODUCT,
-                  //  ParameterConstant.MESSAGE_CONGRAT
-                    nameProduct
-            );
+            model.addAttribute(ParameterConstant.MESSAGE_INSERT_PRODUCT, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
-            model.addAttribute(ParameterConstant.MESSAGE_INSERT_PRODUCT,
-                  //  ParameterConstant.MESSAGE_ERROR_REGIST
-                    nameProduct
-            );
+            model.addAttribute(ParameterConstant.MESSAGE_INSERT_PRODUCT, ParameterConstant.MESSAGE_ERROR_REGIST);
         }
         return currentPage;
     }

@@ -4,12 +4,9 @@ import by.epam.crackertracker.config.SecurityConfig;
 import by.epam.crackertracker.config.SpringConfig;
 import by.epam.crackertracker.config.UserPrincipal;
 import by.epam.crackertracker.config.WebConfig;
-import by.epam.crackertracker.entity.Bucket;
-import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.service.BucketService;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
-import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,11 +19,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import java.util.*;
-import java.util.ArrayList;
-
 import static by.epam.crackertracker.utils.TestParametres.*;
-import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 import static  org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static  org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;

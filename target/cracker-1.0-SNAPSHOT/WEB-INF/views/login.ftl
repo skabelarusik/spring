@@ -17,6 +17,7 @@
                        <div class="blockLogin"><br/>
             <!-- Login form -->
                             <h3 class="h3login"><@spring.message "label.enterlogin"/></h3><br/><br/>
+                           ${messageAuth}
                             <form class="loginForm" method="post" action="/login">
                                 <p>
                                     <input type="text" name="username" maxlength="45" autofocus id="loginField" pattern="^[(\w)-]{3,16}"

@@ -11,6 +11,36 @@
     <div class="wrapperUserResultInner">
         <h1>Program name list</h1>
 
+
+        <ul class="uui-pagination">
+            <li class="actions-wrapper">
+                <ul class="pagination-items">
+                    <li class="first-page disable">
+                        <a href="/user/select">
+                            <span>First</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="pages-wrapper">
+                <ul class="pagination-items">
+                    <#if previousPage != null>
+                    <li class="active">
+                        <a href="/user/select?nextPage=${previousPage}">${previousPage}</a>
+                    </li>
+                    </#if>
+                    <li>
+                        <a href="/user/select?nextPage=${currPage}">${currPage}</a>
+                    </li>
+                    <#if nextPage != null>
+                    <li>
+                        <a href="/user/select?nextPage=${nextPage}">${nextPage}</a>
+                    </li>
+                    </#if>
+                </ul>
+            </li>
+        </ul>
+
         <table class="uui-table stripe">
             <thead>
             <tr>

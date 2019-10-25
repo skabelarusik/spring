@@ -81,7 +81,7 @@
                                                 <br/>
                                                 <button class="uui-button"><@spring.message "label.registr"/></button>
                                             </form>
-                                ${wrongData}
+                                ${wrongDataPass}
                         </div>
                  </div>
 <!-- registration block -->

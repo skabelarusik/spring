@@ -1,4 +1,7 @@
 by\epam\crackertracker\utils\TestParametres.class
+by\epam\crackertracker\controller\SubscriptionControllerTest.class
+by\epam\crackertracker\controller\UserControllerTest.class
+by\epam\crackertracker\controller\CommonControllerTest.class
 by\epam\crackertracker\controller\ProductControllerTest.class
 by\epam\crackertracker\controller\ReviewControllerTest.class
 by\epam\crackertracker\controller\BucketControllerTest.class

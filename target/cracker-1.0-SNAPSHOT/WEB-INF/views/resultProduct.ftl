@@ -9,17 +9,7 @@
 <div class="wrapperResult">
     <div class="wrapperLoginInner">
         <h1>Product list</h1>
-<#--        <form class="changePageForm" method="post" action="/product/select">-->
-<#--            <input type="hidden" name="currentPage" value=${currPage}>-->
-<#--            <input type="submit" class="lan3" name="nextPage" value="${previousPage}">-->
-<#--            <input type="submit" class="lan3" name="nextPage" value="${currPage}">-->
-<#--            <input type="submit" class="lan3" name="nextPage" value="${nextPage}">-->
-<#--            <input type="radio" class="lan3" name="type" value="INCREASE_CALORIES"><small>INCR(CAL)</small>-->
-<#--            <input type="radio" class="lan3" name="type" value="DECREASE_CALORIES"><small>DECR(CAL)</small>-->
-<#--            <input type="radio" class="lan3" name="type" value="NOTHING"><small>NOTHING</small>-->
-<#--            <input type="radio" class="lan3" name="type" value="INCREASE_NAME"><small>INCR(NAME)</small>-->
-<#--            <input type="radio" class="lan3" name="type" value="DECREASE_NAME"><small>DECR(NAME)</small>-->
-<#--        </form>-->
+
         <table class="uui-table stripe">
             <thead>
             <tr>
@@ -32,16 +22,16 @@
             </tr>
             </thead>
             <tbody>
-            <#list listProducts as product>
-                <tr>
-                    <td width="20px">${product.id}</td>
-                    <td width="100px">${product.name}</td>
-                    <td width=100px">${product.calories}</td>
-                    <td width="100px">${product.proteins}</td>
-                    <td width="80px">${product.fats}</td>
-                    <td width="60px">${product.carbs}</td>
-                </tr>
-            </#list>
+                <#list listProducts as product>
+                    <tr>
+                        <td width="20px">${product.id}</td>
+                        <td width="100px">${product.name}</td>
+                        <td width=100px">${product.calories}</td>
+                        <td width="100px">${product.proteins}</td>
+                        <td width="80px">${product.fats}</td>
+                        <td width="60px">${product.carbs}</td>
+                    </tr>
+                </#list>
             </tbody>
         </table>
         ${wrongData}

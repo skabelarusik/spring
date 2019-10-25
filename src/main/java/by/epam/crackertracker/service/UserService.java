@@ -92,6 +92,8 @@ public class UserService {
         try{
             if(loginValidator.isValidate(loginValue) && validator1.isValidate(passValue)) {
                 user = userDao.selectByLogin(loginValue, passValue);
+            } else {
+                throw new TrackerServiceException("Wrong service check user");
             }
         } catch (TrackerDBException e){
             LOGGER.error(" Wrong service check user",e);
@@ -176,6 +178,7 @@ public class UserService {
                 newUserList.add(userList.get(i));
             }
         }
+        model.addAttribute("URI", PageConstant.URI_SELECT);
         return userList;
     }
 

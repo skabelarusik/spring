@@ -1,9 +1,7 @@
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\DurationValidator.java
-C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\controller\ExceptionController.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\exception\TrackerDBException.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\ReviewDao.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\service\ProductService.java
-C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\filter\ServletSecurityFilter.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\controller\CommonController.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\PositiveIntValidator.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\CostValidator.java
@@ -28,7 +26,6 @@ C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\b
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\config\MyUserDetailsService.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\AdviceDaoJdbcImpl.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\BucketDaoJdbcImpl.java
-C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\filter\EncodingFilter.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\PathAvatarValidator.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\util\LanguageSelector.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\controller\MessageController.java
@@ -48,7 +45,6 @@ C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\b
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\mapper\ProgramNameMapper.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\config\UserPrincipal.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\util\ParameterConstant.java
-C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\filter\XssFilter.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\service\BucketService.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\TrackerSubscriptionDao.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\TimeValidator.java
@@ -65,17 +61,13 @@ C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\b
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\config\WebAppInitializer.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\TrackerDao.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\BucketDao.java
-C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\filter\StaticFilter.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\exception\TrackerServiceException.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\mapper\SubscriptionMapper.java
-C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\util\AttributeSessionCleaner.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\service\MessageService.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\mapper\MessageMapper.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\entity\Advice.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\MessageValidator.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\ValidatorI.java
-C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\controller\UploadServlet.java
-C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\tag\ShowCuratorTag.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\entity\MealTime.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\GenderValidator.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\entity\Product.java
@@ -102,7 +94,6 @@ C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\b
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\exception\TrackerServletException.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\mapper\UserMapper.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\ProgramsNameDaoJdbc.java
-C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\exception\ResourceNotFoundException.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\util\PageSelector.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\controller\ProductController.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\BirthdayValidator.java
@@ -110,5 +101,4 @@ C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\b
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\LoginValidator.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\validator\ProgramNameValidator.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\config\WebConfig.java
-C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\tag\CuratorMap.java
 C:\Users\Andrei_Krupin\Desktop\Work_folder_Krupin\github\cracker\src\main\java\by\epam\crackertracker\dao\ProductDaoJdbc.java
