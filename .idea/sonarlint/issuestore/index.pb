@@ -299,10 +299,6 @@ w
 Gsrc/test/java/by/epam/crackertracker/controller/UserControllerTest.java,9\c\9cdee99aa36f91145b3826ed1fac4bfbcf1631a5
 y
 Isrc/test/java/by/epam/crackertracker/controller/CommonControllerTest.java,2\3\23f734fd8923355ee9a0a9f0bab76605c878aeb3
-w
-Gsrc/main/java/by/epam/crackertracker/security/MyUserDetailsService.java,4\1\410fb1bfaf3499afc34b070c06c359b5404e2235
-p
-@src/main/java/by/epam/crackertracker/security/UserPrincipal.java,6\c\6c29d2f70b6baef87cc07a3d5177824da49065c8
 u
 Esrc/main/java/by/epam/crackertracker/config/MyUserDetailsService.java,4\1\41d7acf944141743e36061efc4369c72152c71dc
 n

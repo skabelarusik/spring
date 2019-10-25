@@ -23,10 +23,15 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Map;
 
+@ControllerAdvice
 @Controller
 @RequestMapping(PageConstant.REQUEST_USER)
 public class UserController {
 
+    @ExceptionHandler(TrackerServiceException.class)
+    public String except(){
+        return PageConstant.PATH_PAGE_ERROR;
+    }
 
     @Autowired
     private UserService userService;
@@ -37,7 +42,6 @@ public class UserController {
     @Autowired
     private BucketService bucketService;
 
-    @ExceptionHandler(TrackerServiceException.class)
     @GetMapping(PageConstant.URI_SELECT)
     public String selectAllUsers(@RequestParam Map<String,String> allRequestParams, ModelMap model) throws TrackerServiceException {
         String page = PageConstant.PATH_RESULT_USER;
@@ -45,7 +49,6 @@ public class UserController {
         return page;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_SELECT_USER_BY_STATUS)
     public String selectAllUsersByStatus(@RequestParam Map<String,String> allRequestParams, ModelMap model) throws TrackerServiceException {
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByRole(allRequestParams, model));
@@ -53,7 +56,6 @@ public class UserController {
         return page;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_SELECT_USER_BY_GENDER)
     public String selectAllUsersByGender(@RequestParam Map<String, String> allRequestParam, Model model) throws TrackerServiceException {
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_USERS, userService.selectUsersByGender(allRequestParam, model));
@@ -175,7 +177,7 @@ public class UserController {
 
     @PostMapping(PageConstant.URI_DEP)
     public String makeDeposit(@RequestParam String sum, @AuthenticationPrincipal UserPrincipal user,  @RequestParam String type,
-                              @SessionAttribute String balance,  Model model, HttpServletRequest request){
+                              @SessionAttribute String balance,  Model model, HttpServletRequest request) throws TrackerServiceException {
         try {
             userService.deposit(sum, type, user.getUsername(), BigDecimal.valueOf(Double.parseDouble(balance)));
             model.addAttribute(ParameterConstant.MESSAGE_DEPOSIT, ParameterConstant.MESSAGE_CONGRAT);
@@ -193,7 +195,6 @@ public class UserController {
         return PageConstant.PATH_RESULT_USER;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @RequestMapping(PageConstant.URI_MAIN)
     public String main(@AuthenticationPrincipal UserPrincipal user, Model model, HttpServletRequest request) throws TrackerServiceException {
         String page = PageSelector.selectHomePage(user.getRole());

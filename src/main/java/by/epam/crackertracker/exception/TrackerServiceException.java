@@ -5,6 +5,9 @@
 
 package by.epam.crackertracker.exception;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
 public class TrackerServiceException extends Exception  {
     public TrackerServiceException(){
         super();

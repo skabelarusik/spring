@@ -72,7 +72,7 @@ public class SubscriptionService {
         return list;
     }
 
- //   @Transactional(rollbackFor = Exception.class)
+    @Transactional(rollbackFor = Exception.class)
     public boolean buySubscribe(String id, String cost, String duration, String login, BigDecimal balance,
              String role) throws TrackerServiceException {
         boolean status;

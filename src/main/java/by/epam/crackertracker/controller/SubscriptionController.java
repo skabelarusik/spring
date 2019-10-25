@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+@ControllerAdvice
 @Controller
 @RequestMapping(PageConstant.URI_SUBSCRIPTION)
 public class SubscriptionController {
@@ -19,6 +20,10 @@ public class SubscriptionController {
     private SubscriptionService service;
 
     @ExceptionHandler(TrackerServiceException.class)
+    public String except(){
+        return PageConstant.PATH_PAGE_ERROR;
+    }
+
     @GetMapping(PageConstant.URI_SELECT)
     public String select(Model model) throws TrackerServiceException {
         model.addAttribute(ParameterConstant.MESSAGE_SUBSCRIBERS, service.selectAllSubscriptions());
@@ -26,21 +31,18 @@ public class SubscriptionController {
         return PageConstant.PATH_PAGE_SUBSCRIPTION;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @GetMapping(PageConstant.URI_SELECT_CURATOR)
     public String selectCurator(@AuthenticationPrincipal UserPrincipal user, Model model) throws TrackerServiceException {
         model.addAttribute(ParameterConstant.MESSAGE_SUBSCRIBERS,service.selectSubscribersCurator(user.getUsername()));
         return PageConstant.PATH_PAGE_SUBSCRIPTION;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @RequestMapping(PageConstant.URI_SHOW_HISTORY)
     public String showHistory(@AuthenticationPrincipal UserPrincipal user, Model model) throws TrackerServiceException {
         model.addAttribute(ParameterConstant.MESSAGE_SUBSCRIBERS,service.selectHistorySubs(user.getUsername()));
         return PageConstant.PATH_PAGE_SUBSCRIPTION;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_BUY)
     public String buy(@SessionAttribute String startPage, @AuthenticationPrincipal UserPrincipal user, @RequestParam String id,
                       @RequestParam String cost, @RequestParam String duration, Model model) throws TrackerServiceException {

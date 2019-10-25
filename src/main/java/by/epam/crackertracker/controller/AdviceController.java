@@ -11,15 +11,22 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.multiaction.NoSuchRequestHandlingMethodException;
 
 @Controller
+@ControllerAdvice
 @RequestMapping(PageConstant.PATH_ADVICE)
 public class AdviceController {
+
+    @ExceptionHandler(TrackerServiceException.class)
+    public String except(){
+        return PageConstant.PATH_PAGE_ERROR;
+    }
 
     @Autowired
     private AdviceService adviceService;
 
-    @ExceptionHandler(TrackerServiceException.class)
+
+
     @GetMapping(PageConstant.URI_SELECT)
-    public String selectAdvice(Model model){
+    public String selectAdvice(Model model) {
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_ADVICES, adviceService.selectAllAdvices());
         return PageConstant.PATH_RESULT_ADVICE;
     }

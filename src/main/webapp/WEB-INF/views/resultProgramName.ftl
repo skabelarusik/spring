@@ -35,17 +35,17 @@
                     <td width=100px">${program.curator}</td>
                     <td width="80px">${program.cost}</td>
                     <td width="80px">${program.duration}</td>
-<#--                    <#if role == "USER">-->
-<#--                    <td class="prod3" width="60px">-->
-<#--                        <form class="changePageForm" method="post" action="/subscription/buy">-->
-<#--                            <input type="hidden" name="id" value="${program.id}">-->
-<#--                            <input type="hidden" name="name" value="${program.name}">-->
-<#--                            <input type="hidden" name="duration" value="${program.duration}">-->
-<#--                            <input type="hidden" name="cost" value="${program.cost}">-->
-<#--                            <input type="submit"  value="BUY" class="uploadButtonTable"/>-->
-<#--                        </form>-->
-<#--                    </td>-->
-<#--                    </#if>-->
+                    <#if role == "USER">
+                    <td class="prod3" width="60px">
+                        <form class="changePageForm" method="post" action="/subscription/buy">
+                            <input type="hidden" name="id" value="${program.id}">
+                            <input type="hidden" name="name" value="${program.name}">
+                            <input type="hidden" name="duration" value="${program.duration}">
+                            <input type="hidden" name="cost" value="${program.cost}">
+                            <input type="submit"  value="BUY" class="uploadButtonTable"/>
+                        </form>
+                    </td>
+                    </#if>
                     <#if role == "ADMIN" || role = "CURATOR">
                     <td class="prod3" width="60px">
                         <form class="changePageForm" method="post" action="/program_name/delete">

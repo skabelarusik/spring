@@ -87,7 +87,6 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 //        return new DataSourceTransactionManager(dataSource);
 //    }
 
-
     @Bean(name="simpleMappingExceptionResolver")
     public SimpleMappingExceptionResolver
     createSimpleMappingExceptionResolver() {
@@ -101,7 +100,8 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 
         resolver.setExceptionMappings(mappings);  // None by default
         resolver.setDefaultErrorView("error");    // No default
-        resolver.setExceptionAttribute("ex");     // Default is "exception"
+        resolver.setExceptionAttribute("ex");
+        // Default is "exception"
         resolver.setWarnLogCategory("example.MvcLogger");     // No default
         return resolver;
     }

@@ -1,7 +1,7 @@
 
-isquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(øõìµ8žë›‘à-
-_squid:S1075)"ARefactor your code to get this URI from a customizable parameter.(–ÿ‹8ÍÈ²íÞ-
 ^squid:S1075("ARefactor your code to get this URI from a customizable parameter.(¨âÒL8ÍÈ²íÞ-
+nsquid:CommentedOutCodeLineV"<This block of commented-out lines of code should be removed.(–¢õøÿÿÿÿ8•Žœ‘à-
+isquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(øõìµ8žë›‘à-
 dsquid:S1075#"ARefactor your code to get this URI from a customizable parameter.(Úä¨Þýÿÿÿÿ8·ÛºÙÛ-
 ˆsquid:UselessImportCheck	"]Remove this unused import 'org.springframework.security.core.userdetails.UserDetailsService'.(¶…¥à8»ä·¥Ý-
-nsquid:CommentedOutCodeLineV"<This block of commented-out lines of code should be removed.(–¢õøÿÿÿÿ8•Žœ‘à-
+_squid:S1075)"ARefactor your code to get this URI from a customizable parameter.(–ÿ‹8ÍÈ²íÞ-

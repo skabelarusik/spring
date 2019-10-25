@@ -12,12 +12,18 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
+@ControllerAdvice
 @Controller
 @RequestMapping(PageConstant.URI_PRODUCT)
 public class ProductController {
 
     @Autowired
     private ProductService service;
+
+    @ExceptionHandler(TrackerServiceException.class)
+    public String except(){
+        return PageConstant.PATH_PAGE_ERROR;
+    }
 
     @PostMapping(PageConstant.URI_SEARCH_PRODUCT)
     public String search(@RequestParam String text, @SessionAttribute String startPage, Model model){
@@ -30,7 +36,6 @@ public class ProductController {
         return PageConstant.PATH_PAGE_PRODUCT;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @GetMapping(PageConstant.URI_SELECT)
     public String selectAll( Model model) throws TrackerServiceException {
         int pageNum = 1;
@@ -39,7 +44,6 @@ public class ProductController {
         return PageConstant.PATH_PAGE_PRODUCT;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_SELECT)
     public String selectAll(@RequestParam Map<String,String> allRequestParams, Model model) throws TrackerServiceException {
         int page = Integer.parseInt(allRequestParams.get(ParameterConstant.ATTRIBUTE_CURRENT_PAGE));

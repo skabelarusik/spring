@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
+@ControllerAdvice
 @Controller
 @RequestMapping(PageConstant.PATH_REVIEW)
 public class ReviewController {
@@ -22,7 +23,11 @@ public class ReviewController {
     @Autowired
     private ReviewService service;
 
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler(TrackerServiceException.class)
+    public String except(){
+        return PageConstant.PATH_PAGE_ERROR;
+    }
+
     @GetMapping(PageConstant.URI_SHOW)
     public String show(Model model){
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW, service.selectAllReview(ParameterConstant.SHOW));
@@ -30,14 +35,12 @@ public class ReviewController {
         return PageConstant.PATH_RESULT_REVIEW;
     }
 
-    @ExceptionHandler(Exception.class)
     @GetMapping(PageConstant.URI_SHOW_MAIN)
     public String showDel( Model model){
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW, service.selectAllReview(ParameterConstant.SHOW));
         return PageConstant.PATH_RESULT_REVIEW;
     }
 
-    @ExceptionHandler(Exception.class)
     @GetMapping(PageConstant.URI_SHOW_DEL)
     public String showDeleted(Model model){
         model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_REVIEW,service.selectAllReview(ParameterConstant.SHOW_DELETED));
@@ -45,7 +48,6 @@ public class ReviewController {
         return PageConstant.PATH_RESULT_REVIEW;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_DELETE)
     public String delete(@RequestParam String id, @RequestParam String buttonName, Model model) throws TrackerServiceException {
         service.deleteById(id ,buttonName);

@@ -16,12 +16,19 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.awt.*;
+@ControllerAdvice
 @Controller
 @RequestMapping(PageConstant.PATH_MESSAGE)
 public class MessageController {
 
     @Autowired
     MessageService service;
+
+    @ExceptionHandler(TrackerServiceException.class)
+    public String except(){
+        return PageConstant.PATH_PAGE_ERROR;
+    }
+
 
     @GetMapping(PageConstant.URI_INPUT_MESSAGE)
     public String checkInputMessage(@SessionAttribute User user, Model model) throws TrackerServiceException {
@@ -41,7 +48,6 @@ public class MessageController {
         return PageConstant.PATH_SEND_MESSAGE;
     }
 
-    @ExceptionHandler(Exception.class)
     @PostMapping(PageConstant.URI_SEND_MESS)
     public String sendMessage(@RequestParam String recipient, Model model){
         model.addAttribute(ParameterConstant.PARAM_RECIPIENT, recipient);
@@ -65,7 +71,6 @@ public class MessageController {
         return PageConstant.PATH_SEND_MESSAGE;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_DELETE)
     public String delete(@RequestParam String id, Model model, @SessionAttribute String login, @RequestParam String sender) throws TrackerServiceException {
         String type;

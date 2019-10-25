@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.awt.*;
 
+@ControllerAdvice
 @Controller
 @RequestMapping(PageConstant.PATH_PROGRAM_NAME)
 public class ProgramNameController {
@@ -18,7 +19,6 @@ public class ProgramNameController {
     @Autowired
     private ProgramsNameService service;
 
-    @ExceptionHandler(TrackerServiceException.class)
     @GetMapping(PageConstant.URI_SELECT)
     public String select(Model model) throws TrackerServiceException {
         model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
@@ -26,7 +26,6 @@ public class ProgramNameController {
         return  PageConstant.PATH_RESULT_PROGRAM_NAME;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @GetMapping(PageConstant.URI_SELECT_DEL)
     public String selectDeleted(Model model) throws TrackerServiceException {
         model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_RESTORE_TYPE);
@@ -34,7 +33,6 @@ public class ProgramNameController {
         return PageConstant.PATH_RESULT_PROGRAM_NAME;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @GetMapping(PageConstant.URI_SELECT_CURATOR)
     public String selectCurator(@SessionAttribute String login,  Model model) throws TrackerServiceException {
         model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
@@ -43,7 +41,6 @@ public class ProgramNameController {
         return PageConstant.PATH_RESULT_PROGRAM_NAME;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @GetMapping(PageConstant.URI_SELECT_CURATOR_DEL)
     public String selectDeletedCurator(@SessionAttribute String login, Model model) throws TrackerServiceException {
         model.addAttribute(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_RESTORE_TYPE);
@@ -66,7 +63,6 @@ public class ProgramNameController {
         return startPage;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_DELETE)
     public String delete(@RequestParam String id, @RequestParam String buttonName, Model model) throws TrackerServiceException {
         service.deleteById(id, buttonName);

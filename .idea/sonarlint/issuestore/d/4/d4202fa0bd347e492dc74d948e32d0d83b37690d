@@ -1,10 +1,11 @@
 
-qsquid:S3776”"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(êĞ´š8á‹ÔÛÛ-
-rsquid:UselessImportCheck	"GRemove this unused import 'by.epam.crackertracker.dao.UserDaoJdbcImpl'.(‚ŞèÇ8Œ¥ÖóŞ-
-„squid:S1192Ú"fDefine a constant instead of duplicating this literal "Wrong service deposit to account user" 4 times.(óãs8„¬ÒÜ-
-vsquid:S3776„"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¿òƒêşÿÿÿÿ8ëŒ‰×Ú-
-zsquid:S1192|"\Define a constant instead of duplicating this literal "Wrong service register user" 3 times.(Ä¤ş8ßĞ•úÜ-
-msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8ï†‡×Ú-
-ƒsquid:S1192ß"_Define a constant instead of duplicating this literal "Wrong service send avatar user" 4 times.(ô‡¬¼şÿÿÿÿ8‚×óŞ-
-psquid:UselessImportCheck"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ
 …squid:UselessImportCheck"URemove this unused import 'org.springframework.transaction.annotation.Transactional'.(ğùçøùÿÿÿÿ8›¦ãğß-
+psquid:UselessImportCheck"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ
+zsquid:S1192~"\Define a constant instead of duplicating this literal "Wrong service register user" 3 times.(Ä¤ş8ßĞ•úÜ-
+wsquid:S1192`"YDefine a constant instead of duplicating this literal "Wrong service check user" 3 times.(ô²8Ù¥’à-
+msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8ï†‡×Ú-
+vsquid:S3776†"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¿òƒêşÿÿÿÿ8ëŒ‰×Ú-
+ƒsquid:S1192â"_Define a constant instead of duplicating this literal "Wrong service send avatar user" 4 times.(ô‡¬¼şÿÿÿÿ8‚×óŞ-
+qsquid:S3776—"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(êĞ´š8á‹ÔÛÛ-
+rsquid:UselessImportCheck	"GRemove this unused import 'by.epam.crackertracker.dao.UserDaoJdbcImpl'.(‚ŞèÇ8Œ¥ÖóŞ-
+„squid:S1192İ"fDefine a constant instead of duplicating this literal "Wrong service deposit to account user" 4 times.(óãs8¦óÆ”à-

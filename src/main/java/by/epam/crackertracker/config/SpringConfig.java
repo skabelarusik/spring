@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 import java.util.Properties;
@@ -16,7 +17,7 @@ import java.util.ResourceBundle;
 @Configuration
 @ComponentScan(basePackages = {"by.epam.crackertracker"})
 @PropertySource("classpath:database.properties")
-
+@EnableTransactionManagement
 public class SpringConfig {
     @Value("${db.url}")
     public String URL;

@@ -11,9 +11,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+@ControllerAdvice
 @Controller
 @RequestMapping(PageConstant.PATH_BUCKET)
 public class BucketController {
+
+    @ExceptionHandler(TrackerServiceException.class)
+    public String except(){
+        return PageConstant.PATH_PAGE_ERROR;
+    }
 
     @Autowired
     private BucketService service;
@@ -30,7 +36,6 @@ public class BucketController {
         return startPage;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(ParameterConstant.CLEAR_BUCKET)
     public String clear(@SessionAttribute String startPage, Model model, @AuthenticationPrincipal UserPrincipal user) throws TrackerServiceException {
         service.removeAll(user.getUsername());
@@ -40,7 +45,6 @@ public class BucketController {
         return startPage;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.URI_DELETE)
     public String delete_by_id(@SessionAttribute String startPage, @RequestParam String id,
                                @SessionAttribute String login, Model model) throws TrackerServiceException {
@@ -49,7 +53,6 @@ public class BucketController {
         return startPage;
     }
 
-    @ExceptionHandler(TrackerServiceException.class)
     @PostMapping(PageConstant.CALCULATE)
     public String calculate(@SessionAttribute String startPage, @SessionAttribute String login, Model model) throws TrackerServiceException {
         model.addAttribute(ParameterConstant.ATTRIBUTE_RESULT, service.calculate(login));
