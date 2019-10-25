@@ -46,18 +46,13 @@ public class SubscriptionService {
 
 
     public List<TrackerSubscription> selectSubscribersCurator(String loginCurator) throws TrackerServiceException {
-
         List<TrackerSubscription> list = null;
-        /*
-        TrackerSubscriptionDaoJdbcImpl dao = new TrackerSubscriptionDaoJdbcImpl();
         try {
             list = dao.selectAllByCurator(loginCurator);
         } catch (TrackerDBException e) {
             LOGGER.error("Wrong service select curators subscriptions",e);
             throw new TrackerServiceException("Wrong service select curators subscriptions",e);
         }
-
-         */
         return list;
     }
 
@@ -72,10 +67,10 @@ public class SubscriptionService {
         return list;
     }
 
-    @Transactional(rollbackFor = Exception.class)
-    public boolean buySubscribe(String id, String cost, String duration, String login, BigDecimal balance,
+    @Transactional(rollbackFor = TrackerServiceException.class)
+    public void buySubscribe(String id, String cost, String duration, String login, BigDecimal balance,
              String role) throws TrackerServiceException {
-        boolean status;
+        String status;
         try{
             if(idValidator.isValidate(id) && costValidator.isValidate(cost) && loginValidator.isValidate(login)
                     && durationValidator.isValidate(duration) && roleValidator.isValidate(role) &&
@@ -88,17 +83,13 @@ public class SubscriptionService {
                 } else {
                     throw new TrackerServiceException();
                 }
-                status = true;
             } else {
-                status = false;
-                //throw new TrackerServiceException("Wrong buy subscribe");
+                throw new TrackerServiceException();
             }
         } catch (TrackerDBException | SQLException e){
             LOGGER.error("Wrong buy subscribe");
-            status = false;
-            //throw new TrackerServiceException("Wrong buy subscribe", e);
+            throw new TrackerServiceException("Wrong buy subscribe", e);
         }
-        return status;
     }
 
 

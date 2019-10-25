@@ -40,9 +40,6 @@ public class WebConfig extends WebMvcConfigurerAdapter{
     public static final String PICTURE_PATH = "/picture";
     public static final String UUI_PATH = "/uui";
 
-//    @Autowired
-//    private DataSource dataSource;
-
     @Bean
     public ViewResolver getViewResolver() {
         FreeMarkerViewResolver freeMarkerViewResolver = new FreeMarkerViewResolver();
@@ -81,11 +78,6 @@ public class WebConfig extends WebMvcConfigurerAdapter{
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler(RESOURCE_PATH).addResourceLocations(PICTURE_PATH, UUI_PATH);
     }
-
-//    @Bean
-//    public PlatformTransactionManager txManager() {
-//        return new DataSourceTransactionManager(dataSource);
-//    }
 
     @Bean(name="simpleMappingExceptionResolver")
     public SimpleMappingExceptionResolver

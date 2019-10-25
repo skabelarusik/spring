@@ -8,6 +8,7 @@ package by.epam.crackertracker.dao;
 import by.epam.crackertracker.entity.TrackerSubscription;
 import by.epam.crackertracker.exception.TrackerConnectionPoolException;
 import by.epam.crackertracker.exception.TrackerDBException;
+import by.epam.crackertracker.exception.TrackerServiceException;
 import by.epam.crackertracker.mapper.SubscriptionMapper;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -110,18 +111,12 @@ public class TrackerSubscriptionDaoJdbcImpl implements TrackerSubscriptionDao {
         return list;
     }
 
-    public void insert(int idProgram, BigDecimal cost, int duration, String login, BigDecimal balance) throws TrackerDBException, SQLException {
+    public void insert(int idProgram, BigDecimal cost, int duration, String login, BigDecimal balance) throws TrackerDBException, SQLException, TrackerServiceException {
         BigDecimal balanceAcc = balance.subtract(cost);
         LocalDate date = LocalDate.now();
         LocalDate endDate = date.plusDays(duration);
         template.update(UPDATE_ROLE_SUPERUSER, login);
-     //   int i = template.update(INSERT_SUBSCRIPTION, idProgram, login, date.toString(), endDate.toString());
-//        if(i == 1){
-//            throw new TrackerDBException("");
-//        }
-//        template.update(UPDATE_BALANCE, balanceAcc, login);
-//        template.update(UPDATE_ROLE_SUPERUSER, login);
+        template.update(INSERT_SUBSCRIPTION, idProgram, login, date.toString(), endDate.toString());
+        template.update(UPDATE_BALANCE, balanceAcc, login);
     }
-
-
 }

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -41,5 +42,14 @@ public class SpringConfig {
         dataSource.setPassword(PASSWORD);
         dataSource.setDriverClassName(DRIVER);
         return dataSource;
+    }
+
+    @Bean(name = "transactionManager")
+    public DataSourceTransactionManager getTransactionManager() {
+        DataSourceTransactionManager txManager = new DataSourceTransactionManager();
+        DataSource dataSource = this.getDataSource();
+        txManager.setDataSource(dataSource);
+
+        return txManager;
     }
 }

@@ -45,10 +45,14 @@ public class SubscriptionController {
 
     @PostMapping(PageConstant.URI_BUY)
     public String buy(@SessionAttribute String startPage, @AuthenticationPrincipal UserPrincipal user, @RequestParam String id,
-                      @RequestParam String cost, @RequestParam String duration, Model model) throws TrackerServiceException {
-        model.addAttribute("messageProgram",             service.buySubscribe(id, cost, duration, user.getUsername(), user.getBalance(), user.getRole()));
-
+                      @RequestParam String cost, @RequestParam String duration, Model model) {
+        try {
+           service.buySubscribe(id, cost, duration, user.getUsername(),
+                    user.getBalance(), user.getRole());
+            model.addAttribute("messageProgram", "GRATZIE. YOU MUST MAKE LOGOUT/LOGIN FOR TAKE NEW STATUS!!! ");
+        } catch (TrackerServiceException e) {
+            model.addAttribute("messageProgram", "WRONG DATA!!!");
+        }
         return PageConstant.PATH_RESULT_PROGRAM_NAME;
-        //  return startPage;
     }
 }
