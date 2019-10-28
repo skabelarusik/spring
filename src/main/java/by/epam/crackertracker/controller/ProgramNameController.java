@@ -59,8 +59,9 @@ public class ProgramNameController {
             model.addAttribute(ParameterConstant.MESSAGE_PROGRAM_NAME, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e){
             model.addAttribute(ParameterConstant.MESSAGE_PROGRAM_NAME, ParameterConstant.WRONG_DATA);
+            return startPage;
         }
-        return startPage;
+        return "redirect:" + startPage;
     }
 
     @PostMapping(PageConstant.URI_DELETE)

@@ -20,7 +20,7 @@ public class ProductController {
     @Autowired
     private ProductService service;
 
-    @ExceptionHandler(TrackerServiceException.class)
+    @ExceptionHandler(Exception.class)
     public String except(){
         return PageConstant.PATH_PAGE_ERROR;
     }
@@ -37,18 +37,14 @@ public class ProductController {
     }
 
     @GetMapping(PageConstant.URI_SELECT)
-    public String selectAll( Model model) throws TrackerServiceException {
-        int pageNum = 1;
-        model.addAttribute(ParameterConstant.ATTRIBUTE_CURRENT_PAGE, pageNum);
-        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS, service.selectAllProduct(null,pageNum));
+    public String selectAll(@RequestParam Map<String,String> allRequestParams, Model model) throws TrackerServiceException {
+        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS, service.selectAllProduct(allRequestParams, model));
         return PageConstant.PATH_PAGE_PRODUCT;
     }
 
     @PostMapping(PageConstant.URI_SELECT)
-    public String selectAll(@RequestParam Map<String,String> allRequestParams, Model model) throws TrackerServiceException {
-        int page = Integer.parseInt(allRequestParams.get(ParameterConstant.ATTRIBUTE_CURRENT_PAGE));
-        model.addAttribute(ParameterConstant.ATTRIBUTE_CURR_PAGE, page);
-        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS, service.selectAllProduct(null,page));
+    public String selectAllProd(@RequestParam Map<String,String> allRequestParams, Model model) throws TrackerServiceException {
+        model.addAttribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS, service.selectAllProduct(allRequestParams, model));
         return PageConstant.PATH_PAGE_PRODUCT;
     }
 
@@ -87,8 +83,9 @@ public class ProductController {
             model.addAttribute(ParameterConstant.MESSAGE_DELETE_PRODUCT, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.MESSAGE_DELETE_PRODUCT, ParameterConstant.MESSAGE_ERROR_REGIST);
+            return currentPage;
         }
-        return currentPage;
+        return "redirect:" + currentPage;
     }
 
     @PostMapping(PageConstant.URI_ADD)

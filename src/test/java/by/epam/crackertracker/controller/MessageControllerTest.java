@@ -156,8 +156,7 @@ public class MessageControllerTest {
                 .param(ParameterConstant.PARAM_SENDER, LOGIN_FIRST)
                 .sessionAttr(ParameterConstant.LOGIN, LOGIN_FIRST))
                 .andDo(print())
-                .andExpect(model().attribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_ERROR_REGIST))
-                .andExpect(forwardedUrl(PageConstant.PATH_PAGE_MESSAGE));
+                .andExpect(forwardedUrl(PageConstant.PATH_PAGE_ERROR));
     }
 
 }

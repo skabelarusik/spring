@@ -139,18 +139,7 @@ public class ProgramNameControllerTest {
             .param(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE))
             .andDo(print())
             .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_NAME_PROGRAM_NAME, programsNameList))
-            .andExpect(view().name(REDIRECT + PageConstant.PATH_RESULT_PROGRAM_NAME));
-    }
-
-    @Test
-    public void testDeleteProgramNameWrong() throws Exception {
-        doThrow(TrackerServiceException.class).when(service).deleteById(WRONG_ID, ParameterConstant.ATTRIBUTE_DELETE_TYPE);
-        when(service.selectAllProgramsName(START_PAGE, START_PAGE)).thenReturn(programsNameList);
-        mockMvc.perform(post(PageConstant.PATH_PROGRAM_NAME_DELETE).param(ParameterConstant.PARAM_ID, WRONG_ID)
-                .param(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE))
-                .andDo(print())
-                .andExpect(model().attribute(ParameterConstant.MESSAGE_SEND_PROGRAM, ParameterConstant.MESSAGE_ERROR_REGIST))
-                .andExpect(view().name(PageConstant.PATH_RESULT_PROGRAM_NAME));
+            .andExpect(forwardedUrl(PageConstant.PATH_RESULT_PROGRAM_NAME));
     }
 
 }

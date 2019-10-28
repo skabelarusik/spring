@@ -54,7 +54,9 @@ public class BucketController {
     }
 
     @PostMapping(PageConstant.CALCULATE)
-    public String calculate(@SessionAttribute String startPage, @SessionAttribute String login, Model model) throws TrackerServiceException {
+    public String calculate(
+            @SessionAttribute String startPage, @SessionAttribute String login,
+            Model model) throws TrackerServiceException {
         model.addAttribute(ParameterConstant.ATTRIBUTE_RESULT, service.calculate(login));
         return startPage;
     }

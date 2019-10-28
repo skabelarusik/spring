@@ -99,8 +99,7 @@ public class ReviewControllerTest {
         mockMvc.perform(post(PageConstant.SECUR_PATH_REVIEW_DEL).param(ParameterConstant.PARAM_ID, GOOD_ID)
                 .param(ParameterConstant.ATTRIBUTE_BUTTON_NAME, ParameterConstant.ATTRIBUTE_DELETE_TYPE))
                 .andDo(print())
-                .andExpect(model().attribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_ERROR_REGIST))
-                .andExpect(forwardedUrl(PageConstant.PATH_RESULT_REVIEW));
+                .andExpect(view().name( PageConstant.PATH_PAGE_ERROR));
     }
 
     @Test
@@ -132,7 +131,7 @@ public class ReviewControllerTest {
             .param(ParameterConstant.TEXT, VALIDE_TEXT))
             .andDo(print())
             .andExpect(model().attribute(ParameterConstant.MESSAGE_SEND_REVIEW, ParameterConstant.MESSAGE_CONGRAT))
-            .andExpect(view().name("redirect:/" + PageConstant.PATH_PAGE_SEND_REVIEW));
+            .andExpect(view().name("redirect:" + PageConstant.PATH_PAGE_SEND_REVIEW));
     }
 
     @Test

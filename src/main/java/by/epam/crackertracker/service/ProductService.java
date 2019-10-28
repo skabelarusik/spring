@@ -20,6 +20,7 @@ import org.springframework.ui.Model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ProductService {
@@ -46,6 +47,9 @@ public class ProductService {
     @Autowired
     private ProductNameValidator nameValidator;
 
+    public static final int MAX_TABLE_PRODUCT = 11;
+
+
 
     public List<Product> selectProduct(String min, String max, String intPage, String type, Model model) throws TrackerServiceException {
         List<Product> productList;
@@ -61,7 +65,7 @@ public class ProductService {
         if(!validator.isValidate(type) || !caloriesValidator.isValidate(min) ||
                 !caloriesValidator.isValidate(max)){
             LOGGER.warn("Wrong sort type or min-max calories products");
-             throw new TrackerServiceException("Wrong sort type or min-max calories products");
+            throw new TrackerServiceException("Wrong sort type or min-max calories products");
         }
         int minCalories = Integer.parseInt(min);
         int maxCalories = Integer.parseInt(max);
@@ -81,7 +85,9 @@ public class ProductService {
         return productList;
     }
 
-    public List<Product> selectAllProduct(String type, int page) throws TrackerServiceException {
+    public List<Product> selectAllProduct(Map<String, String> allRequestParams, Model model) throws TrackerServiceException {
+        String currentPage = allRequestParams.get(ParameterConstant.ATTRIBUTE_NEXT_PAGE);
+        String type = allRequestParams.get(ParameterConstant.PARAM_TYPE);
         List<Product> productList;
         if(type == null){
             type = ParameterConstant.SORTED_NOTHING;
@@ -90,19 +96,53 @@ public class ProductService {
             LOGGER.warn("Wrong sort type products exception");
             throw new TrackerServiceException("Wrong sort type products exception");
         }
-        try {
-            productList = dao.selectAll(page, type);
-        } catch (TrackerDBException e) {
-            throw new TrackerServiceException("Wrong service select product",e);
+        if(currentPage == null) {
+            int intPage = 1;
+            try {
+                productList = dao.selectAll(intPage, type);
+            } catch (TrackerDBException e) {
+                throw new TrackerServiceException("Wrong service select product", e);
+            }
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
+            if (productList.size() == MAX_TABLE_PRODUCT) {
+                model.addAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
+            }
+        } else {
+            int intPage = Integer.parseInt(currentPage);
+            try {
+                productList = dao.selectAll(intPage, type);
+            } catch (Exception e) {
+                LOGGER.error("Wrong service  select all products",e);
+                throw new TrackerServiceException("Wrong service select all products",e);
+            }
+            model.addAttribute(ParameterConstant.ATTRIBUTE_RES_PAGE, intPage);
+            if(productList.size() == MAX_TABLE_PRODUCT){
+                model.addAttribute(ParameterConstant.ATTRIBUTE_NEXT_PAGE, intPage + 1);
+            }
+            if(intPage > 1){
+                model.addAttribute(ParameterConstant.ATTRIBUTE_PREV_PAGE, intPage - 1);
+            }
+        }
+        List<Product> newUserList = null;
+        if(!productList.isEmpty() && productList.size() < MAX_TABLE_PRODUCT){
+            newUserList = new ArrayList<>(productList.size());
+            for(int i = 0 ; i < productList.size(); i++){
+                newUserList.add(productList.get(i));
+            }
+        } else {
+            newUserList = new ArrayList<>(productList.size()-1);
+            for(int i = 0 ; i < productList.size() - 1; i++){
+                newUserList.add(productList.get(i));
+            }
         }
         return productList;
     }
 
     public void updateProduct(String id, String name, String calories, String fats, String carbs,
-                                 String proteins) throws TrackerServiceException {
+                              String proteins) throws TrackerServiceException {
         if(doubleValidator.isValidate(fats) && doubleValidator.isValidate(carbs) &&
                 doubleValidator.isValidate(proteins) && caloriesValidator.isValidate(calories) &&
-            nameValidator.isValidate(name) && intValidator.isValidate(id)){
+                nameValidator.isValidate(name) && intValidator.isValidate(id)){
             int caloriesPr = Integer.parseInt(calories);
             Product product = new Product(name, caloriesPr);
             double carbsPr;
@@ -144,7 +184,7 @@ public class ProductService {
             try {
                 dao.deleteById(idProd);
             } catch (TrackerDBException e) {
-               LOGGER.error("Wrong service delete product",e);
+                LOGGER.error("Wrong service delete product",e);
                 throw new TrackerServiceException("Wrong service delete product",e);
             }
         } else {

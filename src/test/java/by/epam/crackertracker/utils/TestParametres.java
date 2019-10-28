@@ -13,9 +13,9 @@ public class TestParametres {
     public static final String LOGIN_SECOND = "Tatsiana";
 
     //paths pages roles
-    public static final String REDIRECT_ADMIN = "redirect:/admin";
+    public static final String REDIRECT_ADMIN = "redirect:admin";
     public static final String ADMIN = "admin";
-    public static final String REDIRECT = "redirect:/";
+    public static final String REDIRECT = "redirect:";
 
     //for program name controller test
     public static final String PROGRAM_NAME = "program1";

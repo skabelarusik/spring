@@ -1,8 +1,9 @@
 
-zsquid:UselessImportCheck"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8çØÚÚ-
-qsquid:UselessImportCheck	"FRemove this unused import 'by.epam.crackertracker.dao.ProductDaoJdbc'.(’¢Ÿª8µ¾õıÜ-
-isquid:S3776e"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ã¨—ˆ
-wsquid:S1192º"ZDefine a constant instead of duplicating this literal "Wrong service add product" 3 times.(¯„Çõüÿÿÿÿ
-osquid:S3776›"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(†ØË“úÿÿÿÿ
-zsquid:S1192…"]Define a constant instead of duplicating this literal "Wrong service update product" 3 times.(ÏÆÓ»ıÿÿÿÿ
-|squid:S1192“"]Define a constant instead of duplicating this literal "Wrong service delete product" 3 times.(„¶½‹8ß¿—ØÛ-
+|squid:S1192»"]Define a constant instead of duplicating this literal "Wrong service delete product" 3 times.(„¶½‹8¹ôÈ‹á-
+squid:S1192­"]Define a constant instead of duplicating this literal "Wrong service update product" 3 times.(ÏÆÓ»ıÿÿÿÿ8¹ôÈ‹á-
+~squid:S1192â"ZDefine a constant instead of duplicating this literal "Wrong service add product" 3 times.(¯„Çõüÿÿÿÿ8¹ôÈ‹á-
+zsquid:UselessImportCheck"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8¹ôÈ‹á-
+qsquid:UselessImportCheck	"FRemove this unused import 'by.epam.crackertracker.dao.ProductDaoJdbc'.(’¢Ÿª8¹ôÈ‹á-
+psquid:S3776X"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(¸Éİš8¹ôÈ‹á-
+qsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ã¨—ˆ8¹ôÈ‹á-
+vsquid:S3776Ã"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(†ØË“úÿÿÿÿ8¹ôÈ‹á-

@@ -77,8 +77,7 @@ public class SubscriptionControllerTest {
         doThrow(TrackerServiceException.class).when(service).selectAllSubscriptions();
         mockMvc.perform(get(PageConstant.URI_SUBS_SELEC))
                 .andDo(print())
-                .andExpect(model().attribute(ParameterConstant.MESSAGE_HAVE_SUBS, ParameterConstant.MESSAGE_ERROR_REGIST))
-                .andExpect(forwardedUrl(PageConstant.PATH_PAGE_SUBSCRIPTION));
+                .andExpect(forwardedUrl(PageConstant.PATH_PAGE_ERROR));
     }
 
     @Test

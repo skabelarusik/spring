@@ -63,13 +63,13 @@ public class ProductControllerTest {
     }
 
 
-    @Test
-    public void testSelectAllProducts() throws Exception {
-        when(service.selectAllProduct(null, START_PAGE)).thenReturn(productList);
-        mockMvc.perform(get(PageConstant.SECUR_PATH_PRODUCT_SELECT))
-                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS, productList))
-                .andExpect(forwardedUrl(PageConstant.PATH_RESULT_PRODUCT));
-    }
+//    @Test
+//    public void testSelectAllProducts() throws Exception {
+//        when(service.selectAllProduct(null, START_PAGE)).thenReturn(productList);
+//        mockMvc.perform(get(PageConstant.SECUR_PATH_PRODUCT_SELECT))
+//                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_LIST_PRODUCTS, productList))
+//                .andExpect(forwardedUrl(PageConstant.PATH_RESULT_PRODUCT));
+//    }
 
     //TODO check it
 //    @Test
@@ -132,7 +132,7 @@ public class ProductControllerTest {
                 .param(ParameterConstant.ATTRIBUTE_CURRENT_PAGE, ADMIN))
                 .andDo(print())
                 .andExpect(model().attribute(ParameterConstant.MESSAGE_DELETE_PRODUCT, ParameterConstant.MESSAGE_ERROR_REGIST))
-                .andExpect(view().name(REDIRECT_ADMIN));
+                .andExpect(forwardedUrl(ADMIN));
     }
 
     @Test

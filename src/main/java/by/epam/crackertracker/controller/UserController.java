@@ -28,7 +28,7 @@ import java.util.Map;
 @RequestMapping(PageConstant.REQUEST_USER)
 public class UserController {
 
-    @ExceptionHandler(TrackerServiceException.class)
+    @ExceptionHandler(Exception.class)
     public String except(){
         return PageConstant.PATH_PAGE_ERROR;
     }
@@ -73,7 +73,7 @@ public class UserController {
             model.addAttribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_ERROR_REGIST);
             return PageConstant.PATH_PAGE_EDIT_USER;
         }
-        return PageConstant.PATH_PAGE_EDIT_USER;
+        return "redirect:" + PageConstant.PATH_PAGE_EDIT_USER;
     }
 
     @GetMapping(PageConstant.URI_UPDATE_USER)
@@ -185,8 +185,9 @@ public class UserController {
             request.getSession(true).setAttribute(ParameterConstant.PARAM_BALANCE, newSum);
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.MESSAGE_DEPOSIT, ParameterConstant.MESSAGE_ERROR_REGIST);
+            return PageConstant.PATH_DEPOSIT;
         }
-        return PageConstant.PATH_DEPOSIT;
+        return "redirect:" + PageConstant.PATH_DEPOSIT;
     }
 
     @GetMapping(PageConstant.URI_REQUEST)

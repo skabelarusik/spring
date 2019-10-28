@@ -80,8 +80,9 @@ public class UserControllerTest {
             .sessionAttr(ParameterConstant.LOGIN, LOGIN_FIRST))
                 .andDo(print())
                 .andExpect(model().attribute(ParameterConstant.WRONG_DATA, ParameterConstant.MESSAGE_CONGRAT))
-                .andExpect(forwardedUrl(PageConstant.PATH_PAGE_EDIT_USER));
+                .andExpect(view().name("redirect:" + PageConstant.PATH_PAGE_EDIT_USER));
     }
+
 
     @Test
     public void testWrongUpdateUser() throws Exception {

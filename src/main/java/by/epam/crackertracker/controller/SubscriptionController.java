@@ -19,7 +19,7 @@ public class SubscriptionController {
     @Autowired
     private SubscriptionService service;
 
-    @ExceptionHandler(TrackerServiceException.class)
+    @ExceptionHandler(Exception.class)
     public String except(){
         return PageConstant.PATH_PAGE_ERROR;
     }

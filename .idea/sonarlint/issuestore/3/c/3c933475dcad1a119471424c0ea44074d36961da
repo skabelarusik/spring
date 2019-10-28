@@ -1,9 +1,6 @@
 
+¥%squid:RedundantThrowsDeclarationCheckr"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(©…ç8Šàø–à-
+É%squid:RedundantThrowsDeclarationCheckr"‘Remove the declaration of thrown exception 'by.epam.crackertracker.exception.TrackerServiceException', as it cannot be thrown from method's body.(©…ç8¬¢–—à-
 †squid:UselessImportCheck	"\Remove this unused import 'by.epam.crackertracker.exception.TrackerConnectionPoolException'.(Â¸Ük8Ä€ñß-
-¦%squid:RedundantThrowsDeclarationCheckq"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(¿²Ï¿8¯–¤òß-
-Nsquid:S1172q"0Remove this unused method parameter "idProgram".(¿²Ï¿8¸É­òß-
-Osquid:S1481t",Remove this unused "endDate" local variable.(±Âñ–ùÿÿÿÿ8¸É­òß-
-Rsquid:S1481r"/Remove this unused "balanceAcc" local variable.(ÔìÉÌûÿÿÿÿ8Â´œòß-
-Å%squid:RedundantThrowsDeclarationCheckq"ŒRemove the declaration of thrown exception 'by.epam.crackertracker.exception.TrackerDBException', as it cannot be thrown from method's body.(¿²Ï¿8…ò­òß-
-nsquid:CommentedOutCodeLinev"<This block of commented-out lines of code should be removed.(ñò¡€üÿÿÿÿ8¸É­òß-
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Ïç²éß-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Ïç²éß-
+Ä%squid:RedundantThrowsDeclarationCheckr"ŒRemove the declaration of thrown exception 'by.epam.crackertracker.exception.TrackerDBException', as it cannot be thrown from method's body.(©…ç8Ã›ù–à-

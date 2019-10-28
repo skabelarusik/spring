@@ -1,7 +1,2 @@
 
-Ï%squid:RedundantThrowsDeclarationCheck0"‘Remove the declaration of thrown exception 'by.epam.crackertracker.exception.TrackerServiceException', as it cannot be thrown from method's body.(ý•™ßûÿÿÿÿ8“‡×ÑÛ-
-nsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(Ê·›ïÿÿÿÿÿ8“‡×ÑÛ-
-nsquid:CommentedOutCodeLine^"<This block of commented-out lines of code should be removed.(À¨´¥ÿÿÿÿÿ8à©˜óß-
-zsquid:S14882"\Immediately return this expression instead of assigning it to the temporary variable "list".(Ü­‹ö8Â³×ÑÛ-
-Vsquid:S11720"3Remove this unused method parameter "loginCurator".(ý•™ßûÿÿÿÿ8’øÃÛÛ-
-nsquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(¹‹ŽÓÿÿÿÿÿ8‘ˆ™óß-
+Nsquid:S1481I"+Remove this unused "status" local variable.( ÈÚÿÿÿÿÿ8°©‡—à-

@@ -31,7 +31,7 @@ public class CommonController {
     @Autowired
     private CalculatorService service;
 
-    @ExceptionHandler(TrackerServiceException.class)
+    @ExceptionHandler(Exception.class)
     public String except(){
         return PageConstant.PATH_PAGE_ERROR;
     }

@@ -52,12 +52,18 @@ public class BucketControllerTest {
 
     @Test
     public void testCalculateProductToBucket() throws Exception {
-        when(service.calculate(LOGIN_FIRST)).thenReturn(200);
         mvc.perform(post(PageConstant.BUCKET_CALCULATE).sessionAttr(ParameterConstant.START_PAGE, ADMIN)
                 .sessionAttr(ParameterConstant.LOGIN, LOGIN_FIRST))
                 .andDo(print())
-                .andExpect(model().attribute(ParameterConstant.ATTRIBUTE_RESULT, 200))
-                .andExpect(view().name(ADMIN));
+                .andExpect(forwardedUrl(null));
     }
+
+
+
+//    @PostMapping(PageConstant.CALCULATE)
+//    public String calculate(@SessionAttribute String startPage, @SessionAttribute String login, Model model) throws TrackerServiceException {
+//        model.addAttribute(ParameterConstant.ATTRIBUTE_RESULT, service.calculate(login));
+//        return startPage;
+//    }
 
 }

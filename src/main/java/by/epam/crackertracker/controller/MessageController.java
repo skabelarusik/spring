@@ -24,7 +24,7 @@ public class MessageController {
     @Autowired
     MessageService service;
 
-    @ExceptionHandler(TrackerServiceException.class)
+    @ExceptionHandler(Exception.class)
     public String except(){
         return PageConstant.PATH_PAGE_ERROR;
     }
@@ -67,8 +67,9 @@ public class MessageController {
             model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e) {
             model.addAttribute(ParameterConstant.WRONG_DATA_PASS, ParameterConstant.MESSAGE_ERROR_REGIST);
+            return PageConstant.PATH_SEND_MESSAGE;
         }
-        return PageConstant.PATH_SEND_MESSAGE;
+        return "redirect:" + PageConstant.PATH_SEND_MESSAGE;
     }
 
     @PostMapping(PageConstant.URI_DELETE)

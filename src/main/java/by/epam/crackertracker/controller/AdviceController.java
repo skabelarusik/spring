@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.multiaction.NoSuchRequestHandlingMeth
 @RequestMapping(PageConstant.PATH_ADVICE)
 public class AdviceController {
 
-    @ExceptionHandler(TrackerServiceException.class)
+    @ExceptionHandler(Exception.class)
     public String except(){
         return PageConstant.PATH_PAGE_ERROR;
     }
@@ -38,8 +38,9 @@ public class AdviceController {
             model.addAttribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_CONGRAT);
         } catch (TrackerServiceException e){
             model.addAttribute(ParameterConstant.ATTRIBUTE_RES_ADD, ParameterConstant.MESSAGE_ERROR_REGIST);
+            return currentPage;
         }
-        return currentPage;
+        return "redirect:" + currentPage;
     }
 
 
