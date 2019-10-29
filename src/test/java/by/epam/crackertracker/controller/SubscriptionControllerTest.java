@@ -10,7 +10,6 @@ import by.epam.crackertracker.service.ReviewService;
 import by.epam.crackertracker.service.SubscriptionService;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
-import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

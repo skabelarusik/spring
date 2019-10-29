@@ -933,6 +933,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/ProgramNameControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/ReviewControllerTest.java">
           <value>
             <set />

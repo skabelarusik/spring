@@ -14,7 +14,6 @@ import by.epam.crackertracker.service.UserService;
 import by.epam.crackertracker.util.PageConstant;
 import by.epam.crackertracker.util.ParameterConstant;
 import org.apache.log4j.helpers.Loader;
-import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -110,14 +109,6 @@ public class UserControllerTest {
                 .andDo(print())
                 .andExpect(forwardedUrl(PageConstant.PATH_PAGE_REGISTER));
     }
-
-    @Test
-    public void testDepositPage() throws Exception {
-        mockMvc.perform(get(PageConstant.URI_DEP))
-                .andDo(print())
-                .andExpect(forwardedUrl(PageConstant.PATH_DEPOSIT));
-    }
-
 
     @Test
     public void testSelectAllAdmins() throws Exception {
