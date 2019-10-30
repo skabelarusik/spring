@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: by.epam.crackertracker.controller.AdviceControllerTest
--------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.66 sec - in by.epam.crackertracker.controller.AdviceControllerTest
