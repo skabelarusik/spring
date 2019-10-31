@@ -47,11 +47,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(PageConstant.SECUR_PATH_UPDATE_ROLE, PageConstant.SECUR_PATH_REVIEW_DELETE)
                 .hasRole(ParameterConstant.ROLE_ADMIN)
 
+                //CURATORS
+                .antMatchers(PageConstant.PATH_RESULT_PROGRAM)
+                .hasAnyRole(ParameterConstant.ROLE_CURATOR)
                 //ADMINS + CURATORS
                 .antMatchers(PageConstant.SECUR_PATH_ADVICE_ADD, PageConstant.SECUR_PATH_ADVICE_DELETE, PageConstant.SECUR_PATH_PRODUCT_ADD,
                         PageConstant.SECUR_PATH_PRODUCT_DELETE, PageConstant.SECUR_PATH_PRODUCT_UPDATE)
                 .hasAnyRole(ParameterConstant.ROLE_ADMIN, ParameterConstant.ROLE_CURATOR)
                 .anyRequest().authenticated()
+
 
                 .and();
 

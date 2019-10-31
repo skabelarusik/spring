@@ -46,44 +46,33 @@ public class ProgramService {
             String portions) throws TrackerServiceException {
         if(dayValidator.isValidate(day) && timeValidator.isValidate(time) &&  portionsValidator.isValidate(portions) &&
             programNameValidator.isValidate(nameProgram) && productNameValidator.isValidate(product)){
-            dao = new ProgramDaoJdbcImpl();
             MealTime mealTime = MealTime.valueOf(time.toUpperCase());
             MealDay mealDay = MealDay.valueOf(day.toUpperCase());
             double port = Double.parseDouble(portions);
             Program program = new Program(nameProgram, product, port, mealDay, mealTime);
-//            try {
+            try {
                 dao.insert(program);
-//            } catch (TrackerDBException e) {
-//                LOGGER.error("Wrong service insert product to program",e);
-//                throw new TrackerServiceException("Wrong service insert product to program",e);
-//            }
+            } catch (TrackerDBException e) {
+                throw new TrackerServiceException();
+            }
         }
     }
 
 
 
-    public List<Program> selectAll(String name, String login) throws TrackerServiceException {
+    public List<Program> selectAll(String name) {
         List<Program> listComponent;
-        try {
-            dao = new ProgramDaoJdbcImpl();
-            listComponent = dao.selectAll(name, login);
-        } catch (TrackerDBException e){
-            LOGGER.error("Wrong service select all components programs",e);
-            throw new TrackerServiceException("Wrong service select all components programs",e);
-        }
+            listComponent = dao.selectAll(name);
+            LOGGER.error("Wrong service select all components programs");
         return listComponent;
     }
 
-    public void deleteById(String id, String login) throws TrackerServiceException {
-        if(idValidator.isValidate(id) && loginValidator.isValidate(login)){
-            dao = new ProgramDaoJdbcImpl();
+    public void deleteById(String id) throws TrackerServiceException {
+        if(idValidator.isValidate(id)){
             int idProgram = Integer.parseInt(id);
-            try {
-                dao.deleteById(idProgram);
-            } catch (TrackerDBException e) {
-                LOGGER.error("Wrong service delete by id product from program",e);
-                throw new TrackerServiceException("Wrong service delete by id product from program",e);
-            }
+            dao.deleteById(idProgram);
+        } else {
+            throw new TrackerServiceException("Wrong service delete by id product from program");
         }
     }
 

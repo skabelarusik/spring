@@ -288,6 +288,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/entity/MealDay.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/entity/Role.java">
           <value>
             <set />
@@ -344,6 +349,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/mapper/ProductMapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/by/epam/crackertracker/mapper/ProgramMapper.java">
           <value>
             <set />
           </value>
@@ -758,6 +768,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultProgram.ftl">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resultProgramName.ftl">
           <value>
             <set />
@@ -934,6 +949,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/ProgramNameControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/by/epam/crackertracker/controller/ProgramTest.java">
           <value>
             <set />
           </value>

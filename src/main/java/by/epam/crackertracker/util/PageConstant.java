@@ -29,6 +29,7 @@ public class PageConstant {
     public static final String PATH_SEND_MESSAGE = "send_message";
     public static final String PATH_RESULT_REVIEW = "resultReview";
     public static final String PATH_RESULT_REVIEW_MAIN = "reviewMain";
+    public static final String PATH_RESULT_PROGRAM = "resultProgram";
 
     public static final String PATH_RESULT_PROGRAM_NAME = "resultProgramName";
     public static final String PATH_PAGE_EDIT_PROGRAM = "editProgram";
@@ -145,6 +146,9 @@ public class PageConstant {
     public static final String PATH_PROGRAM_NAME_ADD = "/program_name/add";
     public static final String PATH_PROGRAM_NAME_DELETE = "/program_name/delete";
     public static final String URI_SUBS_SELEC = "/subscription/select";
+    public static final String PATH_PROGRAM_SELECT = "/program/select";
+    public static final String PATH_PROGRAM_ADD = "/program/add";
+    public static final String PATH_PROGRAM_DELETE = "/program/delete";
 
 
 

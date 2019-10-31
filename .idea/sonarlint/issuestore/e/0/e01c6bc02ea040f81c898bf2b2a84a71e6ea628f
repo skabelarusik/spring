@@ -1,21 +1,2 @@
 
-rsquid:S2095K"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½²£¹üÿÿÿÿ8–ÙÂîß-
-Usquid:S1172½"1Remove this unused method parameter "loginValue".(ƒ —üÿÿÿÿ8–ÙÂîß-
-nsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(¡»¢üùÿÿÿÿ8–ÙÂîß-
-Ê%squid:RedundantThrowsDeclarationCheck,"ŒRemove the declaration of thrown exception 'by.epam.crackertracker.exception.TrackerDBException', as it cannot be thrown from method's body.(½çÚ›øÿÿÿÿ8–ÙÂîß-
-msquid:S2095v"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ù¶—Í8–ÙÂîß-
-Osquid:S1172"0Remove this unused method parameter "idProgram".(™ìªù8–ÙÂîß-
-isquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(«ÌH8–ÙÂîß-
-rsquid:S2095`"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÙàÀıÿÿÿÿÿ8–ÙÂîß-
-nsquid:S00116±"NRename this field "SQL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á«ş¢8–ÙÂîß-
-Æ%squid:RedundantThrowsDeclarationCheck"ŒRemove the declaration of thrown exception 'by.epam.crackertracker.exception.TrackerDBException', as it cannot be thrown from method's body.(™ìªù8–ÙÂîß-
-jsquid:CommentedOutCodeLineÂ"<This block of commented-out lines of code should be removed.(ò›ßî8–ÙÂîß-
-‚squid:S1488Á"cImmediately return this expression instead of assigning it to the temporary variable "programList".(Äà’ü8–ÙÂîß-
-Isquid:S1172,"&Remove these unused method parameters.(½çÚ›øÿÿÿÿ8–ÙÂîß-
-Ë%squid:RedundantThrowsDeclarationCheck½"ŒRemove the declaration of thrown exception 'by.epam.crackertracker.exception.TrackerDBException', as it cannot be thrown from method's body.(ƒ —üÿÿÿÿ8–ÙÂîß-
-gsquid:UnusedPrivateMethodq"6Remove this unused private "hasCuratorProgram" method.(Œ…ıñúÿÿÿÿ8–ÙÂîß-
-zsquid:S1488."\Immediately return this expression instead of assigning it to the temporary variable "list".(ÓÉÂÔ8–ÙÂîß-
-]squid:UnusedPrivateMethod†"0Remove this unused private "fillingList" method.(ÍŠ€ô8–ÙÂîß-
-Nsquid:S1481Ÿ"/Remove this unused "connection" local variable.(ïÆ¥8–ÙÂîß-
-isquid:CommentedOutCodeLine¿"<This block of commented-out lines of code should be removed.(«ÌH8–ÙÂîß-
-Nsquid:S1481¾"/Remove this unused "connection" local variable.(ïÆ¥8–ÙÂîß-
+Nsquid:S1481?"0Remove this unused "programList" local variable.(Äà’ü8Èèîâ-

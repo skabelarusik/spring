@@ -26,6 +26,13 @@ public class TestParametres {
     public static final String MESSAGE = "How are you?";
     public static final String TOPIC = "Hello!?";
 
+    //for program controller test
+    public static final String DAY = "SUNDAY";
+    public static final String TIME = "LUNCH";
+    public static final String PRODUCT = "APPLE";
+    public static final String PORTIONS = "1.5";
+
+
     // for advice controller test
 
     public static final String VALIDE_TEXT = "testtes t";

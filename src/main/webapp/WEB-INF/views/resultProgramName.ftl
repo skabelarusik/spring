@@ -24,6 +24,7 @@
                 </#if>
                 <#if role = "CURATOR">
                     <th>UPDATE</th>
+                    <th>EDIT PROGRAM</th>
                 </#if>
             </tr>
             </thead>
@@ -62,6 +63,12 @@
                             <input type="hidden" name="name" value="${program.name}">
                             <input type="hidden" name="duration" value="${program.duration}">
                             <input type="hidden" name="cost" value="${program.cost}">
+                            <input type="submit"  value="UPDATE" class="uploadButtonTable"/>
+                        </form>
+                    </td>
+                    <td class="prod3" width="60px">
+                        <form class="changePageForm" method="get" action="/program/select">
+                            <input type="hidden" name="name" value="${program.name}">
                             <input type="submit"  value="UPDATE" class="uploadButtonTable"/>
                         </form>
                     </td>
